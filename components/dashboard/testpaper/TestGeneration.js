@@ -86,7 +86,7 @@ useEffect(() => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {inputFields.map(({ label, type, name, options, placeholder }) => (
           <div key={name}>
-            <label className="block mb-1 text-sm font-medium text-white">
+            <label className="block mb-1 text-sm font-medium text-lightblue">
               {label}
             </label>
             {type === 'select' ? (

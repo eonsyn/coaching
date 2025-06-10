@@ -63,7 +63,7 @@ export default function Page() {
   }
 
   return (
-    <div className="p-4 max-w-3xl mx-auto">
+    <div className="p-4 max-w-3xl text-lightblue mx-auto">
       <TestGeneration
         form={form}
         handleChange={handleChange}
@@ -75,7 +75,7 @@ export default function Page() {
 
      {questions.length > 0 && (
   <div className="mt-6">
-    <h2 className="text-lg font-semibold mb-4 text-white">Fetched Questions:</h2>
+    <h2 className="text-lg font-semibold mb-4 text-lightblue">Fetched Questions:</h2>
     <QuestionList questions={questions} />
   </div>
 )}
