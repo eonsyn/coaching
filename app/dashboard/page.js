@@ -1,8 +1,12 @@
 
+import DashboardHero from "@/components/dashboard/DashboardHero";
+import SkillGrowthGraph from "@/components/dashboard/SkillGrowthGraph"
 export default function Dashboard() {
+  
   return (
-    <div>
-        <h1>Dashboard</h1>
-    </div>
+    < >
+        <DashboardHero/>
+        <SkillGrowthGraph/>
+    </ >
   );
 }
