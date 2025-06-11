@@ -24,7 +24,7 @@ const data = [
 
 export default function SkillGrowthGraph() {
   return (
-    <div className="w-full h-[300px] p-4">
+    <div className="w-full h-[300px] p-3">
       <h2 className="text-xl font-bold mb-4 text-center">  Your Skill Over Time</h2>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
