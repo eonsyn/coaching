@@ -2,13 +2,13 @@ import React from 'react'
 
 function DashboardHero() {
     return (
-        <div>
-            <div className='w-full rounded-2xl p-4 md:h-[40vh] md:flex items-center justify-between  bg-darkblue '>
+       
+            <div className='w-full  rounded-2xl p-4 md:h-[40vh] md:flex items-center justify-between  bg-darkblue '>
                 <div> 
                     <h1 className='text-4xl font-bold '>PROBLEM OF THE DAY </h1>
                 <p>A new way to be a GENIUS</p>
-                <button className='px-2 hidden md:block mt-4 bg-white text-darkblue font-bold py-3  rounded-md '>
-                    View today Problem
+                <button className='px-2 hidden md:block mt-4 bg-white text-lightblue font-bold py-3  rounded-md '>
+                    View Today Problem
                 </button>
                 </div>
                
@@ -17,11 +17,11 @@ function DashboardHero() {
                 
                 </div>
 
-                <button className='px-2 w-full md:hidden mt-4 bg-white text-darkblue font-bold py-3  rounded-md '>
-                    View today Problem
+                <button className='px-2 w-full md:hidden mt-4 bg-white text-lightblue  font-bold py-3  rounded-md '>
+                    View Today Problem
                 </button>
             </div>
-        </div>
+        
     )
 }
 

@@ -35,7 +35,7 @@ function Asidebar() {
   return (
     <>
       {/* Desktop Sidebar (hidden on mobile) */}
-      <aside className="hidden lg:flex flex-col w-64 h-[90vh] bg-darkblue text-lightblue p-4">
+      <aside className="hidden ml-2 mt-2 rounded-xl lg:flex flex-col w-64 h-[90vh] bg-darkblue text-lightblue p-4">
         {/* Profile */}
         <div className="flex items-center mb-6">
           <img
