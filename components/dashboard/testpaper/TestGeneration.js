@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 export default function TestGeneration({ form, handleChange, handleSubmit, loading }) {
   const [subject, setsubject] = useState('Physics')
-   
+
   const [optionSubject, setoptionSubject] = useState([])
   const inputFields = [
     {
@@ -19,8 +19,9 @@ export default function TestGeneration({ form, handleChange, handleSubmit, loadi
       label: 'Unit',
       type: 'select',
       name: 'unit',
-      options: optionSubject,
+      options: [{ value: 'Select Unit', label: 'Select Unit' }, ...optionSubject],
     },
+
     {
       label: 'Number of Questions',
       type: 'number',
@@ -50,35 +51,48 @@ export default function TestGeneration({ form, handleChange, handleSubmit, loadi
       ],
     },
   ]
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const selectedClass=(form.class).replace(" ","%20");
-       
-      const response = await fetch(`/api/syllabus?class=${selectedClass}&subject=${subject}`);
-      const json = await response.json();
-       
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const selectedClass = (form.class).replace(" ", "%20");
 
-      if (json?.subjects?.[0]?.chapters) {
-        const options = json.subjects[0].chapters.map((chapter) => ({
-          value: chapter,
-          label: chapter,
-        }));
-        setoptionSubject(options);
+        const response = await fetch(`/api/syllabus?class=${selectedClass}&subject=${subject}`);
+        const json = await response.json();
+
+
+        if (json?.subjects?.[0]?.chapters) {
+          const options = json.subjects[0].chapters.map((chapter) => ({
+            value: chapter,
+            label: chapter,
+          }));
+          setoptionSubject(options);
+        }
+      } catch (err) {
+        console.error("Failed to fetch syllabus:", err);
       }
-    } catch (err) {
-      console.error("Failed to fetch syllabus:", err);
-    }
-  };
+    };
 
-  if (subject) fetchData();
-}, [subject,form.class]);
+    if (subject) fetchData();
+  }, [subject, form.class]);
 
   useEffect(() => {
-   
-     setsubject(form.subject)
+
+    setsubject(form.subject);
+
+
 
   }, [form.subject])
+  useEffect(() => {
+    if (optionSubject.length > 0) {
+      // Automatically select the first unit
+      handleChange({
+        target: {
+          name: 'unit',
+          value: optionSubject[0].value,
+        },
+      });
+    }
+  }, [optionSubject]);
 
 
   return (

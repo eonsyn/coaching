@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import TestGeneration from '@/components/dashboard/testpaper/TestGeneration'
 import QuestionList from '@/components/dashboard/testpaper/QuestionList'
 
@@ -42,13 +42,14 @@ export default function Page() {
         },
         body: JSON.stringify({
           subject: form.subject,
-          topic: form.unit,
+          unit: form.unit,
           level: form.level,
           count: Number(form.count) || 1,
         }),
       })
 
       const data = await res.json()
+      console.log(data)
 
       if (!res.ok || !data.success) {
         setError(data.error || 'Failed to fetch questions')
@@ -61,6 +62,7 @@ export default function Page() {
       setLoading(false)
     }
   }
+ 
 
   return (
     <div className="p-4 max-w-3xl text-lightblue mx-auto">

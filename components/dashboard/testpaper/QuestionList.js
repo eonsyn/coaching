@@ -9,8 +9,11 @@ function QuestionList({ questions }) {
   const contentRef = useRef(null);
   const [showAnswer, setshowAnswer] = useState(false)
   const [showoption, setshowoption] = useState(false);
+  const [downloading, setdownloading] = useState(false)
 
   const handleDownloadPDF = async () => {
+    setdownloading(true);
+
     const element = contentRef.current;
     if (!element) return;
 
@@ -64,18 +67,19 @@ function QuestionList({ questions }) {
     }
 
     pdf.save('questions.pdf');
+    setdownloading(false);
   };
 
   const toggleOption = () => {
     if (!showAnswer) {
       setshowoption(!showoption);
     }
-    
+
   };
-const toggleAnswer = () => {
-  setshowAnswer(!showAnswer);
-  setshowoption(false);
-};
+  const toggleAnswer = () => {
+    setshowAnswer(!showAnswer);
+    setshowoption(false);
+  };
 
   if (!questions || questions.length === 0) {
     return <p className="text-white">No questions to display.</p>;
@@ -86,24 +90,25 @@ const toggleAnswer = () => {
       <div className="flex items-center gap-3">
         <button
           onClick={handleDownloadPDF}
-          className="mb-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          className="cursor-pointer mb-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
         >
-          Download PDF
+
+          {downloading ? "Loading..." : "Download PDF"}
         </button>
-        
-       
-         <button
+
+
+        <button
           onClick={toggleAnswer}
-          className="mb-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          className="mb-4 cursor-pointer px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
         >
           {showAnswer ? 'Hide Answer' : 'Show Answer'}
         </button>
-        {!showAnswer &&  <button
+        {!showAnswer && <button
           onClick={toggleOption}
-          className="mb-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          className="mb-4 cursor-pointer px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
         >
           {showoption ? 'Hide Options' : 'Show Options'}
-        </button> }
+        </button>}
       </div>
 
       <div
@@ -111,12 +116,12 @@ const toggleAnswer = () => {
         className="space-y-6 bg-white text-black px-4 py-6 rounded-md"
         style={{ width: '800px', margin: '0 auto' }}
       >
-        { questions.map((q, idx) => (
+        {questions.map((q, idx) => (
           <div key={q._id || idx} className="question-box px-2 rounded-md text-black">
-            
+
             {showAnswer ? (<h3 className="font-semibold mb-2">
-              Ans{idx + 1}: {renderMathText(q.answer)||renderMathText(q.correctOption) || renderMathText(q.explanation) || 'No Answer found'}
-            </h3>):(<h3 className="font-semibold mb-2">
+              Ans{idx + 1}: {renderMathText(q.answer) || renderMathText(q.correctOption) || renderMathText(q.explanation) || 'No Answer found'}
+            </h3>) : (<h3 className="font-semibold w-[70vw] md:w-[60vw]  mb-2">
               Q{idx + 1}: {renderMathText(q.question?.text) || 'No question text'}
             </h3>)}
 
@@ -127,26 +132,31 @@ const toggleAnswer = () => {
                 style={{ maxWidth: '100%', height: 'auto' }}
               />
             )}
-
+           
             {showoption && (
-              <ol className="list-none list-inside mb-2">
-                {Object.entries(q.options || {}).map(([key, val], i) => {
-                  const optionLabels = ['a', 'b', 'c', 'd', 'e', 'f'];
-                  return (
-                    <li key={i} className="mb-1 flex gap-2">
-                      <span className="font-semibold">{optionLabels[i]}.</span>
-                      <span>{renderMathText(val?.text) || val}</span>
-                      {val?.imageUrl && (
-                        <img
-                          src={val.imageUrl}
-                          alt="Option image"
-                          style={{ maxHeight: '150px', maxWidth: '250px' }}
-                        />
-                      )}
-                    </li>
-                  );
-                })}
-              </ol>
+               <ol className="list-none list-inside mb-2">
+              {Object.entries(q.options || {}).map(([key, val], i) => {
+                const optionLabels = ['a', 'b', 'c', 'd', 'e', 'f'];
+                return (
+                  <li key={i} className="mb-1 flex gap-2">
+                    <span className="font-semibold">{optionLabels[i]}.</span>
+                    <span>
+                      {val?.text?.trim()
+                        ? renderMathText(val.text)
+                        : 'Option is not provided'}
+                    </span>
+
+                    {val?.imageUrl && (
+                      <img
+                        src={val.imageUrl}
+                        alt="Option image"
+                        style={{ maxHeight: '150px', maxWidth: '250px' }}
+                      />
+                    )}
+                  </li>
+                );
+              })}
+            </ol>
             )}
           </div>
         ))}
