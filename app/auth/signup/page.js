@@ -210,14 +210,14 @@ export default function SignupPage() {
                 )}
               </svg>
             </button>
-            <button
+            {/* <button
               type="button"
               onClick={handleGeneratePassword}
               className="absolute bottom-1 right-16 px-2 py-1 bg-gray-200 text-gray-700 text-xs rounded hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
               disabled={isLoading}
             >
               Generate
-            </button>
+            </button> */}
           </div>
           <button
             onClick={handleSignup}
