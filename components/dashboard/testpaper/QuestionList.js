@@ -71,6 +71,7 @@ function QuestionList({ questions }) {
   };
 
   const toggleOption = () => {
+    console.log(questions)
     if (!showAnswer) {
       setshowoption(!showoption);
     }

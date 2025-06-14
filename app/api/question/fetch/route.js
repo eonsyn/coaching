@@ -3,11 +3,11 @@ import Question from "@/models/Question";
 
 export async function POST(req) {
   await dbConnect(); 
-  const { subject, unit, level, count } = await req.json();
+  const { subject, unit, level,type, count } = await req.json();
   console.log("unit")
   try {
     const questions = await Question.aggregate([
-      { $match: { subject, unit, level } },
+      { $match: { subject, unit, level ,type } },
       { $sample: { size: count || 1 } },
     ]); 
    

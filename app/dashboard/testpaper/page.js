@@ -9,8 +9,9 @@ export default function Page() {
     class: 'Class 11',
     subject: 'Mathematics',
     unit: '',
+    type:'MCQ',
     count: 1,
-    level: 'Easy',
+    level: 'Medium',
   })
 
   const [loading, setLoading] = useState(false)
@@ -43,6 +44,7 @@ export default function Page() {
         body: JSON.stringify({
           subject: form.subject,
           unit: form.unit,
+          type: form.type,
           level: form.level,
           count: Number(form.count) || 1,
         }),
