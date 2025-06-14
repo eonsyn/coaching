@@ -62,7 +62,7 @@ export default function Page() {
       setLoading(false)
     }
   }
- 
+
 
   return (
     <div className="p-4 max-w-3xl text-lightblue mx-auto">
@@ -75,12 +75,12 @@ export default function Page() {
 
       {error && <p className="mt-4 text-red-600">{error}</p>}
 
-     {questions.length > 0 && (
-  <div className="mt-6">
-    <h2 className="text-lg font-semibold mb-4 text-lightblue">Fetched Questions:</h2>
-    <QuestionList questions={questions} />
-  </div>
-)}
+      {questions.length > 0 && (
+        <div className="mt-6">
+          <h2 className="text-lg font-semibold mb-4 text-lightblue">Fetched Questions:</h2>
+          <QuestionList questions={questions} />
+        </div>
+      )}
     </div>
   )
 }

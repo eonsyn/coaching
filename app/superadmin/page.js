@@ -4,13 +4,7 @@ import QuestionRenderer from '@/components/superadmin/QuestionRenderer';
 import MetaData from '@/components/superadmin/MetaData';
 export default function Page() {
   const [rawData, setRawData] = useState(``);
-  const [form, setForm] = useState({
-    class: 'Class 11',
-    subject: 'Mathematics',
-    unit: '',
-    count: 1,
-    level: 'Easy',
-  })
+   
 
   const [questions, setQuestions] = useState([]);
   const [meta, setMeta] = useState({ subject: 'Mathematics', topic: '', unit: '' });
@@ -42,6 +36,7 @@ export default function Page() {
   const handleConvert = () => {
     try {
       const parsed = JSON.parse(rawData);
+      console.log("parsed", parsed);
       if (!Array.isArray(parsed)) throw new Error('Input must be an array');
       setQuestions(parsed);
     } catch (err) {
@@ -49,6 +44,10 @@ export default function Page() {
     }
   };
 
+  useEffect(() => {
+     console.log("test", questions)
+  }, [questions])
+  
   const handleQuestionUpdate = (index, updatedQuestion) => {
     const updated = [...questions];
     updated[index] = updatedQuestion;

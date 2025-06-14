@@ -43,6 +43,7 @@ export default function QuestionCard({ index, rawData, meta, onChange }) {
   return (
     <div className="p-6 border rounded-2xl shadow-md my-6 bg-white space-y-5">
       <h3 className="font-semibold text-xl text-blue-700">Question {index + 1}</h3>
+      <p>{rawData.type}</p>
       {showQuestion && <div>
         <label className="block font-medium mb-1">Question Text:</label>
         <textarea
