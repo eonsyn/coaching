@@ -69,6 +69,7 @@ export default function Page() {
       subject: meta.subject || q.subject || "Unknown",
       topic: meta.topic || q.topic || "Unknown",
       unit: meta.unit || q.unit || "",
+      askedIn: q.askedIn || "",
     }));
 
     try {
@@ -110,7 +111,15 @@ Output Format:
       "option4": { "text": "Option D", "imageUrl": "" }
     },
     "correctOption": "optionX",
-    "answer": ""
+    "answer": "",
+    askedIn: {
+  exam: String,   // e.g., "JEE Main"
+  year: Number,   // e.g., 2019
+  date: String,   // e.g., "12 Jan I"
+  marks: Number,  // e.g., 3 (for "3M")
+ },
+
+
   }
 ]
 

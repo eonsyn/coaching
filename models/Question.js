@@ -1,10 +1,20 @@
-//models/Question.js
+// models/Question.js
 import mongoose from "mongoose";
 
 const optionSchema = new mongoose.Schema({
   text: String,
   imageUrl: String,
 });
+
+const askedInSchema = new mongoose.Schema(
+  {
+    exam: String,     // e.g., "JEE Main", "JEE Adv.", "NDA"
+    year: Number,     // e.g., 2019, 2006
+    date: String,     // e.g., "12 Jan I", optional
+    marks: Number,    // e.g., 3 (for "3M"), optional
+  },
+  { _id: false }
+);
 
 const questionSchema = new mongoose.Schema(
   {
@@ -29,10 +39,17 @@ const questionSchema = new mongoose.Schema(
     publication: String,
     subject: { type: String, required: true },
     topic: { type: String, required: true },
-    level: { type: String, enum: ["Easy", "Medium", "Hard"], required: true },
+    level: {
+      type: String,
+      enum: ["Easy", "Medium", "Hard"],
+      required: true,
+    },
     unit: String,
     error: String,
     createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+
+    // New: store exam history, marks, etc.
+    askedIn: askedInSchema,
   },
   { timestamps: true }
 );

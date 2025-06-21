@@ -2,674 +2,947 @@
   {
     "type": "MCQ",
     "question": {
-      "text": "Which of the following combinations has the dimension of electrical resistance ($\\epsilon_{0}$ is the permittivity of vacuum $\\mu_{0}$ is the permeability of vacuum)?",
+      "text": "Let $z\\in C$ with $Im(z)=10$ and it satisfies $\\frac{2z-n}{2z+n}=2i-1$ for some natural number n, then (2019 Main, 12 April II)",
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "$\\sqrt{\\frac{\\mu_{0}}{\\epsilon_{0}}}$", "imageUrl": "" },
-      "option2": { "text": "$\\frac{\\mu_{0}}{\\epsilon_{0}}$", "imageUrl": "" },
-      "option3": { "text": "$\\sqrt{\\frac{\\epsilon_{0}}{\\mu_{0}}}$", "imageUrl": "" },
-      "option4": { "text": "$\\frac{\\epsilon_{0}}{\\mu_{0}}$", "imageUrl": "" }
-    },
-    "correctOption": "option1",
-    "answer": "(a)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "In the formula $X=5YZ^{2}$, X and Z have dimensions of capacitance and magnetic field, respectively. What are the dimensions of Y in SI units?",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$[M^{-1}L^{-2}T^{4}A^{2}]$", "imageUrl": "" },
-      "option2": { "text": "$[M^{-2}L^{0}T^{-4}A^{-2}]$", "imageUrl": "" },
-      "option3": { "text": "$[M^{-3}L^{-2}T^{8}A^{4}]$", "imageUrl": "" },
-      "option4": { "text": "$[M^{-2}L^{-2}T^{6}A^{3}]$", "imageUrl": "" }
-    },
-    "correctOption": "option3",
-    "answer": "(c)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If surface tension (S), moment of inertia (I) and Planck's constant (h), were to be taken as the fundamental units, the dimensional formula for linear momentum would be",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$S^{1/2}I^{1/2}h^{-1}$", "imageUrl": "" },
-      "option2": { "text": "$S^{3/2}I^{1/2}h^{0}$", "imageUrl": "" },
-      "option3": { "text": "$S^{1/2}I^{1/2}h^{0}$", "imageUrl": "" },
-      "option4": { "text": "$S^{1/2}I^{3/2}h^{-1}$", "imageUrl": "" }
-    },
-    "correctOption": "option3",
-    "answer": "(c)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "In SI units, the dimensions of $\\sqrt{\\frac{\\epsilon_{0}}{\\mu_{0}}}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$[A^{-1}TML^{3}]$", "imageUrl": "" },
-      "option2": { "text": "$[AT^{2}M^{-1}L^{-1}]$", "imageUrl": "" },
-      "option3": { "text": "$[AT^{-3}ML^{3/2}]$", "imageUrl": "" },
-      "option4": { "text": "$[A^{2}T^{3}M^{-1}L^{-2}]$", "imageUrl": "" }
-    },
-    "correctOption": "option4",
-    "answer": "(d)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let I, r, c, and v represent inductance, resistance, capacitance and voltage, respectively. The dimension of $\\frac{I}{rcv}$ in SI units will be",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$[LT^{2}]$", "imageUrl": "" },
-      "option2": { "text": "[LTA]", "imageUrl": "" },
-      "option3": { "text": "$[A^{-1}]$", "imageUrl": "" },
-      "option4": { "text": "$[LA^{-2}]$", "imageUrl": "" }
-    },
-    "correctOption": "option3",
-    "answer": "(c)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If speed (V), acceleration (A) and force (F) are considered as fundamental units, the dimension of Young's modulus will be",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$[V^{-4}A^{-2}F]$", "imageUrl": "" },
-      "option2": { "text": "$[V^{-2}A^{2}F^{2}]$", "imageUrl": "" },
-      "option3": { "text": "$[V^{-2}A^{2}F^{-2}]$", "imageUrl": "" },
-      "option4": { "text": "$[V^{-4}A^{2}F]$", "imageUrl": "" }
-    },
-    "correctOption": "option4",
-    "answer": "(d)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The force of interaction between two atoms is given by $F=\\alpha\\beta~exp(-\\frac{x^{2}}{\\alpha kT});$ where x is the distance, k is the Boltzmann constant and T is temperature and $\\alpha$ and $\\beta$ are two constants. The dimension of $\\beta$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$[MLT^{-2}]$", "imageUrl": "" },
-      "option2": { "text": "$[M^{0}L^{2}T^{-4}]$", "imageUrl": "" },
-      "option3": { "text": "$[M^{2}LT^{-4}]$", "imageUrl": "" },
-      "option4": { "text": "$[M^{2}L^{2}\\Gamma^{-2}]$", "imageUrl": "" }
-    },
-    "correctOption": "option1",
-    "answer": "(a)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The density of a material in SI units is $128~kg~m^{-3}$. In certain units in which the unit of length is 25 cm and the unit of mass is 50 g, the numerical value of density of the material is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "40", "imageUrl": "" },
-      "option2": { "text": "16", "imageUrl": "" },
-      "option3": { "text": "640", "imageUrl": "" },
-      "option4": { "text": "410", "imageUrl": "" }
-    },
-    "correctOption": "option1",
-    "answer": "(a)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "In form of G (universal gravitational constant), h (Planck constant) and c (speed of light), the time period will be proportional to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$\\sqrt{\\frac{Gh}{c^{5}}}$", "imageUrl": "" },
-      "option2": { "text": "$\\sqrt{\\frac{Gh}{c^{3}}}$", "imageUrl": "" },
-      "option3": { "text": "$\\sqrt{\\frac{hc^{5}}{G}}$", "imageUrl": "" },
-      "option4": { "text": "$\\sqrt{\\frac{c^{3}}{Gh}}$", "imageUrl": "" }
-    },
-    "correctOption": "option1",
-    "answer": "(a)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $[\\epsilon_{0}]$ denote the dimensional formula of the permittivity of vacuum. If $M=mass$, $L=$ length, $T=$ Time and $A=$ electric current, then",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$[\\epsilon_{0}]=[M^{-1}L^{-3}T^{2}A]$", "imageUrl": "" },
-      "option2": { "text": "$[\\epsilon_{0}]=[M^{-1}L^{-3}T^{4}A^{2}]$", "imageUrl": "" },
-      "option3": { "text": "$[\\epsilon_{0}]=[M^{-2}L^{2}T^{-1}A^{-2}]$", "imageUrl": "" },
-      "option4": { "text": "$[\\epsilon_{0}]=[M^{-1}L^{2}T^{-1}A^{2}]$", "imageUrl": "" }
-    },
-    "correctOption": "option2",
-    "answer": "(b)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Which of the following sets have different dimensions?",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "Pressure, Young's modulus, Stress", "imageUrl": "" },
-      "option2": { "text": "Emf, Potential difference, Electric potential", "imageUrl": "" },
-      "option3": { "text": "Heat, Work done, Energy", "imageUrl": "" },
-      "option4": { "text": "Dipole moment, Electric flux, Electric field", "imageUrl": "" }
-    },
-    "correctOption": "option4",
-    "answer": "(d)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "In the relation, $p=\\frac{\\alpha}{\\beta}e^{-\\frac{\\alpha Z}{kT}}$, p is pressure, Z is distance, k is Boltzmann's constant and T is the temperature. The dimensional formula of $\\beta$ will be",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$[M^{0}L^{2}T^{0}]$", "imageUrl": "" },
-      "option2": { "text": "$[ML^{2}T]$", "imageUrl": "" },
-      "option3": { "text": "$[ML^{0}T^{-1}]$", "imageUrl": "" },
-      "option4": { "text": "$[M^{0}L^{2}T^{-1}]$", "imageUrl": "" }
-    },
-    "correctOption": "option1",
-    "answer": "(a)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "A quantity X is given by $\\epsilon_{0}L\\frac{\\Delta V}{\\Delta t},$ where $\\epsilon_{0}$ is the permittivity of free space, L is a length, $\\Delta V$ is a potential difference and $\\Delta t$ is a time interval. The dimensional formula for X is the same as that of",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "resistance", "imageUrl": "" },
-      "option2": { "text": "charge", "imageUrl": "" },
-      "option3": { "text": "voltage", "imageUrl": "" },
-      "option4": { "text": "current", "imageUrl": "" }
-    },
-    "correctOption": "option4",
-    "answer": "(d)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The dimensions of $\\frac{1}{2}\\epsilon_{0}E^{2}$ ($\\epsilon_{0}$: permittivity of free space; E: electric field) is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$[MLT^{-1}]$", "imageUrl": "" },
-      "option2": { "text": "$[ML^{2}T^{-2}]$", "imageUrl": "" },
-      "option3": { "text": "$[MLT^{-2}]$", "imageUrl": "" },
-      "option4": { "text": "$[ML^{2}T^{-1}]$", "imageUrl": "" }
+      "option1": {
+        "text": "$n=20$ and $Re(z)=-10$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$n=40$ and $Re(z)=10$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$n=40$ and $Re(z)=-10$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$n=20$ and $Re(z)=10$",
+        "imageUrl": ""
+      }
     },
     "correctOption": "",
-    "answer": "None of the four choices",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
+    "answer": ""
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "In the formula $X=3Y~Z^{2}$, X and Z have dimensions of capacitance and magnetic induction, respectively. What are the dimensions of Y in MKSQ system?",
+      "text": "All the points in the set $S=\\{\\frac{\\alpha+i}{\\alpha-i}:\\alpha\\in R\\}$ $(i=\\sqrt{-1})$ lie on a (2019 Main, 9 April 1)",
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "$[M^{-3}L^{-1}T^{3}Q^{4}]$", "imageUrl": "" },
-      "option2": { "text": "$[M^{-3}L^{-2}T^{-4}Q^{4}]$", "imageUrl": "" },
-      "option3": { "text": "$[M^{-2}L^{-2}T^{4}Q^{4}]$", "imageUrl": "" },
-      "option4": { "text": "$[M^{-3}L^{-2}T^{4}Q]$", "imageUrl": "" }
-    },
-    "correctOption": "option2",
-    "answer": "(b)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The least count of the main scale of a vernier caliper is 1 mm. Its vernier scale is divided into 10 divisions and these 10 divisions coincide with 9 divisions of the main scale. When measuring the diameter of a wire, the zero of the vernier scale lies between 2.0 cm and 2.1 cm and 5th division of vernier scale coincides with a main scale division. The diameter of the wire is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "2.05 cm", "imageUrl": "" },
-      "option2": { "text": "2.07 cm", "imageUrl": "" },
-      "option3": { "text": "2.02 cm", "imageUrl": "" },
-      "option4": { "text": "2.00 cm", "imageUrl": "" }
-    },
-    "correctOption": "option1",
-    "answer": "(c)",
-    "subject": "General Physics",
-    "topic": "Errors and Experiment"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The density of a material in SI units is $128~kg~m^{-3}$. In certain units in which the unit of length is 25 cm and the unit of mass is 50 g, the numerical value of density of the material is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "40", "imageUrl": "" },
-      "option2": { "text": "16", "imageUrl": "" },
-      "option3": { "text": "640", "imageUrl": "" },
-      "option4": { "text": "410", "imageUrl": "" }
+      "option1": {
+        "text": "circle whose radius is $\\sqrt{2}.$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "straight line whose slope is -1",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "circle whose radius is 1.",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "straight line whose slope is 1.",
+        "imageUrl": ""
+      }
     },
     "correctOption": "",
-    "answer": "(*)",
-    "subject": "General Physics",
-    "topic": "Errors and Experiment"
+    "answer": ""
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "The quantity that has the dimensions of $\\frac{\\text{ML}^{2}}{\\text{T}}$ is",
+      "text": "Let $z\\in C$ be such that $|z|<1.$ $\\omega=\\frac{5+3z}{5(1-z)}$ then (2019 Main, 9 April II)",
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "power", "imageUrl": "" },
-      "option2": { "text": "work", "imageUrl": "" },
-      "option3": { "text": "Young's modulus", "imageUrl": "" },
-      "option4": { "text": "torque", "imageUrl": "" }
+      "option1": {
+        "text": "$4~Im(\\omega)>5$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "5Re ( $(\\omega)>1$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$5~Im(\\omega)<1$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$5~Re(\\omega)>4$",
+        "imageUrl": ""
+      }
     },
-    "correctOption": "option2",
-    "answer": "(b)",
-    "subject": "General Physics",
-    "topic": "Errors and Experiment"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "A student measures the time period of 100 oscillations of a simple pendulum four times. The data taken are 90 s, 91 s, 95 s and 92 s. If the minimum division in the measuring clock is 1 s, then the reported mean time should be",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "92 $\\pm$ 2 s", "imageUrl": "" },
-      "option2": { "text": "92 $\\pm$ 5 s", "imageUrl": "" },
-      "option3": { "text": "92 $\\pm$ 1.8 s", "imageUrl": "" },
-      "option4": { "text": "92 $\\pm$ 3 s", "imageUrl": "" }
-    },
-    "correctOption": "option1",
-    "answer": "(b)",
-    "subject": "General Physics",
-    "topic": "Errors and Experiment"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "In an experiment, the percentage of error in the measurement of a physical quantity is estimated as $\\pm$2%. If the formula for the physical quantity is $P = a^{2}b^{3}c^{-1}d^{-2}$, then the percentage of error in P is (Given: error in a, b, c, d is 1%, 2%, 3%, 4% respectively)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$20\\%$", "imageUrl": "" },
-      "option2": { "text": "$21\\%$", "imageUrl": "" },
-      "option3": { "text": "$23\\%$", "imageUrl": "" },
-      "option4": { "text": "$25\\%$", "imageUrl": "" }
-    },
-    "correctOption": "option2",
-    "answer": "(d)",
-    "subject": "General Physics",
-    "topic": "Errors and Experiment"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The diameter of a steel ball is measured using a vernier caliper which has divisions of 0.05 cm on its main scale. The main scale reading is 0.5 cm, and the 5th division of the vernier scale coincides with the main scale division. If the vernier caliper has a least count of 0.01 cm, the diameter of the ball is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "0.55 cm", "imageUrl": "" },
-      "option2": { "text": "0.50 cm", "imageUrl": "" },
-      "option3": { "text": "0.51 cm", "imageUrl": "" },
-      "option4": { "text": "0.53 cm", "imageUrl": "" }
-    },
-    "correctOption": "option3",
-    "answer": "(a)",
-    "subject": "General Physics",
-    "topic": "Errors and Experiment"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "In a simple pendulum experiment, the length of the pendulum is measured with an accuracy of 0.5% and the time period with an accuracy of 1%. The maximum possible percentage error in the measurement of acceleration due to gravity is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$0.5\\%$", "imageUrl": "" },
-      "option2": { "text": "$1.5\\%$", "imageUrl": "" },
-      "option3": { "text": "$2.5\\%$", "imageUrl": "" },
-      "option4": { "text": "$3.0\\%$", "imageUrl": "" }
-    },
-    "correctOption": "option3",
-    "answer": "(a)",
-    "subject": "General Physics",
-    "topic": "Errors and Experiment"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The current voltage relation of diode is given by $I=(e^{1000V/T}-1)mA$, where the applied voltage V is in volt and the temperature T is in kelvin. If a student makes an error in measuring the voltage by +0.01 V, what will be the percentage error in the current at 300 K?",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$10\\%$", "imageUrl": "" },
-      "option2": { "text": "$20\\%$", "imageUrl": "" },
-      "option3": { "text": "$30\\%$", "imageUrl": "" },
-      "option4": { "text": "$40\\%$", "imageUrl": "" }
-    },
-    "correctOption": "option1",
-    "answer": "(a)",
-    "subject": "General Physics",
-    "topic": "Errors and Experiment"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "A student measures the time period of 100 oscillations of a simple pendulum four times. The data taken are 90 s, 91 s, 95 s and 92 s. If the minimum division in the measuring clock is 1 s, then the reported mean time should be",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "92 $\\pm$ 2 s", "imageUrl": "" },
-      "option2": { "text": "92 $\\pm$ 5 s", "imageUrl": "" },
-      "option3": { "text": "92 $\\pm$ 1.8 s", "imageUrl": "" },
-      "option4": { "text": "92 $\\pm$ 3 s", "imageUrl": "" }
-    },
-    "correctOption": "option1",
-    "answer": "(d)",
-    "subject": "General Physics",
-    "topic": "Errors and Experiment"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The pitch of the screw gauge is 1 mm and there are 100 divisions on its circular scale. When nothing is put in between its jaws, the main scale reads 1 mm and 20th division of circular scale coincides with the main scale line. When a wire is tightly placed between the jaws, the main scale reads 3 mm and 75th division of circular scale coincides with the main scale line. The diameter of the wire is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "2.80 mm", "imageUrl": "" },
-      "option2": { "text": "2.85 mm", "imageUrl": "" },
-      "option3": { "text": "2.90 mm", "imageUrl": "" },
-      "option4": { "text": "2.95 mm", "imageUrl": "" }
-    },
-    "correctOption": "option1",
-    "answer": "(a)",
-    "subject": "General Physics",
-    "topic": "Errors and Experiment"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The length of the string of a simple pendulum is measured with an accuracy of 0.1% and the time period with an accuracy of 2%. The acceleration due to gravity is determined by the relation $g=\\frac{4\\pi^{2}L}{T^{2}}$. What is the total error in the measurement of g?",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$\\pm4.1\\%$", "imageUrl": "" },
-      "option2": { "text": "$\\pm2.1\\%$", "imageUrl": "" },
-      "option3": { "text": "$\\pm3.1\\%$", "imageUrl": "" },
-      "option4": { "text": "$\\pm4.0\\%$", "imageUrl": "" }
-    },
-    "correctOption": "option1",
-    "answer": "$\\pm4\\%$",
-    "subject": "General Physics",
-    "topic": "Errors and Experiment"
-  }
-,
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The angle between the vectors $\\vec{A}$ and $\\vec{B}$ is $\\theta$. The value of the triple product $\\vec{A} \\cdot (\\vec{B} \\times \\vec{A})$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$A^{2}B$", "imageUrl": "" },
-      "option2": { "text": "Zero", "imageUrl": "" },
-      "option3": { "text": "$A^{2}B~sin\\theta$", "imageUrl": "" },
-      "option4": { "text": "$A^{2}B~cos\\theta$", "imageUrl": "" }
-    },
-    "correctOption": "option2",
-    "answer": "(b)",
-    "subject": "General Physics",
-    "topic": "Vectors"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $\\vec{A}=(\\hat{i}+2\\hat{j}+\\hat{k})$ and $\\vec{B}=(\\hat{i}-\\hat{j}+\\hat{k})$ be two vectors. The component of $\\vec{B}$ perpendicular to $\\vec{A}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$-\\frac{1}{6}(2\\hat{i}+\\hat{j}+\\hat{k})$", "imageUrl": "" },
-      "option2": { "text": "$-\\frac{1}{3}(\\hat{i}-2\\hat{j}+\\hat{k})$", "imageUrl": "" },
-      "option3": { "text": "$-\\frac{1}{6}(-\\hat{i}+2\\hat{j}-5\\hat{k})$", "imageUrl": "" },
-      "option4": { "text": "$-\\frac{1}{3}(\\hat{i}+2\\hat{j}-\\hat{k})$", "imageUrl": "" }
-    },
-    "correctOption": "option2",
-    "answer": "(c)",
-    "subject": "General Physics",
-    "topic": "Vectors"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $\\vec{A}=\\hat{i}+2\\hat{j}+\\hat{k}$ and $\\vec{B}=\\hat{i}+2\\hat{j}-2\\hat{k}$, then magnitude of a vector $\\vec{C}$ that lies in the plane of $\\vec{A}$ and $\\vec{B}$ and is perpendicular to $\\vec{A}$ is $x\\sqrt{y}$. The value of x will be, if the value of y=36",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "1", "imageUrl": "" },
-      "option2": { "text": "2", "imageUrl": "" },
-      "option3": { "text": "3", "imageUrl": "" },
-      "option4": { "text": "4", "imageUrl": "" }
-    },
-    "correctOption": "option2",
-    "answer": "(b)",
-    "subject": "General Physics",
-    "topic": "Vectors"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The resultant of two forces, one double the other in magnitude, is perpendicular to the smaller of the two forces. The angle between the two forces is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$cos^{-1}(\\frac{1}{2})$", "imageUrl": "" },
-      "option2": { "text": "$cos^{-1}(-\\frac{1}{2})$", "imageUrl": "" },
-      "option3": { "text": "$cos^{-1}(\\frac{1}{4})$", "imageUrl": "" },
-      "option4": { "text": "$cos^{-1}(-\\frac{1}{4})$", "imageUrl": "" }
-    },
-    "correctOption": "option2",
-    "answer": "(b)",
-    "subject": "General Physics",
-    "topic": "Vectors"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $\\vec{A}=\\hat{i}+\\hat{j}+\\hat{k}$ and $\\vec{B}=\\hat{i}-\\hat{j}+\\hat{k}$, then a unit vector in the direction of $\\vec{A}-\\vec{B}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$\\frac{1}{\\sqrt{2}}(\\hat{j}-\\hat{k})$", "imageUrl": "" },
-      "option2": { "text": "$\\frac{1}{\\sqrt{2}}(\\hat{j})$", "imageUrl": "" },
-      "option3": { "text": "$\\frac{1}{\\sqrt{2}}(\\hat{k})$", "imageUrl": "" },
-      "option4": { "text": "$\\frac{1}{\\sqrt{2}}(\\hat{i})$", "imageUrl": "" }
-    },
-    "correctOption": "option2",
-    "answer": "(b)",
-    "subject": "General Physics",
-    "topic": "Vectors"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The angle between vector $(\\vec{A} \\text{ and } \\vec{B})$ is $\\theta$. The value of the triple product $\\vec{A} \\cdot (\\vec{B} \\times \\vec{A})$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$A^{2}B$", "imageUrl": "" },
-      "option2": { "text": "Zero", "imageUrl": "" },
-      "option3": { "text": "$A^{2}B~sin\\theta$", "imageUrl": "" },
-      "option4": { "text": "$A^{2}B~cos\\theta$", "imageUrl": "" }
-    },
-    "correctOption": "option2",
-    "answer": "(b)",
-    "subject": "General Physics",
-    "topic": "Vectors"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Three forces $\\vec{F_{1}}, \\vec{F_{2}} \\text{ and } \\vec{F_{3}}$ are acting on a particle such that the particle is in equilibrium. If the forces $\\vec{F_{1}} \\text{ and } \\vec{F_{2}}$ are perpendicular to each other, then the magnitude of $\\vec{F_{3}}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$F_{1}+F_{2}$", "imageUrl": "" },
-      "option2": { "text": "$F_{1}-F_{2}$", "imageUrl": "" },
-      "option3": { "text": "$\\sqrt{F_{1}^{2}+F_{2}^{2}}$", "imageUrl": "" },
-      "option4": { "text": "$|F_{1}-F_{2}|$", "imageUrl": "" }
-    },
-    "correctOption": "option3",
-    "answer": "(c)",
-    "subject": "General Physics",
-    "topic": "Vectors"
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "A vector $\\vec{A}$ is given by $\\vec{A}=A_{x}\\hat{i}+A_{y}\\hat{j}+A_{z}\\hat{k}$. The angle between $\\vec{A}$ and Z-axis is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$cos^{-1}(\\frac{A_{x}}{A})$", "imageUrl": "" },
-      "option2": { "text": "$cos^{-1}(\\frac{A_{y}}{A})$", "imageUrl": "" },
-      "option3": { "text": "$cos^{-1}(\\frac{A_{z}}{A})$", "imageUrl": "" },
-      "option4": { "text": "$cos^{-1}(\\frac{\\sqrt{A_{x}^{2}+A_{y}^{2}}}{A})$", "imageUrl": "" }
-    },
-    "correctOption": "option3",
-    "answer": "(c)",
-    "subject": "General Physics",
-    "topic": "Vectors"
-  },  
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Consider a vector $\\vec{F}=4\\hat{i}-3\\hat{j}$ . Another vector $\\vec{G}$ that is perpendicular to $\\vec{F}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$3\\hat{i}+4\\hat{j}$", "imageUrl": "" },
-      "option2": { "text": "$6\\hat{i}$", "imageUrl": "" },
-      "option3": { "text": "$7\\hat{k}$", "imageUrl": "" },
-      "option4": { "text": "$3\\hat{i}-4\\hat{j}$", "imageUrl": "" }
-    },
-    "correctOption": "option1",
-    "answer": "(d)",
-    "subject": "General Physics",
-    "topic": "Vectors"
-  }
-,
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "The energy of a system as a function of time  is given as $E(t)=A^{2}exp(-\\alpha t)$ where $\\alpha=0.2s^{-1}$. The measurement of A has an error of 1.25%. If the error in the measurement of time is 1.50%, the percentage error in the value of $E(t)$ at $t=5~s$ is",
-      "imageUrl": ""
-    },
-    "options": {},
     "correctOption": "",
-    "answer": "4",
-    "subject": "General Physics",
-    "topic": "Significant Figures and Error"
+    "answer": ""
   },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "During Searle's experiment, zero of the vernier scale lies between $3.20\\times10^{-2}$ m and $3.25\\times10^{-2}$ m of the main scale. The 20th division of the vernier scale exactly coincides with one of the main scale divisions. When an additional load of 2 kg is applied to the wire, the zero of the vernier scale still lies between $3.20\\times10^{-2}$ m and $3.25\\times10^{-2}$ m of the main scale but now the 45th division of vernier scale coincides with one of the main scale divisions. The length of the thin metallic wire is 2 m and its cross-sectional area is $8\\times10^{-7}m^{2}$. The least count of the vernier scale is $1.0\\times10^{-5}$ m. The maximum percentage error in the Young's modulus of the wire is",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": "",
-    "answer": "See the solution",
-    "subject": "General Physics",
-    "topic": "Experimental Physics"
-  }
-,
   {
     "type": "MCQ",
     "question": {
-      "text": "Match the columns. \nColumn-I (Physical quantity)\n A. Magnetic Induction\n B. Electrical resistance\n C. Specific heat\n D. Latent heat\n\nColumn-II (Dimension)\n p. $[L^{2}T^{-2}K^{-1}]$\n q. $[ML^{2}T^{-3}A^{-2}]$\n r. $[ML^{0}T^{-2}A^{-1}]$\n s. $[L^{2}T^{-2}]$",
+      "text": "Let $(-2-\\frac{1}{3}i)^{3}=\\frac{x+iy}{27}(i=\\sqrt{-1})$ where x and y are real numbers, then $y-x$ xequals (2019 Main, 11 Jan 1)",
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "A-r, B-q, C-p, D-s", "imageUrl": "" },
-      "option2": { "text": "A-r, B-q, C-s, D-p", "imageUrl": "" },
-      "option3": { "text": "A-s, B-q, C-p, D-r", "imageUrl": "" },
-      "option4": { "text": "A-s, B-p, C-q, D-r", "imageUrl": "" }
+      "option1": {
+        "text": "91",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "85",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "-85",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "-91",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $A=\\{\\theta\\in(-\\frac{\\pi}{2},\\pi):\\frac{3+2i~sin~\\theta}{1-2i~sin~\\theta}$ is purely imaginary Then, the sum of the elements in A is (2019 Main, 9 Jan 1)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$\\frac{3\\pi}{4}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{5\\pi}{6}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$\\pi$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$\\frac{2\\pi}{3}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "A value of for which $\\frac{2+3i~sin~\\theta}{1-2i~sin~\\theta}$ is purely imaginary, is (2016 Main)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$\\frac{\\pi}{3}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{\\pi}{6}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$sin^{-1}(\\frac{\\sqrt{3}}{4})$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$sin^{-1}(\\frac{1}{\\sqrt{3}})$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $|\\begin{matrix}6i&-3i&1\\\\ 4&3i&-1\\\\ 20&3&i\\end{matrix}|=x+iy,then$ (1998, 2M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$x=3,$ $y=1$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$x=1,$ $y=1$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$x=0$, $y=3$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$x=0$ $y=0$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The value of sum$\\sum \\sum_{n=1}^{13}(i^{n}+i^{n+1}),$ where $i=\\sqrt{-1},$ equals (1998, 2M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "i",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$i-1$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "-i",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "0",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The smallest positive integer n for which $(\\frac{1+i}{1-i})^{n}=1$ is (1980, 2M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "8",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "16",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "12",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of these",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Leta, b, xand y be real numbers such that $a-b=1and$ $y\\ne0$ If the complex number $z=x+iy$ satisfies $Im(\\frac{az+b}{z+1})=y,$ then which of the following is(are) possible value(s) of x? (2017 Adv.)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$1-\\sqrt{1+y^{2}}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$-1-\\sqrt{1-y^{2}}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$1+\\sqrt{1+y^{2}}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$-1+\\sqrt{1-y^{2}}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The equation $z-i|=|z-1|,$ $i=\\sqrt{-1},$ represents (2019 Main, 12 April 1)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "a circle of radius $\\frac{1}{2}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "the line passing through the origin with slope 1",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "a circle of radius 1",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "the line passing through the origin with slope - 1",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $a>0$ and $z=\\frac{(1+i)^{2}}{a-i},$ has magnitude $\\sqrt{\\frac{2}{5}}$ then $\\overline{z}$ is equal to (2019 Main, 10 April 1)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$\\frac{1}{5}-\\frac{3}{5}i$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$-\\frac{1}{5}-\\frac{3}{5}i$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$-\\frac{1}{5}+\\frac{3}{5}i$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$-\\frac{3}{5}-\\frac{1}{5}i$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $z_{1}$ and $z_{2}$ be two complex numbers satisfying $|z_{1}|=9$ and $|z_{2}-3-4i|=4$ Then, the minimum value of $|z_{1}-z_{2}|$ is (2019 Main, 12 Jan II)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "1",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "2",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$\\sqrt{2}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "0",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $\\frac{z-\\alpha}{\\overline{z}+\\alpha}(\\alpha\\in R)$ is a purely imaginary number and $|z|=2$ then a value of a is (2019 Main, 12 Jan 1)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$\\sqrt{2}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{1}{2}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "1",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "2",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let z be a complex number such that $|z|+z=3+i$ (where $i=\\sqrt{-1})$. Then, $|z|$ is equal to (2019 Main, 11 Jan II)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$\\frac{\\sqrt{34}}{3}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{5}{3}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$\\frac{\\sqrt{41}}{4}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$\\frac{5}{4}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "A complex number z is said to be unimodular, $if|z|\\ne1$ is $\\frac{z_{1}-2z_{2}}{2-z_{1}\\overline{z}_{2}}$ unimodular and z $z_{2}$ is not unimodular. Then, the point $z_{1}$ lies on a (2015 Main)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "straight line parallel to X-axis",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "straight line parallel to Y-axis",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "circle of radius 2",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "circle of radius $\\sqrt{2}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If z is a complex number such that $|z|\\ge2,$ then the minimum value of $z+\\frac{1}{2}|$ (2014 Main)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "is equal to $5/2$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "lies in the interval (1, 2)",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "is strictly greater than $5/2$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "is strictly greater than $3/2$ but less than $5/2$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let complex numbers a and $1/\\overline{\\alpha}$ lies on circles $(x-x_{0})^{2}+(y-y_{0})^{2}=r^{2}$ and $(x-x_{0})^{2}+(y-y_{0})^{2}=4r^{2},$ respectively. $z_{0}=x_{0}+\\iota y_{0}$ satisfies the equation $2|z_{0}|^{2}=r^{2}+2,$ then is equal to (2013 Adv.)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$\\frac{1}{\\sqrt{2}}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{1}{2}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$\\frac{1}{\\sqrt{7}}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$\\frac{1}{3}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let z be a complex number such that the imaginary part of z is non-zero and $a=z^{2}+z+1$ is real. Then, a cannot take the value (2012)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "-1",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{1}{3}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$\\frac{1}{2}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$\\frac{3}{4}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $z=x+iy$ be a complex number where, x and y are integers. Then, the area of the rectangle whose vertices are the root of the equation $z\\overline{z}^{3}+\\overline{z}z^{3}=350,$ is (2009)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "48",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "32",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "40",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "80",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $|z|=1$ and $z\\ne\\pm1$ then all the values of $\\frac{z}{1-z^{2}}$ lie on (2007, 3M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "a line not passing through the origin",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$|z|=\\sqrt{2}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "the X-axis",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "the Y-axis",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $w=\\alpha+i\\beta$, where $\\beta\\ne0$ and $z\\ne1$, satisfies the condition that $(\\frac{w-\\overline{w}z}{1-z})$ is purely real, then the set of values of z is (2006, 3M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$z|=1,$ $z\\ne2$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$|z|=1$ $z\\ne1$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$z=z$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of these",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $|z|=1$ and $w=\\frac{z-1}{z+1}$ (where, $z\\ne-1)$, then Re (w) is (2003, 1M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "0",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{1}{2+12}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$\\frac{1}{|z+1|^{z}}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$\\frac{\\sqrt{2}}{|z+1|^{2}}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "For all complex numbers $z_{1}$, $z_{2}$ satisfying $|z_{1}|=12$ and $|z_{2}-3-4i|=5$ the minimum value of $|z_{1}-z_{2}|$ is (2002, 1M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "0",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "2",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "7",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "17",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $z_{1}$ and $Z_{3}$ are complex numbers such that $|z_{1}|=|z_{2}|=|z_{3}|=|\\frac{1}{z_{1}}+\\frac{1}{z_{2}}+\\frac{1}{z_{3}}|=1$, then $|z_{1}+z_{2}+z_{3}|$ (2000, 2M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "equal to 1",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "less than 1",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "greater than 3",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "equal to 3",
+        "imageUrl": ""
+      }
     },
     "correctOption": "option1",
-    "answer": "(a)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
+    "answer": ""
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "Match the columns. \nColumn-I (Physical quantity)\n A. Wavelength\n B. Time\n C. Pressure\n D. Power\n\nColumn-II (Dimension)\n p. $[ML^{2}T^{-3}]$\n q. $[M^{1}L^{-1}T^{-2}]$\n r. $[T]$\n s. $[L]$",
+      "text": "For positive integers $n_{1}$, $n_{2}$ the value of expression $(1+i)^{n_{1}}+(1+i^{3})^{n_{1}}+(1+i^{5})^{n_{2}}+(1+i^{7})^{n_{2}}$ here $i=\\sqrt{-1}$ is a real number, if and only if (1996, 2M)",
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "A-r, B-s, C-p, D-q", "imageUrl": "" },
-      "option2": { "text": "A-s, B-r, C-q, D-p", "imageUrl": "" },
-      "option3": { "text": "A-s, B-r, C-p, D-q", "imageUrl": "" },
-      "option4": { "text": "A-r, B-s, C-q, D-p", "imageUrl": "" }
+      "option1": {
+        "text": "$n_{1}=n_{2}+1$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$n_{1}=n_{2}-1$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$n_{1}=n_{2}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$n_{1}>0$ $n_{2}>0$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The numbers complex $sin~x+i~cos~2x$ and $cos~x-i~sin~2x$ are conjugate to each other, for (1988, 2M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$x=n\\pi$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$x=0$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$x=(n+1/2)\\pi$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "no value of x",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The points $z_{1}$, $z_{2}$, $Z_{3}$ and $z_{4}$ in the complex plane are the vertices of a parallelogram taken in order, if and only if (1983, 1M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$z_{1}+z_{4}=z_{2}+z_{3}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$z_{1}+z_{3}=z_{2}+z_{4}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$z_{1}+z_{2}=z_{3}+z_{4}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of these",
+        "imageUrl": ""
+      }
     },
     "correctOption": "option2",
-    "answer": "(b)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
+    "answer": ""
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "Match the columns. \nColumn-I (Physical quantity)\n A. Speed of light\n B. Planck's constant\n C. Gravitational constant\n D. Permeability\n\nColumn-II (Relation with other quantities)\n p. $\\sqrt{\\frac{1}{\\mu_{0}\\epsilon_{0}}}$\n q. $\\frac{E}{v}$\n r. $\\frac{F r^{2}}{m_{1}m_{2}}$\n s. $\\frac{B}{\\mu_{0}}$",
+      "text": "If $z=x+iy$ and $w=(1-iz)/(z-i)$ then $|w|=1$ implies that, in the complex plane (1983, 1M)",
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "A-p, B-q, C-r, D-s", "imageUrl": "" },
-      "option2": { "text": "A-q, B-p, C-r, D-s", "imageUrl": "" },
-      "option3": { "text": "A-p, B-r, C-q, D-s", "imageUrl": "" },
-      "option4": { "text": "A-q, B-r, C-p, D-s", "imageUrl": "" }
+      "option1": {
+        "text": "z lies on the imaginary axis",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "z lies on the real axis",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "z lies on the unit circle",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of these",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "option2",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The inequality $|z-4|<|z-2|$ represents the region given by (1982, 2M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "Re $(z)\\ge0$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "Re $(z)<0$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "Re $(z)>0$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of these",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $z=(\\frac{\\sqrt{3}}{2}+\\frac{i}{2})^{5}+(\\frac{\\sqrt{3}}{2}-\\frac{i}{2})^{5}$ ,then (1982, 2M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$Re(z)=0$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$Im(z)=0$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "Re $e(z)>0,Im(z)>0$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "Re $e(z)>0,Im(z)<0$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "option2",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The complex numbers $z=x+iy$ which satisfy the equation $\\frac{|z-5i}{z+5i}|=1,$ lie on (1981, 2M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "the X-axis",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "the straight line $y=5$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "a circle passing through the origin",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of the above",
+        "imageUrl": ""
+      }
     },
     "correctOption": "option1",
-    "answer": "(a)",
-    "subject": "General Physics",
-    "topic": "Units and Dimensions"
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let s, t, r be non-zero complex numbers and L be the set of solutions $z=x+iy$ (x, $y\\in R$ $i=\\sqrt{-1})$ of the equation $sz+t\\overline{z}+r=0,$ where $\\overline{z}=x-iy.$ Then, which of the following statement(s) is (are) TRUE? (2018 Adv.)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "If L has exactly one element, $then|s|\\ne|t||$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "If $|s|=|t|,$ then L has infinitely many elements",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "The number of elements in $L\\cap\\{z:|z-1+i|=5\\}$ is at most 2",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "If L has more than one element, then Lhas infinitely many elements",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $z_{1}$ and $z_{2}$ be complex numbers such that $z_{1}\\ne z_{2}$ and $|z_{1}|=|z_{2}|$. If $z_{1}$ has positive real part and $z_{2}$ has negative imaginary part, then $\\frac{z_{1}+z_{2}}{z_{1}-z_{2}}$ may be (1986, 2M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "zero",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "real and positive",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "real and negative",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "purely imaginary",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $z_{1}=a+ib$ and $z_{2}=c+id$ are complex numbers such that $|z_{1}|=|z_{2}|=1$ and Re $(z_{1}\\overline{z}_{2})=0,$ then the pair of Complex Numbers 3 $w_{1}=a+$ ic and $w_{2}=b+id$ satisfies (1985, 2M)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$|w_{1}|=1$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$|w_{2}|=1$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "Re $(w_{1}\\overline{w_{2}})=0$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of these",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": "",
+    "answer": ""
   }
+  
 ]
