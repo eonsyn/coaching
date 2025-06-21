@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import {   toast } from 'react-toastify';
 import { FaHome, FaUser, FaNewspaper } from "react-icons/fa";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { RiLogoutCircleRLine } from "react-icons/ri";
@@ -17,6 +18,22 @@ function Asidebar() {
   const pathname = usePathname();
   const [theme, setTheme] = useState("system");
 
+  const handleLogout = async () => {
+    try{
+      const response = await fetch("/api/userAuth/logout", {
+        method: "POST",
+        credentials: "include",
+      });
+      if (response.ok) {
+        toast.success("Logged out successfully");
+        window.location.href = "/auth/login";
+      } else {
+        console.error("Logout failed");
+      }
+    } catch (error) {
+      console.error("Error during logout:", error);
+    }
+  }
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -82,7 +99,9 @@ function Asidebar() {
             </span>
           </button>
 
-          <button className="flex items-center gap-3 w-full py-2 px-3 rounded-md text-red-400 hover:bg-red-100 transition">
+          <button 
+            onClick={handleLogout}
+            className="flex items-center gap-3 w-full py-2 px-3 rounded-md text-red-400 hover:bg-red-100 transition">
             <RiLogoutCircleRLine className="text-xl" />
             <span>Logout</span>
           </button>
