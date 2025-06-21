@@ -19,7 +19,7 @@ export default async function RootLayout({ children }) {
  
   return (
     <html data-theme="light" lang="en">
-      <body className="font-puritan antialiased h-screen w-screen overflow-hidden">
+      <body className="font-puritan antialiased min-h-screen w-screen  ">
      <ToastContainer /> 
       {children}
        

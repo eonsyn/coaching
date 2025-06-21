@@ -70,7 +70,7 @@ export default function Page() {
       topic: meta.topic || q.topic || "Unknown",
       unit: meta.unit || q.unit || "",
     }));
- 
+
     try {
       const res = await fetch("/api/question", {
         method: "POST",
@@ -91,7 +91,47 @@ export default function Page() {
     }
   };
 
+  const promptText = `Task: Extract all questions from this PDF and format them as an array of JSON objects using the specified schema.
+Important: Return the output in 3 parts. When I say "next", continue with the next part.
+Each part should return a clean array of questions only, strictly in the following JSON format (no extra text or HTML).
 
+Output Format:
+[
+  {
+    "type": "MCQ" | "Numerical" | "Descriptive",
+    "question": {
+      "text": "Question text with LaTeX math like $\\int x^2 dx$ if present.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "Option A", "imageUrl": "" },
+      "option2": { "text": "Option B", "imageUrl": "" },
+      "option3": { "text": "Option C", "imageUrl": "" },
+      "option4": { "text": "Option D", "imageUrl": "" }
+    },
+    "correctOption": "optionX",
+    "answer": ""
+  }
+]
+
+Rules & Notes:
+- Divide the PDF content into 3 parts. Wait for my “next” before proceeding to the next one.
+- Preserve any math expressions using LaTeX syntax with $...$.
+- If a question or option contains an image, fill imageUrl with the extracted URL (else leave it as "").
+- For MCQs, use correctOption if the answer key is available.
+- For Numerical or Descriptive, fill the "answer" field with the actual answer if known.
+- If the correct answer is missing, leave both "correctOption" and "answer" as empty strings.
+- Do not include any extra fields (like explanations, createdBy, etc.)
+- Return a clean array of JSON objects only. No wrapping text, no formatting tags, and no extra explanations.
+`;
+  const handlecopy = async () => {
+    try {
+      await navigator.clipboard.writeText(promptText);
+      alert('Prompt copied to clipboard!');
+    } catch (error) {
+      alert('Failed to copy the prompt. Please try again.');
+    }
+  }
   return (
     <div className='w-[100%] '>
       <div className="max-w-5xl mx-auto p-6 ">
@@ -104,7 +144,7 @@ export default function Page() {
           value={rawData}
           onChange={(e) => setRawData(e.target.value)}
         />
-
+        <button onClick={handlecopy} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Copy Prompt</button>
 
         <MetaData setMeta={setMeta} meta={meta} />
         <div className="flex gap-4">

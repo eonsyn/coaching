@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import { toast } from 'react-toastify';
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa"; 
- 
+import Link from 'next/link';
 // Function to generate a strong random password
 const generateStrongPassword = (length = 16) => {
   const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
@@ -259,9 +259,9 @@ export default function SignupPage() {
     )}
     <p className="mt-6 text-center text-sm text-gray-500">
      Have an account?{' '}
-      <a href="/auth/login" className="text-indigo-600 hover:text-indigo-700 font-medium">
+      <Link href="/auth/login" className="text-indigo-600 hover:text-indigo-700 font-medium">
        Login 
-      </a>
+      </Link>
     </p>
   </div>
 </div>
