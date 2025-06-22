@@ -1,317 +1,271 @@
-// app/superadmin/edit/[slug]/page.js
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import useSWR from 'swr';
-import { mutate } from 'swr'; // Import mutate for revalidation
+import useSWR, { mutate } from 'swr';
 
-// Define the fetcher function for GET requests
 const fetcher = async (url) => {
-    const res = await fetch(url);
-    if (!res.ok) {
-        const errorData = await res.json().catch(() => ({ message: 'Unknown error' }));
-        throw new Error(errorData.message || 'An error occurred while fetching the data.');
-    }
-    return res.json();
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('Failed to fetch question');
+  return res.json();
 };
 
-function Page({ params }) {
-    const { slug } = params;
+export default function Page({ params }) {
+  const { slug } = params;
+  const { data, error, isLoading } = useSWR(`/api/question/superadmin/editquestion/${slug}`, fetcher);
 
-    // SWR hook to fetch the initial question data
-    const { data: initialQuestion, error, isLoading } = useSWR(
-        `/api/question/superadmin/editquestion/${slug}`,
-        fetcher
-    );
+  const [formData, setFormData] = useState(null);
+  const [message, setMessage] = useState('');
 
-    // State to hold the editable question data
-    // Initialize with a default structure to avoid errors before data loads
-    const [editedQuestion, setEditedQuestion] = useState(null);
-    const [isUpdating, setIsUpdating] = useState(false);
-    const [updateStatus, setUpdateStatus] = useState(''); // 'success', 'error', 'loading', ''
+  useEffect(() => {
+    if (data) setFormData(data);
+  }, [data]);
 
-    // Effect to update the editedQuestion state when initialQuestion data loads or changes
-    useEffect(() => {
-        if (initialQuestion) {
-            // Deep copy to ensure no direct mutation of SWR's cached data
-            setEditedQuestion(JSON.parse(JSON.stringify(initialQuestion)));
-        }
-    }, [initialQuestion]);
-
-    if (isLoading) {
-        return <div className="p-4 text-white">Loading question...</div>;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    if (name.includes('.')) {
+      const [outer, inner] = name.split('.');
+      setFormData((prev) => ({
+        ...prev,
+        [outer]: {
+          ...prev[outer],
+          [inner]: value,
+        },
+      }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
     }
+  };
 
-    if (error) {
-        return <div className="p-4 text-red-600">Failed to load question: {error.message}</div>;
+  const handleOptionChange = (key, field, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      options: {
+        ...prev.options,
+        [key]: {
+          ...prev.options[key],
+          [field]: value,
+        },
+      },
+    }));
+  };
+
+  const handleCorrectOptionChange = (key) => {
+    const current = formData.correctOption || [];
+
+    if (isMSQ) {
+      const updated = current.includes(key)
+        ? current.filter((opt) => opt !== key)
+        : [...current, key];
+      setFormData((prev) => ({
+        ...prev,
+        correctOption: updated,
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        correctOption: [key],
+      }));
     }
+  };
 
-    if (!initialQuestion || !editedQuestion) {
-        // If data is not available after loading (e.g., 404 from API)
-        return <div className="p-4 text-yellow-600">Question not found.</div>;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch(`/api/question/superadmin/editquestion/${slug}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await res.json();
+      if (res.ok) {
+        setMessage('  Question updated successfully!');
+        mutate(`/api/question/superadmin/editquestion/${slug}`);
+      } else {
+        setMessage(`  Update failed: ${result.message}`);
+      }
+    } catch (err) {
+      console.error(err);
+      setMessage('  Something went wrong.');
     }
+  };
 
-    // --- Handlers for input changes ---
-    const handleQuestionTextChange = (e) => {
-        setEditedQuestion(prev => ({
-            ...prev,
-            question: {
-                ...prev.question,
-                text: e.target.value
-            }
-        }));
-    };
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error fetching question</p>;
+  if (!formData) return null;
 
-    const handleQuestionImageUrlChange = (e) => {
-        setEditedQuestion(prev => ({
-            ...prev,
-            question: {
-                ...prev.question,
-                imageUrl: e.target.value
-            }
-        }));
-    };
+  const { type } = formData;
+  const isMCQ = type === 'MCQ';
+  const isMSQ = type === 'MSQ';
+  const isMCQorMSQ = isMCQ || isMSQ;
 
-    const handleOptionTextChange = (optionKey, e) => {
-        setEditedQuestion(prev => ({
-            ...prev,
-            options: {
-                ...prev.options,
-                [optionKey]: {
-                    ...prev.options[optionKey],
-                    text: e.target.value
-                }
-            }
-        }));
-    };
+  return (
+    <div className="p-4 max-w-4xl mx-auto">
+      <h2 className="text-xl font-semibold mb-4">Edit {type} Question</h2>
 
-    const handleFieldChange = (e) => {
-        const { name, value } = e.target;
-        setEditedQuestion(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-
-    // --- Function to send update to the API ---
-    const handleUpdate = async (e) => {
-        e.preventDefault(); // Prevent default form submission
-
-        setIsUpdating(true);
-        setUpdateStatus('loading');
-
-        try {
-            const res = await fetch(`/api/question/superadmin/editquestion/${slug}`, {
-                method: 'PATCH',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(editedQuestion), // Send the entire editedQuestion object
-            });
-
-            if (!res.ok) {
-                const errorData = await res.json();
-                throw new Error(errorData.message || 'Failed to update question.');
-            }
-
-            const updatedData = await res.json();
-            setUpdateStatus('success');
-            console.log('Question updated successfully:', updatedData);
-
-            // Revalidate SWR cache to fetch the latest data from the server
-            // This ensures the UI reflects the changes that happened in the DB
-            mutate(`/api/question/superadmin/editquestion/${slug}`);
-
-        } catch (err) {
-            setUpdateStatus('error');
-            console.error('Error updating question:', err);
-            // You might want to display a more specific error message to the user
-        } finally {
-            setIsUpdating(false);
-            // Clear status after a short delay
-            setTimeout(() => setUpdateStatus(''), 3000);
-        }
-    };
-
-    return (
-        <div className="bg-black min-h-screen p-8 text-white">
-            <h1 className='text-3xl font-bold mb-6 text-center'>Edit Question (ID: {slug})</h1>
-
-            <form onSubmit={handleUpdate} className="max-w-3xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
-                {/* Status messages */}
-                {updateStatus === 'loading' && (
-                    <div className="bg-blue-500 text-white p-3 rounded mb-4 text-center">Updating...</div>
-                )}
-                {updateStatus === 'success' && (
-                    <div className="bg-green-500 text-white p-3 rounded mb-4 text-center">Update successful!</div>
-                )}
-                {updateStatus === 'error' && (
-                    <div className="bg-red-500 text-white p-3 rounded mb-4 text-center">Update failed. Please try again.</div>
-                )}
-
-                {/* Question Text */}
-                <div className="mb-4">
-                    <label htmlFor="questionText" className="block text-lg font-medium mb-2">Question Text:</label>
-                    <textarea
-                        id="questionText"
-                        className="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500 h-32"
-                        value={editedQuestion.question.text || ''}
-                        onChange={handleQuestionTextChange}
-                        rows="5"
-                    />
-                </div>
-
-                {/* Question Image URL */}
-                <div className="mb-4">
-                    <label htmlFor="questionImageUrl" className="block text-lg font-medium mb-2">Image URL:</label>
-                    <input
-                        type="text"
-                        id="questionImageUrl"
-                        className="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500"
-                        value={editedQuestion.question.imageUrl || ''}
-                        onChange={handleQuestionImageUrlChange}
-                    />
-                    {editedQuestion.question.imageUrl && (
-                        <img src={editedQuestion.question.imageUrl} alt="Current Question" className="mt-4 max-w-xs h-auto rounded shadow-md" />
-                    )}
-                </div>
-
-                {/* Options */}
-                <div className="mb-6">
-                    <h2 className="text-lg font-medium mb-3">Options:</h2>
-                    {Object.keys(editedQuestion.options).map(optionKey => (
-                        <div key={optionKey} className="mb-3">
-                            <label htmlFor={`option-${optionKey}`} className="block text-md font-medium mb-1 capitalize">
-                                {optionKey.replace('option', 'Option ')}:
-                            </label>
-                            <textarea
-                                id={`option-${optionKey}`}
-                                className="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500"
-                                value={editedQuestion.options[optionKey].text || ''}
-                                onChange={(e) => handleOptionTextChange(optionKey, e)}
-                                rows="2"
-                            />
-                        </div>
-                    ))}
-                </div>
-
-                {/* Other fields */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                    <div>
-                        <label htmlFor="type" className="block text-lg font-medium mb-2">Type:</label>
-                        <input
-                            type="text"
-                            id="type"
-                            name="type"
-                            className="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500"
-                            value={editedQuestion.type || ''}
-                            onChange={handleFieldChange}
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="correctOption" className="block text-lg font-medium mb-2">Correct Option:</label>
-                        <select
-                            id="correctOption"
-                            name="correctOption"
-                            className="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500"
-                            value={editedQuestion.correctOption || ''}
-                            onChange={handleFieldChange}
-                        >
-                            <option value="">Select Correct Option</option>
-                            {Object.keys(editedQuestion.options).map(optionKey => (
-                                <option key={optionKey} value={optionKey}>{optionKey.replace('option', 'Option ')}</option>
-                            ))}
-                        </select>
-                    </div>
-                    <div>
-                        <label htmlFor="answer" className="block text-lg font-medium mb-2">Answer:</label>
-                        <input
-                            type="text"
-                            id="answer"
-                            name="answer"
-                            className="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500"
-                            value={editedQuestion.answer || ''}
-                            onChange={handleFieldChange}
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="explanation" className="block text-lg font-medium mb-2">Explanation:</label>
-                        <textarea
-                            id="explanation"
-                            name="explanation"
-                            className="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500"
-                            value={editedQuestion.explanation || ''}
-                            onChange={handleFieldChange}
-                            rows="3"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="subject" className="block text-lg font-medium mb-2">Subject:</label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            className="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500"
-                            value={editedQuestion.subject || ''}
-                            onChange={handleFieldChange}
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="topic" className="block text-lg font-medium mb-2">Topic:</label>
-                        <input
-                            type="text"
-                            id="topic"
-                            name="topic"
-                            className="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500"
-                            value={editedQuestion.topic || ''}
-                            onChange={handleFieldChange}
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="level" className="block text-lg font-medium mb-2">Level:</label>
-                        <input
-                            type="text"
-                            id="level"
-                            name="level"
-                            className="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500"
-                            value={editedQuestion.level || ''}
-                            onChange={handleFieldChange}
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="unit" className="block text-lg font-medium mb-2">Unit:</label>
-                        <input
-                            type="text"
-                            id="unit"
-                            name="unit"
-                            className="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500"
-                            value={editedQuestion.unit || ''}
-                            onChange={handleFieldChange}
-                        />
-                    </div>
-                     <div>
-                        <label htmlFor="publication" className="block text-lg font-medium mb-2">Publication:</label>
-                        <input
-                            type="text"
-                            id="publication"
-                            name="publication"
-                            className="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500"
-                            value={editedQuestion.publication || ''}
-                            onChange={handleFieldChange}
-                        />
-                    </div>
-                </div>
-
-                <button
-                    type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-                    disabled={isUpdating}
-                >
-                    {isUpdating ? 'Updating...' : 'Update Question'}
-                </button>
-            </form>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Question Text */}
+        <div>
+          <label className="block font-medium">Question Text</label>
+          <textarea
+            name="question.text"
+            value={formData.question?.text || ''}
+            onChange={handleChange}
+            className="w-full border rounded p-2"
+          />
         </div>
-    );
-}
 
-export default Page;
+        {/* Options for MCQ/MSQ */}
+        {isMCQorMSQ && (
+          <>
+            <h3 className="font-semibold">Options</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {['option1', 'option2', 'option3', 'option4'].map((key, idx) => {
+                const isSelected = formData.correctOption?.includes(key);
+
+                return (
+                  <div key={key} className="border p-3 rounded">
+                    <label className="block font-semibold mb-1">Option {idx + 1}</label>
+                    <textarea
+                      value={formData.options?.[key]?.text || ''}
+                      onChange={(e) => handleOptionChange(key, 'text', e.target.value)}
+                      className="w-full border rounded p-2 mb-2"
+                    />
+                    <label className="flex items-center gap-2">
+                      <input
+                        type={isMSQ ? 'checkbox' : 'radio'}
+                        name="correctOption"
+                        checked={isSelected}
+                        onChange={() => handleCorrectOptionChange(key)}
+                      />
+                      {isMSQ ? 'Correct (Multiple allowed)' : 'Correct'}
+                    </label>
+                  </div>
+                );
+              })}
+            </div>
+          </>
+        )}
+
+        {/* Answer */}
+        <div>
+          <label className="block font-medium">
+            {type === 'Numerical' ? 'Answer (Number)' : 'Answer'}
+          </label>
+          <textarea
+            name="answer"
+            value={formData.answer || ''}
+            onChange={handleChange}
+            className="w-full border rounded p-2"
+          />
+        </div>
+
+        {/* Explanation */}
+        <div>
+          <label className="block font-medium">Explanation</label>
+          <textarea
+            name="explanation"
+            value={formData.explanation || ''}
+            onChange={handleChange}
+            className="w-full border rounded p-2"
+          />
+        </div>
+
+        {/* Meta Fields */}
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="block font-medium">Subject</label>
+            <input
+              name="subject"
+              value={formData.subject || ''}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
+            />
+          </div>
+          <div>
+            <label className="block font-medium">Topic</label>
+            <input
+              name="topic"
+              value={formData.topic || ''}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
+            />
+          </div>
+          <div>
+            <label className="block font-medium">Unit</label>
+            <input
+              name="unit"
+              value={formData.unit || ''}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
+            />
+          </div>
+          <div>
+            <label className="block font-medium">Level</label>
+            <input
+              name="level"
+              value={formData.level || ''}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
+            />
+          </div>
+        </div>
+
+        {/* Asked In */}
+        <h3 className="font-semibold">Asked In</h3>
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="block font-medium">Exam</label>
+            <input
+              name="askedIn.exam"
+              value={formData.askedIn?.exam || ''}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
+            />
+          </div>
+          <div>
+            <label className="block font-medium">Year</label>
+            <input
+              name="askedIn.year"
+              type="number"
+              value={formData.askedIn?.year || ''}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
+            />
+          </div>
+          <div>
+            <label className="block font-medium">Date</label>
+            <input
+              name="askedIn.date"
+              value={formData.askedIn?.date || ''}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
+            />
+          </div>
+          <div>
+            <label className="block font-medium">Marks</label>
+            <input
+              name="askedIn.marks"
+              type="number"
+              value={formData.askedIn?.marks || ''}
+              onChange={handleChange}
+              className="w-full border rounded p-2"
+            />
+          </div>
+        </div>
+
+        {/* Submit */}
+        <button
+          type="submit"
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-4"
+        >
+          Update Question
+        </button>
+      </form>
+
+      {/* Feedback Message */}
+      {message && <p className="mt-4 text-green-700">{message}</p>}
+    </div>
+  );
+}

@@ -68,7 +68,7 @@ export default function Page() {
       level: q.level || "Medium",
       subject: meta.subject || q.subject || "Unknown",
       topic: meta.topic || q.topic || "Unknown",
-      unit: meta.unit || q.unit || "",
+      unit: meta.unit || q.unit || "", 
       askedIn: q.askedIn || "",
     }));
 
@@ -113,11 +113,11 @@ Output Format:
     "correctOption": ["optionX"], // for msq (multiple select question) ["option1", "option4"]
     "answer": "",
     askedIn: {
-  exam: String,   // e.g., "JEE Main"
-  year: Number,   // e.g., 2019
-  date: String,   // e.g., "12 Jan I"
-  marks: Number,  // e.g., 3 (for "3M")
- },
+      exam: String,   // e.g., "JEE Main"
+      year: Number,   // e.g., 2019
+      date: String,   // e.g., "12 Jan I"
+      marks: Number,  // e.g., 3 (for "3M")
+    },
 
 
   }

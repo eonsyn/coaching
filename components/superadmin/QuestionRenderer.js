@@ -1,7 +1,7 @@
 import QuestionCard from './QuestionCard';
 
 export default function QuestionRenderer({ questions, meta, onUpdate }) {
-   
+   console.log(questions);
   return (
     <div className="mt-6 space-y-6">
       {questions.map((q, idx) => (
