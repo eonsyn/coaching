@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#custom public ignore file 
+/public/text.json
+/public/conceptlearning.questions.json

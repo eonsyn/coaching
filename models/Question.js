@@ -20,7 +20,7 @@ const questionSchema = new mongoose.Schema(
   {
     type: {
       type: String,
-      enum: ["MCQ", "Numerical", "Descriptive"],
+      enum: ["MCQ", "Numerical", "Descriptive","MSQ"],
       required: true,
     },
     question: {
@@ -33,7 +33,17 @@ const questionSchema = new mongoose.Schema(
       option3: optionSchema,
       option4: optionSchema,
     },
-    correctOption: String,
+     correctOption: {
+      type: [String], // always stored as an array
+      validate: {
+        validator: function (v) {
+          if (this.type === 'MSQ') return Array.isArray(v) && v.length > 1;
+          if (this.type === 'MCQ') return Array.isArray(v) && v.length === 1;
+          return true;
+        },
+        message: props => `Invalid correctOption for type ${props.value}`,
+      },
+    },
     answer: String,
     explanation: String,
     publication: String,

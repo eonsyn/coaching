@@ -99,7 +99,7 @@ Each part should return a clean array of questions only, strictly in the followi
 Output Format:
 [
   {
-    "type": "MCQ" | "Numerical" | "Descriptive",
+    "type": "MCQ" | "Numerical" | "Descriptive" | "MSQ",
     "question": {
       "text": "Question text with LaTeX math like $\\int x^2 dx$ if present.",
       "imageUrl": ""
@@ -110,7 +110,7 @@ Output Format:
       "option3": { "text": "Option C", "imageUrl": "" },
       "option4": { "text": "Option D", "imageUrl": "" }
     },
-    "correctOption": "optionX",
+    "correctOption": ["optionX"], // for msq (multiple select question) ["option1", "option4"]
     "answer": "",
     askedIn: {
   exam: String,   // e.g., "JEE Main"
