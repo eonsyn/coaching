@@ -2,947 +2,189 @@
   {
     "type": "MCQ",
     "question": {
-      "text": "Let $z\\in C$ with $Im(z)=10$ and it satisfies $\\frac{2z-n}{2z+n}=2i-1$ for some natural number n, then (2019 Main, 12 April II)",
+      "text": "Let $z \\in C$ with $\\text{Im} \\, (z) = 10$ and it satisfies $\\frac{2z - n}{2z + n} = 2i - 1$ for some natural number $n$, then",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "$n=20$ and $Re(z)=-10$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$n=40$ and $Re(z)=10$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$n=40$ and $Re(z)=-10$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$n=20$ and $Re(z)=10$",
-        "imageUrl": ""
-      }
+      "option1": { "text": "$n = 20$ and $\\text{Re}(z) = -10$", "imageUrl": "" },
+      "option2": { "text": "$n = 40$ and $\\text{Re}(z) = 10$", "imageUrl": "" },
+      "option3": { "text": "$n = 40$ and $\\text{Re}(z) = -10$", "imageUrl": "" },
+      "option4": { "text": "$n = 20$ and $\\text{Re}(z) = 10$", "imageUrl": "" }
     },
-    "correctOption": "",
-    "answer": ""
+    "correctOption": "option3",
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "12 April II",
+      "marks": 0
+    }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "All the points in the set $S=\\{\\frac{\\alpha+i}{\\alpha-i}:\\alpha\\in R\\}$ $(i=\\sqrt{-1})$ lie on a (2019 Main, 9 April 1)",
+      "text": "All the points in the set $S = \\left\\{ \\frac{\\alpha + i}{\\alpha - i}, \\alpha \\in R \\right\\}$ ($i = \\sqrt{-1}$) lie on a",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "circle whose radius is $\\sqrt{2}.$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "straight line whose slope is -1",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "circle whose radius is 1.",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "straight line whose slope is 1.",
-        "imageUrl": ""
-      }
+      "option1": { "text": "circle whose radius is $\\sqrt{2}$", "imageUrl": "" },
+      "option2": { "text": "straight line whose slope is $-1$", "imageUrl": "" },
+      "option3": { "text": "circle whose radius is $1$", "imageUrl": "" },
+      "option4": { "text": "straight line whose slope is $1$", "imageUrl": "" }
     },
-    "correctOption": "",
-    "answer": ""
+    "correctOption": "option3",
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 0,
+      "date": "",
+      "marks": 0
+    }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "Let $z\\in C$ be such that $|z|<1.$ $\\omega=\\frac{5+3z}{5(1-z)}$ then (2019 Main, 9 April II)",
+      "text": "Let $z \\in C$ be such that $|A| < 1$. If $\\omega = \\frac{5 + 3z}{5(1 - z)}$, then",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "$4~Im(\\omega)>5$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "5Re ( $(\\omega)>1$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$5~Im(\\omega)<1$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$5~Re(\\omega)>4$",
-        "imageUrl": ""
-      }
+      "option1": { "text": "$4 \\, \\text{Im}(\\omega) > 5$", "imageUrl": "" },
+      "option2": { "text": "$5 \\, \\text{Re} \\, (\\omega) > 1$", "imageUrl": "" },
+      "option3": { "text": "$5 \\, \\text{Im} \\, (\\omega) < 1$", "imageUrl": "" },
+      "option4": { "text": "$5 \\, \\text{Re}(\\omega) > 4$", "imageUrl": "" }
     },
-    "correctOption": "",
-    "answer": ""
+    "correctOption": "option2",
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 0,
+      "date": "",
+      "marks": 0
+    }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "Let $(-2-\\frac{1}{3}i)^{3}=\\frac{x+iy}{27}(i=\\sqrt{-1})$ where x and y are real numbers, then $y-x$ xequals (2019 Main, 11 Jan 1)",
+      "text": "Let $\\left( -2 - \\frac{1}{3} i \\right)^3 = \\frac{x + iy}{27} \\, (i = \\sqrt{-1})$, where $x$ and $y$ are real numbers, then $y - x$ equals",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "91",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "85",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "-85",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "-91",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $A=\\{\\theta\\in(-\\frac{\\pi}{2},\\pi):\\frac{3+2i~sin~\\theta}{1-2i~sin~\\theta}$ is purely imaginary Then, the sum of the elements in A is (2019 Main, 9 Jan 1)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\\frac{3\\pi}{4}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{5\\pi}{6}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\pi$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{2\\pi}{3}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "A value of for which $\\frac{2+3i~sin~\\theta}{1-2i~sin~\\theta}$ is purely imaginary, is (2016 Main)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\\frac{\\pi}{3}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{\\pi}{6}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$sin^{-1}(\\frac{\\sqrt{3}}{4})$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$sin^{-1}(\\frac{1}{\\sqrt{3}})$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $|\\begin{matrix}6i&-3i&1\\\\ 4&3i&-1\\\\ 20&3&i\\end{matrix}|=x+iy,then$ (1998, 2M)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$x=3,$ $y=1$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$x=1,$ $y=1$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$x=0$, $y=3$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$x=0$ $y=0$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The value of sum$\\sum \\sum_{n=1}^{13}(i^{n}+i^{n+1}),$ where $i=\\sqrt{-1},$ equals (1998, 2M)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "i",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$i-1$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "-i",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "0",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The smallest positive integer n for which $(\\frac{1+i}{1-i})^{n}=1$ is (1980, 2M)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "8",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "16",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "12",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Leta, b, xand y be real numbers such that $a-b=1and$ $y\\ne0$ If the complex number $z=x+iy$ satisfies $Im(\\frac{az+b}{z+1})=y,$ then which of the following is(are) possible value(s) of x? (2017 Adv.)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$1-\\sqrt{1+y^{2}}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$-1-\\sqrt{1-y^{2}}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$1+\\sqrt{1+y^{2}}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$-1+\\sqrt{1-y^{2}}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The equation $z-i|=|z-1|,$ $i=\\sqrt{-1},$ represents (2019 Main, 12 April 1)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "a circle of radius $\\frac{1}{2}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "the line passing through the origin with slope 1",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "a circle of radius 1",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "the line passing through the origin with slope - 1",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $a>0$ and $z=\\frac{(1+i)^{2}}{a-i},$ has magnitude $\\sqrt{\\frac{2}{5}}$ then $\\overline{z}$ is equal to (2019 Main, 10 April 1)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\\frac{1}{5}-\\frac{3}{5}i$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$-\\frac{1}{5}-\\frac{3}{5}i$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$-\\frac{1}{5}+\\frac{3}{5}i$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$-\\frac{3}{5}-\\frac{1}{5}i$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $z_{1}$ and $z_{2}$ be two complex numbers satisfying $|z_{1}|=9$ and $|z_{2}-3-4i|=4$ Then, the minimum value of $|z_{1}-z_{2}|$ is (2019 Main, 12 Jan II)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "1",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "2",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\sqrt{2}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "0",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $\\frac{z-\\alpha}{\\overline{z}+\\alpha}(\\alpha\\in R)$ is a purely imaginary number and $|z|=2$ then a value of a is (2019 Main, 12 Jan 1)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\\sqrt{2}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{1}{2}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "1",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "2",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let z be a complex number such that $|z|+z=3+i$ (where $i=\\sqrt{-1})$. Then, $|z|$ is equal to (2019 Main, 11 Jan II)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\\frac{\\sqrt{34}}{3}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{5}{3}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\frac{\\sqrt{41}}{4}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{5}{4}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "A complex number z is said to be unimodular, $if|z|\\ne1$ is $\\frac{z_{1}-2z_{2}}{2-z_{1}\\overline{z}_{2}}$ unimodular and z $z_{2}$ is not unimodular. Then, the point $z_{1}$ lies on a (2015 Main)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "straight line parallel to X-axis",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "straight line parallel to Y-axis",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "circle of radius 2",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "circle of radius $\\sqrt{2}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If z is a complex number such that $|z|\\ge2,$ then the minimum value of $z+\\frac{1}{2}|$ (2014 Main)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "is equal to $5/2$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "lies in the interval (1, 2)",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "is strictly greater than $5/2$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "is strictly greater than $3/2$ but less than $5/2$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let complex numbers a and $1/\\overline{\\alpha}$ lies on circles $(x-x_{0})^{2}+(y-y_{0})^{2}=r^{2}$ and $(x-x_{0})^{2}+(y-y_{0})^{2}=4r^{2},$ respectively. $z_{0}=x_{0}+\\iota y_{0}$ satisfies the equation $2|z_{0}|^{2}=r^{2}+2,$ then is equal to (2013 Adv.)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\\frac{1}{\\sqrt{2}}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{1}{2}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\frac{1}{\\sqrt{7}}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{1}{3}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let z be a complex number such that the imaginary part of z is non-zero and $a=z^{2}+z+1$ is real. Then, a cannot take the value (2012)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "-1",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{1}{3}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\frac{1}{2}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{3}{4}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $z=x+iy$ be a complex number where, x and y are integers. Then, the area of the rectangle whose vertices are the root of the equation $z\\overline{z}^{3}+\\overline{z}z^{3}=350,$ is (2009)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "48",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "32",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "40",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "80",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $|z|=1$ and $z\\ne\\pm1$ then all the values of $\\frac{z}{1-z^{2}}$ lie on (2007, 3M)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "a line not passing through the origin",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$|z|=\\sqrt{2}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "the X-axis",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "the Y-axis",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $w=\\alpha+i\\beta$, where $\\beta\\ne0$ and $z\\ne1$, satisfies the condition that $(\\frac{w-\\overline{w}z}{1-z})$ is purely real, then the set of values of z is (2006, 3M)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$z|=1,$ $z\\ne2$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$|z|=1$ $z\\ne1$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$z=z$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $|z|=1$ and $w=\\frac{z-1}{z+1}$ (where, $z\\ne-1)$, then Re (w) is (2003, 1M)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "0",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{1}{2+12}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\frac{1}{|z+1|^{z}}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{\\sqrt{2}}{|z+1|^{2}}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "For all complex numbers $z_{1}$, $z_{2}$ satisfying $|z_{1}|=12$ and $|z_{2}-3-4i|=5$ the minimum value of $|z_{1}-z_{2}|$ is (2002, 1M)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "0",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "2",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "7",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "17",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $z_{1}$ and $Z_{3}$ are complex numbers such that $|z_{1}|=|z_{2}|=|z_{3}|=|\\frac{1}{z_{1}}+\\frac{1}{z_{2}}+\\frac{1}{z_{3}}|=1$, then $|z_{1}+z_{2}+z_{3}|$ (2000, 2M)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "equal to 1",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "less than 1",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "greater than 3",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "equal to 3",
-        "imageUrl": ""
-      }
+      "option1": { "text": "91", "imageUrl": "" },
+      "option2": { "text": "85", "imageUrl": "" },
+      "option3": { "text": "-85", "imageUrl": "" },
+      "option4": { "text": "-91", "imageUrl": "" }
     },
     "correctOption": "option1",
-    "answer": ""
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 0,
+      "date": "",
+      "marks": 0
+    }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "For positive integers $n_{1}$, $n_{2}$ the value of expression $(1+i)^{n_{1}}+(1+i^{3})^{n_{1}}+(1+i^{5})^{n_{2}}+(1+i^{7})^{n_{2}}$ here $i=\\sqrt{-1}$ is a real number, if and only if (1996, 2M)",
+      "text": "Let $A = \\left\\{ 0 \\in \\left( -\\frac{\\pi}{2}, \\pi \\right) : \\frac{3 + 2i \\sin \\theta}{1 - 2i \\sin \\theta} \\text{ is purely imaginary} \\right\\}$. Then, the sum of the elements in $A$ is",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "$n_{1}=n_{2}+1$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$n_{1}=n_{2}-1$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$n_{1}=n_{2}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$n_{1}>0$ $n_{2}>0$",
-        "imageUrl": ""
-      }
+      "option1": { "text": "$\\frac{3\\pi}{4}$", "imageUrl": "" },
+      "option2": { "text": "$\\frac{5\\pi}{6}$", "imageUrl": "" },
+      "option3": { "text": "$\\pi$", "imageUrl": "" },
+      "option4": { "text": "$\\frac{2\\pi}{3}$", "imageUrl": "" }
     },
-    "correctOption": "",
-    "answer": ""
+    "correctOption": "option4",
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 0,
+      "date": "",
+      "marks": 0
+    }
+  },{
+    "type": "MCQ",
+    "question": {
+      "text": "A value of $\\theta$ for which $\\frac{2 + 3i \\sin \\theta}{1 - 2i \\sin \\theta}$ is purely imaginary, is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "$\\frac{\\pi}{3}$", "imageUrl": "" },
+      "option2": { "text": "$\\frac{\\pi}{6}$", "imageUrl": "" },
+      "option3": { "text": "$\\sin^{-1}\\left(\\frac{\\sqrt{3}}{4}\\right)$", "imageUrl": "" },
+      "option4": { "text": "$\\sin^{-1}\\left(\\frac{1}{\\sqrt{3}}\\right)$", "imageUrl": "" }
+    },
+    "correctOption": "option4",
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2016,
+      "date": "",
+      "marks": 0
+    }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "The numbers complex $sin~x+i~cos~2x$ and $cos~x-i~sin~2x$ are conjugate to each other, for (1988, 2M)",
+      "text": "If $\\begin{vmatrix} 6i & -3i & 1 \\\\ 4 & 3i & -1 \\\\ 20 & 3 & i \\end{vmatrix} = x + iy$, then",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "$x=n\\pi$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$x=0$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$x=(n+1/2)\\pi$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "no value of x",
-        "imageUrl": ""
-      }
+      "option1": { "text": "$x = 3, y = 1$", "imageUrl": "" },
+      "option2": { "text": "$x = 1, y = 1$", "imageUrl": "" },
+      "option3": { "text": "$x = 0, y = 3$", "imageUrl": "" },
+      "option4": { "text": "$x = 0, y = 0$", "imageUrl": "" }
     },
-    "correctOption": "",
-    "answer": ""
+    "correctOption": "option4",
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 1998,
+      "date": "",
+      "marks": 2
+    }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "The points $z_{1}$, $z_{2}$, $Z_{3}$ and $z_{4}$ in the complex plane are the vertices of a parallelogram taken in order, if and only if (1983, 1M)",
+      "text": "The value of sum $\\sum_{n=1}^{13} (i^n + i^{n+1})$, where $i = \\sqrt{-1}$, equals",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "$z_{1}+z_{4}=z_{2}+z_{3}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$z_{1}+z_{3}=z_{2}+z_{4}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$z_{1}+z_{2}=z_{3}+z_{4}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
+      "option1": { "text": "$i$", "imageUrl": "" },
+      "option2": { "text": "$i - 1$", "imageUrl": "" },
+      "option3": { "text": "$-i$", "imageUrl": "" },
+      "option4": { "text": "$0$", "imageUrl": "" }
     },
     "correctOption": "option2",
-    "answer": ""
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 0,
+      "date": "",
+      "marks": 2
+    }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "If $z=x+iy$ and $w=(1-iz)/(z-i)$ then $|w|=1$ implies that, in the complex plane (1983, 1M)",
+      "text": "The smallest positive integer $n$ for which $\\left( \\frac{1 + i}{1 - i} \\right)^n = 1$, is",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "z lies on the imaginary axis",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "z lies on the real axis",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "z lies on the unit circle",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
+      "option1": { "text": "8", "imageUrl": "" },
+      "option2": { "text": "16", "imageUrl": "" },
+      "option3": { "text": "12", "imageUrl": "" },
+      "option4": { "text": "None of these", "imageUrl": "" }
     },
-    "correctOption": "option2",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The inequality $|z-4|<|z-2|$ represents the region given by (1982, 2M)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "Re $(z)\\ge0$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "Re $(z)<0$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "Re $(z)>0$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $z=(\\frac{\\sqrt{3}}{2}+\\frac{i}{2})^{5}+(\\frac{\\sqrt{3}}{2}-\\frac{i}{2})^{5}$ ,then (1982, 2M)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$Re(z)=0$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$Im(z)=0$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "Re $e(z)>0,Im(z)>0$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "Re $e(z)>0,Im(z)<0$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "option2",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The complex numbers $z=x+iy$ which satisfy the equation $\\frac{|z-5i}{z+5i}|=1,$ lie on (1981, 2M)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "the X-axis",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "the straight line $y=5$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "a circle passing through the origin",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of the above",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "option1",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let s, t, r be non-zero complex numbers and L be the set of solutions $z=x+iy$ (x, $y\\in R$ $i=\\sqrt{-1})$ of the equation $sz+t\\overline{z}+r=0,$ where $\\overline{z}=x-iy.$ Then, which of the following statement(s) is (are) TRUE? (2018 Adv.)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "If L has exactly one element, $then|s|\\ne|t||$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "If $|s|=|t|,$ then L has infinitely many elements",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "The number of elements in $L\\cap\\{z:|z-1+i|=5\\}$ is at most 2",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "If L has more than one element, then Lhas infinitely many elements",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $z_{1}$ and $z_{2}$ be complex numbers such that $z_{1}\\ne z_{2}$ and $|z_{1}|=|z_{2}|$. If $z_{1}$ has positive real part and $z_{2}$ has negative imaginary part, then $\\frac{z_{1}+z_{2}}{z_{1}-z_{2}}$ may be (1986, 2M)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "zero",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "real and positive",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "real and negative",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "purely imaginary",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $z_{1}=a+ib$ and $z_{2}=c+id$ are complex numbers such that $|z_{1}|=|z_{2}|=1$ and Re $(z_{1}\\overline{z}_{2})=0,$ then the pair of Complex Numbers 3 $w_{1}=a+$ ic and $w_{2}=b+id$ satisfies (1985, 2M)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$|w_{1}|=1$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$|w_{2}|=1$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "Re $(w_{1}\\overline{w_{2}})=0$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": "",
-    "answer": ""
+    "correctOption": "option4",
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 0,
+      "date": "",
+      "marks": 2
+    }
   }
-  
 ]

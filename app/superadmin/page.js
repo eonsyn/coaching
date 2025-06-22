@@ -126,7 +126,7 @@ Output Format:
 Rules & Notes:
 - Divide the PDF content into 3 parts. Wait for my “next” before proceeding to the next one.
 - Preserve any math expressions using LaTeX syntax with $...$.
-- If a question or option contains an image, fill imageUrl with the extracted URL (else leave it as "").
+- If a question or option contains an image, fill imageUrl with the extracted URL (else leave it as ""). 
 - For MCQs, use correctOption if the answer key is available.
 - For Numerical or Descriptive, fill the "answer" field with the actual answer if known.
 - If the correct answer is missing, leave both "correctOption" and "answer" as empty strings.

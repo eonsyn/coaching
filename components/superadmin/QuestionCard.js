@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 export default function QuestionCard({ index, rawData, meta, onChange }) {
   const optionKeys = Object.keys(rawData.options || {});
-   
+
   const [showQuestion, setshowQuestion] = useState(false)
 
   const [question, setQuestion] = useState({
@@ -63,7 +63,7 @@ export default function QuestionCard({ index, rawData, meta, onChange }) {
         </div>
       }
 
-      <button onClick={() => setshowQuestion(!showQuestion)} className="">Edit Question </button>
+      <button onClick={() => setshowQuestion(!showQuestion)} className="bg-red-400 text-white p-2 rounded-md">Edit Question </button>
 
       {question.question.imageUrl && (
         <Image
@@ -75,36 +75,13 @@ export default function QuestionCard({ index, rawData, meta, onChange }) {
         />
       )}
 
-      <ImageUploader
-        label="Upload Question Image"
-        onUpload={(url) => setQuestion({ ...question, question: { ...question.question, imageUrl: url } })}
-      />
-
-      <div className="grid gap-4 mt-4">
-        {(question.options || []).map((opt, i) => (
-          <div key={i} className="border border-gray-200 p-4 rounded-md bg-gray-50">
-            <OptionEditor
-              index={i}
-              value={opt}
-              onChange={(val) => {
-                const newOpts = [...question.options];
-                newOpts[i] = val;
-                setQuestion({ ...question, options: newOpts });
-              }}
-            />
-            <ImageUploader
-              label={`Option ${String.fromCharCode(65 + i)} Image`}
-              onUpload={(url) => {
-                const newOpts = [...question.options];
-                newOpts[i] = { ...newOpts[i], imageUrl: url };
-                setQuestion({ ...question, options: newOpts });
-              }}
-            />
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-4">
+      {
+        showQuestion && <ImageUploader
+          label="Upload Question Image"
+          onUpload={(url) => setQuestion({ ...question, question: { ...question.question, imageUrl: url } })}
+        />
+      }
+<div className="mt-4">
         <label className="block font-medium mb-1">Correct Option:</label>
         <div className="flex flex-wrap gap-4">
           {question.options.map((_, idx) => {
@@ -128,20 +105,63 @@ export default function QuestionCard({ index, rawData, meta, onChange }) {
           })}
         </div>
       </div>
+      <div className="grid gap-4 mt-4">
+        { showQuestion && (question.options || []).map((opt, i) => {
+          const optionKey = question.optionKeys?.[i] || `option${i + 1}`;
+          return (<div key={i} className="border border-gray-200 p-4 rounded-md bg-gray-50">
+            {
+              showQuestion && <><OptionEditor
+                index={i}
+                value={opt}
+                onChange={(val) => {
+                  const newOpts = [...question.options];
+                  newOpts[i] = val;
+                  setQuestion({ ...question, options: newOpts });
+                }}
+              /> <ImageUploader
+                  label={`Option ${String.fromCharCode(65 + i)} Image`}
+                  onUpload={(url) => {
+                    const newOpts = [...question.options];
+                    newOpts[i] = { ...newOpts[i], imageUrl: url };
+                    setQuestion({ ...question, options: newOpts });
+                  }}
+                />
+              </>
+            }
+
+            {/* {
+              !showQuestion && (
+                <div
+                  className={`p-4 mb-2 rounded-lg text-white font-medium shadow-md transition-all duration-300 ${question.correctOption === optionKey ? 'bg-green-500' : 'bg-slate-500'
+                    }`}
+                >
+                  {renderMathText(opt.text)}
+                </div>
+              )
+            } */}
+
+
+          </div>)
+        })}
+      </div>
+
+      
 
       <div>
-        <label className="block font-medium mb-1">Answer:</label>
-        <input
+        <label className="  font-medium mb-1">Answer:</label>
+        {showQuestion ? (<input
           className="w-full border border-gray-300 p-2 rounded-md"
           placeholder="Answer (optional)"
           value={question.answer}
           onChange={(e) => setQuestion({ ...question, answer: e.target.value })}
-        />
+        />):(<span>{question.answer}</span>)}
+        
+        
       </div>
 
       <div>
-        <label className="block font-medium mb-1">Explanation:</label>
-        <textarea
+        <label className="  font-medium mb-1">Explanation:</label>
+        {showQuestion ? ( <textarea
           className="w-full border border-gray-300 p-2 rounded-md resize-none"
           placeholder="Explanation (optional)"
           rows={2}
@@ -149,33 +169,37 @@ export default function QuestionCard({ index, rawData, meta, onChange }) {
           onChange={(e) =>
             setQuestion({ ...question, explanation: e.target.value })
           }
-        />
+        />):(<span>{question.explanation}</span>)}
+       
       </div>
+      {
+        showQuestion && <> <div>
+          <label className="block font-medium mb-1">Publication:</label>
+          <input
+            className="w-full border border-gray-300 p-2 rounded-md"
+            placeholder="Publication (optional)"
+            value={question.publication}
+            onChange={(e) =>
+              setQuestion({ ...question, publication: e.target.value })
+            }
+          />
+        </div>
 
-      <div>
-        <label className="block font-medium mb-1">Publication:</label>
-        <input
-          className="w-full border border-gray-300 p-2 rounded-md"
-          placeholder="Publication (optional)"
-          value={question.publication}
-          onChange={(e) =>
-            setQuestion({ ...question, publication: e.target.value })
-          }
-        />
-      </div>
+          <div className="pt-2">
+            <label className="block font-medium mb-1">Level:</label>
+            <select
+              className="border border-gray-300 p-2 rounded-md"
+              value={level}
+              onChange={(e) => setLevel(e.target.value)}
+            >
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </div>
+        </>
+      }
 
-      <div className="pt-2">
-        <label className="block font-medium mb-1">Level:</label>
-        <select
-          className="border border-gray-300 p-2 rounded-md"
-          value={level}
-          onChange={(e) => setLevel(e.target.value)}
-        >
-          <option value="Easy">Easy</option>
-          <option value="Medium">Medium</option>
-          <option value="Hard">Hard</option>
-        </select>
-      </div>
     </div>
 
   );
