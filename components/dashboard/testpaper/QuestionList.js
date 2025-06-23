@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import domtoimage from 'dom-to-image';
 import jsPDF from 'jspdf';
 import { renderMathText } from '@/utils/renderMath';
@@ -10,6 +10,7 @@ function QuestionList({ questions }) {
   const [showAnswer, setshowAnswer] = useState(false)
   const [showoption, setshowoption] = useState(false);
   const [downloading, setdownloading] = useState(false)
+  const [questionType, setQuestionType] = useState("MCQ")
 
   const handleDownloadPDF = async () => {
     setdownloading(true);
@@ -81,6 +82,11 @@ function QuestionList({ questions }) {
     setshowAnswer(!showAnswer);
     setshowoption(false);
   };
+  useEffect(() => 
+  {
+    console.log("questions",questions)
+  }, [])
+  
 
   if (!questions || questions.length === 0) {
     return <p className="text-white">No questions to display.</p>;
@@ -120,11 +126,21 @@ function QuestionList({ questions }) {
         {questions.map((q, idx) => (
           <div key={q._id || idx} className="question-box px-2 rounded-md text-black">
 
-            {showAnswer ? (<h3 className="font-semibold mb-2">
-              Ans{idx + 1}: {renderMathText(q.answer) || renderMathText(q.correctOption) || renderMathText(q.explanation) || 'No Answer found'}
-            </h3>) : (<h3 className="font-semibold w-[70vw] md:w-[60vw]  mb-2">
+            {showAnswer ? (<>
+            <h3 className="font-semibold mb-2">
+              Ans{idx + 1}: {renderMathText(q.answer) || renderMathText(q.explanation) ||  q.correctOption?.map((e,idxx)=> (
+                  <span key={idxx} className={' mr-2 bg-slate-200 p-1 rounded-md text-black italic  '}>{renderMathText(q.options[e]?.text) 
+                  }</span>
+                )) || 'No Answer found'}
+            </h3>
+           
+            </>
+              
+          ) : (
+          <h3 className="font-semibold w-[70vw] md:w-[60vw]  mb-2">
               Q{idx + 1}: {renderMathText(q.question?.text) || 'No question text'}
-            </h3>)}
+            </h3>
+          )}
 
             {!showAnswer && q.question.imageUrl && (
               <img

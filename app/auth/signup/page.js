@@ -96,7 +96,7 @@ export default function SignupPage() {
       if (res.ok) {
         toast.success("Signup successful! You can now log in.", 'success');
         // You might want to redirect the user here, e.g., to a login page
-        window.location.href = '/login';
+        window.location.href = '/auth/login';
       } else {
         toast.error(data.message || 'OTP verification failed.', 'error');
       }

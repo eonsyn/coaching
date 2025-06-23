@@ -22,6 +22,7 @@ export default function TestGeneration({ form, handleChange, handleSubmit, loadi
       options: [
 
         { value: 'MCQ', label: 'MCQ' },
+        { value: 'MSQ', label: 'MSQ' },
          { value: 'Numerical', label: 'Numerical' },
         { value: 'Descriptive', label: 'Descriptive' },
       ],
