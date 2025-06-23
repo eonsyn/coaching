@@ -1,10 +1,14 @@
 // models/Question.js
 import mongoose from "mongoose";
 
-const optionSchema = new mongoose.Schema({
-  text: String,
-  imageUrl: String,
-});
+const optionSchema = new mongoose.Schema(
+  {
+    text: String,
+    imageUrl: String,
+  },
+  { _id: false } // 👈 Prevents automatic _id generation
+);
+
 
 const askedInSchema = new mongoose.Schema(
   {
