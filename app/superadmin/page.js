@@ -92,16 +92,20 @@ export default function Page() {
     }
   };
 
-  const promptText = `Task: Extract all questions from this PDF and format them as an array of JSON objects using the specified schema.
-Important: Return the output in 3 parts. When I say "next", continue with the next part.
-Each part should return a clean array of questions only, strictly in the following JSON format (no extra text or HTML).
+  const promptText = `Task:
+Extract all questions from the attached PDF and convert them into an array of JSON objects using the schema provided below.
 
-Output Format:
+Instructions:
+Split the output into 3 parts. After finishing each part, wait for my prompt “next” before continuing with the next part.
+Each part should return only a valid JSON array of questions. Do not include any extra text, comments, or formatting.
+
+Strictly follow this Output Format json
+ 
 [
   {
     "type": "MCQ" | "Numerical" | "Descriptive" | "MSQ",
     "question": {
-      "text": "Question text with LaTeX math like $\\int x^2 dx$ if present.",
+      "text": "Question text with LaTeX math like $\int x^2 dx$ if present.",
       "imageUrl": ""
     },
     "options": {
@@ -118,20 +122,28 @@ Output Format:
       date: String,   // e.g., "12 Jan I"
       marks: Number,  // e.g., 3 (for "3M")
     },
-
-
   }
 ]
+  Rules & Notes
+Divide the questions into 3 parts.
 
-Rules & Notes:
-- Divide the PDF content into 3 parts. Wait for my “next” before proceeding to the next one.
-- Preserve any math expressions using LaTeX syntax with $...$.
-- If a question or option contains an image, fill imageUrl with the extracted URL (else leave it as ""). 
-- For MCQs, use correctOption if the answer key is available.
-- For Numerical or Descriptive, fill the "answer" field with the actual answer if known.
-- If the correct answer is missing, leave both "correctOption" and "answer" as empty strings.
-- Do not include any extra fields (like explanations, createdBy, etc.)
-- Return a clean array of JSON objects only. No wrapping text, no formatting tags, and no extra explanations.
+Use the exact JSON format shown above.
+
+Wait for “next” before outputting the next part.
+
+Preserve all math expressions in LaTeX using $...$ delimiters.
+
+If a question or option contains an image, set imageUrl to the extracted image link, else leave it as an empty string.
+
+For MCQs, use correctOption to specify the correct one(s) if known.
+
+For Numerical/Descriptive, use the answer field (text only).
+
+If the correct answer is not available, leave both correctOption and answer as empty ("" or []).
+
+Do not include any extra fields (like explanations, solutions, createdBy, etc.).
+
+Ensure the output is a valid JSON array only — no HTML, no formatting, no extra text.
 `;
   const handlecopy = async () => {
     try {

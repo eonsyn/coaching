@@ -4,22 +4,24 @@ import { InlineMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
 
 /**
- * Parses text with inline LaTeX math expressions ($...$)
- * and returns an array of React nodes where math is rendered with InlineMath.
+ * Renders text with inline LaTeX math expressions ($...$) using KaTeX.
+ * Safely handles cases where $ is unmatched or used incorrectly.
  * 
- * Example input: "Calculate the value of $\\frac{\\sqrt{11}-1}{2\\sqrt{3}}$."
+ * Example: "Find the value of $\\frac{a+b}{c}$ when $a = 2$ and $b = 3$."
  */
 export function renderMathText(text) {
   if (!text) return null;
 
-  // Split on $...$ inline math delimiters
-  const parts = text.split(/(\$.*?\$)/g);
+  // Regex to match anything between $...$, non-greedy
+  const parts = text.split(/(\$(?:\\\$|[^$])+\$)/g); 
 
-  return parts.map((part, i) => {
-    if (part.startsWith('$') && part.endsWith('$')) {
-      const math = part.slice(1, -1); // remove $ delimiters
-      return <InlineMath key={i}>{math}</InlineMath>;
+  return parts.map((part, index) => {
+    // Match $...$
+    const match = /^\$(.*)\$$/.exec(part);
+    if (match) {
+      return <InlineMath key={index}>{match[1]}</InlineMath>;
+    } else {
+      return <React.Fragment key={index}>{part}</React.Fragment>;
     }
-    return <span key={i}>{part}</span>;
   });
 }
