@@ -68,7 +68,7 @@ export default function Page() {
       level: q.level || "Medium",
       subject: meta.subject || q.subject || "Unknown",
       topic: meta.topic || q.topic || "Unknown",
-      unit: meta.unit || q.unit || "", 
+      unit: meta.unit || q.unit || "",
       askedIn: q.askedIn || "",
     }));
 
@@ -93,19 +93,50 @@ export default function Page() {
   };
 
   const promptText = `Task:
-Extract all questions from the attached PDF and convert them into an array of JSON objects using the schema provided below.
+Extract all questions from the attached PDF and convert them into a valid JSON array using the strict schema provided below.
+All mathematical expressions must be converted into proper inline LaTeX, wrapped in $...$.
+Ensure that all math is accurately preserved and rendered correctly. If any expression appears to be broken or incomplete, fix it using LaTeX standards wherever logically possible.
 
-Instructions:
-Split the output into 3 parts. After finishing each part, wait for my prompt “next” before continuing with the next part.
-Each part should return only a valid JSON array of questions. Do not include any extra text, comments, or formatting.
+✅ Output Instructions:
+Divide the total output into 3 parts.
 
-Strictly follow this Output Format json
+After sending each part, wait for my reply "next" before continuing.
+
+Each part must be a valid JSON array — strictly no extra text, comments, markdown, or formatting outside the JSON.
+
+Ensure every question is fully parseable JSON.
+
+✅ LaTeX Formatting Rules (Strict):
+All math expressions must follow proper LaTeX standards. Wrap every math part in $...$.
+Convert any raw math-like text or pseudo-LaTeX from the PDF to valid LaTeX. Pay attention to:
+
+Integrals: $\\int x^2 \\, dx$
+
+Fractions: $\\frac{a}{b}$
+
+Matrices: $\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$
+
+Limits/Sums/Products: $\\lim_{x \\to \\infty}$, $\\sum_{i=1}^{n}$, $\\prod_{i=1}^{n}$
+
+Roots: $\\sqrt{x}$, $\\sqrt[n]{y}$
+
+Complex numbers: $z = x + iy$, $\\arg(z)$, $|z|$
+
+Greek letters: $\\theta$, $\\pi$, $\\alpha$, $\\beta$, etc.
+
+Vectors or modulus: $|\\vec{A}|$, $\\hat{i}$, $\\vec{F}$
+
+Special characters: escape underscore (_ as \\_) and percent (% as \\%) where needed.
+
+Ensure \left, \right are used for scalable brackets: e.g., $\left| \arg\left(\frac{z - 1}{z + 1} \right) \right|$.
+
+  JSON Output Format (Strict)
  
 [
   {
-    "type": "MCQ" | "Numerical" | "Descriptive" | "MSQ",
+    "type": "MCQ" | "MSQ" | "Numerical" | "Descriptive",
     "question": {
-      "text": "Question text with LaTeX math like $\int x^2 dx$ if present.",
+      "text": "Full question text with valid LaTeX (math in $...$).",
       "imageUrl": ""
     },
     "options": {
@@ -114,36 +145,34 @@ Strictly follow this Output Format json
       "option3": { "text": "Option C", "imageUrl": "" },
       "option4": { "text": "Option D", "imageUrl": "" }
     },
-    "correctOption": ["optionX"], // for msq (multiple select question) ["option1", "option4"]
+    "correctOption": ["optionX"],
     "answer": "",
-    askedIn: {
-      exam: String,   // e.g., "JEE Main"
-      year: Number,   // e.g., 2019
-      date: String,   // e.g., "12 Jan I"
-      marks: Number,  // e.g., 3 (for "3M")
-    },
+    "topic": "", //if you find topic then write it there otherwise dont write leave blank
+    "askedIn": {
+          "exam": "Exam Name (e.g., JEE Main)",
+          "year": Number,  // e.g., 2019
+          "date": String, // e.g., "12 Jan I"
+          "marks": Number // e.g., 3 (for "3M")
+    }
   }
 ]
-  Rules & Notes
-Divide the questions into 3 parts.
+  Notes & Rules
+Always divide questions into 3 equal parts (if possible).
 
-Use the exact JSON format shown above.
+Wait for the prompt “next” before sending the next batch.
 
-Wait for “next” before outputting the next part.
+Only use this exact structure — do not include fields like explanation, difficulty, tags, etc.
 
-Preserve all math expressions in LaTeX using $...$ delimiters.
+If an image is present with a question or option, extract and place its URL in imageUrl; otherwise, leave it as an empty string.
 
-If a question or option contains an image, set imageUrl to the extracted image link, else leave it as an empty string.
+If the correct answer is not available, set:
 
-For MCQs, use correctOption to specify the correct one(s) if known.
+"correctOption": []
 
-For Numerical/Descriptive, use the answer field (text only).
+"answer": ""
 
-If the correct answer is not available, leave both correctOption and answer as empty ("" or []).
+Always validate the final JSON output — it must be parsable without any extra characters, newlines outside strings, or trailing commas.
 
-Do not include any extra fields (like explanations, solutions, createdBy, etc.).
-
-Ensure the output is a valid JSON array only — no HTML, no formatting, no extra text.
 `;
   const handlecopy = async () => {
     try {

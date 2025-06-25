@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 export default function TestGeneration({ form, handleChange, handleSubmit, loading }) {
-  const [subject, setsubject] = useState('Physics')
+  const [subject, setsubject] = useState('Mathematics')
 
   const [optionSubject, setoptionSubject] = useState([])
   const inputFields = [
@@ -70,6 +70,7 @@ export default function TestGeneration({ form, handleChange, handleSubmit, loadi
 
         const response = await fetch(`/api/syllabus?class=${selectedClass}&subject=${subject}`);
         const json = await response.json();
+        
 
 
         if (json?.subjects?.[0]?.chapters) {

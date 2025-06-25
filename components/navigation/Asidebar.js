@@ -2,15 +2,17 @@
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import {   toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { FaHome, FaUser, FaNewspaper } from "react-icons/fa";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { FaBookOpenReader } from "react-icons/fa6";
 import { RiLogoutCircleRLine } from "react-icons/ri";
-import MobileNavbar from './MobileNavbar'; // 👉 Import mobile navbar separately
+import MobileNavbar from './MobileNavbar'; 
 
 const navOptions = [
   { icon: FaHome, name: "Home", to: "/dashboard" },
   { icon: FaNewspaper, name: "Test Paper", to: "/dashboard/testpaper" },
+ { icon: FaBookOpenReader , name: "Solve Problems", to: "/dashboard/solveproblem" },
   { icon: FaUser, name: "Profile", to: "/dashboard/profile" },
 ];
 
@@ -19,7 +21,7 @@ function Asidebar() {
   const [theme, setTheme] = useState("system");
 
   const handleLogout = async () => {
-    try{
+    try {
       const response = await fetch("/api/userAuth/logout", {
         method: "POST",
         credentials: "include",
@@ -72,9 +74,9 @@ function Asidebar() {
           {navOptions.map(({ icon: Icon, name, to }, index) => {
             const isActive = pathname === to;
             return (
-              <Link key={index} href={to}>
+              <Link key={index}  href={to}>
                 <button
-                  className={`w-full flex items-center gap-3 px-3 py-2 rounded-md transition-all
+                  className={`w-full mb-1 flex items-center gap-3 px-3 py-2 rounded-md transition-all ease-in-out cursor-pointer
                     ${isActive ? "bg-lightblue text-darkblue font-semibold" : "hover:bg-lightblue hover:text-darkblue"}`}
                 >
                   <Icon className="text-lg" />
@@ -99,7 +101,7 @@ function Asidebar() {
             </span>
           </button>
 
-          <button 
+          <button
             onClick={handleLogout}
             className="flex items-center gap-3 w-full py-2 px-3 rounded-md text-red-400 hover:bg-red-100 transition">
             <RiLogoutCircleRLine className="text-xl" />

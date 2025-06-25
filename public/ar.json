@@ -2,861 +2,14 @@
   {
     "type": "MCQ",
     "question": {
-      "text": "If $a_{1},a_{2},a_{3},...,a_{n}$ are in AP and $a_{1}+a_{4}+a_{7}+...+a_{16}=114$ then $a_{1}+a_{6}+a_{11}+a_{16}$ is equal to",
+      "text": "The number of four-digit numbers strictly greater than 4321 that can be formed using the digits 0, 1, 2, 3, 4, 5 (repetition of digits is allowed) is",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "64",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "76",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "98",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "38",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "10 April 1",
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If 19th term of a non-zero AP is zero, then its (49th term): (29th term) is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "1:3",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "4:1",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "2:1",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "3:1",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option4"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "11 Jan II",
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "For any three positive real numbers a, b and, if $9 (25a^{2}+b^{2})+25(c^{2}-3ac)=15b(3a+c),$ then",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "b, cand a are in GP",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "b, cand a are in AP",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "a, band care in AP",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "a, band care in GP",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2017,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $T_{r}$ is the rth term of an AP, for $r=1,2,3,......$ If for some positive integers m and n, we have $T_{m}=\frac{1}{n}$ and $T_{n}=\frac{1}{m},$ then $T_{mn}^{\prime}$ equals",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\frac{1}{mn}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\frac{1}{m}+\frac{1}{n}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "1",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "0",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1998,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If $a_{1},a_{2}.....,a_{n}$ are in arithmetic progression, where $a_{i}>0,\forall i,$ then show that $\frac{1}{\sqrt{a_{1}}+\sqrt{a_{2}}}+\frac{1}{\sqrt{a_{2}}+\sqrt{a_{3}}}+...+\frac{1}{\sqrt{a_{n-1}}+\sqrt{a_{n}}}=\frac{n-1}{\sqrt{a_{1}}+\sqrt{a_{n}}}$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1982,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "$n_{1},n_{2},...,n_{p}$ are p positive integers, whose sum is an even number, then the number of odd integers among them is odd.",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "False",
-    "askedIn": {
-      "exam": null,
-      "year": 1985,
-      "date": null,
-      "marks": 1
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "The sides of a right angled triangle are in arithmetic progression. If the triangle has area 24, then what is the length of its smallest side?",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "6",
-    "askedIn": {
-      "exam": "JEE Adv.",
-      "year": 2017,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $a_{1}$, $a_{2},$ a ... are in AP such that $a_{1}+a_{7}+a_{16}=40,$ then the sum of the first 15 terms of this AP is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "200",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "280",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "120",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "150",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "12 April II",
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $S_{n}$ denote the sum of the first n terms of an AP. If $S_{4}=16$ and $S_{6}=-48,$ then $S_{10}$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$-260$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$-410$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "-320",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$-380$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "12 April 1",
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "For $x\in R,$ let [x] denote the greatest integer $\cdot\le x$ then the sum of the series $[-\frac{1}{3}]+[-\frac{1}{3}-\frac{1}{100}]+[-\frac{1}{3}-\frac{2}{100}]+...+[-\frac{1}{3}-\frac{99}{100}]is$",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "-153",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "133",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "-131",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "135",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "12 April 1",
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If the sum and product of the first three terms in an AP are 33 and 1155, respectively, then a value of its 11th term is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "25",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "-36",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "-25",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "-35",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "9 April II",
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let the sum of the first n terms of a non-constant AP $a_{1}$, $a_{2},$ ag.....be $50n+\frac{n(n-7)}{2}A$ where A is a constant. If d is the common difference of this AP, then the ordered pair $(d,a_{50})$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "(A, $50+46A)$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$(50,50+45A)$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "( $(50,50+46A)$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "( $(A,50+45A)$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "9 April 1",
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The sum of all two digit positive numbers which when divided by 7 yield 2 or 5 as remainder is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "1256",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "1465",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "1356",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "1365",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "10 Jan 1",
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $a_{1},a_{2},.....a_{30}$ be an AP, $S=\sum_{i=1}^{\\infty}a_{i}$ and $T=\\sum_{i=1}^{16}a_{(2i-1)}.$ If $a_{5}=27$ and $S-2T=75,$ then $a_{10}$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "42",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "57",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "52",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "47",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "9 Jan 1",
-      "marks": null
-    }
-  },
-  {
-    "type": "MSQ",
-    "question": {
-      "text": "Let $b_{i}>1$ for $i=1,2,...,101$. Suppose $log_{e}b_{1}$ $log_{e}b_{2},$ $...,log_{c}b_{101}$ are in AP with the common difference $log_{e}2$ Suppose $a_{1},a_{2},...,a_{101}$ are in AP, such that $a_{1}=b_{1}$ and $a_{51}=b_{51}$ If $s =a_{1}+a_{2}+...+a_{51}$, and $t=b_{1}+b_{2}+...+b_{5}$, then",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$s>t~and~a_{101}>b_{101}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$s>t$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$s<t~and~a_{101}>b_{101}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$s<t$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2", "option4"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Adv.",
-      "year": 2016,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If the sum of first n terms of an AP is $cn^{2},$ then the sum of squares of these n terms is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\frac{n(4n^{2}-1)c^{2}}{6}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\frac{n(4n^{2}+1)c^{2}}{3}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\frac{n(4n^{2}-1)c^{2}}{3}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\frac{n(4n^{2}+1)e^{2}}{6}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2009,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If the sum of the first 2n terms of the AP series 2,5,8,.... is equal to the sum of the first n terms of the AP series 57, 59, 61,..., then n equals",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "10",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "12",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "11",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "13",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2001,
-      "date": null,
-      "marks": 1
-    }
-  },
-  {
-    "type": "MSQ",
-    "question": {
-      "text": "$If~S_{n}=\\sum_{2}^{4n}(-1)^{\\frac{k(k+1)}{2}}k^{2}$ Then, $S_{n}$ can take value(s)",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "1056",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "1088",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "1120",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "1332",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1", "option4"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Adv.",
-      "year": 2013,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $V_{r}$ denotes the sum of the first r terms of an arithmetic progression (AP) whose first term is r and the common difference is $(2r-1).$ Let $T_{r}=V_{r+1}-V_{r}$ and $Q_{r}=T_{r+1}-T_{r}$ for $r=1,2,...$ The sum $V_{1}+V_{2}+...+V_{n}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\frac{1}{12}n(n+1)(3n^{2}-n+1)$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\frac{1}{12}n(n+1)(3n^{2}+n+2)$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\frac{1}{2}n(2n^{2}-n+1)$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\frac{1}{3}(2n^{3}-2n+3)$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2007,
-      "date": null,
-      "marks": 8
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "$T_{r}$ is always",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "an odd number",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "an even number",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "a prime number",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "a composite number",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option4"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": null,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Which one of the following is a correct statement?",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$Q_{3}$ are in an AP with common difference 5",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$Q_{1}$... are in an AP with common difference 6",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$Q_{1},Q_{2},Q_{3},...$ are in an AP with common difference 11",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$Q_{1}=Q_{2}=Q_{3}=...$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": null,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "Let pand q be the roots of the equation $x^{2}-2x+A=0$ and let rand s be the roots of the equation $x^{2}-18x+B=0.$ If $p<q<r<s$ are in arithmetic progression, then $A=...$ and $B=....$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$A=-3, B=77$",
-    "askedIn": {
-      "exam": null,
-      "year": 1997,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "The sum of the first n terms of the series $1^{2}+2\\cdot2^{2}+3^{2}+2\\cdot4^{2}+5^{2}+2\\cdot6^{2}+...$ is $\\frac{n(n+1)^{2}}{2},$ when n is even. When n is odd, the sum is.....",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$\\frac{n^{2}(n+1)}{2}$",
-    "askedIn": {
-      "exam": null,
-      "year": 1988,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "The sum of integers from 1 to 100 that are divisible by 2 or 5 is",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "3050",
-    "askedIn": {
-      "exam": null,
-      "year": 1984,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "The fourth power of the common difference of an arithmetic progression with integer entries is added to the product of any four consecutive terms of it. Prove that resulting sum is the square of an integer",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2000,
-      "date": null,
-      "marks": 4
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "The real numbers $x_{1},x_{2},x_{3}$ satisfying the equation $x^{3}-x^{2}+\\beta x+\\gamma=0$ are in AP. Find the intervals in which \\beta and \\gamma lie.",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$\\beta\\in[-\\infty,\\frac{1}{3}]and~\\gamma\\in[-\\frac{1}{27},\\infty]$",
-    "askedIn": {
-      "exam": null,
-      "year": 1996,
-      "date": null,
-      "marks": 3
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "The interior angles of a polygon are in arithmetic progression. The smallest angle is $120^{\\circ};$ and the common difference is $5^{\\circ}.$ Find the number of sides of the polygon.",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "9",
-    "askedIn": {
-      "exam": null,
-      "year": 1980,
-      "date": null,
-      "marks": 3
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Suppose that all the terms of an arithmetic progression are natural numbers. If the ratio of the sum of the first seven terms to the sum of the first eleven terms is 6: 11 and the seventh term lies in between 130 and 140, then the common difference of this AP is",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "9",
-    "askedIn": {
-      "exam": "JEE Adv.",
-      "year": 2015,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "A pack contains a cards numbered from 1 to n. Two consecutive numbered cards are removed from the pack and the sum of the numbers on the remaining cards is 1224. If the smaller of the numbers on the removed cards is k, then $k-20$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "5",
-    "askedIn": {
-      "exam": "JEE Adv.",
-      "year": 2013,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $a_{1},a_{2},a_{3},...,a_{100}$ be an arithmetic progression with $a_{1}=3~and~S_{p}=\\sum_{i=1}a_{i}$ , $1\\le p\\le100$ For any integer n with 1 $l\\le n\\le20,$ let $m=5n$. If $\\frac{S_{m}}{S_{n}}$ does not depend on n, then a $x_{2}$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "9",
-    "askedIn": {
-      "exam": null,
-      "year": 2011,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $a_{1},a_{2},a_{3},...,a_{11}$ be real numbers satisfying $a_{1}=15.$ $27-2a_{2}>0$ and $a_{k}=2a_{k-1}-a_{k-2}$ fork $k=3,4,...,11.$ $f\\frac{a_{1}^{2}+a_{2}^{2}+...+a_{11}^{2}}{**}=90$ then the value of $\\frac{a_{1}+a_{2}+...+a_{11}}{11}is........$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "0",
-    "askedIn": {
-      "exam": null,
-      "year": 2010,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Leta, band cbe in GP with common ratio r, where $a\\ne0$ $and~0<r\\le\\frac{1}{2}.If3a$ 76 and 15 care the first three terms of an AP, then the 4th term of this AP is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "5\\alpha",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{2}{3}a$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "a",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{7}{3}a$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "10 April II",
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If three distinct numbers a, b and care in GP and the equations $ax^{2}+2bx+c=0$ and $dx^{2}+2ex+f=0$ have a common root, then which one of the following statements is correct?",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "d, e and are in GP",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{d}{a},\\frac{e}{b}and\\frac{f}{c}are~in~AP$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "d, e and fare in AP",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{d}{a},\\frac{e}{b}and\\frac{f}{c}are~in~GP$",
-        "imageUrl": ""
-      }
+      "option1": { "text": "306", "imageUrl": "" },
+      "option2": { "text": "310", "imageUrl": "" },
+      "option3": { "text": "360", "imageUrl": "" },
+      "option4": { "text": "288", "imageUrl": "" }
     },
     "correctOption": ["option2"],
     "answer": "",
@@ -864,32 +17,768 @@
       "exam": "JEE Main",
       "year": 2019,
       "date": "8 April II",
-      "marks": null
+      "marks": 0
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "The product of three consecutive terms of a GP is 512. If 4 is added to each of the first and the second of these terms, the three terms now form an AP. Then, the sum of the original three terms of the given GP is",
+      "text": "How many $3\\times3$ matrices M with entries from (0, 1, 2) are there, for which the sum of the diagonal entries of MM is 5?",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "36",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "28",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "32",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "24",
-        "imageUrl": ""
-      }
+      "option1": { "text": "198", "imageUrl": "" },
+      "option2": { "text": "162", "imageUrl": "" },
+      "option3": { "text": "126", "imageUrl": "" },
+      "option4": { "text": "135", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Adv.",
+      "year": 2017,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The number of integers greater than 6000 that can be formed using the digits 3, 5, 6, 7 and 8 without repetition is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "216", "imageUrl": "" },
+      "option2": { "text": "192", "imageUrl": "" },
+      "option3": { "text": "120", "imageUrl": "" },
+      "option4": { "text": "72", "imageUrl": "" }
+    },
+    "correctOption": ["option2"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2015,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The number of seven-digit integers, with sum of the digits equal to 10 and formed by using the digits 1, 2 and 3 only, is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "55", "imageUrl": "" },
+      "option2": { "text": "66", "imageUrl": "" },
+      "option3": { "text": "77", "imageUrl": "" },
+      "option4": { "text": "88", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 2009,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "How many different nine-digit numbers can be formed from the number 22 33 55 888 by rearranging its digits so that the odd digits occupy even positions?",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "16", "imageUrl": "" },
+      "option2": { "text": "36", "imageUrl": "" },
+      "option3": { "text": "60", "imageUrl": "" },
+      "option4": { "text": "180", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 2000,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "An n-digit number is a positive number with exactly n digits. Nine hundred distinct n-digit numbers are to be formed using only the three digits 2,5 and 7. The smallest value of n for which this is possible, is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "6", "imageUrl": "" },
+      "option2": { "text": "7", "imageUrl": "" },
+      "option3": { "text": "8", "imageUrl": "" },
+      "option4": { "text": "9", "imageUrl": "" }
+    },
+    "correctOption": ["option2"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 1998,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "In a collage of 300 students, every student reads 5 newspapers and every newspaper is read by 60 students. The number of newspapers is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "atleast 30", "imageUrl": "" },
+      "option2": { "text": "atmost 20", "imageUrl": "" },
+      "option3": { "text": "exactly 25", "imageUrl": "" },
+      "option4": { "text": "None of the above", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 1998,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "A five digits number divisible by 3 is to be formed using the numbers 0, 1, 2, 3, 4 and 5, without repetition. The total number of ways this can be done, is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "216", "imageUrl": "" },
+      "option2": { "text": "240", "imageUrl": "" },
+      "option3": { "text": "600", "imageUrl": "" },
+      "option4": { "text": "3125", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 1989,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Eight chairs are numbered 1 to 8. Two women and three men wish to occupy one chair each. First the women choose the chairs from amongst the chairs marked 1 to 4 and then the men select the chairs from amongst the remaining. The number of possible arrangements is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "$^{6}C_{3}\\times^{4}C_{2}$", "imageUrl": "" },
+      "option2": { "text": "$^{t}P_{2}\\times^{4}P_{3}$", "imageUrl": "" },
+      "option3": { "text": "$^{4}C_{2}+^{4}P_{3}$", "imageUrl": "" },
+      "option4": { "text": "None of these", "imageUrl": "" }
+    },
+    "correctOption": ["option4"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 1982,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The different letters of an alphabet are given. Words with five letters are formed from these given letters. Then, the number of words which have at least one letter repeated, is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "69760", "imageUrl": "" },
+      "option2": { "text": "30240", "imageUrl": "" },
+      "option3": { "text": "99748", "imageUrl": "" },
+      "option4": { "text": "None", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 1980,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "Eighteen guests have to be seated half on each side of a long table. Four particular guests desire to sit on one particular side and three other on the other side. Determine the number of ways in which the sitting arrangements can be made.",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$^{9}P_{4}\\times^{9}P_{3}$ (11)!",
+    "askedIn": {
+      "exam": "",
+      "year": 1991,
+      "date": "",
+      "marks": 4
+    }
+  },
+  {
+    "type": "MSQ",
+    "question": {
+      "text": "Match the conditions/expressions in Column I with statement in Column II. Consider all possible permutations of the letters of the word ENDEANOEL.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "A. The number of permutations containing the word ENDEA, is", "imageUrl": "" },
+      "option2": { "text": "B. The number of permutations in which the letter E occurs in the first and the last positions, is", "imageUrl": "" },
+      "option3": { "text": "C. The number of permutations in which none of the letters D, L, N occurs in the last five positions, is", "imageUrl": "" },
+      "option4": { "text": "D. The number of permutations in which the letters A, E, O occur only in odd positions, is", "imageUrl": "" },
+      "option_p": { "text": "p. $5! / 4$", "imageUrl": "" },
+      "option_q": { "text": "q. $2\\times5!$", "imageUrl": "" },
+      "option_r": { "text": "r. $7\\times5!$", "imageUrl": "" },
+      "option_s": { "text": "s. $21\\times5!$", "imageUrl": "" }
+    },
+    "correctOption": ["option_A_p", "option_B_s", "option_C_q", "option_D_q"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 2008,
+      "date": "",
+      "marks": 6
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The number of ways of choosing 10 objects out of 31 objects of which 10 are identical and the remaining 21 are distinct, is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "$2^{20}-1$", "imageUrl": "" },
+      "option2": { "text": "$2^{21}$", "imageUrl": "" },
+      "option3": { "text": "$2^{20}$", "imageUrl": "" },
+      "option4": { "text": "$2^{20}+1$", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "12 April 1",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Suppose that 20 pillars of the same height have been erected along the boundary of a circular stadium. If the top of each pillar has been connected by beams with the top of all its non-adjacent pillars, then the total number of beams is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "180", "imageUrl": "" },
+      "option2": { "text": "210", "imageUrl": "" },
+      "option3": { "text": "170", "imageUrl": "" },
+      "option4": { "text": "190", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "10 April II",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Some identical balls are arranged in rows to form an equilateral triangle. The first row consists of one ball, the second row consists of two balls and so on. If 99 more identical balls are added to the total number of balls used in forming the equilateral triangle, then all these balls can be arranged in a square whose each side contains exactly 2 balls less than the number of balls each side of the triangle contains. Then, the number of balls used to form the equilateral triangle is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "262", "imageUrl": "" },
+      "option2": { "text": "190", "imageUrl": "" },
+      "option3": { "text": "225", "imageUrl": "" },
+      "option4": { "text": "157", "imageUrl": "" }
+    },
+    "correctOption": ["option2"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "9 April II",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "There are m men and two women participating in a chess tournament. Each participant plays two games with every other participant. If the number of games played by the men between themselves exceeds the number of games played between the men and the women by 84, then the value of m is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "12", "imageUrl": "" },
+      "option2": { "text": "11", "imageUrl": "" },
+      "option3": { "text": "9", "imageUrl": "" },
+      "option4": { "text": "7", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "12 Jan II",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "$If^{\\circ}C_{4}$ \" $C_{5}$ and ${}^{n}C_{6}$ are in AP, then n can be",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "9", "imageUrl": "" },
+      "option2": { "text": "11", "imageUrl": "" },
+      "option3": { "text": "14", "imageUrl": "" },
+      "option4": { "text": "12", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "12 Jan II",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $\\sum_{r=0}^{25}\\{^{50}C_{r}\\cdot^{50-r}C_{25-r}\\}=K(^{50}C_{25}),$ then, K is equal to",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "$2^{24}$", "imageUrl": "" },
+      "option2": { "text": "$2^{25}-1$", "imageUrl": "" },
+      "option3": { "text": "$2^{25}$", "imageUrl": "" },
+      "option4": { "text": "$(25)^{2}$", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "10 Jan II",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $\\sum_{i=1}^{20}(\\frac{^{20}C_{i-1}}{\\frac{20}{20}C_{i}+^{20}C_{i-1}})^{3}=\\frac{k}{21},$ then k equals",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "100", "imageUrl": "" },
+      "option2": { "text": "400", "imageUrl": "" },
+      "option3": { "text": "200", "imageUrl": "" },
+      "option4": { "text": "50", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "10 Jan I",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "A man X has 7 friends, 4 of them are ladies and 3 are men. His wife Y also has 7 friends, 3 of them are ladies and 4 are men. Assume X and Y have no common friends. Then, the total number of ways in which X and Y together can throw a party inviting 3 ladies and 3 men, so that 3 friends of each of X and Y are in this party, is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "485", "imageUrl": "" },
+      "option2": { "text": "468", "imageUrl": "" },
+      "option3": { "text": "469", "imageUrl": "" },
+      "option4": { "text": "484", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2017,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $S=\\{1,2,3,.....,9\\}$ For $k=1,2,......5,$ let let $N_{k}$ be the number of subsets of S, each containing five elements out of which exactly k are odd. Then $N_{1}+N_{2}+N_{3}+N_{4}+N_{5}=$",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "210", "imageUrl": "" },
+      "option2": { "text": "252", "imageUrl": "" },
+      "option3": { "text": "126", "imageUrl": "" },
+      "option4": { "text": "125", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Adv.",
+      "year": 2017,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "A debate club consists of 6 girls and 4 boys. A team of 4 members is to be selected from this club including the selection of a captain (from among these 4 members) for the team. If the team has to include atmost one boy, the number of ways of selecting the team is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "380", "imageUrl": "" },
+      "option2": { "text": "320", "imageUrl": "" },
+      "option3": { "text": "260", "imageUrl": "" },
+      "option4": { "text": "95", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Adv.",
+      "year": 2016,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $T_{u}$ be the number of all possible triangles formed by joining vertices of an n-sided regular polygon. If $T_{n+1}-T_{n}=10$ then the value of n is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "7", "imageUrl": "" },
+      "option2": { "text": "5", "imageUrl": "" },
+      "option3": { "text": "10", "imageUrl": "" },
+      "option4": { "text": "8", "imageUrl": "" }
+    },
+    "correctOption": ["option2"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2013,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If r, s, tare prime numbers and p, q are the positive integers such that LCM of p, qis $r^{2}s^{4}t^{2}$ then the number of ordered pairs (p, q) is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "252", "imageUrl": "" },
+      "option2": { "text": "254", "imageUrl": "" },
+      "option3": { "text": "225", "imageUrl": "" },
+      "option4": { "text": "224", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 2006,
+      "date": "",
+      "marks": 3
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The value of the expression $^{i7}C_{4}+\\sum_{j=1}^{32-j}C_{3}^{j}$",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "$I^{47}C_{5}$", "imageUrl": "" },
+      "option2": { "text": "$^{32}C_{5}$", "imageUrl": "" },
+      "option3": { "text": "$^{52}C_{4}$", "imageUrl": "" },
+      "option4": { "text": "None of these", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 1980,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MSQ",
+    "question": {
+      "text": "In a high school, a committee has to be formed from a group of 6 boys M1, $M_{2},$ $M_{3},$ $M_{4}$, $M_{5}$ $M_{6}$ and 5 girls $G_{1}$ $G_{2},$ $G_{4}.$ (i) Leta $\\alpha_{1}$ be the total number of ways in which the committee can be formed such that the committee has 5 members, having exactly 3 boys and 2 girls. (ii) $\\alpha_{2}$ be the total number of ways in which the committee can be formed such that the committee has at least 2 members, and having an equal number of boys and girls. (iii) Leta $\\alpha_{1}$ be the total number of ways in which the committee can be formed such that the committee has 5 members, at least 2 of them being girls. (iv) $\\alpha_{4}$ be the total number of ways in which the committee can be formed such that the committee has 4 members, having at least 2 girls such that both $M_{1}$ and $G_{1}$ are NOT in the committee together.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "P. The value of $\\alpha_{1}$ is", "imageUrl": "" },
+      "option2": { "text": "Q. The value of $\\alpha_{2}$ is", "imageUrl": "" },
+      "option3": { "text": "R. The value of $\\alpha_{3}$ is", "imageUrl": "" },
+      "option4": { "text": "S. The value of $\\alpha_{4}$ is", "imageUrl": "" },
+      "option_1": { "text": "1. 136", "imageUrl": "" },
+      "option_2": { "text": "2. 189", "imageUrl": "" },
+      "option_3": { "text": "3. 192", "imageUrl": "" },
+      "option_4": { "text": "4. 200", "imageUrl": "" },
+      "option_5": { "text": "5. 381", "imageUrl": "" },
+      "option_6": { "text": "6. 461", "imageUrl": "" }
+    },
+    "correctOption": ["option1_4", "option2_6", "option3_5", "option4_2"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Adv.",
+      "year": 2018,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "Let $n\\ge2$ be an integer. Take n distinct points on a circle and join each pair of points by a line segment. Colour the line segment joining every pair of adjacent points by blue and the rest by red. If the number of red and blue line segments are equal, then the value of n is",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "5",
+    "askedIn": {
+      "exam": "JEE Adv",
+      "year": 2014,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "Let A be a set of n distinct elements. Then, the total number of distinct functions from A to A is...and out of these... are onto functions.",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$2^{n}-1$ $\\sum_{r=1}^{n}(-1)^{n-r\\cdot n}C_{r}(r)^{n}$",
+    "askedIn": {
+      "exam": "",
+      "year": 1985,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "In a certain test, $a_{i}$ students gave wrong answers to at least i questions, where $i=1,2,...,k.$ No student gave more that k wrong answers. The total number of wrong answers given is....",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$2\\cdot\\frac{1}{2}(2n-k^{2}+k-2)$",
+    "askedIn": {
+      "exam": "",
+      "year": 1982,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "The product of any r consecutive natural numbers is always divisible by r!.",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "True",
+    "askedIn": {
+      "exam": "",
+      "year": 1985,
+      "date": "",
+      "marks": 1
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "A committee of 12 is to be formed from 9 women and 8 men. In how many ways this can be done if at least five women have to be included in a committee? In how many of these committees (i) the women are in majority? (ii) the men are in majority?",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "6062, (i) 2702 (ii) 1008",
+    "askedIn": {
+      "exam": "",
+      "year": 1994,
+      "date": "",
+      "marks": 4
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "A student is allowed to select atmost n books from n collection of $(2n+1)$ books. If the total number of ways in which he can select at least one books is 63, find the value of n.",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$n=3$",
+    "askedIn": {
+      "exam": "",
+      "year": 1987,
+      "date": "",
+      "marks": 3
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "A box contains two white balls, three black balls and four red balls. In how many ways can three balls be drawn from the box, if at least one black ball is to be included in the draw?",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "64",
+    "askedIn": {
+      "exam": "",
+      "year": 1986,
+      "date": "",
+      "marks": 2.5
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "7 relatives of a man comprises 4 ladies and 3 gentlemen, his wife has also 7 relatives; 3 of them are ladies and 4 gentlemen. In how many ways can they invite a dinner party of 3 ladies and 3 gentlemen so that there are 3 of man's relative and 3 of the wife's relatives?",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "485",
+    "askedIn": {
+      "exam": "",
+      "year": 1985,
+      "date": "",
+      "marks": 5
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "m men and n women are to be seated in a row so that no two women sit together. If $m>n.$ then show that the number of ways in which they can be seated, is $\\frac{m!(m+1)!}{(m-n+1)}$ $(m-n+1)!$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 1983,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "mn squares of equal size are arranged to form a rectangle of dimension m by n where mand n are natural numbers. Two squares will be called 'neighbours' if they have exactly one common side. A natural number is written in each square such that the number in written any square is the arithmetic mean of the numbers written in its neighbouring squares. Show that this is possible only if all the numbers used are equal.",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 1982,
+      "date": "",
+      "marks": 5
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "If ${}^{n}C_{r-1}=36$, ${}^{n}C_{r}=84$ and ${}^{\\circ}C_{r+1}=126,$ then find the values of n and r.",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$(n=9~and~r=3)$",
+    "askedIn": {
+      "exam": "",
+      "year": 1979,
+      "date": "",
+      "marks": 3
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The number of 6 digits numbers that can be formed using the digits 0, 1, 2,5, 7 and 9 which are divisible by 11 and no digit is repeated, is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "60", "imageUrl": "" },
+      "option2": { "text": "72", "imageUrl": "" },
+      "option3": { "text": "48", "imageUrl": "" },
+      "option4": { "text": "36", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "10 April 1",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "A committee of 11 members is to be formed from 8 males and 5 females. If m is the number of ways the committee is formed with at least 6 males and n is the number of ways the committee is formed with atleast 3 females, then",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "$m=n=68$", "imageUrl": "" },
+      "option2": { "text": "$m+n=68$", "imageUrl": "" },
+      "option3": { "text": "$m=n=78$", "imageUrl": "" },
+      "option4": { "text": "$n=m-8$", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "9 April 1",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Consider three boxes, each containing 10 balls labelled 1, 2, ..., 10. Suppose one ball is randomly drawn from each of the boxes. Denote by $n_{ij}$ the label of the ball drawn from the ith box, $(i=1,2,3),$ Then, the number of ways in which the balls can be chosen such that $n_{1}<n_{2}<n_{3}$ nis",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "82", "imageUrl": "" },
+      "option2": { "text": "120", "imageUrl": "" },
+      "option3": { "text": "240", "imageUrl": "" },
+      "option4": { "text": "164", "imageUrl": "" }
     },
     "correctOption": ["option2"],
     "answer": "",
@@ -897,638 +786,634 @@
       "exam": "JEE Main",
       "year": 2019,
       "date": "12 Jan 1",
-      "marks": null
+      "marks": 0
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "Let $a_{1},a_{2},....,a_{10}$ be a GP. If $\\frac{a_{3}}{a_{1}}=25,$ then $\\frac{a_{9}}{a_{5}}$ equals",
+      "text": "The number of natural numbers less than 7,000 which can be formed by using the digits 0, 1, 3, 7, 9 (repitition of digits allowed) is equal to",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "$5^{3}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$2(5^{2})$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$4(5^{2})$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$5^{4}$",
-        "imageUrl": ""
-      }
+      "option1": { "text": "374", "imageUrl": "" },
+      "option2": { "text": "375", "imageUrl": "" },
+      "option3": { "text": "372", "imageUrl": "" },
+      "option4": { "text": "250", "imageUrl": "" }
     },
-    "correctOption": ["option4"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "11 Jan 1",
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let a, b and c be the 7th, 11th and 13th terms respectively of a non-constant AP. If these are also the three consecutive terms of a GP, then is equal to $\\frac{a}{c}$",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "2",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{7}{13}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "4",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{1}{2}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
+    "correctOption": ["option1"],
     "answer": "",
     "askedIn": {
       "exam": "JEE Main",
       "year": 2019,
       "date": "9 Jan II",
-      "marks": null
+      "marks": 0
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "If a, b and c be three distinct real numbers in GP and $a+b+c=xb,$ then x cannot be",
+      "text": "Consider a class of 5 girls and 7 boys. The number of different teams consisting of 2 girls and 3 boys that can be formed from this class, if there are two specific boys A and B, who refuse to be the members of the same team, is",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "4",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "2",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "-2",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "-3",
-        "imageUrl": ""
-      }
+      "option1": { "text": "350", "imageUrl": "" },
+      "option2": { "text": "500", "imageUrl": "" },
+      "option3": { "text": "200", "imageUrl": "" },
+      "option4": { "text": "300", "imageUrl": "" }
     },
-    "correctOption": ["option2"],
+    "correctOption": ["option4"],
     "answer": "",
     "askedIn": {
       "exam": "JEE Main",
       "year": 2019,
       "date": "9 Jan 1",
-      "marks": null
+      "marks": 0
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "If the 2nd, 5th and 9th terms of a non-constant AP are in GP, then the common ratio of this GP is",
+      "text": "If all the words (with or without meaning) having five letters, formed using the letters of the word SMALL and arranged as in a dictionary, then the position of the word SMALL is",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "$\\frac{8}{5}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{4}{3}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "1",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{7}{4}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2016,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $f(x)=ax^{2}+bx+c,$ $a\\ne0$ and $\\Delta=b^{2}-4ac.$ If $\\alpha+\\beta,$ $\\alpha^{2}+\\beta^{2}and~\\alpha^{3}+\\beta^{3}$ are in GP, then",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\\Delta\\ne0$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$b\\Delta=0$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$c\\Delta=0$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$bc\\ne0$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2005,
-      "date": null,
-      "marks": 1
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let a, b, cbe in an $AP~and~a^{2},b^{2},c^{2}$ be in GP. If $a<b<c$ and $a+b+c=\\frac{3}{2},$ then the value of a is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\\frac{1}{2\\sqrt{2}}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{1}{2\\sqrt{3}}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\frac{1}{2}-\\frac{1}{\\sqrt{3}}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{1}{2}-\\frac{1}{\\sqrt{2}}$",
-        "imageUrl": ""
-      }
+      "option1": { "text": "46th", "imageUrl": "" },
+      "option2": { "text": "59th", "imageUrl": "" },
+      "option3": { "text": "52nd", "imageUrl": "" },
+      "option4": { "text": "58th", "imageUrl": "" }
     },
     "correctOption": ["option4"],
     "answer": "",
     "askedIn": {
-      "exam": null,
+      "exam": "JEE Main",
+      "year": 2016,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The letters of the word COCHIN are permuted and all the permutations are arranged in an alphabetical order as in an English dictionary. The number of words that appear before the word COCHIN, is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "360", "imageUrl": "" },
+      "option2": { "text": "192", "imageUrl": "" },
+      "option3": { "text": "96", "imageUrl": "" },
+      "option4": { "text": "48", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 2007,
+      "date": "",
+      "marks": 3
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "The number of 5 digit numbers which are divisible by 4, with digits from the set (1, 2, 3, 4, 5) and the repetition of digits is allowed, is",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "625",
+    "askedIn": {
+      "exam": "JEE Adv.",
+      "year": 2018,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "Words of length 10 are formed using the letters A, B, C, D, E, F, G, H, I, J. Let x be the number of such words where no letter is repeated; and let y be the number of such words where exactly one letter is repeated twice and no other letter is repeated. Then, en, $\\frac{y}{9x}=$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "5",
+    "askedIn": {
+      "exam": "JEE Adv.",
+      "year": 2017,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "Let n be the number of ways in which 5 boys and 5 girls can stand in a queue in such a way that all the girls stand consecutively in the queue. Let m be the number of ways in which 5 boys and 5 girls can stand in a queue in such a way that exactly four girls stand consecutively in the queue. Then, the value of $\\frac{m}{n}is$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "5",
+    "askedIn": {
+      "exam": "JEE Adv.",
+      "year": 2015,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "Let $n_{1}<n_{2}<n_{3}<n_{4}<n_{5}$ be positive integers such that $n_{1}+n_{2}+n_{3}+n_{4}+n_{5}=20$ The number of such distinct arrangements $(n_{1},n_{2},n_{3},n_{4},n_{5})$ is",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "7",
+    "askedIn": {
+      "exam": "JEE Adv.",
+      "year": 2014,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "Let n and k be positive integers such that $n\\ge\\frac{k(k+1)}{2}.$ The number of solutions $(x_{1},x_{2},...,x_{k})$ $x_{1}\\ge1$ $x_{2}\\ge2.$..... $x_{k}\\ge k$ for all integers satisfying $x_{1}+x_{2}+...+x_{k}=nis.$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 1996,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "Total number of ways in which six '+' and four - signs can be arranged in a line such that no two ''signs occur together is....",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "35 ways",
+    "askedIn": {
+      "exam": "",
+      "year": 1988,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "A group of students comprises of 5 boys and n girls. If the number of ways, in which a team of 3 students can randomly be selected from this group such that there is at least one boy and at least one girl in each team, is 1750, then n is equal to",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "28", "imageUrl": "" },
+      "option2": { "text": "27", "imageUrl": "" },
+      "option3": { "text": "25", "imageUrl": "" },
+      "option4": { "text": "24", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "12 April II",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let S be the set of all triangles in the xy-plane, each having one vertex at the origin and the other two vertices lie on coordinate axes with integral coordinates. If each triangle in S has area 50 sq. units, then the number of elements in the set S is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "36", "imageUrl": "" },
+      "option2": { "text": "32", "imageUrl": "" },
+      "option3": { "text": "18", "imageUrl": "" },
+      "option4": { "text": "9", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "9 Jan II",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "From 6 different novels and 3 different dictionaries, 4 novels and 1 dictionary are to be selected and arranged in a row on a shelf, so that the dictionary is always in the middle. The number of such arrangements is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "atleast 1000", "imageUrl": "" },
+      "option2": { "text": "less than 500", "imageUrl": "" },
+      "option3": { "text": "atleast 500 but less than 750", "imageUrl": "" },
+      "option4": { "text": "atleast 750 but less than 1000", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2018,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The total number of ways in which 5 balls of different colours can be distributed among 3 persons so that each person gets at least one ball, is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "75", "imageUrl": "" },
+      "option2": { "text": "150", "imageUrl": "" },
+      "option3": { "text": "210", "imageUrl": "" },
+      "option4": { "text": "243", "imageUrl": "" }
+    },
+    "correctOption": ["option2"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 2012,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The number of arrangements of the letters of the word BANANA in which the two N's do not appear adjacently, is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "40", "imageUrl": "" },
+      "option2": { "text": "60", "imageUrl": "" },
+      "option3": { "text": "80", "imageUrl": "" },
+      "option4": { "text": "100", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
       "year": 2002,
-      "date": null,
+      "date": "",
       "marks": 1
     }
   },
   {
-    "type": "MCQ",
-    "question": {
-      "text": "Let a, \\beta be the roots of $x^{2}-x+p=0~and~\\gamma,$ 8 be the roots of $x^{2}-4x+q=0$ If $\\alpha,\\beta,\\gamma,$ 8 are in GP, then the integer values of p and q respectively are",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "-2,-32",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "-2.3",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "-6,3",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "-6,-32",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2001,
-      "date": null,
-      "marks": 1
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If a, b, c, d and p are distinct real numbers such that $(a^{2}+b^{2}+c^{2})p^{2}-2(ab+bc+cd)p +(b^{2}+c^{2}+d^{2})\\le0$ then a, b, c, d",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "are in AP",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "are in GP",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "are in HP",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "satisfy $ab=cd$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1987,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If a, b, care in GP, then the equations $ax^{2}+2bx+c=0$ and $dx^{2}+2ex+f=0$ have a common root, $f\\frac{d}{a},\\frac{e}{b},\\frac{f}{c}are$ in",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "AP",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "GP",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "HP",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1985,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The third term of a geometric progression is 4. The product of the first five terms is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$4^{3}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$4^{5}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$4^{4}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1982,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
     "type": "Descriptive",
     "question": {
-      "text": "Find three numbers a, b, c between 2 and 18 such that (i) their sum is 25. (ii) the numbers 2,a,b are consecutive terms of an AP. (iii) the numbers b, c, 18 are consecutive terms of a GP.",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$a=5, b=8, c=12$",
-    "askedIn": {
-      "exam": null,
-      "year": 1983,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "Does there exist a geometric progression containing 27,8 and 12 as three of its term? If it exists, then how many such progressions are possible?",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "Yes, infinite",
-    "askedIn": {
-      "exam": null,
-      "year": 1982,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If the mth, nth and pth terms of an AP and GP are equal and are x, y, z, then prove that $x^{y-z}\\cdot y^{z-x}\\cdot z^{x-y}=1$",
+      "text": "Using permutation or otherwise, prove that $\\frac{n^{2}!}{(n!)^{n}}$ is an integer, where n is a positive integer.",
       "imageUrl": ""
     },
     "options": {},
     "correctOption": [],
     "answer": "",
     "askedIn": {
-      "exam": null,
+      "exam": "",
+      "year": 2004,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "In how many ways can a pack of 52 cards be (i) divided equally among four players in order (ii) divided into four groups of 13 cards each (iii) divided in 4 sets, three of them having 17 cards each and the fourth just one card?",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$(i)\\frac{(52)!}{(13!)^{4}}$ (ii) $\\frac{(52)!}{4!(13!)^{4}}$ (iii) $\\frac{(52)!}{3!(17)^{3}}$",
+    "askedIn": {
+      "exam": "",
       "year": 1979,
-      "date": null,
+      "date": "",
       "marks": 3
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "The sum $\\sum_{k=1}^{20}k\\frac{1}{2^{k}}$ is equal to",
+      "text": "Number of divisors of the form $(4n+2),$ $n\\ge0$ of the integer 240 is",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "$2-\\frac{11}{2^{19}}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$1-\\frac{11}{2^{20}}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$2-\\frac{3}{2^{17}}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$2-\\frac{21}{2^{20}}$",
-        "imageUrl": ""
-      }
+      "option1": { "text": "4", "imageUrl": "" },
+      "option2": { "text": "8", "imageUrl": "" },
+      "option3": { "text": "10", "imageUrl": "" },
+      "option4": { "text": "3", "imageUrl": "" }
     },
     "correctOption": ["option1"],
     "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 1998,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "There are four balls of different colours and four boxes of colours, same as those of the balls. The number of ways in which the balls, one each in a box, could be placed such that a ball does not go to a box of its own colour is....",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "9",
+    "askedIn": {
+      "exam": "",
+      "year": 1992,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "Five balls of different colours are to be placed in three boxes of different sizes. Each box can hold all five. In how many different ways can we place the balls so that no box remains empty?",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "150",
+    "askedIn": {
+      "exam": "",
+      "year": 1981,
+      "date": "",
+      "marks": 4
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "Find the number of ways of arranging the letters of the word `ASSASSINATION`. How many of these arrangements are such that the two S's are always together?",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$13! / (3! 4! 2!) = 10810800$, $12! / (4! 2!) = 19958400$",
+    "askedIn": {
+      "exam": "",
+      "year": 1980,
+      "date": "",
+      "marks": 3
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "The number of integers from 1 to 1000 which are divisible by neither 5 nor 7, is",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "686",
     "askedIn": {
       "exam": "JEE Main",
       "year": 2019,
       "date": "8 April II",
-      "marks": null
+      "marks": 0
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "Let $S_{n}=1+q+q^{2}+...+q^{n}and$ $T_{n}=1+(\\frac{q+1}{2})+(\\frac{q+1}{2})^{2}+...+ (\\frac{q+1}{2})^{n}$ , where q qis a real number and $q\\ne1.If$ ${}^{101}C_{1}+{}^{101}C_{2}\\cdot S_{1}+...+^{101}C_{101}\\cdot S_{100}=\\alpha T_{100}$, then a is equal to",
+      "text": "The number of ways of selecting 3 persons from 15 persons such that no two of them are consecutive is",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "$2^{100}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "202",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "200",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$2^{99}$",
-        "imageUrl": ""
-      }
+      "option1": { "text": "$^{12}C_{3}$", "imageUrl": "" },
+      "option2": { "text": "$^{11}C_{3}$", "imageUrl": "" },
+      "option3": { "text": "$^{13}C_{3}$", "imageUrl": "" },
+      "option4": { "text": "$^{14}C_{3}$", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "9 April I",
+      "marks": 0
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "The number of all possible selections of one or more questions from 10 given questions, each having an alternative is",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "3^10 - 1 = 59048",
+    "askedIn": {
+      "exam": "",
+      "year": 1999,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "In a hotel, 4 rooms are available. Six persons are to be accommodated in these 4 rooms in such a way that each of these rooms contains at least one person and at most two persons. The number of all possible ways in which this can be done is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "1080", "imageUrl": "" },
+      "option2": { "text": "432", "imageUrl": "" },
+      "option3": { "text": "288", "imageUrl": "" },
+      "option4": { "text": "none of these", "imageUrl": "" }
     },
     "correctOption": ["option1"],
     "answer": "",
     "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "11 Jan II",
-      "marks": null
+      "exam": "",
+      "year": 1996,
+      "date": "",
+      "marks": 2
     }
   },
   {
-    "type": "MCQ",
+    "type": "Descriptive",
     "question": {
-      "text": "The sum of an infinite geometric series with positive terms is 3 and the sum of the cubes of its terms is $\\frac{27}{19}.$ Then, the common ratio of this series is",
+      "text": "A seven-digit number made up of all distinct digits 8, 7, 6, 4, 2, 1, 0 is arranged in descending order. Find the position of the number 4210678.",
       "imageUrl": ""
     },
-    "options": {
-      "option1": {
-        "text": "$\\frac{4}{9}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{2}{3}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\frac{2}{9}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{1}{3}$",
-        "imageUrl": ""
-      }
+    "options": {},
+    "correctOption": [],
+    "answer": "2983rd",
+    "askedIn": {
+      "exam": "",
+      "year": 1990,
+      "date": "",
+      "marks": 4
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "A five-digit number is formed by digits 1, 2, 3, 4, 5 without repetition. Find the probability that the number formed is divisible by 4.",
+      "imageUrl": ""
     },
-    "correctOption": ["option2"],
-    "answer": "",
+    "options": {},
+    "correctOption": [],
+    "answer": "2/5",
+    "askedIn": {
+      "exam": "",
+      "year": 1989,
+      "date": "",
+      "marks": 4
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "In a class of 10 students, 3 failed in History, 6 failed in Geography and 2 failed in both the subjects. A student is selected at random. What is the probability that he has failed in History or Geography?",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "7/10",
+    "askedIn": {
+      "exam": "",
+      "year": 1980,
+      "date": "",
+      "marks": 3
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "A box contains two white balls, three black balls and four red balls. In how many ways can three balls be drawn from the box, if at least one black ball is to be included in the draw?",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "64",
+    "askedIn": {
+      "exam": "",
+      "year": 1986,
+      "date": "",
+      "marks": 2.5
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "The number of ways of distributing 8 identical balls in 3 distinct boxes, such that none of the boxes is empty is",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "21",
     "askedIn": {
       "exam": "JEE Main",
       "year": 2019,
-      "date": "11 Jan I",
-      "marks": null
+      "date": "10 Jan I",
+      "marks": 0
     }
   },
   {
-    "type": "MCQ",
+    "type": "Descriptive",
     "question": {
-      "text": "Three positive numbers form an increasing GP. If the middle term in this GP is doubled, then new numbers are in AP. Then, the common ratio of the GP is",
+      "text": "Prove that $C(2n, n)$ is an even integer.",
       "imageUrl": ""
     },
-    "options": {
-      "option1": {
-        "text": "$\\sqrt{2}+\\sqrt{3}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$3+\\sqrt{2}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$2-\\sqrt{3}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$2+\\sqrt{3}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option4"],
+    "options": {},
+    "correctOption": [],
     "answer": "",
     "askedIn": {
-      "exam": "JEE Main",
-      "year": 2014,
-      "date": null,
-      "marks": null
+      "exam": "",
+      "year": 1982,
+      "date": "",
+      "marks": 2
     }
   },
   {
-    "type": "MCQ",
+    "type": "Numerical",
     "question": {
-      "text": "$f(10)^{9}+2(11)^{1}(10)^{8}+3(11)^{2}(10)^{7}+...+10(11)^{9}=k(10)^{9},$ then k is equal to",
+      "text": "The number of points, having both coordinates as integers, that lie in the interior of the triangle with vertices (0, 0), (0, 41) and (41, 0) is",
       "imageUrl": ""
     },
-    "options": {
-      "option1": {
-        "text": "$\\frac{121}{10}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{441}{100}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "100",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "110",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
+    "options": {},
+    "correctOption": [],
+    "answer": "780",
     "askedIn": {
       "exam": "JEE Main",
-      "year": 2014,
-      "date": null,
-      "marks": null
+      "year": 2019,
+      "date": "8 April I",
+      "marks": 0
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "The sum of first 20 terms of the sequence 0.7, 0.77, 0.777...., is",
+      "text": "There are 5 different books and 7 different pens. Number of ways to select 2 books and 3 pens is",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "$\\frac{7}{81}(179+10^{-20})$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{7}{9}(99-10^{-20})$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\frac{7}{81}(179-10^{-20})$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{7}{9}(99+10^{-20})$",
-        "imageUrl": ""
-      }
+      "option1": { "text": "350", "imageUrl": "" },
+      "option2": { "text": "120", "imageUrl": "" },
+      "option3": { "text": "70", "imageUrl": "" },
+      "option4": { "text": "210", "imageUrl": "" }
     },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2013,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $a, b, c$ be in GP with common ratio $r$, where $a \\ne 0$ and $r \\ne 0$. If $a$, $ar$, and $ar^2$ are the first three terms of an AP, then the 4th term of this AP is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$5a$", "imageUrl": "" },
-      "option2": { "text": "$\\frac{2}{3}a$", "imageUrl": "" },
-      "option3": { "text": "$a$", "imageUrl": "" },
-      "option4": { "text": "$\\frac{7}{3}a$", "imageUrl": "" }
-    },
-    "correctOption": ["option3"],
+    "correctOption": ["option1"],
     "answer": "",
     "askedIn": {
       "exam": "JEE Main",
       "year": 2019,
       "date": "10 April II",
-      "marks": 4
+      "marks": 0
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "If three distinct numbers $a, b, c$ are in GP and the equations $ax^2 + 2bx + c = 0$ and $dx^2 + 2ex + f = 0$ have a common root, then which one of the following statements is correct?",
+      "text": "The number of solutions of the equation $x+y+z=33$ where $x,y,z$ are non-negative integers is",
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "$d, e, f$ are in GP", "imageUrl": "" },
-      "option2": { "text": "$\\frac{d}{a}, \\frac{e}{b}, \\frac{f}{c}$ are in AP", "imageUrl": "" },
-      "option3": { "text": "$d, e, f$ are in AP", "imageUrl": "" },
-      "option4": { "text": "$\\frac{d}{a}, \\frac{e}{b}, \\frac{f}{c}$ are in GP", "imageUrl": "" }
+      "option1": { "text": "153", "imageUrl": "" },
+      "option2": { "text": "595", "imageUrl": "" },
+      "option3": { "text": "630", "imageUrl": "" },
+      "option4": { "text": "629", "imageUrl": "" }
     },
     "correctOption": ["option2"],
     "answer": "",
     "askedIn": {
       "exam": "JEE Main",
       "year": 2019,
-      "date": "8 April II",
-      "marks": 4
+      "date": "9 April II",
+      "marks": 0
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "The product of three consecutive terms of a GP is $512$. If $4$ is added to each of the first and the second of these terms, the three terms now form an AP. Then, the sum of the original three terms of the given GP is",
+      "text": "The number of permutations of $n$ different things taken r at a time, when $p$ particular things are always to be included is",
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "36", "imageUrl": "" },
-      "option2": { "text": "28", "imageUrl": "" },
-      "option3": { "text": "32", "imageUrl": "" },
-      "option4": { "text": "24", "imageUrl": "" }
+      "option1": { "text": "$^{n-p}P_{r-p}$", "imageUrl": "" },
+      "option2": { "text": "$^{n-p}C_{r-p}r!$", "imageUrl": "" },
+      "option3": { "text": "$^{n}P_{r}$", "imageUrl": "" },
+      "option4": { "text": "$^{n-p}C_{r-p}$", "imageUrl": "" }
     },
     "correctOption": ["option2"],
     "answer": "",
@@ -1536,2027 +1421,296 @@
       "exam": "JEE Main",
       "year": 2019,
       "date": "12 Jan I",
-      "marks": 4
+      "marks": 0
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "Let $a_1, a_2, \\dots, a_{10}$ be a GP. If $\\frac{a_3}{a_1} = 25$, then $\\frac{a_9}{a_5}$ equals",
+      "text": "The number of selections of n objects taken r at a time, where $p$ particular objects are always to be included is",
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "$5^3$", "imageUrl": "" },
-      "option2": { "text": "$2(5^2)$", "imageUrl": "" },
-      "option3": { "text": "$4(5^2)$", "imageUrl": "" },
-      "option4": { "text": "$5^4$", "imageUrl": "" }
+      "option1": { "text": "$^{n-p}C_{r-p}$", "imageUrl": "" },
+      "option2": { "text": "$^{n}C_{r}$", "imageUrl": "" },
+      "option3": { "text": "$^{n-p}C_{r}$", "imageUrl": "" },
+      "option4": { "text": "$^{n}P_{r}$", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "12 Jan I",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The number of ordered pairs (r, k) for which $6\\cdot^{n}C_{r}+^{n}C_{k}=^{n+1}C_{k+1},$ where k is a non-negative integer and $n^{n}C_{k}=^{n}C_{k}$ denotes the binomial coefficient is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "(4,2)", "imageUrl": "" },
+      "option2": { "text": "(5,2)", "imageUrl": "" },
+      "option3": { "text": "(5,3)", "imageUrl": "" },
+      "option4": { "text": "(4,3)", "imageUrl": "" }
     },
     "correctOption": ["option4"],
     "answer": "",
     "askedIn": {
       "exam": "JEE Main",
       "year": 2019,
-      "date": "11 Jan I",
-      "marks": 4
+      "date": "10 Jan II",
+      "marks": 0
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "Let $a$, $b$ and $c$ be the 7th, 11th and 13th terms respectively of a non-constant AP. If these are also the three consecutive terms of a GP, then the value of $\\frac{ac}{b^2}$ is equal to",
+      "text": "From a group of 10 students, 7 students are to be selected for a cultural program. The number of ways in which this can be done, so that 3 particular students are always selected is",
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "2", "imageUrl": "" },
-      "option2": { "text": "$\\frac{7}{13}$", "imageUrl": "" },
-      "option3": { "text": "4", "imageUrl": "" },
-      "option4": { "text": "$\\frac{1}{2}$", "imageUrl": "" }
+      "option1": { "text": "$^{7}C_{4}$", "imageUrl": "" },
+      "option2": { "text": "$^{7}P_{4}$", "imageUrl": "" },
+      "option3": { "text": "$^{10}C_{7}$", "imageUrl": "" },
+      "option4": { "text": "None of these", "imageUrl": "" }
     },
-    "correctOption": ["option3"],
+    "correctOption": ["option1"],
     "answer": "",
     "askedIn": {
       "exam": "JEE Main",
       "year": 2019,
-      "date": "9 Jan II",
-      "marks": 4
+      "date": "9 Jan I",
+      "marks": 0
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "The number of common terms in the two sequences 17, 21, 25,..,417 and 16, 21, 26,..,466 is",
+      "text": "The number of permutations of the letters of the word 'ALLAHABAD' is",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "19",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "20",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "21",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "91",
-        "imageUrl": ""
-      }
+      "option1": { "text": "7560", "imageUrl": "" },
+      "option2": { "text": "15120", "imageUrl": "" },
+      "option3": { "text": "30240", "imageUrl": "" },
+      "option4": { "text": "60480", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2017,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If m is the number of integers in (10,00,000, 1,00,00,000) whose sum of digits is 10, then m is equal to",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "285", "imageUrl": "" },
+      "option2": { "text": "210", "imageUrl": "" },
+      "option3": { "text": "240", "imageUrl": "" },
+      "option4": { "text": "330", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2017,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "A man x has 7 friends, 4 of them are ladies and 3 are men. His wife Y also has 7 friends, 3 of them are ladies and 4 are men. Assume x and y have no common friends. Then the total number of ways in which X and Y together can throw a party inviting 3 ladies and 3 men, so that 3 friends of each of X and Y are in this party, is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "485", "imageUrl": "" },
+      "option2": { "text": "468", "imageUrl": "" },
+      "option3": { "text": "469", "imageUrl": "" },
+      "option4": { "text": "484", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2017,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The number of integers greater than 6000 that can be formed using the digits 3, 5, 6, 7 and 8 without repetition is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "216", "imageUrl": "" },
+      "option2": { "text": "192", "imageUrl": "" },
+      "option3": { "text": "120", "imageUrl": "" },
+      "option4": { "text": "72", "imageUrl": "" }
     },
     "correctOption": ["option2"],
     "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2015,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The number of ways of distributing 8 identical balls in 3 distinct boxes, such that none of the boxes is empty is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "21", "imageUrl": "" },
+      "option2": { "text": "15", "imageUrl": "" },
+      "option3": { "text": "18", "imageUrl": "" },
+      "option4": { "text": "12", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "10 Jan I",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $S=\\{1,2,3,4,5,6,7,8,9,10\\}$. The number of subsets of S each having 5 elements, of which exactly 3 are odd numbers is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "100", "imageUrl": "" },
+      "option2": { "text": "120", "imageUrl": "" },
+      "option3": { "text": "200", "imageUrl": "" },
+      "option4": { "text": "240", "imageUrl": "" }
+    },
+    "correctOption": ["option2"],
+    "answer": "",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2015,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The number of ways in which 6 men and 5 women can dine at a round table if no two women are to sit together is given by",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "6! $\\times$ 5!", "imageUrl": "" },
+      "option2": { "text": "5! $\\times$ 4!", "imageUrl": "" },
+      "option3": { "text": "6! $\\times$ 4!", "imageUrl": "" },
+      "option4": { "text": "None of these", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 2003,
+      "date": "",
+      "marks": 1
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The number of ways in which 5 boys and 3 girls can be seated in a row so that no two girls are together is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "14400", "imageUrl": "" },
+      "option2": { "text": "7200", "imageUrl": "" },
+      "option3": { "text": "2400", "imageUrl": "" },
+      "option4": { "text": "480", "imageUrl": "" }
+    },
+    "correctOption": ["option1"],
+    "answer": "",
+    "askedIn": {
+      "exam": "",
+      "year": 1982,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "The number of points, having both coordinates as integers, that lie in the interior of the triangle with vertices (0, 0), (0, 41) and (41, 0) is",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "780",
     "askedIn": {
       "exam": "JEE Main",
       "year": 2019,
       "date": "8 April I",
-      "marks": null
+      "marks": 0
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "Let $a_{n}$ be the nth term of a GP of positive terms. If $\\sum_{n=1}^{100}a_{2n+1}=200$ and $\\sum_{n=1}^{100}a_{2n}=100,$ then the common ratio of the GP is",
+      "text": "Number of divisors of the form $(4n+2),$ $n\\ge0$ of the integer 240 is",
       "imageUrl": ""
     },
     "options": {
-      "option1": {
-        "text": "$\\sqrt{2}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$1/2$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "2",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$1/\\sqrt{2}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "9 Jan 1",
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $x=\\sum_{n=0}^{\\infty}(-1)^{n}tan^{2n}\\theta$ and $y=\\sum_{n=0}^{\\infty}cos^{2n}\\theta,$ for $0<\\theta<\\pi/4,$ then",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$y(1-x)=1$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$y(1+x)=1$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$x(1+y)=1$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$x(1-y)=1$",
-        "imageUrl": ""
-      }
+      "option1": { "text": "4", "imageUrl": "" },
+      "option2": { "text": "8", "imageUrl": "" },
+      "option3": { "text": "10", "imageUrl": "" },
+      "option4": { "text": "3", "imageUrl": "" }
     },
     "correctOption": ["option1"],
     "answer": "",
     "askedIn": {
-      "exam": "JEE Main",
-      "year": 2017,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The sum of all real roots of the equation $(x(x^{2}+x+1))^{2}-(x^{2}+x+1)+1=0i$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$-1$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$1$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$0$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "-2",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2017,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The sum of the series $1+\\frac{x}{1!}+\\frac{x(x+y)}{2!}+\\frac{x(x+y)(x+2y)}{3!}+...,$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$e^{x+y}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$e^{x}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$e^{y}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{x}{y}e^{x}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option4"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2004,
-      "date": null,
-      "marks": 1
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $x=\\sum_{n=0}^{\\infty}a^{n},y=\\sum_{n=0}^{\\infty}b^{n},z=\\sum_{n=0}^{\\infty}c^{n}$ where a, b, care in AP and $|a|<1,|b|<1,|c|<1.$ Then x, y, z are in",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "AP",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "GP",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "HP",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2005,
-      "date": null,
-      "marks": 1
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $S_{k},k=1,2,...$ be the sum of an infinite geometric series with first term $\\frac{k-1}{k!}$ and common ratio $\\frac{1}{k}$ Then, the value of $\\sum_{k=1}^{\\infty}k^{2}S_{k}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "e",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$e-1$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$e+1$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "1",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2004,
-      "date": null,
-      "marks": 1
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The sum of the series $1^{3}+(1^{3}+2^{3})+(1^{3}+2^{3}+3^{3})+...$ upto n terms is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\\frac{n(n+1)(n+2)}{12}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{n(n+1)(n+2)^{2}}{12}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\frac{n(n+1)^{2}(n+2)}{12}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{n^{2}(n+1)^{2}(n+2)^{2}}{12}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1986,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The sum to infinity of the series $1+\\frac{2}{3}+\\frac{6}{3^{2}}+\\frac{10}{3^{3}}+\\frac{14}{3^{4}}+...$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "3",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "4",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "6",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "2",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1993,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The sum of integers from 1 to 100 that are divisible by 2 or 5 is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "3050",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "2550",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "3550",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "3600",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1984,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The number of terms common to the two AP's 3,7,11,....,407 and 2,9,16,....,709 is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "18",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "7",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "9",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "15",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2006,
-      "date": null,
-      "marks": 1
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "Find the sum of the series $\\sum_{r=1}^{n}(-1)^{r-1}~^{n}C_{r}(\\frac{1}{r}+\\frac{1}{r+1}+...+ \\frac{1}{n}).$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$\\frac{1}{n}$",
-    "askedIn": {
-      "exam": null,
-      "year": 1993,
-      "date": null,
-      "marks": 5
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "Let $a_{n}$ be the nth term of an AP. If $\\sum_{r=1}^{100}a_{2r}=\\alpha$ and $\\sum_{r=1}^{100}a_{2r-1}=\\beta,$ then the common difference of the AP is",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$\\frac{\\alpha-\\beta}{100}$",
-    "askedIn": {
-      "exam": null,
-      "year": 1990,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "Evaluate $\\sum_{k=1}^{n}(-1)^{k-1}k^{2}.$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$(-1)^{n-1}\\frac{n(n+1)}{2}$",
-    "askedIn": {
-      "exam": null,
-      "year": 1986,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "A total number of 16 players participated in a tennis tournament. The players are seeded $S_{1},S_{2},...,S_{16}$ according to their skills, $S_{1}$ being the best player. In each round, a match is played between two players. The winner from each match advances to the next round and the loser is eliminated. The matches are organised in such a way that in each round, the best available player plays with the worst available player, and the second best plays with the second worst available player, and so on. (i) Which players are in round 2? (ii) If $S_{2}$ and $S_{9}$ reach the final, who will win the tournament? (iii) Suppose $S_{1}$ and $S_{2}$ are in the final. If $S_{1}$ wins the final, then the probability that $S_{3}$ was among the top four players in the tournament is...",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "(i) $S_{1},S_{2},S_{3},S_{4},S_{5},S_{6},S_{7},S_{8}$ (ii) $S_{2}$ (iii) $\\frac{1}{2}$",
-    "askedIn": {
-      "exam": null,
+      "exam": "",
       "year": 1998,
-      "date": null,
+      "date": "",
       "marks": 2
     }
   },
   {
-    "type": "Numerical",
+    "type": "MCQ",
     "question": {
-      "text": "The sum of the series $1+(1+2+4)+(1+2+4+8)+(1+2+4+8+16)+...+ (1+2+4+...+2^{n-1})$ is",
+      "text": "A five-digit number divisible by 3 is to be formed using the numbers 0, 1, 2, 3, 4 and 5, without repetition. The total number of ways this can be done, is",
       "imageUrl": ""
     },
-    "options": {},
-    "correctOption": [],
-    "answer": "$2^{n+1}-n-2$",
-    "askedIn": {
-      "exam": null,
-      "year": 1981,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $S_{n}$ be the sum of n terms of the series $\\frac{8}{5}+\\frac{16}{65}+\\frac{24}{325}+...$ If $S_{n}=\\frac{n(n+1)}{An^{2}+Bn+C}$ then $A+B+C$ equals",
-      "imageUrl": ""
+    "options": {
+      "option1": { "text": "216", "imageUrl": "" },
+      "option2": { "text": "240", "imageUrl": "" },
+      "option3": { "text": "600", "imageUrl": "" },
+      "option4": { "text": "3125", "imageUrl": "" }
     },
-    "options": {},
-    "correctOption": [],
-    "answer": "1",
+    "correctOption": ["option1"],
+    "answer": "",
     "askedIn": {
-      "exam": null,
-      "year": 2011,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "The sum of the series $\\sum_{r=0}^{n}(-1)^{r}^{n}C_{r}(\\frac{1}{2^{r}}+\\frac{3^{r}}{2^{2r}}+\\frac{7^{r}}{2^{3r}}+...$ upto m terms) is equal to",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$\\frac{2^{m}-1}{2^{m}(2^{n}-1)}$",
-    "askedIn": {
-      "exam": null,
+      "exam": "",
       "year": 1989,
-      "date": null,
-      "marks": 5
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "If n is an odd integer, then $n^{2}(n^{2}-1^{2})(n^{2}-2^{2})... (n^{2}-(n-1)^{2})=...$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$((2n)!)^{2}$",
-    "askedIn": {
-      "exam": null,
-      "year": 1994,
-      "date": null,
+      "date": "",
       "marks": 2
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $\\sum_{r=0}^{25}{}^{50}C_{r}=K$, then $\\sum_{r=0}^{25}r\\cdot{}^{50}C_{r}$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$25K$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{1}{2}K$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$50K$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$25K-\\frac{1}{2}{}^{50}C_{25}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option4"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "10 April I",
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The value of $\\sum_{r=1}^{15}r^{2}\\frac{^{15}C_{r}}{^{15}C_{r-1}}$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "560",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "680",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "1240",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "1080",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "9 Jan II",
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The sum of the series $\\sum_{n=1}^{\\infty}\\frac{n^{2}+6n+10}{(2n+1)!}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$e-\\frac{e^{-1}}{2}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$4e-e^{-1}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$2e-e^{-1}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$e-e^{-1}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Adv.",
-      "year": 2017,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The value of $\\sum_{k=1}^{13}\\frac{1}{sin(\\frac{\\pi}{4}+(k-1)\\frac{\\pi}{6})sin(\\frac{\\pi}{4}+\\frac{k\\pi}{6})}$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$3-\\sqrt{3}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$2(3-\\sqrt{3})$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$2(\\sqrt{3}-1)$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$2(\\sqrt{3}+1)$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Adv.",
-      "year": 2016,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The sum of the series $1+\\frac{1}{1+2}+\\frac{1}{1+2+3}+...+\\frac{1}{1+2+...+n}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\\frac{2n}{n+1}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{2n}{n+2}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\frac{n}{n+1}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{2}{n+1}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2013,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The sum of the series $1+\\frac{1}{3}++\\frac{1}{3^{2}}+...\\frac{1}{3^{n-1}}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\\frac{3}{2}(1-\\frac{1}{3^{n}})$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{3}{2}(1+\\frac{1}{3^{n}})$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\frac{2}{3}(1-\\frac{1}{3^{n}})$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$\\frac{2}{3}(1+\\frac{1}{3^{n}})$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": "AIEEE",
-      "year": 2005,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If a, band c are in AP, then $\\frac{a}{bc},\\frac{1}{c},\\frac{1}{b}$ are in",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "AP",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "GP",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "HP",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1983,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If a, b and c are in AP, GP and HP respectively, then a, c, b are in",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "AP",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "GP",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "HP",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1983,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If the pth, qth and rth terms of an AP are a, b, crespectively, then $a(q-r)+b(r-p)+c(p-q)$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "0",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "1",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "-1",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1983,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "Find the sum of the series $\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{7}+\\frac{1}{43}+...+\\frac{1}{1+n^{2}-n}$.",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$1-\\frac{1}{1+n+n^{2}}$",
-    "askedIn": {
-      "exam": null,
-      "year": 1980,
-      "date": null,
-      "marks": 3
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $S_{n}$ be the sum of n terms of the series $8+12+20+32+...$ Then $S_{n}$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$3\\cdot2^{n}+4n-3$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$3\\cdot2^{n+1}+4n-3$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$3\\cdot2^{n+1}+4n-6$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$3\\cdot2^{n}+4n-6$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2013,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The sum of the series $1+\\frac{1}{2}+\\frac{1}{3}+...+\\frac{1}{n}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$ln(n)+Y$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$n^{2}+1$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\frac{n(n+1)}{2}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1996,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If x, y and z are in AP, then $(x+2y-z)(x+z-y)(z+2y-x)$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "xyz",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$2xyz$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$4xyz$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$8xyz$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1987,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $a_{n}$ be the nth term of an AP. If $\\sum_{r=1}^{100}a_{2r}=\\alpha$ and $\\sum_{r=1}^{100}a_{2r-1}=\\beta,$ then the common difference of the AP is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\\alpha-\\beta$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{\\alpha-\\beta}{100}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\frac{\\alpha-\\beta}{200}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1990,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $m$ be an integer, such that the cubic $x^{3}-3x+m=0$ has three distinct real roots. Then, the number of possible values of m is......",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "3",
-    "askedIn": {
-      "exam": "JEE Adv.",
-      "year": 2017,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $S_{n}$ be the sum of the first n terms of an arithmetic progression. If $S_{3n}=3S_{n},$ then the ratio $\\frac{S_{2n}}{S_{n}}$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "2",
-    "askedIn": {
-      "exam": "JEE Adv.",
-      "year": 2013,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $a_{1},a_{2},...,a_{10}$ be an AP with common difference -3 and $b_{1},b_{2},...,b_{10}$ be a GP with common ratio 2. Let $c_{k}=a_{k}+b_{k}$ for $k=1,2,...,10.$ If $c_{1}=1$ and $c_{2}=4$ then the number of terms in the sequence $c_{1},c_{2},...,c_{10}$ that are less than 0 is",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "4",
-    "askedIn": {
-      "exam": "JEE Adv.",
-      "year": 2014,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "The value of $2\\sum_{k=1}^{n}(-1)^{k+1}\\frac{1}{k}$ is",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$\\frac{1}{n^{2}}$",
-    "askedIn": {
-      "exam": null,
-      "year": 1993,
-      "date": null,
-      "marks": 5
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $f_{k}(x)=\\frac{1}{k}(sin^{k}x+cos^{k}x)$ for $k=1,2,3...$ Then the value of $f_{4}(x)-f_{6}(x)$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$\\frac{1}{12}$",
-    "askedIn": {
-      "exam": null,
-      "year": 2017,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "A value of r such that $0.5^{r^{2}-6r+8}<1$ is",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "3",
-    "askedIn": {
-      "exam": null,
-      "year": 1992,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "The sum of the digits of the smallest positive integer which has 24 divisors is",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "9",
-    "askedIn": {
-      "exam": null,
-      "year": 2012,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If x, y and z are in AP, then $(x+2y-z)(x+z-y)(z+2y-x)$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "xyz",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$2xyz$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$4xyz$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$8xyz$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1987,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $a_{n}$ be the nth term of an AP. If $\\sum_{r=1}^{100}a_{2r}=\\alpha$ and $\\sum_{r=1}^{100}a_{2r-1}=\\beta,$ then the common difference of the AP is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$\\alpha-\\beta$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$\\frac{\\alpha-\\beta}{100}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$\\frac{\\alpha-\\beta}{200}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1990,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "Let $x_{1},x_{2},...,x_{n}$ be n observations such that $\\sum x_{i}^{2}=400$ and $\\sum x_{i}=80.$ Then a possible value of n is",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "16",
-    "askedIn": {
-      "exam": null,
-      "year": 2005,
-      "date": null,
-      "marks": 1
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If $a_{1},a_{2},...,a_{n}$ are in AP with common difference d. Show that $tan[tan^{-1}(\\frac{d}{1+a_{1}a_{2}})+tan^{-1}(\\frac{d}{1+a_{2}a_{3}})+...+tan^{-1}(\\frac{d}{1+a_{n-1}a_{n}})]=\\frac{n-1)d}{1+a_{1}a_{n}}$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2002,
-      "date": null,
-      "marks": 5
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If $n\\ge2$ be an integer, $A_{n}=\\sum_{k=0}^{n}(-1)^{k}^{n}C_{k}\\frac{1}{k+1}$ and $B_{n}=\\sum_{k=0}^{n}(-1)^{k}^{n}C_{k}\\frac{1}{k+2}Then~find~\\frac{B_{n}}{A_{n}}.$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$\\frac{n+1}{n+2}$",
-    "askedIn": {
-      "exam": null,
-      "year": 1991,
-      "date": null,
-      "marks": 4
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "Prove that $tan[tan^{-1}(\\frac{1}{2})+tan^{-1}(\\frac{1}{3})+...+tan^{-1}(\\frac{1}{n^{2}+n+1})]=\\frac{n}{n+2}$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1993,
-      "date": null,
-      "marks": 5
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "Find the sum of the series $1-\\frac{1}{2}+\\frac{1}{3}-\\frac{1}{4}+...+(-1)^{n-1}\\frac{1}{n}$.",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$ln(2)$",
-    "askedIn": {
-      "exam": null,
-      "year": 1980,
-      "date": null,
-      "marks": 3
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $a_{n}$ be a sequence of positive real numbers such that $a_{n+1}=a_{n}+\\frac{a_{n}}{n}$ for all $n\\ge1.$ If $a_{1}=1,$ then $\\lim_{n\\to\\infty}\\frac{a_{n}}{n}$ equals",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "e",
-    "askedIn": {
-      "exam": "JEE Adv.",
-      "year": 2018,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $n_{1}<n_{2}<n_{3}<n_{4}<n_{5}$ be positive integers in AP. If $n_{1}+n_{2}+n_{3}+n_{4}+n_{5}=15$ and $\\frac{1}{n_{1}}+\\frac{1}{n_{2}}+\\frac{1}{n_{3}}+\\frac{1}{n_{4}}+\\frac{1}{n_{5}}=\\frac{15}{23}$ Then $\\frac{1}{n_{1}n_{2}n_{3}n_{4}n_{5}}$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$\\frac{1}{13840}$",
-    "askedIn": {
-      "exam": "JEE Adv.",
-      "year": 2016,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "A man starts walking from a point P on the ground towards a nearby tower. He observes that the angle of elevation of the top of the tower is $30^{\\circ}.$ He walks 40 m towards the tower and finds that the angle of elevation of the top of the tower is $60^{\\circ}.$ If the height of the tower is $30\\sqrt{3}m,$ then the distance he walked is....",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "40",
-    "askedIn": {
-      "exam": null,
-      "year": 1984,
-      "date": null,
-      "marks": 3
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "The sum $\\sum_{r=1}^{\\infty}\\frac{r}{2^{r-1}}$ is",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "4",
-    "askedIn": {
-      "exam": null,
-      "year": 1999,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $S_{k}$ denotes the sum of the series $1+8+27+...+k^{3}.$ Then $\\frac{S_{n}}{S_{n}}$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "1",
-    "askedIn": {
-      "exam": null,
-      "year": 2000,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let P be the sum of the first n terms of an arithmetic progression. Let $Q=\\sum_{k=1}^{n}\\frac{T_{k}}{(k+1)!}$ and $R=\\sum_{k=1}^{n}\\frac{T_{k}}{k!}$ If $(n^{2}+n+1)P^{2}=\\frac{n^{4}(n+1)^{2}}{4}then~Q=R.$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "False",
-    "askedIn": {
-      "exam": null,
-      "year": 1989,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let A be the sum of the first 20 terms of the first 40 terms of the series $1^{2}+2\\cdot2^{2}+3^{2}+2\\cdot4^{2}+5^{2}+2\\cdot6^{2}+...$ If $B-2A=100\\lambda$ then is equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "232",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "248",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "464",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "496",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2018,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If the sum of the first ten terms of the series $(1\\frac{3}{5})^{2}+(2\\frac{2}{5})^{2}+(3\\frac{1}{5})^{2}+4^{2}+(4\\frac{4}{5})^{2}+...,$ $\\frac{16}{5}m,$ then m is equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "102",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "101",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "100",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "99",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2016,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If m is the AM of two distinct real numbers / and $n(l,n>1)$ and $G_{1}$ $G_{2}$ and $G_{3}$ are three geometric means between land n, then $G_{1}^{4}+2G_{2}^{4}+G_{3}^{4}$ equals",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$4l^{2}mn$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$4lm^{2}n$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$lmn^{2}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$l^{2}m^{2}n^{2}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": 2015,
-      "year": null,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The sum of first 9 terms $\\frac{1^{3}}{1}+\\frac{1^{3}+2^{3}}{1+3}+\\frac{1^{3}+2^{3}+3^{3}}{1+3+5}+...is$",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "71",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "96",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "142",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "192",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": 2015,
-      "year": null,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $\\alpha\\in(0,\\frac{\\pi}{2})$ then $n\\sqrt{x^{2}+x}+\\frac{tan^{2}\\alpha}{\\sqrt{x^{2}+x}}$ is always greater than or equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$2~tan~\\alpha$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "1",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "2",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$sec^{2}\\alpha$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2003,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $a_{1},a_{2},...,a_{n}$ are positive real numbers whose product is a fixed number c, then the minimum value of $a_{1}+a_{2}+...+a_{n-1}+2a_{n}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "n $(2c)^{1/n}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$(n+1)e^{1/n}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$2nc^{1/n}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$(n+1)(2c)^{1/n}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2002,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If a,b,c are positive real numbers such that a $a+b+c+d=2$ then M (a + b) $(c+d)$ satisfies the relation",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$0<M\\le1$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$1\\le M\\le2$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$2\\le M\\le3$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$3\\le M\\le4$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2000,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The harmonic mean of the roots of the equation $(5+\\sqrt{2})x^{2}-(4+\\sqrt{5})x+8+2\\sqrt{5}=0i$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "2",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "4",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "6",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "8",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1999,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The product of n positive numbers is unity, then their sum is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "a positive integer",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "divisible by n",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "equal to $n+\\frac{1}{n}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "never less than n",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option4"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1991,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If a, b and c are distinct positive numbers, then the expression $(b+c-a)(c+a-b)(a+b-c)-abc~is$",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "positive",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "negative",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "non-positive",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "non-negative",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1991,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $x_{1},x_{2},...,x_{n}$ are any real numbers and n is any positive integer, then",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$i\\sum_{i=1}^{n}x_{i}^{i2}\\ge(\\sum_{i=1}^{n}x_{i})^{2}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$i\\sum_{i=1}^{n}x_{i}^{2}<(\\sum_{i=1}^{n}x_{i})^{2}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$n\\sum_{i=1}^{n}x_{i}^{2}\\ge n(\\sum_{i=1}^{n}x_{i})^{2}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "None of these",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1982,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $A_{1}$ $G_{1}$ $H_{1}$ denote the arithmetic, geometric and harmonic means, respectively, of two distinct positive numbers. For $n\\ge2$ let $A_{n-1}$ and $H_{n-1}$ has arithmetic, geometric and harmonic means as respectively. $A_{n}$ Which one of the following statements is correct?",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$G_{1}>G_{2}>G_{3}>...$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$G_{1}<G_{2}<G_{3}<...$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$G_{1}=G_{2}=G_{3}=...$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$G_{1}<G_{5}<G_{5}<....8$ and $G_{2}>G_{4}>G_{6}>...$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2007,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Which of the following statements is correct?",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$A_{1}>A_{2}>A_{3}>...$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$A_{1}<A_{\\underline{1}}<A_{3}<...$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$A_{1}>A_{3}>A_{5}>...$ and $A_{2}<A_{4}<A_{6}>...$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$A_{1}<A_{3}<A_{5}<....$ and $A_{2}>A_{4}>A_{6}>...$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2007,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Which of the following statements is correct?",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$H_{1}>H_{2}>H_{3}>...$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$H_{1}<H_{2}<H_{3}<...$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$H_{1}>H_{3}>H_{5}>...$ and $H_{2}<H_{4}<H_{6}>...$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$H_{1}<H_{3}<H_{5}<....$ and $H_{2}>H_{4}>H_{6}>...$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option2"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2007,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MSQ",
-    "question": {
-      "text": "For a positive integer n let $a(n)=1+\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}+...+\\frac{1}{(2^{n})-1}$ then",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "a $(100)\\le100$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "a $t(100)>100$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "a $(200)\\le100$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "a $z(200)>100$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1", "option4"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1999,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "MSQ",
-    "question": {
-      "text": "If the first and the $(2n-1)th$ term of an AP, GP and HP are equal and their nth terms are a,b and c respectively, then",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "$a=b=c$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "$a\\ge b\\ge c$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "$a+c=b$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "$ac-b^{2}=0$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1", "option2", "option4"],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1988,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If x be is the arithmetic mean and y, z be two geometric means between any two positive numbers, then $\\frac{y^{3}+z^{3}}{xyz}=.....$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "2",
-    "askedIn": {
-      "exam": null,
-      "year": 1997,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If the harmonic mean and geometric mean of two positive numbers are in the ratio 4: 5. Then, the two numbers are in the ratio....",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "4:1",
-    "askedIn": {
-      "exam": null,
-      "year": 1992,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If x and y are positive real numbers and m, n are any positive integers, then $\\frac{x^{n}y^{m}}{(1+x^{2n})(1+y^{2m})}>\\frac{1}{4}.$ ",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "False",
-    "askedIn": {
-      "exam": null,
-      "year": 1989,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "For $0<a<x,$ the minimum value of function $log_{a}x+log_{x}c$ is 2.",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "False",
-    "askedIn": {
-      "exam": null,
-      "year": 1989,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If a, b, care positive real numbers, then prove that $\{(1+a)(1+b)(1+c)\}^{7}>7^{7}a^{4}b^{4}c^{4}$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2004,
-      "date": null,
-      "marks": 4
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "Let $a_{1}$, $a_{2^{r}}$ be positive real numbers in geometric progression. For each n, if $A_{n}$ $,G_{n}$, $H_{n}$ are respectively, the arithmetic mean, geometric mean and harmonic mean of $a_{1},a_{2},....,a_{n}.$ Then, find an expression for the geometric mean of $G_{1},G_{2},...,G_{n}$ in terms of $A_{1},A_{2},...,A_{n},H_{1},H_{2},...,H_{n}.$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 2001,
-      "date": null,
-      "marks": 5
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If p is the first of the n arithmetic means between two numbers and g be the first on n harmonic means between the same numbers. Then, show that q does not lie between pand $(\\frac{n+1}{n-1})^{2}_{F}$ .",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1991,
-      "date": null,
-      "marks": 4
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If $\\alpha>0$, $b>0$ and $c>0,$ then prove that $(a+b+c)\\frac{1}{a}+\\frac{1}{b}+\\frac{1}{c}\\ge9$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "askedIn": {
-      "exam": null,
-      "year": 1984,
-      "date": null,
-      "marks": 2
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $a,b,c$ be positive integers such that $b/a$ is an integer. If a,b,c are in geometric progression and the arithmetic mean of a, $b,c$ is $b+2,$ then the value of $\\frac{a^{2}+a-14}{a+1}$ is",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "8",
-    "askedIn": {
-      "exam": "JEE Adv.",
-      "year": 2014,
-      "date": null,
-      "marks": null
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "The minimum value of the sum of real numbers $a^{-5}$, $a^{-4}$ $3a^{-3}$ 1, $a^{s}$ and $a^{10}$ with a $a>0$ is ...... ",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "8",
-    "askedIn": {
-      "exam": null,
-      "year": 2011,
-      "date": null,
-      "marks": null
     }
   }
 ]
