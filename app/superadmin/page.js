@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import QuestionRenderer from '@/components/superadmin/QuestionRenderer';
 import MetaData from '@/components/superadmin/MetaData';
 export default function Page() {
@@ -70,8 +71,7 @@ export default function Page() {
       topic: meta.topic || q.topic || "Unknown",
       unit: meta.unit || q.unit || "",
       askedIn: q.askedIn || "",
-    }));
-
+    })); 
     try {
       const res = await fetch("/api/question", {
         method: "POST",
@@ -92,18 +92,15 @@ export default function Page() {
     }
   };
 
-  const promptText = `Task:
+const promptText = `Task:
 Extract all questions from the attached PDF and convert them into a valid JSON array using the strict schema provided below.
 All mathematical expressions must be converted into proper inline LaTeX, wrapped in $...$.
 Ensure that all math is accurately preserved and rendered correctly. If any expression appears to be broken or incomplete, fix it using LaTeX standards wherever logically possible.
 
 ✅ Output Instructions:
 Divide the total output into 3 parts.
-
 After sending each part, wait for my reply "next" before continuing.
-
 Each part must be a valid JSON array — strictly no extra text, comments, markdown, or formatting outside the JSON.
-
 Ensure every question is fully parseable JSON.
 
 ✅ LaTeX Formatting Rules (Strict):
@@ -111,27 +108,18 @@ All math expressions must follow proper LaTeX standards. Wrap every math part in
 Convert any raw math-like text or pseudo-LaTeX from the PDF to valid LaTeX. Pay attention to:
 
 Integrals: $\\int x^2 \\, dx$
-
 Fractions: $\\frac{a}{b}$
-
 Matrices: $\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$
-
 Limits/Sums/Products: $\\lim_{x \\to \\infty}$, $\\sum_{i=1}^{n}$, $\\prod_{i=1}^{n}$
-
 Roots: $\\sqrt{x}$, $\\sqrt[n]{y}$
-
 Complex numbers: $z = x + iy$, $\\arg(z)$, $|z|$
-
 Greek letters: $\\theta$, $\\pi$, $\\alpha$, $\\beta$, etc.
-
 Vectors or modulus: $|\\vec{A}|$, $\\hat{i}$, $\\vec{F}$
-
 Special characters: escape underscore (_ as \\_) and percent (% as \\%) where needed.
+Use \\left and \\right for scalable brackets, e.g., $\\left| \\arg\\left(\\frac{z - 1}{z + 1} \\right) \\right|$
 
-Ensure \left, \right are used for scalable brackets: e.g., $\left| \arg\left(\frac{z - 1}{z + 1} \right) \right|$.
+📦 JSON Output Format (Strict):
 
-  JSON Output Format (Strict)
- 
 [
   {
     "type": "MCQ" | "MSQ" | "Numerical" | "Descriptive",
@@ -140,44 +128,47 @@ Ensure \left, \right are used for scalable brackets: e.g., $\left| \arg\left(\fr
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "Option A", "imageUrl": "" },
-      "option2": { "text": "Option B", "imageUrl": "" },
-      "option3": { "text": "Option C", "imageUrl": "" },
-      "option4": { "text": "Option D", "imageUrl": "" }
+      "option1": { "text": "", "imageUrl": "" },
+      "option2": { "text": "", "imageUrl": "" },
+      "option3": { "text": "", "imageUrl": "" },
+      "option4": { "text": "", "imageUrl": "" }
     },
     "correctOption": ["optionX"],
     "answer": "",
-    "topic": "", //if you find topic then write it there otherwise dont write leave blank
+    "explanation": "",
+    "publication": "",
+    "subject": "",
+    "topic": "",
+    "level": "Easy" | "Medium" | "Hard",
+    "unit": "",
+    "error": "",
+    "createdBy": "", // leave as empty string
     "askedIn": {
-          "exam": "Exam Name (e.g., JEE Main)",
-          "year": Number,  // e.g., 2019
-          "date": String, // e.g., "12 Jan I"
-          "marks": Number // e.g., 3 (for "3M")
+      "exam": "",
+      "year": 2020,
+      "date": "",
+      "marks": 3
     }
   }
 ]
-  Notes & Rules
-Always divide questions into 3 equal parts (if possible).
 
-Wait for the prompt “next” before sending the next batch.
-
-Only use this exact structure — do not include fields like explanation, difficulty, tags, etc.
-
-If an image is present with a question or option, extract and place its URL in imageUrl; otherwise, leave it as an empty string.
-
-If the correct answer is not available, set:
-
-"correctOption": []
-
-"answer": ""
-
-Always validate the final JSON output — it must be parsable without any extra characters, newlines outside strings, or trailing commas.
-
+🧠 Notes & Rules:
+- Always divide questions into 3 equal parts (if possible).
+- Wait for the prompt “next” before sending the next batch.
+- Only use this exact structure — do not include or omit any field.
+- If the correct answer is not available, set:
+  "correctOption": []
+  "answer": ""
+- If an image is present with a question or option, extract and place its URL in imageUrl; otherwise, leave it as an empty string.
+- "createdBy" must always be an empty string.
+- Always validate the final JSON output — it must be parseable without any extra characters, markdown, newlines outside strings, or trailing commas.
 `;
+
+
   const handlecopy = async () => {
     try {
       await navigator.clipboard.writeText(promptText);
-      alert('Prompt copied to clipboard!');
+      toast.success('Prompt copied to clipboard!');
     } catch (error) {
       alert('Failed to copy the prompt. Please try again.');
     }
