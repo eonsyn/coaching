@@ -93,38 +93,44 @@ export default function Page() {
   };
 
 const promptText = `Task:
-Extract all questions from the attached PDF and convert them into a valid JSON array using the strict schema provided below.
-All mathematical expressions must be converted into proper inline LaTeX, wrapped in $...$.
-Ensure that all math is accurately preserved and rendered correctly. If any expression appears to be broken or incomplete, fix it using LaTeX standards wherever logically possible.
 
-✅ Output Instructions:
-Divide the total output into 3 parts.
-After sending each part, wait for my reply "next" before continuing.
-Each part must be a valid JSON array — strictly no extra text, comments, markdown, or formatting outside the JSON.
-Ensure every question is fully parseable JSON.
+Extract all questions from the attached PDF topic-wise.
 
-✅ LaTeX Formatting Rules (Strict):
-All math expressions must follow proper LaTeX standards. Wrap every math part in $...$.
-Convert any raw math-like text or pseudo-LaTeX from the PDF to valid LaTeX. Pay attention to:
+For each topic:
+- Extract all questions belonging to that topic together.
+- Once one topic is complete, wait for my input "next" before continuing to the next topic.
 
-Integrals: $\\int x^2 \\, dx$
-Fractions: $\\frac{a}{b}$
-Matrices: $\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$
-Limits/Sums/Products: $\\lim_{x \\to \\infty}$, $\\sum_{i=1}^{n}$, $\\prod_{i=1}^{n}$
-Roots: $\\sqrt{x}$, $\\sqrt[n]{y}$
-Complex numbers: $z = x + iy$, $\\arg(z)$, $|z|$
-Greek letters: $\\theta$, $\\pi$, $\\alpha$, $\\beta$, etc.
-Vectors or modulus: $|\\vec{A}|$, $\\hat{i}$, $\\vec{F}$
-Special characters: escape underscore (_ as \\_) and percent (% as \\%) where needed.
-Use \\left and \\right for scalable brackets, e.g., $\\left| \\arg\\left(\\frac{z - 1}{z + 1} \\right) \\right|$
+Important:
+Solutions and explanations are mentioned at the end of the PDF — match them with the respective questions and map them into the "answer" and "explanation" fields accurately.
 
-📦 JSON Output Format (Strict):
+Output Instructions:
+
+- Convert each question into a **valid JSON array**, using the exact schema below.
+- Each output should contain **only one topic’s questions**.
+- Output only JSON — no extra text, no markdown, no comments, no trailing commas.
+
+LaTeX Formatting Rules (Strict):
+
+- Wrap all math expressions in \`$\`...\`$\`
+- Use correct LaTeX syntax and escape special characters.
+- Examples:
+  - Integrals: \`$\\int x^2\\, dx$\`
+  - Fractions: \`$\\frac{a}{b}$\`
+  - Matrices: \`$\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$\`
+  - Limits: \`$\\lim_{x \\to \\infty}$\`
+  - Roots: \`$\\sqrt{x}$\`
+  - Complex: \`$z = x + iy$, $\\arg(z)$\`
+  - Vectors: \`$\\vec{A}$\`, \`$\\hat{i}$\`, \`$|\\vec{F}|$\`
+  - Brackets: use \`\\left\` and \`\\right\`
+  - Escape characters like \`_\` as \`\\_\`, \`%\` as \`\\%\`
+
+JSON Schema Format (Strict):
 
 [
   {
     "type": "MCQ" | "MSQ" | "Numerical" | "Descriptive",
     "question": {
-      "text": "Full question text with valid LaTeX (math in $...$).",
+      "text": "Question text with LaTeX (math in $...$)",
       "imageUrl": ""
     },
     "options": {
@@ -133,16 +139,20 @@ Use \\left and \\right for scalable brackets, e.g., $\\left| \\arg\\left(\\frac{
       "option3": { "text": "", "imageUrl": "" },
       "option4": { "text": "", "imageUrl": "" }
     },
-    "correctOption": ["optionX"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "",
-    "topic": "",
+    "correctOption": ["optionX"],  // Use [] if unknown
+    "answer": "Direct answer in plain text or LaTeX",
+    "explanation": [
+      {
+        "text": "Explanation block 1 (can include LaTeX)",
+        "imageUrl": ""
+      },
+      {
+        "text": "Explanation block 2 (if any)",
+        "imageUrl": ""
+      }
+    ],  
+    "topic": "Topic name",
     "level": "Easy" | "Medium" | "Hard",
-    "unit": "",
-    "error": "",
-    "createdBy": "", // leave as empty string
     "askedIn": {
       "exam": "",
       "year": 2020,
@@ -152,17 +162,19 @@ Use \\left and \\right for scalable brackets, e.g., $\\left| \\arg\\left(\\frac{
   }
 ]
 
-🧠 Notes & Rules:
-- Always divide questions into 3 equal parts (if possible).
-- Wait for the prompt “next” before sending the next batch.
-- Only use this exact structure — do not include or omit any field.
-- If the correct answer is not available, set:
-  "correctOption": []
-  "answer": ""
-- If an image is present with a question or option, extract and place its URL in imageUrl; otherwise, leave it as an empty string.
-- "createdBy" must always be an empty string.
-- Always validate the final JSON output — it must be parseable without any extra characters, markdown, newlines outside strings, or trailing commas.
+Strict Rules:
+
+- Group output strictly by topic — each JSON array must contain **only one topic’s questions**.
+- Do not include questions from multiple topics in a single output.
+- Do not add or remove any fields from the schema.
+- Remove labels like (a), (b), 1., 2., etc., from option texts.
+- If correct answer is unknown:
+  - Set \`"correctOption": []\`
+  - Leave \`"answer": ""\`, and \`"explanation": []\`
+- If any image is present, insert the extracted URL; else keep \`"imageUrl": ""\`
+- Final JSON must be clean, 100% valid, and fully parseable
 `;
+
 
 
   const handlecopy = async () => {

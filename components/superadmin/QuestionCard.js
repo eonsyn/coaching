@@ -3,8 +3,10 @@
 import { renderMathText } from '@/utils/renderMath';
 import { useState, useEffect } from 'react';
 import OptionEditor from './OptionEditor';
+import EditableExplanation from './renderComponent/EditableExplanation';
 import ImageUploader from './ImageUploader';
 import Image from 'next/image';
+import RenderExplanation from '../render/RenderExplanation';
 
 export default function QuestionCard({ index, rawData, meta, onChange }) {
   const optionKeys = Object.keys(rawData.options || {});
@@ -25,7 +27,7 @@ export default function QuestionCard({ index, rawData, meta, onChange }) {
         ? [rawData.correctOption]
         : [],
     answer: rawData.answer || "",
-    explanation: rawData.explanation || "",
+    explanation: rawData.explanation || [],
     publication: rawData.publication || "",
     optionKeys, // Store option key map
   });
@@ -184,18 +186,19 @@ export default function QuestionCard({ index, rawData, meta, onChange }) {
 
       </div>
 
+      
       <div>
-        <label className="  font-medium mb-1">Explanation:</label>
-        {showQuestion ? (<textarea
-          className="w-full border border-gray-300 p-2 rounded-md resize-none"
-          placeholder="Explanation (optional)"
-          rows={2}
-          value={question.explanation}
-          onChange={(e) =>
-            setQuestion({ ...question, explanation: e.target.value })
-          }
-        />) : (<span>{question.explanation}</span>)}
-
+        
+        {
+          showQuestion? <EditableExplanation
+       showQuestion={showQuestion}
+        data={question.explanation}
+        onChange={(updated) =>
+          setQuestion((prev) => ({ ...prev, explanation: updated }))
+        }
+      />:<RenderExplanation data={question.explanation}/> 
+        }
+       
       </div>
       {
         showQuestion && <> <div>
