@@ -2,150 +2,1716 @@
   {
     "type": "MCQ",
     "question": {
-      "text": "Let $z \\in \\mathbb{C}$ with $\\text{Im}(z) = 10$ and it satisfies $\\frac{z^2 - n^2}{z^2 + n^2} = -i$ for some natural number $n$, then",
+      "text": "Let $z\\in C$ with $Im(z)=10$ and it satisfies $\\frac{2z-n}{2z+n}=2i-1$ for some natural number n, then.",
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "n = 20 and Re(z) = −10", "imageUrl": "" },
-      "option2": { "text": "n = 40 and Re(z) = 10", "imageUrl": "" },
-      "option3": { "text": "n = 40 and Re(z) = −10", "imageUrl": "" },
-      "option4": { "text": "n = 20 and Re(z) = 10", "imageUrl": "" }
-    },
-    "correctOption": ["option3"],
-    "answer": "n = 40, \\text{Re}(z) = -10",
-    "explanation": [
-      {
-        "text": "Given: $\\text{Im}(z) = 10$, Let $z = x + 10i$. Using $\\frac{z^2 - n^2}{z^2 + n^2} = -i$, we equate real and imaginary parts after substituting and simplifying, resulting in $x = -10$ and $n = 40$.",
-        "imageUrl": ""
-      }
-    ],
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "12 April II",
-      "marks": 3
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "All the points in the set $S = \\left\\{ \\frac{i + \\alpha}{i - \\alpha} : \\alpha \\in \\mathbb{R} \\right\\}$ lie on a",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "circle whose radius is 2", "imageUrl": "" },
-      "option2": { "text": "straight line whose slope is −1", "imageUrl": "" },
-      "option3": { "text": "circle whose radius is 1", "imageUrl": "" },
-      "option4": { "text": "straight line whose slope is 1", "imageUrl": "" }
-    },
-    "correctOption": ["option3"],
-    "answer": "Circle whose radius is 1",
-    "explanation": [
-      {
-        "text": "We rewrite the complex number as $z = \\frac{i + \\alpha}{i - \\alpha}$, and rationalize. After simplifying and expressing in terms of $x + iy$, we find that $x^2 + y^2 = 1$, which is the equation of a circle with radius 1.",
-        "imageUrl": ""
-      }
-    ],
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "9 April I",
-      "marks": 3
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $z \\in \\mathbb{C}$ be such that $|z| < 1$. If $\\omega = \\frac{5z + 3}{5z - 1}$, then",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "$4\\,\\text{Im}(\\omega) > 5$", "imageUrl": "" },
-      "option2": { "text": "$\\text{Re}(\\omega) > \\frac{5}{1}$", "imageUrl": "" },
-      "option3": { "text": "$\\text{Im}(\\omega) < \\frac{5}{1}$", "imageUrl": "" },
-      "option4": { "text": "$\\text{Re}(\\omega) > \\frac{5}{4}$", "imageUrl": "" }
-    },
-    "correctOption": ["option2"],
-    "answer": "$\\text{Re}(\\omega) > 5$",
-    "explanation": [
-      {
-        "text": "Let $\\omega = \\frac{5z + 3}{5z - 1}$. Since $|z| < 1$, we use the modulus inequality and comparison to conclude that $\\text{Re}(\\omega) > 5$.",
-        "imageUrl": ""
-      }
-    ],
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "9 April II",
-      "marks": 3
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $\\left( \\frac{3 - 27i}{2 - i} \\right) = x + iy$ where $x$ and $y$ are real numbers. Then, $y - x$ equals",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": { "text": "91", "imageUrl": "" },
-      "option2": { "text": "85", "imageUrl": "" },
-      "option3": { "text": "−85", "imageUrl": "" },
-      "option4": { "text": "−91", "imageUrl": "" }
-    },
-    "correctOption": ["option4"],
-    "answer": "−91",
-    "explanation": [
-      {
-        "text": "Rationalize the denominator and simplify: $\\frac{3 - 27i}{2 - i} = \\frac{(3 - 27i)(2 + i)}{5}$. Expanding and simplifying gives $x = -198$, $y = -107$. So $y - x = -107 + 198 = 91$.",
+      "option1": {
+        "text": "$n=20$ and $Re(z)=-10$",
         "imageUrl": ""
       },
-      {
-        "text": "But in the question, it's $x + iy = \\frac{3 - 27i}{2 - i}$, so $x = -198$, $y = -107$ → $y - x = -107 - (-198) = 91$ → Final answer: $-91$ (correct option).",
+      "option2": {
+        "text": "$n=40$ and $Re(z)=10$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$n=40$ and $Re(z)=-10$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$n=20$ and $Re(z)=10$",
         "imageUrl": ""
       }
+    },
+    "correctOption": [
+      "option3"
     ],
+    "answer": "Let $z=x+10\\hat{i},$ as $Im(z)=10(given).$ Since z satisfies, $\\frac{2z-n}{2z+n}=2i-1,$ $n\\in N.$ $(2x+20i-n)=(2i-1)(2x+20i+n)$ $(2x-n)+20i=(-2x-n-40)+(4x+2n-20)i$ On comparing real and imaginary parts, we get $2x-n=-2x-n-40;$ and $20=4x+2n-20$ $4x=-40$ and $4x+2n=40$ $x=-10~and-40+2n=40\\Rightarrow n=40$ So, $n=40~and~x=Re(z)=-10$",
     "topic": "Complex Number in Iota Form",
-    "level": "Hard",
+    "level": "Medium",
     "askedIn": {
-      "exam": "JEE Main",
+      "exam": "Main",
       "year": 2019,
-      "date": "11 Jan I",
+      "date": "12 April II",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "All the points in the set $S=\\{\\frac{\\alpha+i}{\\alpha-i}:\\alpha\\in R\\}$ $(i=\\sqrt{-1})$ lie on a.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "circle whose radius is $\\sqrt{2}.$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "straight line whose slope is -1",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "circle whose radius is 1.",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "straight line whose slope is 1.",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option3"
+    ],
+    "answer": "Let $x+iy=\\frac{\\alpha+i}{\\alpha-i}$ $\\Rightarrow x+iy=\\frac{(\\alpha+i)^{2}}{\\alpha^{2}+1}=\\frac{(\\alpha^{2}-1)+(2\\alpha)i}{\\alpha^{2}+1}=\\frac{\\alpha^{2}-1}{\\alpha^{2}+1}+(\\frac{2\\alpha}{\\alpha^{2}+1})i$ On comparing real and imaginary parts, we get $x=\\frac{\\alpha^{2}-1}{\\alpha^{2}+1}$ and $y=\\frac{2\\alpha}{\\alpha^{2}+1}$ Now, $x^{2}+y^{2}=(\\frac{\\alpha^{2}-1}{\\alpha^{2}+1})^{2}+(\\frac{2\\alpha}{\\alpha^{2}+1})^{2}$ $=\\frac{\\alpha^{4}+1-2\\alpha^{2}+4\\alpha^{2}}{(\\alpha^{2}+1)^{2}}=\\frac{(\\alpha^{2}+1)^{2}}{(\\alpha^{2}+1)^{2}}=1$ $x^{2}+y^{2}=1$ Which is an equation of circle with centre (0, 0) and radius 1 unit. So, $S=\\{\\frac{\\alpha+i}{\\alpha-i};\\alpha\\in R\\}$ on a circle with radius 1. ",
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Main",
+      "year": 2019,
+      "date": "9 April 1",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $z\\in C$ be such that $|z|<1.$ $\\omega=\\frac{5+3z}{5(1-z)}$ then.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$4~Im(\\omega)>5$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$5Re ( (\\omega)>1$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$5~Im(\\omega)<1$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$5~Re(\\omega)>4$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option2"
+    ],
+    "answer": "Given complex number $\\omega=\\frac{5+3z}{5(1-z)}$ $5\\omega-5\\omega z=5+3z$ $(3+5\\omega)z=5\\omega-5$ $|3+5\\omega||z|=|5\\omega-5|$ [applying modulus both sides and $|z|<1$] $|3+5\\omega|>|5\\omega-5|$ [from Eq. (i)] ",
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Main",
+      "year": 2019,
+      "date": "9 April II",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $(-2-\\frac{1}{3}i)^{3}=\\frac{x+iy}{27}(i=\\sqrt{-1})$ where x and y are real numbers, then $y-x$ equals.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "91",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "85",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "-85",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "-91",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option1"
+    ],
+    "answer": "",
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Main",
+      "year": 2019,
+      "date": "11 Jan 1",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $A=\\{\\theta\\in(-\\frac{\\pi}{2},\\pi):\\frac{3+2i~sin~\\theta}{1-2i~sin~\\theta}$ is purely imaginary Then, the sum of the elements in A is.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$\\frac{3\\pi}{4}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{5\\pi}{6}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$\\pi$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$\\frac{2\\pi}{3}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Main",
+      "year": 2019,
+      "date": "9 Jan 1",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "A value of for which $\\frac{2+3i~sin~\\theta}{1-2i~sin~\\theta}$ is purely imaginary, is.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$\\frac{\\pi}{3}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{\\pi}{6}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$sin^{-1}(\\frac{\\sqrt{3}}{4})$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$sin^{-1}(\\frac{1}{\\sqrt{3}})$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Main",
+      "year": 2016,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $|\\begin{matrix}6i&-3i&1\\\\ 4&3i&-1\\\\ 20&3&i\\end{matrix}|=x+iy,then$.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$x=3,$ $y=1$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$x=1,$ $y=1$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$x=0$, $y=3$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$x=0$ $y=0$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1998,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The value of sum $\\sum_{n=1}^{13}(i^{n}+i^{n+1}),$ where $i=\\sqrt{-1},$ equals.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "i",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$i-1$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "-i",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "0",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option2"
+    ],
+    "answer": "",
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1998,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The smallest positive integer n for which $(\\frac{1+i}{1-i})^{n}=1$ is.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "8",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "16",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "12",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of these",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1980,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MSQ",
+    "question": {
+      "text": "Let a, b, x and y be real numbers such that $a-b=1and$ $y\\ne0$ If the complex number $z=x+iy$ satisfies $Im(\\frac{az+b}{z+1})=y,$ then which of the following is(are) possible value(s) of x?.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$1-\\sqrt{1+y^{2}}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$-1-\\sqrt{1-y^{2}}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$1+\\sqrt{1+y^{2}}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$-1+\\sqrt{1-y^{2}}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option2",
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Adv.",
+      "year": 2017,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The equation $|z-i|=|z-1|,$ $i=\\sqrt{-1},$ represents.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "a circle of radius $\\frac{1}{2}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "the line passing through the origin with slope 1",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "a circle of radius 1",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "the line passing through the origin with slope - 1",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option2"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Main",
+      "year": 2019,
+      "date": "12 April 1",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $a>0$ and $z=\\frac{(1+i)^{2}}{a-i},$ has magnitude $\\sqrt{\\frac{2}{5}}$ then $\\overline{z}$ is equal to.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$\\frac{1}{5}-\\frac{3}{5}i$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$-\\frac{1}{5}+\\frac{3}{5}i$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$-\\frac{1}{5}-\\frac{3}{5}i$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$-\\frac{3}{5}-\\frac{1}{5}i$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option3"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Main",
+      "year": 2019,
+      "date": "10 April 1",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $z_{1}$ and $z_{2}$ be two complex numbers satisfying $|z_{1}|=9$ and $|z_{2}-3-4i|=4$ Then, the minimum value of $|z_{1}-z_{2}|$ is.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "1",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "2",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$\\sqrt{2}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "0",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option1"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Main",
+      "year": 2019,
+      "date": "12 Jan II",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $\\frac{z-\\alpha}{\\overline{z}+\\alpha}(\\alpha\\in R)$ is a purely imaginary number and $|z|=2$ then a value of $\\alpha$ is.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$\\sqrt{2}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{1}{2}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "1",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "2",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Main",
+      "year": 2019,
+      "date": "12 Jan 1",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let z be a complex number such that $|z|+z=3+i$ (where $i=\\sqrt{-1})$. Then, $|z|$ is equal to.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$\\frac{\\sqrt{34}}{3}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{5}{3}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$\\frac{\\sqrt{41}}{4}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$(d)\\frac{5}{4}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Main",
+      "year": 2019,
+      "date": "11 Jan II",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "A complex number z is said to be unimodular, $if|z|\\ne1$ If $z_{1}$ and are complex numbers such that $\\frac{z_{1}-2z_{2}}{2-z_{1}\\overline{z}_{2}}$ is unimodular and z $z_{2}$ is not unimodular. Then, the point $z_{1}$ lies on a.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "straight line parallel to X-axis",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "straight line parallel to Y-axis",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "circle of radius 2",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "circle of radius $\\sqrt{2}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option3"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Main",
+      "year": 2015,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If z is a complex number such that $|z|\\ge2,$ then the minimum value of $z+\\frac{1}{2}|$ is.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "is equal to $5/2$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "lies in the interval (1, 2)",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "is strictly greater than $5/2$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "is strictly greater than $3/2$ but less than $5/2$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Main",
+      "year": 2014,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let complex numbers $\\alpha$ and $1/\\overline{\\alpha}$ lies on circles $(x-x_{0})^{2}+(y-y_{0})^{2}=r^{2}$ and $(x-x_{0})^{2}+(y-y_{0})^{2}=4r^{2},$ respectively. If $z_{0}=x_{0}+\\iota y_{0}$ satisfies the equation $2|z_{0}|^{2}=r^{2}+2,$ then $|\\alpha|$ is equal to.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$(\\frac{1}{\\sqrt{2}})$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{1}{2}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$\\frac{1}{\\sqrt{7}}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$\\frac{1}{3}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Adv.",
+      "year": 2013,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let z be a complex number such that the imaginary part of z is non-zero and $a=z^{2}+z+1$ is real. Then, a cannot take the value.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "-1",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{1}{3}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$\\frac{1}{2}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$\\frac{3}{4}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2012,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $z=x+iy$ be a complex number where, x and y are integers. Then, the area of the rectangle whose vertices are the root of the equation $z\\overline{z}^{3}+\\overline{z}z^{3}=350,$ is.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "48",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "32",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "40",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "80",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option1"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2009,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $|z|=1$ and $z\\ne\\pm1$ then all the values of $\\frac{z}{1-z^{2}}$ lie on.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "a line not passing through the origin",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$|z|=\\sqrt{2}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "the X-axis",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "the Y-axis",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2007,
+      "date": "",
       "marks": 3
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "Let $A = \\left\\{ \\frac{3\\sin\\theta + 2i\\sin\\theta}{\\sin\\theta + 2i\\sin\\theta} : \\theta \\in \\left(0, \\pi\\right) \\right\\}$ is purely imaginary. Then, the sum of elements in $A$ is",
+      "text": "If $w=\\alpha+i\\beta$, where $\\beta\\ne0$ and $z\\ne1$, satisfies the condition that $(\\frac{w-\\overline{w}z}{1-z})$ is purely real, then the set of values of z is.",
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "$\\frac{3\\pi}{4}$", "imageUrl": "" },
-      "option2": { "text": "$\\frac{5\\pi}{6}$", "imageUrl": "" },
-      "option3": { "text": "$\\pi$", "imageUrl": "" },
-      "option4": { "text": "$\\frac{2\\pi}{3}$", "imageUrl": "" }
-    },
-    "correctOption": ["option4"],
-    "answer": "$\\frac{2\\pi}{3}$",
-    "explanation": [
-      {
-        "text": "Expression simplifies to a purely imaginary number when the real part is 0. Solve for $\\theta$ where the real part is 0 and sum up all such valid values of $\\theta$.",
+      "option1": {
+        "text": "$z|=1,$ $z\\ne2$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$|z|=1$ $z\\ne1$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$z=\\overline{z}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of these",
         "imageUrl": ""
       }
+    },
+    "correctOption": [
+      "option2"
     ],
-    "topic": "Complex Number in Iota Form",
-    "level": "Hard",
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
     "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "9 Jan I",
+      "exam": "",
+      "year": 2006,
+      "date": "",
       "marks": 3
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $|z|=1$ and $w=\\frac{z-1}{z+1}$ (where, $z\\ne-1)$, then Re (w) is.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "0",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$\\frac{1}{2+12}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$\\frac{1}{|z+1|^{z}}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$(d)\\frac{\\sqrt{2}}{|z+1|^{2}}$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option1"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2003,
+      "date": "",
+      "marks": 1
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "For all complex numbers $z_{1}$, $z_{2}$ satisfying $|z_{1}|=12$ and $|z_{2}-3-4i|=5$ the minimum value of $|z_{1}-z_{2}|$ is.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "0",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "2",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "7",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "17",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option2"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2002,
+      "date": "",
+      "marks": 1
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $z_{1}$ and $Z_{3}$ are complex numbers such that $|z_{1}|=|z_{2}|=|z_{3}|=|\\frac{1}{z_{1}}+\\frac{1}{z_{2}}+\\frac{1}{z_{3}}|=1$ , then $|z_{1}+z_{2}+z_{3}|$ is.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "equal to 1",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "less than 1",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "greater than 3",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "equal to 3",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option1"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2000,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "For positive integers $n_{1}$, $n_{2}$ the value of expression $(1+i)^{n_{1}}+(1+i^{3})^{n_{1}}+(1+i^{5})^{n_{2}}+(1+i^{7})^{n_{2}}$ here $i=\\sqrt{-1}$ is a real number, if and only if.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$n_{1}=n_{2}+1$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$n_{1}=n_{2}-1$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$n_{1}=n_{2}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$n_{1}>0$ $n_{2}>0$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1996,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The complex numbers $sin~x+i~cos~2x$ and $cos~s~x-i~sin~2x$ are conjugate to each other, for.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$x=n\\pi$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$x=0$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$x=(n+1/2)\\pi$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "no value of x",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1988,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The points $z_{1}$, $z_{2}$, $Z_{3}$ and $z_{4}$ in the complex plane are the vertices of a parallelogram taken in order, if and only if.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$z_{1}+z_{4}=z_{2}+z_{3}$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$z_{1}+z_{3}=z_{2}+z_{4}$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$z_{1}+z_{2}=z_{3}+z_{4}$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of these",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option2"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1983,
+      "date": "",
+      "marks": 1
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $z=x+iy$ and $w=(1-iz)/(z-i)$ then $|w|=1$ implies that, in the complex plane.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "z lies on the imaginary axis",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "z lies on the real axis",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "z lies on the unit circle",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of these",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option2"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1983,
+      "date": "",
+      "marks": 1
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The inequality $|z-4|<|z-2|$ represents the region given by.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "Re $(z)\\ge0$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "Re $(z)<0$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "Re $(z)>0$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of these",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1982,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "If $z=(\\frac{\\sqrt{3}}{2}+\\frac{i}{2})^{5}+(\\frac{\\sqrt{3}}{2}-\\frac{i}{2})^{5}$ ,then.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$Re(z)=0$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$Im(z)=0$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "$Re e(z)>0,Im(z)>0$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "$Re e(z)>0,Im(z)<0$",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option2"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1982,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The complex numbers $z=x+iy$ which satisfy the equation $\\frac{|z-5i}{z+5i}|=1,$ lie on.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "the X-axis",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "the straight line $y=5$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "a circle passing through the origin",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of the above",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option1"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1981,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MSQ",
+    "question": {
+      "text": "Let s, t, r be non-zero complex numbers and L be the set of solutions $z=x+iy$ (x, $y\\in R$ $i=\\sqrt{-1})$ of the equation $sz+t\\overline{z}+r=0,$ where $\\overline{z}=x-iy.$ Then, which of the following statement(s) is (are) TRUE?.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "If L has exactly one element, then $|s|\\ne|t||$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "If $|s|=|t|,$ then L has infinitely many elements",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "The number of elements in $L\\cap\\{z:|z-1+i|=5\\}$ is at most 2",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "If L has more than one element, then L has infinitely many elements",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option1",
+      "option3",
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "Adv.",
+      "year": 2018,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "MSQ",
+    "question": {
+      "text": "Let $z_{1}$ and $z_{2}$ be complex numbers such that $z_{1}\\ne z_{2}$ and $|z_{1}|=|z_{2}|$. If $z_{1}$ has positive real part and $z_{2}$ has negative imaginary part, then $\\frac{z_{1}+z_{2}}{z_{1}-z_{2}}$ may be.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "zero",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "real and positive",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "real and negative",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "purely imaginary",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option1",
+      "option4"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1986,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MSQ",
+    "question": {
+      "text": "If $z_{1}=a+ib$ and $z_{2}=c+id$ are complex numbers such that $|z_{1}|=|z_{2}|=1$ and Re $(z_{1}\\overline{z}_{2})=0,$ then the pair of complex numbers $w_{1}=a+$ ic and $w_{2}=b+id$ satisfies.",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "$|w_{1}|=1$",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$|w_{2}|=1$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "Re $(w_{1}\\overline{w_{2}})=0$",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of these",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option1",
+      "option2",
+      "option3"
+    ],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1985,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "Let A, B, C be three sets of complex number as defined below $A=\\{z:Im(z)\\ge1\\}$ $B=\\{z:|z-2-i|=3\\}$ $C=\\{z:Re((1-i)z)=\\sqrt{2}\\}$ $min_{z\\in a}|1-3i-z|$ is equal to.",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$\\frac{3-\\sqrt{3}}{2}$",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2008,
+      "date": "",
+      "marks": 12
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "Let A, B, C be three sets of complex number as defined below $A=\\{z:Im(z)\\ge1\\}$ $B=\\{z:|z-2-i|=3\\}$ $C=\\{z:Re((1-i)z)=\\sqrt{2}\\}$ Area of S is equal to.",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$\\frac{20\\pi}{3}$",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2008,
+      "date": "",
+      "marks": 12
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "Let A, B, C be three sets of complex number as defined below $A=\\{z:Im(z)\\ge1\\}$ $B=\\{z:|z-2-i|=3\\}$ $C=\\{z:Re((1-i)z)=\\sqrt{2}\\}$ Let z be any point in $A\\cap B\\cap C$ and let w be any point satisfying $|w-2-i|<3.$ Then, $|z|-|w|+3$ lies between.",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "-3 and 9",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2010,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "Let $S=S_{1}\\cap S_{2}\\cap S_{3}$, where $S_{1}=\\{z\\in C:|z|<4\\}$ $S_{2}=\\{z\\in C:lm[\\frac{z-1+\\sqrt{3}i}{1-\\sqrt{3}i}]>0\\}$ and $S_{3}:\\{z\\in C:Re~z>0\\}$ Let z be any point in $A\\cap B\\cap C$ The $|z+1-i|^{2}+|z-5-i|^{2}$ lies between.",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "35 and 39",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2008,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "Let $S=S_{1}\\cap S_{2}\\cap S_{3}$, where $S_{1}=\\{z\\in C:|z|<4\\}$ $S_{2}=\\{z\\in C:lm[\\frac{z-1+\\sqrt{3}i}{1-\\sqrt{3}i}]>0\\}$ and $S_{3}:\\{z\\in C:Re~z>0\\}$ The number of elements in the set $A\\cap B\\cap C$ is.",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "1",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2008,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "Match the statements of Column I with those of Column II. The following table:\",\"Column I \",\"Column II \",\"A. \",\"The set of points z satisfying $|z-i|z||=|z+i|z||$ is contained in or equal to \",\"p. an ellipse with eccentricity $4/5$ \",\"B \",\"The set of points z satisfying $|z+4|+|z-4|=0k$ contained in or equal to \",\"the set of points z satisfying Im ( $(z)=0$ q. \",\"C. \",\"If $|w|=2$, then the set of $z=w-\\frac{1}{w}i$ contained points \",\"the set of points z satisfying $|m(z)|\\le1$ r \",\"in or equal to \",\"D. \",\"$|f|w|=1$ then the set of points $z=w+\\frac{1}{w}$ is contained in or equal to \",\"s. the set of points satisfying $|Re(z)|\\le2$ L the set of points z satisfying $z|\\le3$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "A$\\rightarrow$ q,r; B$\\rightarrow$ p; C$\\rightarrow$ p,s,t; D$\\rightarrow$ q,r,s,t",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2008,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "If $\\alpha$, $\\beta$, $\\gamma$ are the cube roots of p, $p<0,$ then for any x, y $md~z~then\\frac{x\\alpha+y\\beta+z\\gamma}{x\\beta+yy+z\\alpha}=...$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$60^{2}$",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1990,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "For any two complex numbers $z_{1}$, $Z_{2}$ and any real numbers a and b, $|az_{1}-bz_{2}|^{2}+|bz_{1}+az_{2}|^{2}=...$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$(a^{2}+b^{2})(|z_{1}|^{2}+|z_{2}|^{2})$",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1988,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "If the expression $sin(\\frac{x}{2})+cos(\\frac{x}{2})-i~tan(x)$ $1+2~i~sin(\\frac{x}{2})\\rfloor$ is real, then the set of all possible values of x is.....",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$x=2n\\pi+2\\alpha,$ $\\alpha=tan^{-1}k,$ where $k\\in(1,2)$ or $x=2n\\pi$",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1987,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "If three complex numbers are in AP. Then, they lie on a circle in the complex plane.",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "False",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "M",
+      "year": 1985,
+      "date": "",
+      "marks": 0
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "If the complex numbers, $z_{1},$ $z_{2}$ and $z_{3}$ represent the vertices of an equilateral triangle such that $|z_{1}|=|z_{2}|=|z_{3}|$, then $z_{1}+z_{2}+z_{3}=0$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "True",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1984,
+      "date": "",
+      "marks": 1
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "For complex numbers $z_{1}=x_{1}+iy_{1}$ and $z_{2}=x_{2}+iy_{2},$ we write $z_{1}\\cap z_{2},$ if $x_{1}\\le x_{2}$ and $y_{1}\\le y_{2}.$ Then, for all complex numbers z with $1\\cap z,$ we have $\\frac{1-z}{1+z}\\cap0.$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "True",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1981,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "Find the centre and radius of the circle formed by all the points represented by $z=x+iy$ satisfying the relation $\\frac{z-\\alpha}{z-\\beta}|=k(k\\ne1),$ where $\\alpha$ and $\\beta$ are the constant complex numbers given by $\\alpha=\\alpha_{1}+i\\alpha_{2},$ $\\beta=\\beta_{1}+i\\beta_{2}.$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$Centre=\\frac{\\alpha-k^{2}\\beta}{1-k^{2}},$ $Radius=|\\frac{k(\\alpha-\\beta)}{1-k^{2}}|$",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2004,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "Prove that there exists no complex number z such that $|z|<1/3$ and $\\sum_{r=1}^{n}a_{r}z^{r}=1$ where $|a_{r}|<2$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2003,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "If $z_{1}$ and $z_{2}$ are two complex numbers such that $|z_{1}|<1<|z_{2}|$ then prove that $|\\frac{1-z_{1}\\overline{z}_{2}}{z_{1}-z_{2}}|<1.$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2003,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "For complex numbers z and w, prove that $|z|^{2}w-|w|^{2}z=z-w$ if and only if $z=w$ wor z $\\overline{w}=1,$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1999,
+      "date": "",
+      "marks": 10
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "Find all non-zero complex numbers z satisfying $\\overline{z}=iz^{2}.$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$[z=i,\\pm\\frac{\\sqrt{3}}{2}-\\frac{i}{2}]$",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1984,
+      "date": "",
+      "marks": 1
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "If $iz^{3}+z^{2}-z+i=0,$ then show that $|z|=1$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1996,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "A relation R on the set of complex numbers is defined by $z_{1}$ R $z_{2}$ if and only if $\\frac{z_{1}-z_{2}}{z_{1}+z_{2}}$ is real. Show that R is an equivalence relation.",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1995,
+      "date": "",
+      "marks": 5
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "Find the real values of x and y for which the following equation is satisfied $\\frac{(1+i)x-2i}{3+i}+\\frac{(2-3i)y+i}{3-i}=i.$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$(x=3~and~y=-1)$",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1982,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "Express $\\frac{1}{(1-cos~\\theta)+2i~sin~\\theta}$ in the form $A+iB.$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "$A+iB=\\frac{1}{2(1+3~cos^{2}\\frac{\\theta}{2})}-i\\frac{cot(\\theta/2)}{1+3~cos^{2}(\\theta/2)}$",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1980,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "Descriptive",
+    "question": {
+      "text": "If $x+iy=\\sqrt{\\frac{a+ib}{c+id}},$ prove that $(x^{2}+y^{2})^{2}=\\frac{a^{2}+b^{2}}{c^{2}+d^{2}}$",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1979,
+      "date": "",
+      "marks": 3
+    }
+  },
+  {
+    "type": "Numerical",
+    "question": {
+      "text": "If z is any complex number satisfying $|z-3-2i|\\le2$. then the maximum value of $2z-6+5i$ is ...... ",
+      "imageUrl": ""
+    },
+    "options": {},
+    "correctOption": [],
+    "answer": "5",
+    "topic": "Conjugate and Modulus of a Complex Number",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 2011,
+      "date": "",
+      "marks": 0
     }
   }
 ]

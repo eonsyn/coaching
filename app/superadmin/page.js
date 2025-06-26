@@ -92,12 +92,13 @@ export default function Page() {
     }
   };
 
-  const promptText = `Task:
+const promptText = `Task:
 
-Extract all questions from the attached PDF topic-wise.
+Extract all questions from the attached PDF **topic-wise**.
 
 For each topic:
 - Extract all questions belonging to that topic together.
+- If a topic has more than 15 questions, split into chunks of 15 (e.g., Part A, Part B).
 - Once one topic is complete, wait for my input "next" before continuing to the next topic.
 
 Important:
@@ -140,8 +141,8 @@ JSON Schema Format (Strict):
       "option4": { "text": "", "imageUrl": "" }
     },
     "correctOption": ["optionX"],  // Use [] if unknown
-    "answer": "Direct answer in plain text or LaTeX",
-     
+    "answer": "Direct answer in plain text or LaTeX", // Leave blank if type is not 'Descriptive' or 'Numerical'
+
     "topic": "Topic name",
     "level": "Easy" | "Medium" | "Hard",
     "askedIn": {
@@ -162,31 +163,33 @@ Strict Rules:
 - If correct answer is unknown:
   - Set \`"correctOption": []\`
   - Leave \`"answer": ""\`
+- If type is not "Descriptive" or "Numerical", always leave \`"answer": ""\`
 - If any image is present, insert the extracted URL; else keep \`"imageUrl": ""\`
-- Final JSON must be clean, 100% valid, and fully parseable
-`;
-  const mergePromptText = `Prompt: Merge Questions and Explanations into Structured JSON
+- Final JSON must be clean, 100% valid, and fully parseable.`;
 
-You are given two arrays:
+  const mergePromptText = `Task:
+Your task is to merge both arrays into a single structured JSON array of question objects following the schema provided below.
 
-1. \`questionsArray\` – an array of question objects. Each object contains the question details, including type, text, options, answer, topic, level, etc.
-2. \`explanationsArray\` – an array of explanation blocks corresponding to the questions.
+Match each explanation to its corresponding question by position/index (i.e., the 1st explanation belongs to the 1st question, the 2nd to the 2nd question, and so on).
 
-🔧 Task:
+If an explanation for a question is missing, empty, or not available at the corresponding index, then set that question’s "explanation" field to an empty array ([]).
 
-Your task is to combine both arrays into a single JSON array of structured question objects based on the schema provided below.
+When present, the explanation should be added to the "explanation" field of the question object as an array of blocks, where each block contains:
 
-- Match each question with its corresponding explanation by position (i.e., the 1st explanation goes with the 1st question, 2nd with 2nd, and so on).
-- The explanation should be added to the \`explanation\` field of each question object as an array of blocks, where each block has:
-  - "text": Explanation text (can include LaTeX in $...$)
-  - "imageUrl": (empty string if no image)
+"text": Explanation text (can include LaTeX inside $...$)
 
-Make sure the explanations are relevant and clearly tied to the question.
+"imageUrl": (Set to empty string "" if no image)
+
+Ensure:
+
+All LaTeX content is preserved in the explanation using $...$.
+
+The JSON output strictly matches the schema below with no additional fields.
 
 ✅ Output Format:
+Return a valid JSON array, where each object follows this exact schema:
 
-Return a valid JSON array, where each question object follows this exact schema:
-
+ 
 [
   {
     "type": "MCQ" | "MSQ" | "Numerical" | "Descriptive",
@@ -222,6 +225,12 @@ Return a valid JSON array, where each question object follows this exact schema:
     }
   }
 ]
+⚠️ Notes:
+Do not generate explanations for questions if they are missing—just leave the "explanation" field as [].
+
+Only include fields exactly as specified in the schema. Do not add or modify any other fields.
+
+
 `;
 
   const handlecopy = async (text) => {
