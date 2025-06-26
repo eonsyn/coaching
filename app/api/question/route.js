@@ -5,9 +5,10 @@ import Question from '@/models/Question';
 export async function POST(req) {
   try {
     await dbConnect();
-    const questions = await req.json();
-
+    const questions = await req.json(); 
+     
     const inserted = await Question.insertMany(questions, { ordered: false });
+    
     return Response.json({ success: true, insertedCount: inserted.length });
   } catch (error) {
     console.error("DB Insert Error:", error);

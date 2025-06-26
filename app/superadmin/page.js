@@ -38,6 +38,7 @@ export default function Page() {
     try {
       const parsed = JSON.parse(rawData);
       if (!Array.isArray(parsed)) throw new Error('Input must be an array');
+   
       setQuestions(parsed);
     } catch (err) {
       alert('Invalid JSON format. Please make sure it\'s a valid array.');
@@ -54,7 +55,11 @@ export default function Page() {
     setQuestions(updated);
   };
 
+
   const handleSaveToDB = async () => {
+   
+    setIsSaving(true);
+
     const enrichedQuestions = questions.map((q) => ({
       type: q.type || "MCQ",
       question: {
@@ -72,6 +77,7 @@ export default function Page() {
       unit: meta.unit || q.unit || "",
       askedIn: q.askedIn || "",
     }));
+ 
     try {
       const res = await fetch("/api/question", {
         method: "POST",
@@ -80,15 +86,18 @@ export default function Page() {
       });
 
       const data = await res.json();
+     
       if (res.ok) {
         alert(`✅ Successfully saved ${data.insertedCount} questions to MongoDB.`);
       } else {
         console.error(data);
         alert("❌ Failed to save questions.");
       }
+      setIsSaving(false);
     } catch (err) {
       console.error("Save Error:", err);
       alert("❌ Unexpected error occurred.");
+       setIsSaving(false);
     }
   };
 

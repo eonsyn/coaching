@@ -13,14 +13,17 @@ export default function QuestionCard({ index, rawData, meta, onChange }) {
 
   const [showQuestion, setshowQuestion] = useState(false)
 
-  const [question, setQuestion] = useState({
+ const [question, setQuestion] = useState(() => {
+  const formattedOptions = optionKeys.reduce((acc, key) => {
+    const opt = rawData.options?.[key];
+    acc[key] = typeof opt === 'string' ? { text: opt, imageUrl: '' } : (opt || { text: '', imageUrl: '' });
+    return acc;
+  }, {});
+
+  return {
     ...rawData,
-    question: rawData.question || "",
-    imageUrl: rawData.imageUrl || "",
-    options: optionKeys.map(key => {
-      const opt = rawData.options[key];
-      return typeof opt === 'string' ? { text: opt, imageUrl: '' } : opt;
-    }),
+    question: rawData.question || { text: '', imageUrl: '' },
+    options: formattedOptions,
     correctOption: Array.isArray(rawData.correctOption)
       ? rawData.correctOption
       : rawData.correctOption
@@ -29,8 +32,10 @@ export default function QuestionCard({ index, rawData, meta, onChange }) {
     answer: rawData.answer || "",
     explanation: rawData.explanation || [],
     publication: rawData.publication || "",
-    optionKeys, // Store option key map
-  });
+    optionKeys, // can be ['option1', 'option2', ...] if needed for rendering
+  };
+});
+
 
   const [level, setLevel] = useState(rawData.level || "Medium");
 
@@ -90,86 +95,87 @@ export default function QuestionCard({ index, rawData, meta, onChange }) {
       <div className="mt-4">
         <label className="block font-medium mb-1">Correct Option:</label>
         <div className="flex flex-wrap gap-4">
-          {question.options.map((_, idx) => {
-            const optionKey = question.optionKeys?.[idx] || `option${idx + 1}`;
-            const label = String.fromCharCode(65 + idx);
-            const isMSQ = question.type === "MSQ";
-            const isSelected = question.correctOption.includes(optionKey);
+         {question.optionKeys?.map((key, idx) => {
+  const option = question.options?.[key] || { text: '', imageUrl: '' };
+  const label = String.fromCharCode(65 + idx); // A, B, C, D
+  const isMSQ = question.type === "MSQ";
+  const isSelected = question.correctOption.includes(key);
 
-            return (
-              <label key={optionKey} className="flex items-center gap-2 text-sm">
-                <input
-                  type={isMSQ ? "checkbox" : "radio"}
-                  name={`correctOption-${index}`}
-                  value={optionKey}
-                  checked={isSelected}
-                  onChange={() => {
-                    let updatedCorrectOption;
+  return (
+    <label key={key} className="flex items-center gap-2 text-sm">
+      <input
+        type={isMSQ ? "checkbox" : "radio"}
+        name={`correctOption-${index}`}
+        value={key}
+        checked={isSelected}
+        onChange={() => {
+          let updatedCorrectOption;
 
-                    if (isMSQ) {
-                      if (isSelected) {
-                        // Remove this option
-                        updatedCorrectOption = question.correctOption.filter(opt => opt !== optionKey);
-                      } else {
-                        // Add this option
-                        updatedCorrectOption = [...question.correctOption, optionKey];
-                      }
-                    } else {
-                      // For MCQ: only one option allowed
-                      updatedCorrectOption = [optionKey];
-                    }
+          if (isMSQ) {
+            updatedCorrectOption = isSelected
+              ? question.correctOption.filter(opt => opt !== key)
+              : [...question.correctOption, key];
+          } else {
+            updatedCorrectOption = [key];
+          }
 
-                    setQuestion({ ...question, correctOption: updatedCorrectOption });
-                  }}
-                  className="accent-blue-600"
-                />
-                {label}
-              </label>
-            );
-          })}
+          setQuestion(prev => ({
+            ...prev,
+            correctOption: updatedCorrectOption,
+          }));
+        }}
+        className="accent-blue-600"
+      />
+      <span>{label}. {option.text}</span>
+    </label>
+  );
+})}
+
 
 
         </div>
       </div>
       <div className="grid gap-4 mt-4">
-        {showQuestion && (question.options || []).map((opt, i) => {
-          const optionKey = question.optionKeys?.[i] || `option${i + 1}`;
-          return (<div key={i} className="border border-gray-200 p-4 rounded-md bg-gray-50">
-            {
-              showQuestion && <>
-                <OptionEditor
-                  index={i}
-                  value={opt}
-                  onChange={(val) => {
-                    const newOpts = [...question.options];
-                    newOpts[i] = val;
-                    setQuestion({ ...question, options: newOpts });
-                  }}
-                /> <ImageUploader
-                  label={`Option ${String.fromCharCode(65 + i)} Image`}
-                  onUpload={(url) => {
-                    const newOpts = [...question.options];
-                    newOpts[i] = { ...newOpts[i], imageUrl: url };
-                    setQuestion({ ...question, options: newOpts });
-                  }}
-                />
-              </>
-            }
+       {showQuestion && question.optionKeys?.map((key, i) => {
+  const opt = question.options?.[key] || { text: '', imageUrl: '' };
+  return (
+    <div key={key} className="border border-gray-200 p-4 rounded-md bg-gray-50">
+      {showQuestion && (
+        <>
+          <OptionEditor
+            index={i}
+            value={opt}
+            onChange={(val) => {
+              setQuestion(prev => ({
+                ...prev,
+                options: {
+                  ...prev.options,
+                  [key]: val,
+                },
+              }));
+            }}
+          />
+          <ImageUploader
+            label={`Option ${String.fromCharCode(65 + i)} Image`}
+            onUpload={(url) => {
+              setQuestion(prev => ({
+                ...prev,
+                options: {
+                  ...prev.options,
+                  [key]: {
+                    ...prev.options[key],
+                    imageUrl: url,
+                  },
+                },
+              }));
+            }}
+          />
+        </>
+      )}
+    </div>
+  );
+})}
 
-            {/* {
-              !showQuestion && (
-                <div
-                  className={`p-4 mb-2 rounded-lg text-white font-medium shadow-md transition-all duration-300 ${question.correctOption === optionKey ? 'bg-green-500' : 'bg-slate-500'
-                    }`}
-                >
-                  {renderMathText(opt.text)}
-                </div>
-              )
-            } */}
-
-
-          </div>)
-        })}
       </div>
 
 
