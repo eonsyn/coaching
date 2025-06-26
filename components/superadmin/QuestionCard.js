@@ -46,8 +46,9 @@ export default function QuestionCard({ index, rawData, meta, onChange }) {
       subject: meta.subject,
       topic: meta.topic,
       unit: meta.unit,
-      type: "MCQ",
+      type: rawData.type ||"MCQ",
     };
+     
     onChange(updated);
   }, [question, level, meta]);
 
