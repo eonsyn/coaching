@@ -7,32 +7,34 @@
     },
     "options": {
       "option1": {
-        "text": "(a) $n=20$ and $Re(z)=-10$",
+        "text": "$n=20$ and $Re(z)=-10$",
         "imageUrl": ""
       },
       "option2": {
-        "text": "(b) $n=40$ and $Re(z)=10$",
+        "text": "$n=40$ and $Re(z)=10$",
         "imageUrl": ""
       },
       "option3": {
-        "text": "(c) $n=40$ and $Re(z)=-10$",
+        "text": "$n=40$ and $Re(z)=-10$",
         "imageUrl": ""
       },
       "option4": {
-        "text": "(d) $n=20$ and $Re(z)=10$",
+        "text": "$n=20$ and $Re(z)=10$",
         "imageUrl": ""
       }
     },
-    "correctOption": ["option3"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
+    "correctOption": [
+      "option3"
+    ],
+    "answer": "$n=40~and~Re(z)=-10$",
+    "explanation": [
+      {
+        "text": "Let $z = x + 10i$, since $\\operatorname{Im}(z) = 10$. Given: $$\\frac{2z-n}{2z+n}=2i-1$$ Rearranging the equation: $$2z-n = (2i-1)(2z+n)$$ $$2z-n = 4iz + 2in - 2z - n$$ $$2z-n+2z+n = 4iz+2in$$ $$4z = 4iz+2in$$ Since $z = x+10i$: $$4(x+10i) = 4i(x+10i) + 2in$$ $$4x + 40i = 4ix + 40i^2 + 2in$$ $$4x + 40i = 4ix - 40 + 2in$$ Comparing the real parts: $$4x = -40 \\Rightarrow x = -10$$ Comparing the imaginary parts: $$40 = 4x + 2n$$ Substitute $x = -10$: $$40 = 4(-10) + 2n$$ $$40 = -40 + 2n$$ $$80 = 2n$$ $$n = 40$$ So, $n=40$ and $Re(z)=-10$.",
+        "imageUrl": ""
+      }
+    ],
     "topic": "Complex Number in Iota Form",
     "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
     "askedIn": {
       "exam": "JEE Main",
       "year": 2019,
@@ -48,32 +50,34 @@
     },
     "options": {
       "option1": {
-        "text": "(a) circle whose radius is $\\sqrt{2}.$",
+        "text": "circle whose radius is $\\sqrt{2}.$",
         "imageUrl": ""
       },
       "option2": {
-        "text": "(b) straight line whose slope is -1",
+        "text": "straight line whose slope is -1",
         "imageUrl": ""
       },
       "option3": {
-        "text": "(c) circle whose radius is 1.",
+        "text": "circle whose radius is 1.",
         "imageUrl": ""
       },
       "option4": {
-        "text": "(d) straight line whose slope is 1.",
+        "text": "straight line whose slope is 1.",
         "imageUrl": ""
       }
     },
-    "correctOption": ["option3"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
+    "correctOption": [
+      "option3"
+    ],
+    "answer": "a circle whose radius is 1.",
+    "explanation": [
+      {
+        "text": "Let $z = \\frac{\\alpha+i}{\\alpha-i}$. To simplify, multiply the numerator and denominator by the conjugate of the denominator, which is $\\alpha+i$: $$z = \\frac{\\alpha+i}{\\alpha-i} \\times \\frac{\\alpha+i}{\\alpha+i} = \\frac{(\\alpha+i)^2}{\\alpha^2 - i^2} = \\frac{\\alpha^2 + 2\\alpha i + i^2}{\\alpha^2 + 1}$$ $$z = \\frac{\\alpha^2 - 1 + 2\\alpha i}{\\alpha^2 + 1} = \\frac{\\alpha^2 - 1}{\\alpha^2 + 1} + i\\frac{2\\alpha}{\\alpha^2 + 1}$$ Let $z = x + iy$. Then, $$x = \\frac{\\alpha^2 - 1}{\\alpha^2 + 1} \\quad \\text{and} \\quad y = \\frac{2\\alpha}{\\alpha^2 + 1}$$ Now, let's find $x^2 + y^2$: $$x^2 + y^2 = \\left(\\frac{\\alpha^2 - 1}{\\alpha^2 + 1}\\right)^2 + \\left(\\frac{2\\alpha}{\\alpha^2 + 1}\\right)^2$$ $$x^2 + y^2 = \\frac{(\\alpha^2 - 1)^2 + (2\\alpha)^2}{(\\alpha^2 + 1)^2}$$ $$x^2 + y^2 = \\frac{\\alpha^4 - 2\\alpha^2 + 1 + 4\\alpha^2}{(\\alpha^2 + 1)^2}$$ $$x^2 + y^2 = \\frac{\\alpha^4 + 2\\alpha^2 + 1}{(\\alpha^2 + 1)^2}$$ $$x^2 + y^2 = \\frac{(\\alpha^2 + 1)^2}{(\\alpha^2 + 1)^2}$$ $$x^2 + y^2 = 1$$ This is the equation of a circle centered at the origin $(0,0)$ with a radius of 1.",
+        "imageUrl": ""
+      }
+    ],
     "topic": "Complex Number in Iota Form",
     "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
     "askedIn": {
       "exam": "JEE Main",
       "year": 2019,
@@ -89,32 +93,34 @@
     },
     "options": {
       "option1": {
-        "text": "(a) $4~Im(\\omega)>5$",
+        "text": "$4~Im(\\omega)>5$",
         "imageUrl": ""
       },
       "option2": {
-        "text": "(b) $5~Re (\\omega)>1$",
+        "text": "$5~Re(\\omega)>1$",
         "imageUrl": ""
       },
       "option3": {
-        "text": "(c) $5~Im(\\omega)<1$",
+        "text": "$5~Im(\\omega)<1$",
         "imageUrl": ""
       },
       "option4": {
-        "text": "(d) $5~Re(\\omega)>4$",
+        "text": "$5~Re(\\omega)>4$",
         "imageUrl": ""
       }
     },
-    "correctOption": ["option2"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
+    "correctOption": [
+      "option2"
+    ],
+    "answer": "$5~Re(\\omega)>1$",
+    "explanation": [
+      {
+        "text": "Given $\\omega=\\frac{5+3z}{5(1-z)}$. We can rewrite this to express $z$ in terms of $\\omega$: $$5\\omega(1-z) = 5+3z$$ $$5\\omega - 5\\omega z = 5+3z$$ $$5\\omega - 5 = 3z + 5\\omega z$$ $$5(\\omega - 1) = z(3 + 5\\omega)$$ $$z = \\frac{5(\\omega - 1)}{3 + 5\\omega}$$ We are given that $|z|<1$. So, $$|\\frac{5(\\omega - 1)}{3 + 5\\omega}| < 1$$ $$|5(\\omega - 1)| < |3 + 5\\omega|$$ $$|5\\omega - 5| < |5\\omega + 3|$$ Let $\\omega = u+iv$, where $u = Re(\\omega)$ and $v = Im(\\omega)$. $$\\text{Then } |5(u+iv) - 5| < |5(u+iv) + 3|$$ $$|(5u-5) + 5iv| < |(5u+3) + 5iv|$$ Squaring both sides: $$(5u-5)^2 + (5v)^2 < (5u+3)^2 + (5v)^2$$ $$(5u-5)^2 < (5u+3)^2$$ $$25u^2 - 50u + 25 < 25u^2 + 30u + 9$$ $$-50u + 25 < 30u + 9$$ $$25 - 9 < 30u + 50u$$ $$16 < 80u$$ $$u > \\frac{16}{80}$$ $$u > \\frac{1}{5}$$ So, $Re(\\omega) > \\frac{1}{5}$. Multiplying by 5, we get $5Re(\\omega) > 1$.",
+        "imageUrl": ""
+      }
+    ],
     "topic": "Complex Number in Iota Form",
     "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
     "askedIn": {
       "exam": "JEE Main",
       "year": 2019,
@@ -125,160 +131,39 @@
   {
     "type": "MCQ",
     "question": {
-      "text": "Let $(-2-\\frac{1}{3}i)^{3/2}$ be written as $x+iy$ for $x,y\\in R.$ Then the value of $y-x$ is",
+      "text": "Let $(-2-\\frac{1}{3}i)^{3}=\\frac{x+iy}{27}(i=\\sqrt{-1})$ where x and y are real numbers, then $y-x$ equals",
       "imageUrl": ""
     },
     "options": {
       "option1": {
-        "text": "(a) $\\frac{10}{3}$",
+        "text": "91",
         "imageUrl": ""
       },
       "option2": {
-        "text": "(b) $\\frac{9}{10}$",
+        "text": "85",
         "imageUrl": ""
       },
       "option3": {
-        "text": "(c) $\\frac{10}{9}$",
+        "text": "-85",
         "imageUrl": ""
       },
       "option4": {
-        "text": "(d) $\\frac{9}{5}$",
+        "text": "-91",
         "imageUrl": ""
       }
     },
-    "correctOption": ["option3"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "8 April II",
-      "marks": 3
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $z_1$ and $z_2$ be two complex numbers satisfying $|z_1|=9$ and $|z_2-3-4i|=4.$ Then the minimum value of $|z_1-z_2|$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "(a) 0",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "(b) $\\sqrt{2}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "(c) 1",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "(d) 2",
+    "correctOption": [
+      "option1"
+    ],
+    "answer": "91",
+    "explanation": [
+      {
+        "text": "Given the equation $(-2-\\frac{1}{3}i)^{3}=\\frac{x+iy}{27}$. First, let's simplify the left side: $$(-2-\\frac{1}{3}i)^{3} = \\left(-\\left(2+\\frac{1}{3}i\\right)\\right)^{3} = -\\left(2+\\frac{1}{3}i\\right)^{3}$$ Now, expand $\\left(2+\\frac{1}{3}i\\right)^{3}$ using the binomial expansion $(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$: $$a = 2, b = \\frac{1}{3}i$$ $$a^3 = 2^3 = 8$$ $$3a^2b = 3(2^2)(\\frac{1}{3}i) = 3(4)(\\frac{1}{3}i) = 4i$$ $$3ab^2 = 3(2)(\\frac{1}{3}i)^2 = 6(\\frac{1}{9}i^2) = 6(-\\frac{1}{9}) = -\\frac{6}{9} = -\\frac{2}{3}$$ $$b^3 = (\\frac{1}{3}i)^3 = \\frac{1}{27}i^3 = \\frac{1}{27}(-i) = -\\frac{i}{27}$$ So, $$\\left(2+\\frac{1}{3}i\\right)^{3} = 8 + 4i - \\frac{2}{3} - \\frac{i}{27}$$ Combine real and imaginary parts: $$\\text{Real part} = 8 - \\frac{2}{3} = \\frac{24-2}{3} = \\frac{22}{3}$$ $$\\text{Imaginary part} = 4i - \\frac{i}{27} = \\left(4 - \\frac{1}{27}\\right)i = \\left(\\frac{108-1}{27}\\right)i = \\frac{107}{27}i$$ Therefore, $$\\left(2+\\frac{1}{3}i\\right)^{3} = \\frac{22}{3} + \\frac{107}{27}i$$ Now, substitute this back into the original equation: $$- \\left(\\frac{22}{3} + \\frac{107}{27}i\\right) = \\frac{x+iy}{27}$$ $$-\\frac{22}{3} - \\frac{107}{27}i = \\frac{x+iy}{27}$$ Multiply both sides by 27: $$-27 \\times \\frac{22}{3} - 27 \\times \\frac{107}{27}i = x+iy$$ $$-9 \\times 22 - 107i = x+iy$$ $$-198 - 107i = x+iy$$ Comparing the real and imaginary parts, we get: $$x = -198$$ $$y = -107$$ We need to find $y-x$: $$y-x = -107 - (-198)$$ $$y-x = -107 + 198$$ $$y-x = 91$$",
         "imageUrl": ""
       }
-    },
-    "correctOption": ["option4"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
+    ],
     "topic": "Complex Number in Iota Form",
     "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "8 April I",
-      "marks": 3
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $\\frac{z-2}{z+2i}$ is a purely imaginary number ($i=\\sqrt{-1}$), then the locus of $z$ is a",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "(a) circle with centre (1, -1) and radius $\\sqrt{2}$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "(b) circle with centre (1, 1) and radius $\\sqrt{2}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "(c) circle with centre (0, 0) and radius $\\sqrt{2}$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "(d) straight line parallel to X-axis",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "11 Jan II",
-      "marks": 3
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $z\\in C$ be such that the area of the triangle with vertices $z, iz$ and $z+iz$ is $50.$ Then $|z|$ is equal to",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "(a) 50",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "(b) $50\\sqrt{2}$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "(c) 10",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "(d) $10\\sqrt{2}$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option3"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
     "askedIn": {
       "exam": "JEE Main",
       "year": 2019,
@@ -286,762 +171,260 @@
       "marks": 3
     }
   },
+ {
+  "type": "MCQ",
+  "question": {
+    "text": "Let $A=\\left\\{\\theta\\in(-\\frac{\\pi}{2},\\pi):\\frac{3+2i~sin~\\theta}{1-2i~sin~\\theta}\\text{ is purely imaginary}\\right\\}$ Then, the sum of the elements in A is",
+    "imageUrl": ""
+  },
+  "options": {
+    "option1": {
+      "text": "$\\frac{3\\pi}{4}$",
+      "imageUrl": ""
+    },
+    "option2": {
+      "text": "$\\frac{5\\pi}{6}$",
+      "imageUrl": ""
+    },
+    "option3": {
+      "text": "$\\pi$",
+      "imageUrl": ""
+    },
+    "option4": {
+      "text": "$\\frac{2\\pi}{3}$",
+      "imageUrl": ""
+    }
+  },
+  "correctOption": [
+    "option4"
+  ],
+  "answer": "$\\frac{2\\pi}{3}$",
+  "explanation": [
+    {
+      "text": "Let $z = \\frac{3+2i~\\sin~\\theta}{1-2i~\\sin~\\theta}$. For $z$ to be purely imaginary, its real part must be zero. First, let's rationalize the denominator:\n$$z = \\frac{3+2i~\\sin~\\theta}{1-2i~\\sin~\\theta} \\times \\frac{1+2i~\\sin~\\theta}{1+2i~\\sin~\\theta}$$\n$$z = \\frac{3(1) + 3(2i~\\sin~\\theta) + 2i~\\sin~\\theta(1) + (2i~\\sin~\\theta)(2i~\\sin~\\theta)}{1^2 - (2i~\\sin~\\theta)^2}$$\n$$z = \\frac{3 + 6i~\\sin~\\theta + 2i~\\sin~\\theta + 4i^2~\\sin^2~\\theta}{1 - 4i^2~\\sin^2~\\theta}$$\nSince $i^2 = -1$:\n$$z = \\frac{3 + 8i~\\sin~\\theta - 4~\\sin^2~\\theta}{1 + 4~\\sin^2~\\theta}$$\nSeparate the real and imaginary parts:\n$$z = \\frac{3 - 4~\\sin^2~\\theta}{1 + 4~\\sin^2~\\theta} + i\\frac{8~\\sin~\\theta}{1 + 4~\\sin^2~\\theta}$$\nFor $z$ to be purely imaginary, the real part must be zero:\n$$\\frac{3 - 4~\\sin^2~\\theta}{1 + 4~\\sin^2~\\theta} = 0$$\nSince $1 + 4~\\sin^2~\\theta$ is always positive (as $\\sin^2~\\theta \\ge 0$), we must have:\n$$3 - 4~\\sin^2~\\theta = 0$$\n$$4~\\sin^2~\\theta = 3$$\n$$\\sin^2~\\theta = \\frac{3}{4}$$\n$$\\sin~\\theta = \\pm\\frac{\\sqrt{3}}{2}$$\nWe are given that $\\theta\\in(-\\frac{\\pi}{2},\\pi)$.\n\nFor $\\sin~\\theta = \\frac{\\sqrt{3}}{2}$, the value of $\\theta$ in the interval $(-\\frac{\\pi}{2},\\pi)$ is $\\theta = \\frac{\\pi}{3}$.\n\nFor $\\sin~\\theta = -\\frac{\\sqrt{3}}{2}$, the value of $\\theta$ in the interval $(-\\frac{\\pi}{2},\\pi)$ is $\\theta = -\\frac{\\pi}{3}$.\n\nThus, the set $A = \\left\\{-\\frac{\\pi}{3}, \\frac{\\pi}{3}\\right\\}$.\n\nThe sum of the elements in A is $-\\frac{\\pi}{3} + \\frac{\\pi}{3} = 0$.\n\n**Discrepancy Note:**\nThere is a discrepancy between the calculated sum (0) and the provided correct answer ($\\frac{2\\pi}{3}$). The mathematical derivation clearly shows that the elements of set A are $-\\frac{\\pi}{3}$ and $\\frac{\\pi}{3}$, and their sum is 0. If the intended answer is $\\frac{2\\pi}{3}$, it suggests that either the interval for $\\theta$ or the condition for 'purely imaginary' might be interpreted differently in the context from which this problem originated, or there might be an error in the given correct option. However, based on the standard mathematical interpretation of the problem statement, the sum is 0."
+    }
+  ],
+  "topic": "Complex Number in Iota Form",
+  "level": "Medium",
+  "askedIn": {
+    "exam": "JEE Main",
+    "year": 2019,
+    "date": "9 Jan I",
+    "marks": 3
+  }
+},
   {
     "type": "MCQ",
     "question": {
-      "text": "Let $z_1$ and $z_2$ be two non-zero complex numbers such that $|z_1+z_2|=|z_1|+|z_2|.$ Then $\\arg(z_1)-\\arg(z_2)$ is equal to",
+      "text": "A value of for which $\\frac{2+3i~sin~\\theta}{1-2i~sin~\\theta}$ is purely imaginary, is",
       "imageUrl": ""
     },
     "options": {
       "option1": {
-        "text": "(a) $-\\frac{\\pi}{2}$",
+        "text": "$\\frac{\\pi}{3}$",
         "imageUrl": ""
       },
       "option2": {
-        "text": "(b) 0",
+        "text": "$\\frac{\\pi}{6}$",
         "imageUrl": ""
       },
       "option3": {
-        "text": "(c) $-\\pi$",
+        "text": "$sin^{-1}(\\frac{\\sqrt{3}}{4})$",
         "imageUrl": ""
       },
       "option4": {
-        "text": "(d) $\\frac{\\pi}{2}$",
+        "text": "$sin^{-1}(\\frac{1}{\\sqrt{3}})$",
         "imageUrl": ""
       }
     },
-    "correctOption": ["option2"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "$sin^{-1}(\\frac{1}{\\sqrt{3}})$",
+    "explanation": [
+      {
+        "text": "Let $z = \\frac{2+3i~sin~\\theta}{1-2i~sin~\\theta}$. For $z$ to be purely imaginary, its real part must be zero. Rationalize the denominator: $$z = \\frac{2+3i~sin~\\theta}{1-2i~sin~\\theta} \\times \\frac{1+2i~sin~\\theta}{1+2i~sin~\\theta}$$ $$z = \\frac{2(1) + 2(2i~sin~\\theta) + 3i~sin~\\theta(1) + (3i~sin~\\theta)(2i~sin~\\theta)}{1^2 - (2i~sin~\\theta)^2}$$ $$z = \\frac{2 + 4i~sin~\\theta + 3i~sin~\\theta + 6i^2~sin^2~\\theta}{1 - 4i^2~sin^2~\\theta}$$ Since $i^2 = -1$: $$z = \\frac{2 + 7i~sin~\\theta - 6~sin^2~\\theta}{1 + 4~sin^2~\\theta}$$ Separate the real and imaginary parts: $$z = \\frac{2 - 6~sin^2~\\theta}{1 + 4~sin^2~\\theta} + i\\frac{7~sin~\\theta}{1 + 4~sin^2~\\theta}$$ For $z$ to be purely imaginary, the real part must be zero: $$\\frac{2 - 6~sin^2~\\theta}{1 + 4~sin^2~\\theta} = 0$$ Since $1 + 4~sin^2~\\theta \\ne 0$, we must have: $$2 - 6~sin^2~\\theta = 0$$ $$6~sin^2~\\theta = 2$$ $$sin^2~\\theta = \\frac{2}{6} = \\frac{1}{3}$$ $$sin~\\theta = \\pm\\frac{1}{\\sqrt{3}}$$ The options given are single values. Since $sin~\\theta = \\frac{1}{\\sqrt{3}}$ is a possible value for $\\theta$, and it is provided as an option, then $\\theta = sin^{-1}(\\frac{1}{\\sqrt{3}})$ is a correct answer. Also, $sin^{-1}(-\\frac{1}{\\sqrt{3}})$ would also make it purely imaginary. The imaginary part $\\frac{7~sin~\\theta}{1 + 4~sin^2~\\theta}$ is non-zero for $sin~\\theta = \\pm\\frac{1}{\\sqrt{3}}$.",
+        "imageUrl": ""
+      }
+    ],
     "topic": "Complex Number in Iota Form",
     "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
     "askedIn": {
       "exam": "JEE Main",
-      "year": 2019,
-      "date": "9 Jan II",
+      "year": 2016,
+      "date": "",
       "marks": 3
     }
   },
   {
     "type": "MCQ",
     "question": {
-      "text": "If $\\alpha$ and $\\beta$ are the roots of the equation $x^2-2x+2=0,$ then the least value of $n$ for which $\\left(\\frac{\\alpha}{\\beta}\\right)^n=1$ is",
+      "text": "If $\\begin{bmatrix}6i&-3i&1\\ 4&3i&-1\\ 20&3&i\\end{bmatrix}=x+iy,then$",
       "imageUrl": ""
     },
     "options": {
       "option1": {
-        "text": "(a) 2",
+        "text": "$x=3,~y=1$",
         "imageUrl": ""
       },
       "option2": {
-        "text": "(b) 5",
+        "text": "$x=1,~y=1$",
         "imageUrl": ""
       },
       "option3": {
-        "text": "(c) 4",
+        "text": "$x=0,~y=3$",
         "imageUrl": ""
       },
       "option4": {
-        "text": "(d) 3",
+        "text": "$x=0,~y=0$",
         "imageUrl": ""
       }
     },
-    "correctOption": ["option3"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "$x=0,y=0$",
+    "explanation": [
+      {
+        "text": "The given expression is the determinant of the matrix: $$D = \\begin{vmatrix}6i&-3i&1\\ 4&3i&-1\\ 20&3&i\\end{vmatrix}$$ Expand the determinant along the first row: $$D = 6i \\begin{vmatrix}3i&-1\\ 3&i\\end{vmatrix} - (-3i) \\begin{vmatrix}4&-1\\ 20&i\\end{vmatrix} + 1 \\begin{vmatrix}4&3i\\ 20&3\\end{vmatrix}$$ $$D = 6i((3i)(i) - (-1)(3)) + 3i((4)(i) - (-1)(20)) + 1((4)(3) - (3i)(20))$$ $$D = 6i(3i^2 + 3) + 3i(4i + 20) + (12 - 60i)$$ Since $i^2 = -1$: $$D = 6i(-3 + 3) + 3i(4i + 20) + 12 - 60i$$ $$D = 6i(0) + 12i^2 + 60i + 12 - 60i$$ $$D = 0 + 12(-1) + 60i + 12 - 60i$$ $$D = -12 + 60i + 12 - 60i$$ $$D = 0$$ Given that $D = x+iy$, we have $x+iy = 0$. Comparing real and imaginary parts: $$x = 0$$ $$y = 0$$",
+        "imageUrl": ""
+      }
+    ],
     "topic": "Complex Number in Iota Form",
     "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
     "askedIn": {
-      "exam": "JEE Main",
-      "year": 2019,
-      "date": "9 Jan I",
-      "marks": 3
+      "exam": "",
+      "year": 1998,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The value of sum $\\sum_{n=1}^{13}(i^{n}+i^{n+1}),$ where $i=\\sqrt{-1},$ equals",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "i",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "$i-1$",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "-i",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "0",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option2"
+    ],
+    "answer": "$i-1$",
+    "explanation": [
+      {
+        "text": "The sum is $\\sum_{n=1}^{13}(i^{n}+i^{n+1})$. We can split this into two sums: $$\\sum_{n=1}^{13}i^{n} + \\sum_{n=1}^{13}i^{n+1}$$ Let's evaluate the first sum: $$\\sum_{n=1}^{13}i^{n} = i^1 + i^2 + i^3 + i^4 + i^5 + \\dots + i^{12} + i^{13}$$ We know that the powers of $i$ cycle with a period of 4: $i^1 = i$, $i^2 = -1$, $i^3 = -i$, $i^4 = 1$. The sum of one complete cycle is $i + (-1) + (-i) + 1 = 0$. Since $13 = 4 \\times 3 + 1$, there are 3 complete cycles and one remaining term. So, $$\\sum_{n=1}^{13}i^{n} = (i^1 + i^2 + i^3 + i^4) + (i^5 + i^6 + i^7 + i^8) + (i^9 + i^{10} + i^{11} + i^{12}) + i^{13}$$ $$ = 0 + 0 + 0 + i^{13}$$ Since $i^{13} = i^{12} \\cdot i^1 = (i^4)^3 \\cdot i = 1^3 \\cdot i = i$. So, $$\\sum_{n=1}^{13}i^{n} = i$$ Now let's evaluate the second sum: $$\\sum_{n=1}^{13}i^{n+1} = i^2 + i^3 + i^4 + i^5 + \\dots + i^{13} + i^{14}$$ This is the same as the first sum but shifted by one power. So, $$\\sum_{n=1}^{13}i^{n+1} = (i^2 + i^3 + i^4 + i^5) + \\dots + i^{14}$$ Since $i^2 = -1$, $i^3 = -i$, $i^4 = 1$, $i^5 = i$, the sum of a cycle starting from $i^2$ is $(-1) + (-i) + 1 + i = 0$. $14 = 4 \\times 3 + 2$. So there are 3 complete cycles and two remaining terms. $$\\sum_{n=1}^{13}i^{n+1} = (i^2 + i^3 + i^4 + i^5) + \\dots + (i^{10} + i^{11} + i^{12} + i^{13}) + i^{14}$$ $$ = 0 + \\dots + 0 + i^{14}$$ Since $i^{14} = i^{12} \\cdot i^2 = (i^4)^3 \\cdot (-1) = 1^3 \\cdot (-1) = -1$. So, $$\\sum_{n=1}^{13}i^{n+1} = -1$$ Finally, add the two sums: $$\\sum_{n=1}^{13}(i^{n}+i^{n+1}) = \\sum_{n=1}^{13}i^{n} + \\sum_{n=1}^{13}i^{n+1} = i + (-1) = i-1$$",
+        "imageUrl": ""
+      }
+    ],
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1998,
+      "date": "",
+      "marks": 2
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "The smallest positive integer n for which $\\left(\\frac{1+i}{1-i}\\right)^{n}=1$ is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": {
+        "text": "8",
+        "imageUrl": ""
+      },
+      "option2": {
+        "text": "16",
+        "imageUrl": ""
+      },
+      "option3": {
+        "text": "12",
+        "imageUrl": ""
+      },
+      "option4": {
+        "text": "None of these",
+        "imageUrl": ""
+      }
+    },
+    "correctOption": [
+      "option4"
+    ],
+    "answer": "4",
+    "explanation": [
+      {
+        "text": "First, simplify the term inside the parenthesis: $$\\frac{1+i}{1-i}$$ Multiply the numerator and denominator by the conjugate of the denominator, which is $1+i$: $$\\frac{1+i}{1-i} \\times \\frac{1+i}{1+i} = \\frac{(1+i)^2}{1^2 - i^2}$$ $$ = \\frac{1^2 + 2(1)(i) + i^2}{1 - (-1)}$$ $$ = \\frac{1 + 2i - 1}{1 + 1}$$ $$ = \\frac{2i}{2}$$ $$ = i$$ Now, the original equation becomes: $$(i)^{n} = 1$$ We need to find the smallest positive integer $n$ for which $i^n = 1$. The powers of $i$ cycle as follows: $i^1 = i$ $i^2 = -1$ $i^3 = -i$ $i^4 = 1$ The smallest positive integer $n$ for which $i^n = 1$ is $n=4$. Therefore, the answer is 4. This corresponds to 'None of these' among the given options.",
+        "imageUrl": ""
+      }
+    ],
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "",
+      "year": 1980,
+      "date": "",
+      "marks": 2
     }
   },
   {
     "type": "MSQ",
     "question": {
-      "text": "If $z$ is a complex number such that $|z|\\ge 2,$ then the minimum value of $\\left|z+\\frac{1}{2}\\right|$",
+      "text": "Let a, b, x and y be real numbers such that $a-b=1$ and $y\\ne0$ If the complex number $z=x+iy$ satisfies $Im\\left(\\frac{az+b}{z+1}\\right)=y,$ then which of the following is(are) possible value(s) of x?",
       "imageUrl": ""
     },
     "options": {
       "option1": {
-        "text": "(a) is equal to $\\frac{5}{2}$",
+        "text": "$1-\\sqrt{1+y^{2}}$",
         "imageUrl": ""
       },
       "option2": {
-        "text": "(b) lies in the interval $(1,2)$",
+        "text": "$-1-\\sqrt{1-y^{2}}$",
         "imageUrl": ""
       },
       "option3": {
-        "text": "(c) is strictly greater than $\\frac{5}{2}$",
+        "text": "$1+\\sqrt{1+y^{2}}$",
         "imageUrl": ""
       },
       "option4": {
-        "text": "(d) is strictly greater than $\\frac{3}{2}$ but less than $\\frac{5}{2}$",
+        "text": "$-1+\\sqrt{1-y^{2}}$",
         "imageUrl": ""
       }
     },
-    "correctOption": ["option2", "option4"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "JEE Main",
-      "year": 2014,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $A$ be the set of all non-zero complex numbers $z$ such that $z\\bar{z}=1.$ Also, let the relation $R$ be defined as $z_1 R z_2 \\iff z_1=z_2 e^{i\\theta}$ for some $\\theta\\in R.$ Then, the number of distinct elements in the set $\\left\\{z_1 R z_2 : z_1, z_2 \\in A\\right\\}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "(a) 0",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "(b) 1",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "(c) 2",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "(d) infinite",
+    "correctOption": [
+      "option2",
+      "option4"
+    ],
+    "answer": "$-1\\pm\\sqrt{1-y^{2}}$",
+    "explanation": [
+      {
+        "text": "Let $z = x+iy$. We are given $a-b=1$, so $b=a-1$. Consider the expression $\\frac{az+b}{z+1}$: $$\\frac{a(x+iy) + (a-1)}{(x+iy)+1} = \\frac{ax+aiy+a-1}{(x+1)+iy}$$ Multiply the numerator and denominator by the conjugate of the denominator, which is $(x+1)-iy$: $$ = \\frac{(ax+a-1+aiy)((x+1)-iy)}{((x+1)+iy)((x+1)-iy)}$$ $$ = \\frac{(ax+a-1)(x+1) - i(ax+a-1)y + aiy(x+1) - aiy(iy)}{(x+1)^2 + y^2}$$ $$ = \\frac{(ax+a-1)(x+1) + aiy(x+1) - i(ax+a-1)y + ay^2}{(x+1)^2 + y^2}$$ Group the real and imaginary parts: $$ = \\frac{(ax+a-1)(x+1) + ay^2}{(x+1)^2 + y^2} + i\\frac{ay(x+1) - (ax+a-1)y}{(x+1)^2 + y^2}$$ We are given that $Im\\left(\\frac{az+b}{z+1}\\right)=y$. So, $$\\frac{ay(x+1) - (ax+a-1)y}{(x+1)^2 + y^2} = y$$ Since $y \\ne 0$, we can divide both sides by $y$: $$\\frac{a(x+1) - (ax+a-1)}{(x+1)^2 + y^2} = 1$$ $$a(x+1) - (ax+a-1) = (x+1)^2 + y^2$$ $$ax+a - ax - a + 1 = (x+1)^2 + y^2$$ $$1 = (x+1)^2 + y^2$$ Expand $(x+1)^2$: $$1 = x^2 + 2x + 1 + y^2$$ $$0 = x^2 + 2x + y^2$$ We need to find possible values of $x$. This is a quadratic equation in $x$: $$x^2 + 2x + y^2 = 0$$ Using the quadratic formula $x = \\frac{-B \\pm \\sqrt{B^2 - 4AC}}{2A}$, where $A=1, B=2, C=y^2$: $$x = \\frac{-2 \\pm \\sqrt{2^2 - 4(1)(y^2)}}{2(1)}$$ $$x = \\frac{-2 \\pm \\sqrt{4 - 4y^2}}{2}$$ $$x = \\frac{-2 \\pm \\sqrt{4(1 - y^2)}}{2}$$ $$x = \\frac{-2 \\pm 2\\sqrt{1 - y^2}}{2}$$ $$x = -1 \\pm \\sqrt{1 - y^2}$$ For $x$ to be a real number, we must have $1 - y^2 \\ge 0$, which means $y^2 \\le 1$. Since $y \\ne 0$, this means $-1 \\le y < 0$ or $0 < y \\le 1$. The possible values of $x$ are $-1 - \\sqrt{1-y^2}$ and $-1 + \\sqrt{1-y^2}$. These correspond to option 2 and option 4.",
         "imageUrl": ""
       }
-    },
-    "correctOption": ["option4"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
+    ],
     "topic": "Complex Number in Iota Form",
     "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 2007,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "If $z_1, z_2 \\in A$ and $z_1 R z_2,$ then the points $z_1$ and $z_2$ lie on",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "(a) a circle",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "(b) a straight line",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "(c) an ellipse",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "(d) a parabola",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option1"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 2007,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The number of distinct points in the set $\\{z \\in A : z R i\\}$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "(a) 1",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "(b) 2",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "(c) 4",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "(d) infinite",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option4"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 2007,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "Let $z_k = \\cos\\left(\\frac{k\\pi}{10}\\right) + i\\sin\\left(\\frac{k\\pi}{10}\\right),$ for $k=1,2,\\dots,10.$ The value of $\\sum_{k=1}^{10} z_k$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "(a) 0",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "(b) 1",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "(c) $i$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "(d) -1",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option4"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 2006,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "MCQ",
-    "question": {
-      "text": "The value of $\\sum_{k=1}^{10} |z_k-z_{k+1}|$ is",
-      "imageUrl": ""
-    },
-    "options": {
-      "option1": {
-        "text": "(a) $\\frac{2}{\\pi}\\tan\\left(\\frac{\\pi}{20}\\right)$",
-        "imageUrl": ""
-      },
-      "option2": {
-        "text": "(b) $\\frac{10}{\\pi}\\tan\\left(\\frac{\\pi}{20}\\right)$",
-        "imageUrl": ""
-      },
-      "option3": {
-        "text": "(c) $\\frac{20}{\\pi}\\tan\\left(\\frac{\\pi}{20}\\right)$",
-        "imageUrl": ""
-      },
-      "option4": {
-        "text": "(d) $20\\sin\\left(\\frac{\\pi}{20}\\right)$",
-        "imageUrl": ""
-      }
-    },
-    "correctOption": ["option4"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 2006,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "Match the statements/expressions in Column I with the statements/expressions in Column II.\n\nColumn I\nA. The number of solutions of the equation $z^2 + \\bar{z} = 0$ is\nB. The value of $\\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{k=1}^n \\left|\\frac{k}{n} - \\frac{1}{2}\\right|$ is\nC. The number of points in the interval $\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$ at which $y = \\tan(x)$ meets $y = x^2+1$ is\nD. The solution of the differential equation $\\left(1+y^2\\right)dx + \\left(x-e^{\\arctan y}\\right)dy = 0$ is\n\nColumn II\nP. 1\nQ. 2\nR. 3\nS. 4\nT. 5\nU. 6",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "A-Q, B-P, C-P, D-R",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Hard",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 2007,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $z_1$ and $z_2$ be complex numbers such that $\\left|z_1\\right|=9$ and $\\left|z_2-3-4i\\right|=4.$ Then the maximum value of $\\left|z_1-z_2\\right|$ is $\\dots$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "18",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 2011,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $z = x+iy$ be a complex number where $x$ and $y$ are integers. Then the area of the rectangle whose vertices are the roots of the equation $z\\bar{z}^3 + \\bar{z}z^3 = 350$ is $\\dots$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "48",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 2009,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "If $\\omega(\\ne 1)$ is a cube root of unity, then the value of $\\left(1-\\omega+\\omega^2\\right)\\left(1-\\omega^2+\\omega^4\\right)\\left(1-\\omega^4+\\omega^8\\right)\\dots (2n \\text{ factors})$ is $\\dots$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$2^{2n}$",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 2000,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If $z_1$ and $z_2$ are two complex numbers such that $|z_1|<1$ and $|z_2|>1,$ then $\\left|\\frac{1-z_1\\bar{z}_2}{z_1-z_2}\\right|<1.$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "False",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 1995,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If $\\arg(z)<0,$ then $\\arg(-z)-\\arg(z)=\\pi.$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "True",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 1987,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "The locus of $z$ such that $|z-(1+i)|=2$ is a circle with centre $(1,1)$ and radius 2.",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "True",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 1985,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If $a,b,c$ are real numbers and $a+b+c=0,$ and $a^2+b^2+c^2=1,$ then show that the complex number $z = a+ib$ satisfies $|z| = 1,$ where $i=\\sqrt{-1}.$ Also, find the locus of $z.$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Hard",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 2003,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If the real part of $\\frac{z+1}{z+i}$ is 1, then find the locus of $z.$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 2002,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "If $\\omega$ is an imaginary cube root of unity, then $(1+\\omega-\\omega^2)^7$ is equal to $\\dots$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "$128\\omega^2$",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 2002,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If $z_1, z_2, z_3$ are the vertices of an equilateral triangle in the Argand plane, then prove that $z_1^2+z_2^2+z_3^2=z_1z_2+z_2z_3+z_3z_1.$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 1997,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "A function $f(x)=1+x+x^2+x^3$ is defined on the Argand plane. Find the points in the Argand plane where $f(x)$ is purely real.",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 1993,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If $x_n = \\cos\\left(\\frac{\\pi}{2^n}\\right) + i\\sin\\left(\\frac{\\pi}{2^n}\\right),$ then prove that $x_1x_2x_3\\dots x_{\\infty}=-1.$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 1991,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "Show that the equation $z^2 + \\bar{z}^2 = 2$ represents a hyperbola.",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 1990,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If $z_1$ and $z_2$ are two complex numbers and $c>0,$ prove that $|z_1+z_2|^2 \\le (1+c)|z_1|^2 + \\left(1+\\frac{1}{c}\\right)|z_2|^2.$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 1988,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "Show that the complex numbers $z_1, z_2, z_3$ satisfying $z_1+z_2+z_3=0$ and $|z_1|=|z_2|=|z_3|=1$ are the vertices of an equilateral triangle.",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 1987,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Descriptive",
-    "question": {
-      "text": "If $1, \\omega, \\omega^2$ are the cube roots of unity, then show that the roots of $(x-1)^3+8=0$ are $-1, 1-2\\omega, 1-2\\omega^2.$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
-    "askedIn": {
-      "exam": "",
-      "year": 1984,
-      "date": "",
-      "marks": 3
-    }
-  },
-  {
-    "type": "Numerical",
-    "question": {
-      "text": "Let $S = \\{k: k=1,2,\\dots,100\\}.$ The number of elements in the set $S$ such that $i^k + i^{k+1} + i^{k+2} + i^{k+3} = 0,$ where $i=\\sqrt{-1},$ is $\\dots$",
-      "imageUrl": ""
-    },
-    "options": {},
-    "correctOption": [],
-    "answer": "100",
-    "explanation": "",
-    "publication": "",
-    "subject": "Mathematics",
-    "topic": "Complex Number in Iota Form",
-    "level": "Medium",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
     "askedIn": {
       "exam": "JEE Advanced",
-      "year": 2014,
+      "year": 2017,
       "date": "",
       "marks": 3
     }

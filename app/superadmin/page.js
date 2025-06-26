@@ -71,7 +71,7 @@ export default function Page() {
       topic: meta.topic || q.topic || "Unknown",
       unit: meta.unit || q.unit || "",
       askedIn: q.askedIn || "",
-    })); 
+    }));
     try {
       const res = await fetch("/api/question", {
         method: "POST",
@@ -92,7 +92,7 @@ export default function Page() {
     }
   };
 
-const promptText = `Task:
+  const promptText = `Task:
 
 Extract all questions from the attached PDF topic-wise.
 
@@ -141,16 +141,7 @@ JSON Schema Format (Strict):
     },
     "correctOption": ["optionX"],  // Use [] if unknown
     "answer": "Direct answer in plain text or LaTeX",
-    "explanation": [
-      {
-        "text": "Explanation block 1 (can include LaTeX)",
-        "imageUrl": ""
-      },
-      {
-        "text": "Explanation block 2 (if any)",
-        "imageUrl": ""
-      }
-    ],  
+     
     "topic": "Topic name",
     "level": "Easy" | "Medium" | "Hard",
     "askedIn": {
@@ -170,16 +161,72 @@ Strict Rules:
 - Remove labels like (a), (b), 1., 2., etc., from option texts.
 - If correct answer is unknown:
   - Set \`"correctOption": []\`
-  - Leave \`"answer": ""\`, and \`"explanation": []\`
+  - Leave \`"answer": ""\`
 - If any image is present, insert the extracted URL; else keep \`"imageUrl": ""\`
 - Final JSON must be clean, 100% valid, and fully parseable
 `;
+  const mergePromptText = `Prompt: Merge Questions and Explanations into Structured JSON
 
+You are given two arrays:
 
+1. \`questionsArray\` – an array of question objects. Each object contains the question details, including type, text, options, answer, topic, level, etc.
+2. \`explanationsArray\` – an array of explanation blocks corresponding to the questions.
 
-  const handlecopy = async () => {
+🔧 Task:
+
+Your task is to combine both arrays into a single JSON array of structured question objects based on the schema provided below.
+
+- Match each question with its corresponding explanation by position (i.e., the 1st explanation goes with the 1st question, 2nd with 2nd, and so on).
+- The explanation should be added to the \`explanation\` field of each question object as an array of blocks, where each block has:
+  - "text": Explanation text (can include LaTeX in $...$)
+  - "imageUrl": (empty string if no image)
+
+Make sure the explanations are relevant and clearly tied to the question.
+
+✅ Output Format:
+
+Return a valid JSON array, where each question object follows this exact schema:
+
+[
+  {
+    "type": "MCQ" | "MSQ" | "Numerical" | "Descriptive",
+    "question": {
+      "text": "Question text with LaTeX (math in $...$)",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "", "imageUrl": "" },
+      "option2": { "text": "", "imageUrl": "" },
+      "option3": { "text": "", "imageUrl": "" },
+      "option4": { "text": "", "imageUrl": "" }
+    },
+    "correctOption": ["optionX"],  // Leave as [] if unknown
+    "answer": "Direct answer in plain text or LaTeX",
+    "explanation": [
+      {
+        "text": "Explanation block 1 (can include LaTeX)",
+        "imageUrl": ""
+      },
+      {
+        "text": "Explanation block 2 (if any)",
+        "imageUrl": ""
+      }
+    ],
+    "topic": "Topic name",
+    "level": "Easy" | "Medium" | "Hard",
+    "askedIn": {
+      "exam": "",
+      "year": 2020,
+      "date": "",
+      "marks": 3
+    }
+  }
+]
+`;
+
+  const handlecopy = async (text) => {
     try {
-      await navigator.clipboard.writeText(promptText);
+      await navigator.clipboard.writeText(text);
       toast.success('Prompt copied to clipboard!');
     } catch (error) {
       alert('Failed to copy the prompt. Please try again.');
@@ -197,7 +244,13 @@ Strict Rules:
           value={rawData}
           onChange={(e) => setRawData(e.target.value)}
         />
-        <button onClick={handlecopy} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Copy Prompt</button>
+        <button onClick={()=> handlecopy(promptText)} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Copy Prompt</button>
+        <button
+          onClick={() => handlecopy(mergePromptText)}
+          className="bg-blue-600 ml-2.5 hover:bg-blue-700 text-white px-4 py-2 rounded"
+        >
+          Copy Merge Prompt
+        </button>
 
         <MetaData setMeta={setMeta} meta={meta} />
         <div className="flex gap-4">

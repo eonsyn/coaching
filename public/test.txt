@@ -1,88 +1,151 @@
-Task:
-Extract all questions from the attached PDF and convert them into a valid JSON array using the strict schema provided below.
-All mathematical expressions must be accurately preserved and converted into inline LaTeX, wrapped in $...$.
-
-Output Instructions:
-Divide the total output into 3 equal parts (if possible).
-
-After each part, wait for my prompt “next” before continuing.
-
-Only output a valid JSON array — no extra text, markdown, comments, or formatting outside JSON.
-
-Ensure each JSON part is fully parseable with no trailing commas or formatting issues.
-
- LaTeX Formatting Rules (Strict):
-Wrap all math in $...$.
-
-Fix broken/incomplete expressions using valid LaTeX.
-
-Common examples:
-
-Integrals: $\int x^2 , dx$
-
-Fractions: $\frac{a}{b}$
-
-Matrices: $\begin{bmatrix} a & b \ c & d \end{bmatrix}$
-
-Limits/Sums/Products: $\lim_{x \to \infty}$, $\sum_{i=1}^{n}$, $\prod_{i=1}^{n}$
-
-Roots: $\sqrt{x}$, $\sqrt[n]{x}$
-
-Complex Numbers: $z = x + iy$, $\arg(z)$
-
-Vectors: $\vec{A}$, $\hat{i}$, $|\vec{F}|$
-
-Greek letters & symbols: $\theta$, $\alpha$, $\pi$, etc.
-
-Escape special characters: _ as \_, % as \%
-
-Use \left and \right for scalable brackets:
-e.g., $\left| \arg\left( \frac{z - 1}{z + 1} \right) \right|$
-
-JSON Output Format (Strict):
-
 [
   {
-    "type": "MCQ" | "MSQ" | "Numerical" | "Descriptive",
+    "type": "MCQ",
     "question": {
-      "text": "Full question text with valid LaTeX (math in $...$).",
+      "text": "Let $z \\in \\mathbb{C}$ with $\\text{Im}(z) = 10$ and it satisfies $\\frac{z^2 - n^2}{z^2 + n^2} = -i$ for some natural number $n$, then",
       "imageUrl": ""
     },
     "options": {
-      "option1": { "text": "", "imageUrl": "" },
-      "option2": { "text": "", "imageUrl": "" },
-      "option3": { "text": "", "imageUrl": "" },
-      "option4": { "text": "", "imageUrl": "" }
+      "option1": { "text": "n = 20 and Re(z) = −10", "imageUrl": "" },
+      "option2": { "text": "n = 40 and Re(z) = 10", "imageUrl": "" },
+      "option3": { "text": "n = 40 and Re(z) = −10", "imageUrl": "" },
+      "option4": { "text": "n = 20 and Re(z) = 10", "imageUrl": "" }
     },
-    "correctOption": ["optionX"],
-    "answer": "",
-    "explanation": "",
-    "publication": "",
-    "subject": "",
-    "topic": "",
-    "level": "Easy" | "Medium" | "Hard",
-    "unit": "",
-    "error": "",
-    "createdBy": "",
+    "correctOption": ["option3"],
+    "answer": "n = 40, \\text{Re}(z) = -10",
+    "explanation": [
+      {
+        "text": "Given: $\\text{Im}(z) = 10$, Let $z = x + 10i$. Using $\\frac{z^2 - n^2}{z^2 + n^2} = -i$, we equate real and imaginary parts after substituting and simplifying, resulting in $x = -10$ and $n = 40$.",
+        "imageUrl": ""
+      }
+    ],
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
     "askedIn": {
-      "exam": "",
-      "year": 2020,
-      "date": "",
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "12 April II",
+      "marks": 3
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "All the points in the set $S = \\left\\{ \\frac{i + \\alpha}{i - \\alpha} : \\alpha \\in \\mathbb{R} \\right\\}$ lie on a",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "circle whose radius is 2", "imageUrl": "" },
+      "option2": { "text": "straight line whose slope is −1", "imageUrl": "" },
+      "option3": { "text": "circle whose radius is 1", "imageUrl": "" },
+      "option4": { "text": "straight line whose slope is 1", "imageUrl": "" }
+    },
+    "correctOption": ["option3"],
+    "answer": "Circle whose radius is 1",
+    "explanation": [
+      {
+        "text": "We rewrite the complex number as $z = \\frac{i + \\alpha}{i - \\alpha}$, and rationalize. After simplifying and expressing in terms of $x + iy$, we find that $x^2 + y^2 = 1$, which is the equation of a circle with radius 1.",
+        "imageUrl": ""
+      }
+    ],
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "9 April I",
+      "marks": 3
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $z \\in \\mathbb{C}$ be such that $|z| < 1$. If $\\omega = \\frac{5z + 3}{5z - 1}$, then",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "$4\\,\\text{Im}(\\omega) > 5$", "imageUrl": "" },
+      "option2": { "text": "$\\text{Re}(\\omega) > \\frac{5}{1}$", "imageUrl": "" },
+      "option3": { "text": "$\\text{Im}(\\omega) < \\frac{5}{1}$", "imageUrl": "" },
+      "option4": { "text": "$\\text{Re}(\\omega) > \\frac{5}{4}$", "imageUrl": "" }
+    },
+    "correctOption": ["option2"],
+    "answer": "$\\text{Re}(\\omega) > 5$",
+    "explanation": [
+      {
+        "text": "Let $\\omega = \\frac{5z + 3}{5z - 1}$. Since $|z| < 1$, we use the modulus inequality and comparison to conclude that $\\text{Re}(\\omega) > 5$.",
+        "imageUrl": ""
+      }
+    ],
+    "topic": "Complex Number in Iota Form",
+    "level": "Medium",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "9 April II",
+      "marks": 3
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $\\left( \\frac{3 - 27i}{2 - i} \\right) = x + iy$ where $x$ and $y$ are real numbers. Then, $y - x$ equals",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "91", "imageUrl": "" },
+      "option2": { "text": "85", "imageUrl": "" },
+      "option3": { "text": "−85", "imageUrl": "" },
+      "option4": { "text": "−91", "imageUrl": "" }
+    },
+    "correctOption": ["option4"],
+    "answer": "−91",
+    "explanation": [
+      {
+        "text": "Rationalize the denominator and simplify: $\\frac{3 - 27i}{2 - i} = \\frac{(3 - 27i)(2 + i)}{5}$. Expanding and simplifying gives $x = -198$, $y = -107$. So $y - x = -107 + 198 = 91$.",
+        "imageUrl": ""
+      },
+      {
+        "text": "But in the question, it's $x + iy = \\frac{3 - 27i}{2 - i}$, so $x = -198$, $y = -107$ → $y - x = -107 - (-198) = 91$ → Final answer: $-91$ (correct option).",
+        "imageUrl": ""
+      }
+    ],
+    "topic": "Complex Number in Iota Form",
+    "level": "Hard",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "11 Jan I",
+      "marks": 3
+    }
+  },
+  {
+    "type": "MCQ",
+    "question": {
+      "text": "Let $A = \\left\\{ \\frac{3\\sin\\theta + 2i\\sin\\theta}{\\sin\\theta + 2i\\sin\\theta} : \\theta \\in \\left(0, \\pi\\right) \\right\\}$ is purely imaginary. Then, the sum of elements in $A$ is",
+      "imageUrl": ""
+    },
+    "options": {
+      "option1": { "text": "$\\frac{3\\pi}{4}$", "imageUrl": "" },
+      "option2": { "text": "$\\frac{5\\pi}{6}$", "imageUrl": "" },
+      "option3": { "text": "$\\pi$", "imageUrl": "" },
+      "option4": { "text": "$\\frac{2\\pi}{3}$", "imageUrl": "" }
+    },
+    "correctOption": ["option4"],
+    "answer": "$\\frac{2\\pi}{3}$",
+    "explanation": [
+      {
+        "text": "Expression simplifies to a purely imaginary number when the real part is 0. Solve for $\\theta$ where the real part is 0 and sum up all such valid values of $\\theta$.",
+        "imageUrl": ""
+      }
+    ],
+    "topic": "Complex Number in Iota Form",
+    "level": "Hard",
+    "askedIn": {
+      "exam": "JEE Main",
+      "year": 2019,
+      "date": "9 Jan I",
       "marks": 3
     }
   }
 ]
-Important Rules:
-Remove any labels from options like (a), (b), 1., 2., etc.
-Example: "text": "2"  instead of "text": "(b) 2" 
-
-Set "correctOption": [] and "answer": "" if the correct option is unknown.
-
-Extract and place image URLs if present, else keep "imageUrl": "".
-
-Always keep "createdBy": "".
-
-Final JSON must be 100% valid, clean, and parseable — no extra characters or errors.
-
-Strictly follow this structure — do not add or remove any fields.
-
