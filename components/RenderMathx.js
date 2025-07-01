@@ -27,7 +27,7 @@ const RenderMathx = ({ text }) => {
 
     // Use a temporary div to decode HTML entities for the *entire* text string first
     const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = text.trim();
+    tempDiv.innerHTML = text?.trim();
     const decodedQuestion = tempDiv.textContent || tempDiv.innerText;
 
     // Iterate through matches to split the string into plain text and LaTeX parts
@@ -88,7 +88,7 @@ const RenderMathx = ({ text }) => {
   return (
      
         <div className="flex items-start">
-          <p className=" text-lg leading-relaxed flex-1">
+          <div className=" text-lg leading-relaxed flex-1">
             {processedContent.map((part, index) => {
               if (part.type === 'text') {
                 // For plain text, we directly render it.
@@ -111,7 +111,7 @@ const RenderMathx = ({ text }) => {
               }
               return null; // Should not happen
             })}
-          </p>
+          </div>
         </div>
       
   );

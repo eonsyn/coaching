@@ -1,12 +1,13 @@
 'use client';
-import { useState } from 'react'; 
+import { useState } from 'react';
 import RenderMathx from '@/components/RenderMathx';
+import { playSound } from '@/lib/playSound';
 export default function QuestionCard({ question }) {
   const [selected, setSelected] = useState([]);
   const [userInput, setUserInput] = useState('');
   const [isChecked, setIsChecked] = useState(false);
   const [isCorrect, setIsCorrect] = useState(null);
-
+  const [checkbutton,setCheckbutton]=useState(false)
   const handleSingleSelect = (index) => {
     setSelected([index]);
   };
@@ -21,37 +22,57 @@ export default function QuestionCard({ question }) {
 
   const handleCheckAnswer = () => {
     let correct = false;
+
     if (question.type === 'singleCorrect') {
       const correctIndex = question.options.findIndex((o) => o.isCorrect);
-      correct = selected[0] === correctIndex;
-    } else if (question.type === 'multiCorrect') {
-      const correctIndices = question.options
-        .map((o, i) => (o.isCorrect ? i : null))
-        .filter((i) => i !== null);
-      correct = selected.sort().toString() === correctIndices.sort().toString();
-    } else if (question.type === 'numerical') {
-      correct = userInput.trim() === question.correctValue?.toString().trim();
-    } else if (question.type === 'descriptive') {
-      correct = true; // Always accept, subjective
+      console.log(selected[0] === correctIndex)
+      correct = selected.length === 1 && selected[0] === correctIndex;
     }
+
+    else if (question.type === 'multiCorrect') {
+      const correctIndices = question.options
+        .map((opt, idx) => (opt.isCorrect ? idx : null))
+        .filter((v) => v !== null)
+        .sort((a, b) => a - b);
+      const userSelected = [...selected].sort((a, b) => a - b);
+      correct =
+        correctIndices.length === userSelected.length &&
+        correctIndices.every((val, i) => val === userSelected[i]);
+    }
+
+    else if (question.type === 'numerical') {
+      const correctAnswer = (question.correctValue ?? '').toString().trim();
+correct = userInput.trim() === correctAnswer;
+
+
+    }
+
+    else if (question.type === 'descriptive') {
+      correct = true; // always allow as correct
+    }
+if(correct){
+   playSound('/sounds/correct.mp3');
+}else{
+  playSound('/sounds/wrong.mp3');
+}
     setIsCorrect(correct);
     setIsChecked(true);
   };
 
   return (
-    <div className="p-4 border rounded-xl shadow-md max-w-3xl mx-auto my-6">
-      <div className="mb-4">
-        
+    <div className="p-4 border rounded-xl shadow-md max-w-3xl mx-auto my-6 bg-white">
+      {/* Question */}
+      <div className="mb-4 font-medium text-lg">
         <RenderMathx text={question.question.text} />
       </div>
 
-      {/* Options for MCQ */}
+      {/* MCQ Options */}
       {(question.type === 'singleCorrect' || question.type === 'multiCorrect') && (
         <div className="space-y-2">
           {question.options.map((opt, i) => (
             <div
               key={i}
-              className={`p-2 rounded border cursor-pointer ${
+              className={`p-2 rounded border cursor-pointer transition ${
                 selected.includes(i)
                   ? 'bg-blue-100 border-blue-500'
                   : 'bg-white border-gray-300'
@@ -86,10 +107,13 @@ export default function QuestionCard({ question }) {
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
           className="mt-2 p-2 w-full border rounded"
+          rows={3}
         />
       )}
 
+      {/* Check Answer */}
       <button
+      disable={checkbutton}
         onClick={handleCheckAnswer}
         className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
       >
@@ -98,25 +122,31 @@ export default function QuestionCard({ question }) {
 
       {/* Feedback */}
       {isChecked && (
-        <div className={`mt-4 p-3 rounded ${isCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+        <div
+          className={`mt-4 p-3 rounded font-semibold ${
+            isCorrect ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-700'
+          }`}
+        >
           {isCorrect ? '✅ Correct Answer!' : '❌ Wrong Answer'}
         </div>
       )}
 
-      {/* Optional Hint */}
+      {/* Hint */}
       {question.hint && (
-        <details className="mt-3 text-sm text-gray-700">
-          <summary className="cursor-pointer">Hint</summary>
-          <p className="mt-1">{question.hint}</p>
+        <details className="mt-4 text-sm text-gray-700">
+          <summary className="cursor-pointer font-medium">💡 Hint</summary>
+          <div className="mt-1">
+            <RenderMathx text={question.hint} />
+          </div>
         </details>
       )}
 
-      {/* Optional Solution */}
+      {/* Solution */}
       {isChecked && question.solution?.text && (
-        <details className="mt-3 text-sm text-gray-700">
-          <summary className="cursor-pointer">View Solution</summary>
+        <details className="mt-4 text-sm text-gray-700">
+          <summary className="cursor-pointer font-medium">📝 View Solution</summary>
           <div className="mt-2 whitespace-pre-wrap">
-            <RenderMathx textB={question.solution.text} />
+            <RenderMathx text={question.solution.text} />
           </div>
         </details>
       )}

@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import { FiArrowRightCircle } from 'react-icons/fi';
+import { BsQuestionCircle } from 'react-icons/bs';
 import QuestionCard from '@/components/dashboard/question/QuestionCard';
 export default function QuestionPage() {
     const params = useParams();
@@ -31,7 +33,7 @@ export default function QuestionPage() {
     });
     const data = await res.json();
     if (data.nextQuestionId) {
-      router.push(`/dashboard/question/${data.nextQuestionId}`);
+      router.push(`/dashboard/question/${data?.nextQuestionId}`);
     } else {
       alert('No more questions in this subject.');
     }
@@ -41,22 +43,24 @@ export default function QuestionPage() {
   if (!question) return <div>Question not found.</div>;
 
   return (
-    <div className="p-4">
-      <h1 className="text-xl font-bold mb-2">Question Viewer</h1>
-      <QuestionCard question={rdata.question}/>
-      
-      {/* <pre>
-        {JSON.stringify(rdata, null, 2)}
-      </pre> */}
-      <Link href={`/dashboard/question/${rdata.nextQuestionId}`}>
-      
-      
-      <button
-         
-        className="mt-4 px-4 py-2 bg-blue-600 text-white rounded"
-      >
-        Next Question →
-      </button></Link>
+    <div className="p-6 max-w-4xl mx-auto ">
+      <div className="flex items-center gap-2 mb-4">
+        <BsQuestionCircle className="text-blue-600 text-2xl" />
+        <h1 className="text-2xl font-semibold text-gray-800">Question Viewer</h1>
+      </div>
+
+      {/* Question Card */}
+      <QuestionCard question={rdata.question} />
+
+      {/* Navigation Button */}
+      <div className="mt-6 flex justify-end">
+        <Link href={`/dashboard/question/${rdata.nextQuestionId}`} passHref>
+          <button className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+            Next Question
+            <FiArrowRightCircle className="text-lg" />
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
