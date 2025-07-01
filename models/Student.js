@@ -1,17 +1,7 @@
 // models/Student.js
 import mongoose from "mongoose";
 
-const solvedQuestionSchema = new mongoose.Schema({
-  date: {
-    type: Date,
-    required: true,
-  },
-  questions: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Question",
-  }],
- 
-});
+
 
 const studentSchema = new mongoose.Schema({
   name: {
@@ -31,7 +21,41 @@ const studentSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
-  solvedQuestions: [solvedQuestionSchema],
+  saveQuestion: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Question",
+    },
+  ],
+  correctQuestion:[
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Question",
+    },
+  ],
+  incorrectQuestion:[
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Question",
+    },
+  ],
+  performance:[ {
+    date: {
+      type: Date,
+      required: true,
+    },
+    correctQuestion:{
+      type: Number,
+      default: 0,
+    },
+    incorrectQuestion:{
+      type: Number,
+      default: 0,
+    },
+
+  }],
+
+   
 }, { timestamps: true });
 
 export default mongoose.models.Student || mongoose.model("Student", studentSchema);
