@@ -30,8 +30,8 @@ export default function LayoutClient({ user, children }) {
 
   return (
     <main className="flex h-full w-full">
-      <Asidebar />
-      <div className="flex-1 overflow-y-auto p-4">{children}</div>
+      <Asidebar  />
+      <div className=" pt-2 overflow-y-auto  flex-1">{children}</div>
     </main>
   );
 }

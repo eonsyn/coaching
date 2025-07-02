@@ -1,18 +1,27 @@
 'use client';
+
 import { useState } from 'react';
 import RenderMathx from '@/components/RenderMathx';
 import { playSound } from '@/lib/playSound';
+import { toast } from 'react-toastify';
+import { FaRegLightbulb } from "react-icons/fa";
+import { CiTextAlignLeft } from "react-icons/ci";
+
 export default function QuestionCard({ question }) {
   const [selected, setSelected] = useState([]);
   const [userInput, setUserInput] = useState('');
   const [isChecked, setIsChecked] = useState(false);
   const [isCorrect, setIsCorrect] = useState(null);
-  const [checkbutton,setCheckbutton]=useState(false)
+  const [solution, setSolution] = useState(null);
+  const [hint, setHint] = useState(null);
+  const [loading, setloading] = useState(false)
+
   const handleSingleSelect = (index) => {
-    setSelected([index]);
+    if (!isChecked) setSelected([index]);
   };
 
   const handleMultiSelect = (index) => {
+    if (isChecked) return;
     if (selected.includes(index)) {
       setSelected(selected.filter((i) => i !== index));
     } else {
@@ -20,49 +29,53 @@ export default function QuestionCard({ question }) {
     }
   };
 
-  const handleCheckAnswer = () => {
-    let correct = false;
+  const handleCheckAnswer = async () => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    try {
+      setloading(true);
+      const res = await fetch(`/api/subject/chapter/question/${question._id}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          selected,
+          userInput,
+          type: question.type,
+          userId: user?.userId,
+        })
+      });
 
-    if (question.type === 'singleCorrect') {
-      const correctIndex = question.options.findIndex((o) => o.isCorrect);
-      console.log(selected[0] === correctIndex)
-      correct = selected.length === 1 && selected[0] === correctIndex;
+      const result = await res.json();
+
+      if (!res.ok) {
+        throw new Error(result.error || 'Something went wrong');
+      }
+
+      setIsCorrect(result.correct);
+      setIsChecked(true);
+      setSolution(result.solution);
+       
+      if (result.correct) {
+        toast.success('Correct Answer!');
+        playSound('/sounds/correct.mp3');
+      } else {
+        toast.error('Wrong Answer!');
+        playSound('/sounds/wrong.mp3');
+      }
+
+    } catch (err) {
+      console.error(err);
+      toast.error('Error checking answer');
+    }finally{
+      setloading(false)
     }
-
-    else if (question.type === 'multiCorrect') {
-      const correctIndices = question.options
-        .map((opt, idx) => (opt.isCorrect ? idx : null))
-        .filter((v) => v !== null)
-        .sort((a, b) => a - b);
-      const userSelected = [...selected].sort((a, b) => a - b);
-      correct =
-        correctIndices.length === userSelected.length &&
-        correctIndices.every((val, i) => val === userSelected[i]);
-    }
-
-    else if (question.type === 'numerical') {
-      const correctAnswer = (question.correctValue ?? '').toString().trim();
-correct = userInput.trim() === correctAnswer;
-
-
-    }
-
-    else if (question.type === 'descriptive') {
-      correct = true; // always allow as correct
-    }
-if(correct){
-   playSound('/sounds/correct.mp3');
-}else{
-  playSound('/sounds/wrong.mp3');
-}
-    setIsCorrect(correct);
-    setIsChecked(true);
   };
 
   return (
-    <div className="p-4 border rounded-xl shadow-md max-w-3xl mx-auto my-6 bg-white">
+    <div className="p-6 border rounded-xl shadow-md w-full bg-darkblue   transition-all">
       {/* Question */}
-      <div className="mb-4 font-medium text-lg">
+      <div className="mb-4 font-medium text-lg text-foreground">
         <RenderMathx text={question.question.text} />
       </div>
 
@@ -72,11 +85,13 @@ if(correct){
           {question.options.map((opt, i) => (
             <div
               key={i}
-              className={`p-2 rounded border cursor-pointer transition ${
+              className={`p-3 rounded-md border cursor-pointer transition font-medium ${
                 selected.includes(i)
-                  ? 'bg-blue-100 border-blue-500'
-                  : 'bg-white border-gray-300'
-              }`}
+                  ? isChecked
+                    ? 'bg-blue-100 border-blue-500 text-blue-900'
+                    : 'bg-blue-100 border-blue-500'
+                  : 'bg-darkblue border-gray-300 hover:bg-darkblue/80'
+              } ${isChecked ? 'cursor-not-allowed' : ''}`}
               onClick={() =>
                 question.type === 'singleCorrect'
                   ? handleSingleSelect(i)
@@ -93,10 +108,11 @@ if(correct){
       {question.type === 'numerical' && (
         <input
           type="text"
+          disabled={isChecked}
           placeholder="Enter your answer"
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
-          className="mt-2 p-2 w-full border rounded"
+          className="mt-3 p-2 w-full border rounded focus:outline-none focus:ring focus:border-blue-300 disabled:opacity-60"
         />
       )}
 
@@ -106,47 +122,48 @@ if(correct){
           placeholder="Write your answer..."
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
-          className="mt-2 p-2 w-full border rounded"
+          className="mt-3 p-2 w-full border rounded focus:outline-none focus:ring disabled:opacity-60"
           rows={3}
+          disabled={isChecked}
         />
       )}
 
-      {/* Check Answer */}
+      {/* Check Answer Button */}
       <button
-      disable={checkbutton}
         onClick={handleCheckAnswer}
-        className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        disabled={isChecked}
+        className={`mt-5 px-4 py-2 rounded font-medium text-white transition-all ${
+          isChecked ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
+        }`}
       >
-        Check Answer
+      {loading ? "Checking..." : "Check Answer"}
+
       </button>
-
-      {/* Feedback */}
-      {isChecked && (
-        <div
-          className={`mt-4 p-3 rounded font-semibold ${
-            isCorrect ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-700'
-          }`}
-        >
-          {isCorrect ? '✅ Correct Answer!' : '❌ Wrong Answer'}
-        </div>
-      )}
-
+ 
       {/* Hint */}
       {question.hint && (
-        <details className="mt-4 text-sm text-gray-700">
-          <summary className="cursor-pointer font-medium">💡 Hint</summary>
-          <div className="mt-1">
+        <details className="mt-4 text-sm text-muted-foreground">
+          <summary className="cursor-pointer font-medium flex">
+            <span className="flex bg-yellow-300 rounded-t-md p-1 items-center gap-1">
+              <FaRegLightbulb /> Hint
+            </span>
+          </summary>
+          <div className="bg-yellow-300 p-1 rounded-tr-md rounded-b-md transition-all ease-in-out duration-300">
             <RenderMathx text={question.hint} />
           </div>
         </details>
       )}
 
       {/* Solution */}
-      {isChecked && question.solution?.text && (
-        <details className="mt-4 text-sm text-gray-700">
-          <summary className="cursor-pointer font-medium">📝 View Solution</summary>
-          <div className="mt-2 whitespace-pre-wrap">
-            <RenderMathx text={question.solution.text} />
+      {isChecked && solution?.text && (
+        <details className="mt-4 text-sm text-muted-foreground">
+          <summary className="cursor-pointer font-medium flex">
+            <span className="flex bg-green-300 rounded-t-md p-1 items-center gap-1">
+              <CiTextAlignLeft /> View Solution
+            </span>
+          </summary>
+          <div className="bg-green-300 p-1 rounded-tr-md rounded-b-md whitespace-pre-wrap">
+            <RenderMathx text={solution.text} />
           </div>
         </details>
       )}

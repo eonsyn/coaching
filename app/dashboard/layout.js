@@ -8,10 +8,14 @@ export default async function DashboardLayout({ children }) {
 
   // Strip sensitive info before sending to client
   const safeUser = { 
+    userId:user._id,
     name: user.name,
     email: user.email,
-    saveQuestion:user.saveQuestion,
-    score:user.score
+    saveQuestion: user.saveQuestion,
+    score: user.score,
+    correctQuestion: user.correctQuestion,
+    incorrectQuestion: user.incorrectQuestion,
+    performance: user.performance
   }
     
 

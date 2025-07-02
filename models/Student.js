@@ -39,21 +39,15 @@ const studentSchema = new mongoose.Schema({
       ref: "Question",
     },
   ],
-  performance:[ {
-    date: {
-      type: Date,
-      required: true,
-    },
-    correctQuestion:{
-      type: Number,
-      default: 0,
-    },
-    incorrectQuestion:{
-      type: Number,
-      default: 0,
-    },
-
-  }],
+ performanceByDate: {
+  type: Map,
+  of: {
+    correctQuestion: { type: Number, default: 0 },
+    incorrectQuestion: { type: Number, default: 0 },
+  },
+  default: {}
+}
+,
 
    
 }, { timestamps: true });
