@@ -22,21 +22,27 @@ function ChooseSubject() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center  p-6">
-      <h2 className="text-3xl font-bold mb-8">Choose a Subject</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-4xl">
-        {subjects.map((subject) => (
-          <Link key={subject.name} href={`/dashboard/solveproblem/${subject.name}`}>
-          <div
-            key={subject.name}
-            className={`flex flex-col items-center p-6  border-2 rounded-2xl shadow-md transition-all duration-200 cursor-pointer ${subject.color}`}
-          >
+   <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center p-6">
+  <h2 className="text-3xl font-bold mb-8 text-highlight font-puritan">Choose a Subject</h2>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl">
+    {subjects.map((subject) => (
+      <Link key={subject.name} href={`/dashboard/solveproblem/${subject.name}`}>
+        <div
+          className="flex flex-col items-center justify-center bg-card text-textprimary p-6 rounded-2xl shadow-sm border border-[--gray-200] hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-pointer group"
+        >
+          <div className="text-4xl text-darkblue group-hover:text-highlight transition-colors duration-200">
             {subject.icon}
-            <p className="mt-4 text-xl font-semibold">{subject.name}</p>
-          </div></Link>
-        ))}
-      </div>
-    </div>
+          </div>
+          <p className="mt-4 text-lg font-semibold font-puritan group-hover:text-highlight">
+            {subject.name}
+          </p>
+        </div>
+      </Link>
+    ))}
+  </div>
+</div>
+
   );
 }
 

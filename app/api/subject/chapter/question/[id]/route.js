@@ -8,35 +8,45 @@ import Student from '@/models/Student';
 
 
 
-export async function POST(req, { params }) {
-  const questionId = params.id;
+
+
+export async function POST(req) {
+  const url = new URL(req.url);
+  const questionId = url.pathname.split('/').pop(); // safely get [id]
   const { selected = [], userInput = '', type, userId } = await req.json();
 
   try {
     await dbConnect();
 
     const [question, student] = await Promise.all([
-      Question.findById(questionId).select('type options correctValue solution hint'),
-      Student.findById(userId).select('correctQuestion incorrectQuestion performanceByDate score'),
+      Question.findById(questionId).lean(),
+      Student.findById(userId)
     ]);
 
-    if (!question || !student) {
-      return NextResponse.json({ error: 'Question or student not found' }, { status: 404 });
+    if (!question) {
+      return NextResponse.json({ error: 'Question not found' }, { status: 404 });
     }
+     
+
+    if (!student) {
+      return NextResponse.json({ error: 'Student not found' }, { status: 404 });
+    }
+
+    // 🔍 Get correct indexes based on `isCorrect`
+    const correctIndices = question.options
+      ?.map((opt, i) => (opt.isCorrect ? i : null))
+      ?.filter((i) => i !== null) || [];
 
     let correct = false;
 
     if (type === 'singleCorrect') {
-      const correctIndex = question.options.findIndex((o) => o.isCorrect);
-      correct = selected.length === 1 && selected[0] === correctIndex;
+      correct = selected.length === 1 && correctIndices.length === 1 && selected[0] === correctIndices[0];
     } else if (type === 'multiCorrect') {
-      const correctIndices = question.options
-        .map((opt, idx) => (opt.isCorrect ? idx : null))
-        .filter((v) => v !== null)
-        .sort();
-      const userSelected = [...selected].sort();
-      correct = correctIndices.length === userSelected.length &&
-        correctIndices.every((val, i) => val === userSelected[i]);
+      const userSorted = [...selected].sort();
+      const correctSorted = [...correctIndices].sort();
+      correct =
+        userSorted.length === correctSorted.length &&
+        userSorted.every((val, i) => val === correctSorted[i]);
     } else if (type === 'numerical') {
       correct = userInput.trim() === (question.correctValue ?? '').toString().trim();
     } else if (type === 'descriptive') {
@@ -44,47 +54,63 @@ export async function POST(req, { params }) {
     }
 
     const alreadyAttempted =
-      student.correctQuestion.includes(questionId) || student.incorrectQuestion.includes(questionId);
+      student.correctQuestion.includes(question._id) ||
+      student.incorrectQuestion.includes(question._id);
 
-    if (alreadyAttempted) {
-      return NextResponse.json({
-        correct,
-        message: correct ? 'Correct (already attempted)' : 'Wrong (already attempted)',
-        solution: question.solution,
-        hint: question.hint,
-        alreadyAttempted: true,
-        newScore: student.score
-      });
-    }
+    if (!student.performance) student.performance = [];
 
-    const today = new Date().toISOString().split('T')[0];
+    const todayDate = new Date().toISOString().split('T')[0];
+    const today = student.performance.find(
+      (entry) => entry.date.toISOString().split('T')[0] === todayDate
+    );
 
-    const update = {
-      $addToSet: correct
-        ? { correctQuestion: questionId }
-        : { incorrectQuestion: questionId },
-      $inc: {
-        ...(correct ? { score: 5 } : {}),
-        [`performanceByDate.${today}.${correct ? 'correctQuestion' : 'incorrectQuestion'}`]: 1
+    if (!alreadyAttempted) {
+      if (correct) {
+        student.correctQuestion.push(question._id);
+        student.score += 5;
+
+        if (today) {
+          today.correctQuestion += 1;
+        } else {
+          student.performance.push({
+            date: new Date(),
+            correctQuestion: 1,
+            incorrectQuestion: 0
+          });
+        }
+      } else {
+        student.incorrectQuestion.push(question._id);
+
+        if (today) {
+          today.incorrectQuestion += 1;
+        } else {
+          student.performance.push({
+            date: new Date(),
+            correctQuestion: 0,
+            incorrectQuestion: 1
+          });
+        }
       }
-    };
 
-    await Student.findByIdAndUpdate(userId, update);
+      await student.save();
+    }
 
     return NextResponse.json({
       correct,
-      message: correct ? '✅ Correct Answer!' : '❌ Wrong Answer',
-      solution: question.solution,
-      hint: question.hint,
-      alreadyAttempted: false,
-      newScore: student.score + (correct ? 5 : 0)
+      correctAnswers: correctIndices, // ✅ useful for UI feedback
+      message: correct ? 'Correct Answer!' : 'Wrong Answer',
+      alreadyAttempted,
+      solution: question.solution || { text: 'No Solution Available' },
+      hint: question.hint || null,
+      newScore: student.score
     });
 
-  } catch (error) {
-    console.error(error);
+  } catch (err) {
+    console.error('Answer check error:', err);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
+
 export async function GET(req, { params }) {
   const { id } = params;
 

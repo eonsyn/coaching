@@ -32,8 +32,8 @@ function Page() {
   if (isLoading || !data) return <QuesitonLoading/>;
 
   return (
-   <div className="p-6">
-  <h1 className="text-2xl font-bold mb-6 text-primary">
+   <div className="p-6 bg-background text-foreground font-puritan">
+  <h1 className="text-2xl font-bold mb-6 text-highlight">
     {data.chapterTitle}
   </h1>
 
@@ -41,10 +41,10 @@ function Page() {
     {data.questions.map((q) => (
       <li
         key={q._id}
-        className="bg-card border border-border rounded-lg p-4 hover:shadow-md transition-all"
+        className="bg-card border border-[--gray-200] dark:border-[--color-highlight]/10 rounded-lg p-4 hover:shadow-md hover:-translate-y-1 transition-all"
       >
         <Link href={`/dashboard/question/${q._id}?subject=${subject}`}>
-          <div className="text-base text-foreground hover:text-primary transition-colors">
+          <div className="text-base text-foreground hover:text-highlight transition-colors">
             <QuestionDisplay question={q.question.text} />
           </div>
         </Link>
@@ -52,28 +52,31 @@ function Page() {
     ))}
   </ul>
 
-  <div className="mt-8 flex items-center justify-between text-sm max-w-md mx-auto">
+  <div className="mt-8 flex items-center justify-between gap-4 text-sm max-w-md mx-auto">
     <button
       onClick={() => goToPage(page - 1)}
       disabled={page === 0}
-      className="px-4 bg-highlight cursor-pointer py-2 rounded-md bg-muted text-muted-foreground hover:bg-accent disabled:opacity-50 transition"
+      className="flex items-center gap-2 px-4 py-2 rounded-md bg-highlight text-white hover:brightness-110 disabled:opacity-50 transition"
     >
-      <IoIosArrowBack/>  
+      <IoIosArrowBack className="text-lg" />
+      <span>Previous</span>
     </button>
 
-    <span className="text-muted-foreground">
+    <span className="text-textprimary opacity-80">
       Page {data.page + 1} of {data.totalPages}
     </span>
 
     <button
       onClick={() => goToPage(page + 1)}
       disabled={data.page + 1 >= data.totalPages}
-      className="px-4 bg-highlight cursor-pointer py-2 rounded-md bg-muted text-muted-foreground hover:bg-accent disabled:opacity-50 transition"
-    ><IoChevronForwardSharp/>
-    
+      className="flex items-center gap-2 px-4 py-2 rounded-md bg-highlight text-white hover:brightness-110 disabled:opacity-50 transition"
+    >
+      <span>Next</span>
+      <IoChevronForwardSharp className="text-lg" />
     </button>
   </div>
 </div>
+
 
   );
 }

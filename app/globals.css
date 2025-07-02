@@ -3,39 +3,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FDF0F0;
-  --foreground: #171717;
-  --highlight:#E63946; /*button and highlight */
-  --softred:#F28482; /*icon and tag */
-  --card:#FFFFFF; /*card  pannel*/
-  --textprimary:#222222;
-  --success:#2A9D8F;
-  --warning:#F4A261;
-  --error:#E76F51;
-  
-  --darkblue:#b6daff;
-  --lightblue:#293473;
-  --fontpuritan:Puritan, serif;
+  --background: #F9FAFB;       /* Soft neutral white-gray */
+  --foreground: #111827;       /* Deep charcoal for text */
+  --card: #FFFFFF;             /* Clean white card panel */
+  --textprimary: #1F2937;      /* Slightly lighter for body text */
 
+  --highlight: #2563EB;        /* Vibrant blue for buttons, active state */
+  --softred: #EF4444;          /* Red for important icons or tag accents */
+  
+  --success: #10B981;          /* Green for correct answer/success */
+  --warning: #F59E0B;          /* Amber warning tone */
+  --error: #DC2626;            /* Rich red for errors */
+
+  --darkblue: #1E3A8A;         /* Navy for headers or teacher dashboard */
+  --lightblue: #BFDBFE;        /* Soft blue for student areas */
+
+  --fontpuritan: 'Puritan', serif;
 }
+
 [data-theme="dark"] {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --darkblue: #293473;
-  --lightblue: #E1F0FF;
+  --background: #0F172A;       /* Almost black-blue */
+  --foreground: #F1F5F9;       /* Light soft white for text */
+  --card: #1E293B;             /* Blue-gray for dark card panels */
+  --textprimary: #CBD5E1;
+
+  --highlight: #3B82F6;        /* Brighter blue for dark mode */
+  --softred: #F87171;
+
+  --success: #34D399;
+  --warning: #FBBF24;
+  --error: #F87171;
+
+  --darkblue: #93C5FD;
+  --lightblue: #1E3A8A;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-darkblue:var(--darkblue);
-  --color-lightblue:var(--lightblue);
+  --color-textprimary:var(--textprimary);
+  --color-success:var(--success);
+ --color-warning:var(--warning);
+ --color-error:var(--error);
  --color-card:var(--card);
  --color-highlight:var(--highlight);
  --color-softred:var(--softred);
+ --color-darkblue:var(--darkblue);
+ --color-lightblue:var(--lightblue);
   --font-puritan: var(--fontpuritan);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
 }
 
  

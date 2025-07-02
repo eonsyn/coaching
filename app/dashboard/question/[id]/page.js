@@ -43,21 +43,24 @@ export default function QuestionPage() {
   if (!question) return <div>Question not found.</div>;
 
   return (
-    <div className="px-6   mx-auto ">
-     
+ <div className="px-6 py-4 max-w-4xl mx-auto bg-background text-foreground font-puritan">
+  {/* Question Card */}
+  <QuestionCard question={rdata.question} />
 
-      {/* Question Card */}
-      <QuestionCard question={rdata.question} />
+  {/* Navigation Button */}
+  <div className="mt-8 flex justify-end">
+    <Link href={`/dashboard/question/${rdata.nextQuestionId}`} passHref>
+      <button
+        className="flex items-center gap-2 px-5 py-2.5 rounded-md bg-highlight text-white 
+                   hover:brightness-110 shadow transition-all duration-200"
+      >
+        Next Question
+        <FiArrowRightCircle className="text-xl" />
+      </button>
+    </Link>
+  </div>
+</div>
 
-      {/* Navigation Button */}
-      <div className="mt-6 flex justify-end">
-        <Link href={`/dashboard/question/${rdata.nextQuestionId}`} passHref>
-          <button className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-            Next Question
-            <FiArrowRightCircle className="text-lg" />
-          </button>
-        </Link>
-      </div>
-    </div>
+
   );
 }

@@ -56,7 +56,7 @@ export default function QuestionCard({ question }) {
       setIsChecked(true);
       setSolution(result.solution);
        
-      if (result.correct) {
+      if (result.correct) { 
         toast.success('Correct Answer!');
         playSound('/sounds/correct.mp3');
       } else {
@@ -73,100 +73,105 @@ export default function QuestionCard({ question }) {
   };
 
   return (
-    <div className="p-6 border rounded-xl shadow-md w-full bg-darkblue   transition-all">
-      {/* Question */}
-      <div className="mb-4 font-medium text-lg text-foreground">
-        <RenderMathx text={question.question.text} />
-      </div>
+   <div className="p-6 rounded-2xl shadow-xl w-full bg-card transition-all border border-[--color-lightblue]">
+  {/* Question */}
+  <div className="mb-4 font-medium text-lg text-foreground">
+    <RenderMathx text={question.question.text} />
+  </div>
 
-      {/* MCQ Options */}
-      {(question.type === 'singleCorrect' || question.type === 'multiCorrect') && (
-        <div className="space-y-2">
-          {question.options.map((opt, i) => (
-            <div
-              key={i}
-              className={`p-3 rounded-md border cursor-pointer transition font-medium ${
-                selected.includes(i)
-                  ? isChecked
-                    ? 'bg-blue-100 border-blue-500 text-blue-900'
-                    : 'bg-blue-100 border-blue-500'
-                  : 'bg-darkblue border-gray-300 hover:bg-darkblue/80'
-              } ${isChecked ? 'cursor-not-allowed' : ''}`}
-              onClick={() =>
-                question.type === 'singleCorrect'
-                  ? handleSingleSelect(i)
-                  : handleMultiSelect(i)
-              }
-            >
-              <RenderMathx text={opt.text} />
-            </div>
-          ))}
+  {/* MCQ Options */}
+  {(question.type === 'singleCorrect' || question.type === 'multiCorrect') && (
+    <div className="space-y-3">
+      {question.options.map((opt, i) => (
+        <div
+          key={i}
+          className={p-3 rounded-lg border text-sm sm:text-base font-medium transition-all cursor-pointer
+            ${
+              selected.includes(i)
+                ? isChecked
+                  ? 'bg-[--success]/10 border-[--success] text-[--success]'
+                  : 'bg-[--highlight]/10 border-[--highlight] text-[--highlight]'
+                : 'bg-card border-gray-300 hover:bg-[--lightblue]/10'
+            }
+            ${isChecked ? 'cursor-not-allowed opacity-80' : ''}
+          }
+          onClick={() =>
+            question.type === 'singleCorrect'
+              ? handleSingleSelect(i)
+              : handleMultiSelect(i)
+          }
+        >
+          <RenderMathx text={opt.text} />
         </div>
-      )}
-
-      {/* Numerical Input */}
-      {question.type === 'numerical' && (
-        <input
-          type="text"
-          disabled={isChecked}
-          placeholder="Enter your answer"
-          value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-          className="mt-3 p-2 w-full border rounded focus:outline-none focus:ring focus:border-blue-300 disabled:opacity-60"
-        />
-      )}
-
-      {/* Descriptive Input */}
-      {question.type === 'descriptive' && (
-        <textarea
-          placeholder="Write your answer..."
-          value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-          className="mt-3 p-2 w-full border rounded focus:outline-none focus:ring disabled:opacity-60"
-          rows={3}
-          disabled={isChecked}
-        />
-      )}
-
-      {/* Check Answer Button */}
-      <button
-        onClick={handleCheckAnswer}
-        disabled={isChecked}
-        className={`mt-5 px-4 py-2 rounded font-medium text-white transition-all ${
-          isChecked ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
-        }`}
-      >
-      {loading ? "Checking..." : "Check Answer"}
-
-      </button>
- 
-      {/* Hint */}
-      {question.hint && (
-        <details className="mt-4 text-sm text-muted-foreground">
-          <summary className="cursor-pointer font-medium flex">
-            <span className="flex bg-yellow-300 rounded-t-md p-1 items-center gap-1">
-              <FaRegLightbulb /> Hint
-            </span>
-          </summary>
-          <div className="bg-yellow-300 p-1 rounded-tr-md rounded-b-md transition-all ease-in-out duration-300">
-            <RenderMathx text={question.hint} />
-          </div>
-        </details>
-      )}
-
-      {/* Solution */}
-      {isChecked && solution?.text && (
-        <details className="mt-4 text-sm text-muted-foreground">
-          <summary className="cursor-pointer font-medium flex">
-            <span className="flex bg-green-300 rounded-t-md p-1 items-center gap-1">
-              <CiTextAlignLeft /> View Solution
-            </span>
-          </summary>
-          <div className="bg-green-300 p-1 rounded-tr-md rounded-b-md whitespace-pre-wrap">
-            <RenderMathx text={solution.text} />
-          </div>
-        </details>
-      )}
+      ))}
     </div>
+  )}
+
+  {/* Numerical Input */}
+  {question.type === 'numerical' && (
+    <input
+      type="text"
+      disabled={isChecked}
+      placeholder="Enter your answer"
+      value={userInput}
+      onChange={(e) => setUserInput(e.target.value)}
+      className="mt-4 p-3 w-full rounded-md border border-[--color-lightblue] bg-white text-foreground focus:ring-2 focus:ring-[--highlight] disabled:opacity-60"
+    />
+  )}
+
+  {/* Descriptive Input */}
+  {question.type === 'descriptive' && (
+    <textarea
+      placeholder="Write your answer..."
+      value={userInput}
+      onChange={(e) => setUserInput(e.target.value)}
+      className="mt-4 p-3 w-full rounded-md border border-[--color-lightblue] bg-white text-foreground focus:ring-2 focus:ring-[--highlight] disabled:opacity-60"
+      rows={3}
+      disabled={isChecked}
+    />
+  )}
+
+  {/* Check Answer Button */}
+  <button
+    onClick={handleCheckAnswer}
+    disabled={isChecked}
+    className={mt-6 px-5 py-2.5 rounded-md font-semibold text-white transition-all w-full sm:w-auto
+      ${
+        isChecked
+          ? 'bg-gray-400 cursor-not-allowed'
+          : 'bg-[--highlight] hover:bg-[--highlight]/90'
+      }}
+  >
+    {loading ? 'Checking...' : 'Check Answer'}
+  </button>
+
+  {/* Hint */}
+  {question.hint && (
+    <details className="mt-5 text-sm">
+      <summary className="cursor-pointer font-medium flex items-center gap-2 text-[--warning]">
+        <FaRegLightbulb className="text-[--warning]" />
+        Hint
+      </summary>
+      <div className="mt-2 bg-[--warning]/20 p-2 rounded-md text-[--foreground]">
+        <RenderMathx text={question.hint} />
+      </div>
+    </details>
+  )}
+
+  {/* Solution */}
+  {isChecked && solution?.text && (
+    <details className="mt-4 text-sm">
+      <summary className="cursor-pointer font-medium flex items-center gap-2 text-[--success]">
+        <CiTextAlignLeft className="text-[--success]" />
+        View Solution
+      </summary>
+      <div className="mt-2 bg-[--success]/10 p-2 rounded-md text-[--foreground] whitespace-pre-wrap">
+        <RenderMathx text={solution.text} />
+      </div>
+    </details>
+  )}
+</div>
+
+
   );
 }
