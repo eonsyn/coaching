@@ -73,37 +73,41 @@ export default function QuestionCard({ question }) {
   };
 
   return (
-   <div className="p-6 rounded-2xl shadow-xl w-full bg-card transition-all border border-[--color-lightblue]">
-  {/* Question */}
-  <div className="mb-4 font-medium text-lg text-foreground">
+   <div className="p-6 rounded-2xl shadow-xl w-full bg-card transition-all border border-lightblue">
+  {/* Question Text */}
+  <div className="mb-4 font-semibold text-lg text-foreground">
     <RenderMathx text={question.question.text} />
   </div>
 
   {/* MCQ Options */}
   {(question.type === 'singleCorrect' || question.type === 'multiCorrect') && (
     <div className="space-y-3">
-      {question.options.map((opt, i) => (
-        <div
-          key={i}
-          className={p-3 rounded-lg border text-sm sm:text-base font-medium transition-all cursor-pointer
-            ${
-              selected.includes(i)
-                ? isChecked
-                  ? 'bg-[--success]/10 border-[--success] text-[--success]'
-                  : 'bg-[--highlight]/10 border-[--highlight] text-[--highlight]'
-                : 'bg-card border-gray-300 hover:bg-[--lightblue]/10'
+      {question.options.map((opt, i) => {
+        const isSelected = selected.includes(i);
+        const isCorrect = isChecked && isSelected;
+        const baseStyles = `p-3 rounded-lg border text-sm sm:text-base font-medium transition-all cursor-pointer`;
+
+        const stateStyles = isSelected
+          ? isChecked
+            ? 'bg-success/10 border-success text-success'
+            : 'bg-highlight/10 border-highlight text-highlight'
+          : 'bg-card border-gray-200 hover:bg-lightblue/10';
+
+        return (
+          <div
+            key={i}
+            className={`${baseStyles} ${stateStyles} ${isChecked ? 'cursor-not-allowed opacity-80' : ''}`}
+            onClick={() =>
+              !isChecked &&
+              (question.type === 'singleCorrect'
+                ? handleSingleSelect(i)
+                : handleMultiSelect(i))
             }
-            ${isChecked ? 'cursor-not-allowed opacity-80' : ''}
-          }
-          onClick={() =>
-            question.type === 'singleCorrect'
-              ? handleSingleSelect(i)
-              : handleMultiSelect(i)
-          }
-        >
-          <RenderMathx text={opt.text} />
-        </div>
-      ))}
+          >
+            <RenderMathx text={opt.text} />
+          </div>
+        );
+      })}
     </div>
   )}
 
@@ -115,7 +119,7 @@ export default function QuestionCard({ question }) {
       placeholder="Enter your answer"
       value={userInput}
       onChange={(e) => setUserInput(e.target.value)}
-      className="mt-4 p-3 w-full rounded-md border border-[--color-lightblue] bg-white text-foreground focus:ring-2 focus:ring-[--highlight] disabled:opacity-60"
+      className="mt-4 p-3 w-full rounded-md border border-lightblue bg-white text-foreground placeholder:text-gray-400 focus:ring-2 focus:ring-highlight disabled:opacity-60"
     />
   )}
 
@@ -125,9 +129,9 @@ export default function QuestionCard({ question }) {
       placeholder="Write your answer..."
       value={userInput}
       onChange={(e) => setUserInput(e.target.value)}
-      className="mt-4 p-3 w-full rounded-md border border-[--color-lightblue] bg-white text-foreground focus:ring-2 focus:ring-[--highlight] disabled:opacity-60"
       rows={3}
       disabled={isChecked}
+      className="mt-4 p-3 w-full rounded-md border border-lightblue bg-white text-foreground placeholder:text-gray-400 focus:ring-2 focus:ring-highlight disabled:opacity-60"
     />
   )}
 
@@ -135,37 +139,33 @@ export default function QuestionCard({ question }) {
   <button
     onClick={handleCheckAnswer}
     disabled={isChecked}
-    className={mt-6 px-5 py-2.5 rounded-md font-semibold text-white transition-all w-full sm:w-auto
-      ${
-        isChecked
-          ? 'bg-gray-400 cursor-not-allowed'
-          : 'bg-[--highlight] hover:bg-[--highlight]/90'
-      }}
+    className={`mt-6 px-5 py-2.5 w-full sm:w-auto rounded-md font-semibold text-white transition-all
+      ${isChecked ? 'bg-gray-400 cursor-not-allowed' : 'bg-highlight hover:bg-highlight/90'}`}
   >
     {loading ? 'Checking...' : 'Check Answer'}
   </button>
 
-  {/* Hint */}
+  {/* Hint Section */}
   {question.hint && (
-    <details className="mt-5 text-sm">
-      <summary className="cursor-pointer font-medium flex items-center gap-2 text-[--warning]">
-        <FaRegLightbulb className="text-[--warning]" />
+    <details className="mt-6 text-sm">
+      <summary className="cursor-pointer font-medium flex items-center gap-2 text-warning hover:underline">
+        <FaRegLightbulb className="text-warning" />
         Hint
       </summary>
-      <div className="mt-2 bg-[--warning]/20 p-2 rounded-md text-[--foreground]">
+      <div className="mt-2 bg-warning/20 p-3 rounded-md text-foreground">
         <RenderMathx text={question.hint} />
       </div>
     </details>
   )}
 
-  {/* Solution */}
+  {/* Solution Section */}
   {isChecked && solution?.text && (
     <details className="mt-4 text-sm">
-      <summary className="cursor-pointer font-medium flex items-center gap-2 text-[--success]">
-        <CiTextAlignLeft className="text-[--success]" />
+      <summary className="cursor-pointer font-medium flex items-center gap-2 text-success] hover:underline">
+        <CiTextAlignLeft className="text-success" />
         View Solution
       </summary>
-      <div className="mt-2 bg-[--success]/10 p-2 rounded-md text-[--foreground] whitespace-pre-wrap">
+      <div className="mt-2 bg-success/10 p-3 rounded-md text-foreground whitespace-pre-wrap">
         <RenderMathx text={solution.text} />
       </div>
     </details>
