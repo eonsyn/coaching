@@ -22,7 +22,7 @@ export const revalidate = 60; // ISR: Revalidate every 60 seconds
 async function Page({ params }) {
   const subject = params.subject;
 
-  const res = await fetch(`${process.env.BASE_URL}/api/subject/?subject=${subject}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/subject/?subject=${subject}`, {
     next: { revalidate: 60 }, // ISR setup
   });
 
