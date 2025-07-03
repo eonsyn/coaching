@@ -1,6 +1,6 @@
 // app/dashboard/question/[id]/page.js 
 import React from 'react';
-//import QuestionCard from '@/components/dashboard/question/QuestionCard';
+import QuestionCard from '@/components/dashboard/question/QuestionCard';
 
 import RenderMathx from '@/components/RenderMathx';
 export async function generateStaticParams() {
@@ -38,7 +38,7 @@ export default async function QuestionPage({ params }) {
         <div className="mb-4 font-semibold text-lg text-foreground">
                 <RenderMathx text={question.question.text} />
               </div>
-      {/* <QuestionCard nextId={nextId} question={question} /> */}
+     <QuestionCard nextId={nextId} question={question} />  
 </div>
       
     </div>
