@@ -6,7 +6,7 @@ import RenderMathx from '@/components/RenderMathx';
 export async function generateStaticParams() {
   return [
     {
-      id: '68614d9a4486bcd1ca73d714', // ✅ ID should be a string
+      id: '68614d894486bcd1ca73ce8c', // ✅ ID should be a string
     },
   ];
 }

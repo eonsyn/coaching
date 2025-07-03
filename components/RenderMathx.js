@@ -1,5 +1,4 @@
-// components/RenderMathx.jsx (or .js) 
-// components/RenderMathx.jsx (Server Component)
+// components/RenderMathx.jsx
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
@@ -31,7 +30,8 @@ function processText(text) {
     const matchIndex = match.index;
 
     if (matchIndex > lastIndex) {
-      parts.push({ type: 'text', content: decoded.substring(lastIndex, matchIndex) });
+      const raw = decoded.substring(lastIndex, matchIndex);
+      parts.push({ type: 'html-text', content: raw });
     }
 
     const isBlock = latexExpression.startsWith('$$');
@@ -60,7 +60,8 @@ function processText(text) {
   }
 
   if (lastIndex < decoded.length) {
-    parts.push({ type: 'text', content: decoded.substring(lastIndex) });
+    const raw = decoded.substring(lastIndex);
+    parts.push({ type: 'html-text', content: raw });
   }
 
   return parts;
@@ -76,10 +77,21 @@ const RenderMathx = ({ text }) => {
     <div className="flex items-start">
       <div className="text-lg leading-relaxed flex-1">
         {processedContent.map((part, index) => {
-          if (part.type === 'text') {
-            return <span key={index}>{part.content}</span>;
+          if (part.type === 'html-text') {
+            // Allow raw HTML (img, br, etc.) to be rendered correctly
+            return (
+              <span
+                key={index}
+                dangerouslySetInnerHTML={{ __html: part.content }}
+              />
+            );
           } else if (part.type === 'latex') {
-            return <span key={index} dangerouslySetInnerHTML={{ __html: part.content }} />;
+            return (
+              <span
+                key={index}
+                dangerouslySetInnerHTML={{ __html: part.content }}
+              />
+            );
           } else if (part.type === 'error-latex') {
             return (
               <span
