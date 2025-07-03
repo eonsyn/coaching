@@ -1,3 +1,4 @@
+// app/dashboard/layout.js
 import { getLoggedInUser } from '@/lib/auth';
 import LayoutClient from './LayoutClient';
 import { redirect } from 'next/navigation';
@@ -11,8 +12,9 @@ if(!user){
     </div>
 }
   // Strip sensitive info before sending to client
-  const safeUser = { 
-    userId:user._id,
+ 
+  const safeUser = {
+    userId: user._id.toString(), // ✅ Convert ObjectId to string
     name: user.name,
     email: user.email,
     saveQuestion: user.saveQuestion,
@@ -20,7 +22,8 @@ if(!user){
     correctQuestion: user.correctQuestion,
     incorrectQuestion: user.incorrectQuestion,
     performance: user.performance
-  }
+  };
+
   
 
   return <LayoutClient user={safeUser}>{children}</LayoutClient>;

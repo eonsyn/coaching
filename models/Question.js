@@ -40,4 +40,4 @@ const questionSchema = new mongoose.Schema({
 
 const Question = mongoose.models.Question || mongoose.model('Question', questionSchema);
 
-export default Question; // ✅ ESM-style export
+export default Question;  
