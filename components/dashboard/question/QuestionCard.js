@@ -71,11 +71,6 @@ const handleCheckAnswer = async () => {
 
   return (
     <>
-      {/* Question */}
-      <div className="mb-4 font-semibold text-lg text-foreground">
-        <RenderMathx text={question.question.text} />
-      </div>
-
       {/* Options */}
       {(question.type === 'singleCorrect' || question.type === 'multiCorrect') && (
         <div className="space-y-3">
