@@ -29,45 +29,45 @@ export default function QuestionCard({ question, nextId }) {
     );
   };
 
-  const handleCheckAnswer = async () => {
-    const user = JSON.parse(localStorage.getItem('user'));
-    try {
-      setLoading(true);
-      const res = await fetch(`/api/subject/chapter/question/${question._id}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          selected,
-          userInput,
-          type: question.type,
-          userId: user?.userId,
-        }),
-      });
+const handleCheckAnswer = async () => {
+  try {
+    setLoading(true);
 
-      const result = await res.json();
-      if (!res.ok) throw new Error(result.error || 'Something went wrong');
+    const res = await fetch(`/api/subject/chapter/question/${question._id}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        selected,
+        userInput,
+        type: question.type,
+        
+      }),
+    });
 
-      setIsCorrect(result.correct);
-      setIsChecked(true);
-      setSolution(result.solution);
-      setCorrectAnswers(result.correctAnswers || []);
+    const result = await res.json();
+    if (!res.ok) throw new Error(result.error || 'Something went wrong');
 
-      if (result.correct) {
-        toast.success('Correct Answer!');
-        playSound('/sounds/correct.mp3');
-      } else {
-        toast.error('Wrong Answer!');
-        playSound('/sounds/wrong.mp3');
-      }
-    } catch (err) {
-      console.error(err);
-      toast.error('Error checking answer');
-    } finally {
-      setLoading(false);
+    setIsCorrect(result.correct);
+    setIsChecked(true);
+    setSolution(result.solution);
+    setCorrectAnswers(result.correctAnswers || []);
+
+    if (result.correct) {
+      toast.success('Correct Answer!');
+      playSound('/sounds/correct.mp3');
+    } else {
+      toast.error('Wrong Answer!');
+      playSound('/sounds/wrong.mp3');
     }
-  };
+  } catch (err) {
+    console.error(err);
+    toast.error('Error checking answer');
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="p-6 rounded-2xl shadow-xl w-full bg-card transition-all border border-lightblue">
@@ -160,7 +160,7 @@ export default function QuestionCard({ question, nextId }) {
       <div className="mt-8 pb-4 flex flex-col sm:flex-row justify-between items-center gap-4">
         <button
           onClick={handleCheckAnswer}
-          disabled={isChecked }
+          disabled={isChecked}
           className={`px-5 py-2.5 w-full sm:w-auto rounded-md font-semibold text-white transition-all ${isChecked ? 'bg-gray-400 cursor-not-allowed' : 'bg-highlight hover:bg-highlight/90'
             }`}
         >

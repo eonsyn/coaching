@@ -1,6 +1,4 @@
-// app/dashboard/question/[id]/page.js
-import Link from 'next/link';
-import { FiArrowRightCircle } from 'react-icons/fi';
+// app/dashboard/question/[id]/page.js 
 import QuestionCard from '@/components/dashboard/question/QuestionCard';
 
 export async function generateStaticParams() {
