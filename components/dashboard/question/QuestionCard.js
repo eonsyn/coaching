@@ -70,7 +70,7 @@ const handleCheckAnswer = async () => {
 };
 
   return (
-    <div className="p-6 rounded-2xl shadow-xl w-full bg-card transition-all border border-lightblue">
+    <>
       {/* Question */}
       <div className="mb-4 font-semibold text-lg text-foreground">
         <RenderMathx text={question.question.text} />
@@ -189,6 +189,6 @@ const handleCheckAnswer = async () => {
           </div>
         </details>
       )}
-    </div>
+    </>
   );
 }

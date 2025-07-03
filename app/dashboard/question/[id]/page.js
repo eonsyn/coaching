@@ -1,9 +1,15 @@
 // app/dashboard/question/[id]/page.js 
 import QuestionCard from '@/components/dashboard/question/QuestionCard';
 
+import RenderMathx from '@/components/RenderMathx';
 export async function generateStaticParams() {
-  return []; // optional for ISR; useful for pre-rendering known questions
+  return [
+    {
+      id: '68614d9a4486bcd1ca73d714', // ✅ ID should be a string
+    },
+  ];
 }
+
 
 export const revalidate = 60; // Enable ISR (regenerates after 60 seconds)
 
@@ -27,8 +33,12 @@ export default async function QuestionPage({ params }) {
   return (
     <div className="px-6 pb-4 max-w-4xl mx-auto bg-background text-foreground font-puritan">
       {/* Question Card */}
-      <QuestionCard nextId={nextId} question={question} />
-
+      <div className="p-6 rounded-2xl shadow-xl w-full bg-card transition-all border border-lightblue">
+        <div className="mb-4 font-semibold text-lg text-foreground">
+                <RenderMathx text={question.question.text} />
+              </div>
+      {/* <QuestionCard nextId={nextId} question={question} /> */}
+</div>
       
     </div>
   );
