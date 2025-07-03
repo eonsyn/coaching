@@ -1,5 +1,6 @@
 // app/dashboard/question/[id]/page.js 
-import QuestionCard from '@/components/dashboard/question/QuestionCard';
+import React from 'react';
+//import QuestionCard from '@/components/dashboard/question/QuestionCard';
 
 import RenderMathx from '@/components/RenderMathx';
 export async function generateStaticParams() {
