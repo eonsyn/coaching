@@ -1,5 +1,5 @@
 // components/RenderMathx.jsx (or .js)
-
+"use client"
 import React, { useEffect, useRef, useState } from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css'; // Import KaTeX CSS
