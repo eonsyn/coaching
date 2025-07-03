@@ -1,120 +1,99 @@
-// components/RenderMathx.jsx (or .js)
-"use client"
-import React, { useEffect, useRef, useState } from 'react';
+// components/RenderMathx.jsx (or .js) 
+// components/RenderMathx.jsx (Server Component)
 import katex from 'katex';
-import 'katex/dist/katex.min.css'; // Import KaTeX CSS
+import 'katex/dist/katex.min.css';
 
 /**
- * @typedef {object} QuestionDisplayProps
- * @property {string} question - The single question string to display, potentially containing LaTeX.
+ * Decode HTML entities in a server-safe way.
  */
+function decodeHTMLEntities(text) {
+  return text.replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(dec))
+             .replace(/&nbsp;/g, ' ')
+             .replace(/&lt;/g, '<')
+             .replace(/&gt;/g, '>')
+             .replace(/&amp;/g, '&')
+             .replace(/&quot;/g, '"')
+             .replace(/&apos;/g, "'");
+}
 
 /**
- * A React component to display a single mathematical problem with KaTeX rendering,
- * highlighting KaTeX errors.
- * @param {QuestionDisplayProps} props
- * @returns {JSX.Element}
+ * Process LaTeX and text parts from input
+ */
+function processText(text) {
+  const parts = [];
+  const latexRegex = /(\$\$[^\$]*\$\$|\$[^\$]*\$)/g;
+  const decoded = decodeHTMLEntities(text?.trim() || '');
+  let lastIndex = 0;
+  let match;
+
+  while ((match = latexRegex.exec(decoded)) !== null) {
+    const latexExpression = match[0];
+    const matchIndex = match.index;
+
+    if (matchIndex > lastIndex) {
+      parts.push({ type: 'text', content: decoded.substring(lastIndex, matchIndex) });
+    }
+
+    const isBlock = latexExpression.startsWith('$$');
+    const strippedExpression = latexExpression.replace(/^\$\$?|\$\$?$/g, '');
+    let renderedHtml = '';
+    let hasError = false;
+
+    try {
+      renderedHtml = katex.renderToString(strippedExpression, {
+        throwOnError: false,
+        displayMode: isBlock,
+      });
+      if (renderedHtml.includes('katex-error')) hasError = true;
+    } catch (e) {
+      hasError = true;
+      renderedHtml = `<span class="katex-error" style="color: red;">Invalid LaTeX: ${latexExpression}</span>`;
+    }
+
+    if (hasError) {
+      parts.push({ type: 'error-latex', content: latexExpression, rendered: renderedHtml });
+    } else {
+      parts.push({ type: 'latex', content: renderedHtml });
+    }
+
+    lastIndex = latexRegex.lastIndex;
+  }
+
+  if (lastIndex < decoded.length) {
+    parts.push({ type: 'text', content: decoded.substring(lastIndex) });
+  }
+
+  return parts;
+}
+
+/**
+ * @param {{ text: string }} props
  */
 const RenderMathx = ({ text }) => {
-  // State to store the processed parts (text or rendered KaTeX HTML)
-  const [processedContent, setProcessedContent] = useState([]);
-
-  useEffect(() => {
-    const parts = [];
-    // Regex to find LaTeX expressions ($...$ or $$...$$) and capture the text around them
-    const latexRegex = /(\$\$[^\$]*\$\$|\$[^\$]*\$)/g;
-    let lastIndex = 0;
-
-    // Use a temporary div to decode HTML entities for the *entire* text string first
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = text?.trim();
-    const decodedQuestion = tempDiv.textContent || tempDiv.innerText;
-
-    // Iterate through matches to split the string into plain text and LaTeX parts
-    let match;
-    while ((match = latexRegex.exec(decodedQuestion)) !== null) {
-      const latexExpression = match[0];
-      const matchIndex = match.index;
-
-      // Add the plain text before the current LaTeX expression
-      if (matchIndex > lastIndex) {
-        parts.push({ type: 'text', content: decodedQuestion.substring(lastIndex, matchIndex) });
-      }
-
-      // Process the LaTeX expression
-      const isBlock = latexExpression.startsWith('$$');
-      const strippedExpression = latexExpression.replace(/^\$\$?|\$\$?$/g, '');
-      let renderedHtml = '';
-      let hasError = false;
-
-      try {
-        renderedHtml = katex.renderToString(strippedExpression, {
-          throwOnError: false, // Important: don't throw, let KaTeX output error HTML
-          displayMode: isBlock,
-        });
-
-        // KaTeX injects 'katex-error' class if there's an error
-        if (renderedHtml.includes('katex-error')) {
-          hasError = true;
-        }
-
-      } catch (e) {
-        console.error('KaTeX rendering error (outer catch):', e, 'for expression:', latexExpression);
-        hasError = true;
-        // Fallback HTML if an unexpected error occurs during KaTeX.renderToString
-        renderedHtml = `<span class="katex-error" style="color: red;">Invalid LaTeX: ${latexExpression}</span>`;
-      }
-
-      if (hasError) {
-        // If there's a KaTeX error, render the original LaTeX within a styled span
-        // We ensure a common styling class for direct KaTeX errors.
-        parts.push({ type: 'error-latex', content: latexExpression, rendered: renderedHtml });
-      } else {
-        // Otherwise, use the successfully rendered HTML from KaTeX
-        parts.push({ type: 'latex', content: renderedHtml });
-      }
-
-      lastIndex = latexRegex.lastIndex;
-    }
-
-    // Add any remaining plain text after the last LaTeX expression
-    if (lastIndex < decodedQuestion.length) {
-      parts.push({ type: 'text', content: decodedQuestion.substring(lastIndex) });
-    }
-
-    setProcessedContent(parts);
-  }, [text]); // Re-run when the 'question' string changes
+  const processedContent = processText(text);
 
   return (
-     
-        <div className="flex items-start">
-          <div className=" text-lg leading-relaxed flex-1">
-            {processedContent.map((part, index) => {
-              if (part.type === 'text') {
-                // For plain text, we directly render it.
-                // React handles basic HTML entities correctly for text nodes by default.
-                // We've already decoded the full string, so here it's just text.
-                return <React.Fragment key={index}>{part.content}</React.Fragment>;
-              } else if (part.type === 'latex') {
-                // For successfully rendered LaTeX, use dangerouslySetInnerHTML
-                return <span key={index} dangerouslySetInnerHTML={{ __html: part.content }} />;
-              } else if (part.type === 'error-latex') {
-                // For LaTeX with errors, render the error HTML generated by KaTeX
-                // or our custom error message, wrapped in a styled span.
-                return (
-                  <span
-                    key={index}
-                    className="text-red-600 font-mono bg-red-100 p-0.5 rounded" // Tailwind for error styling
-                    dangerouslySetInnerHTML={{ __html: part.rendered }} // Render the KaTeX error HTML
-                  />
-                );
-              }
-              return null; // Should not happen
-            })}
-          </div>
-        </div>
-      
+    <div className="flex items-start">
+      <div className="text-lg leading-relaxed flex-1">
+        {processedContent.map((part, index) => {
+          if (part.type === 'text') {
+            return <span key={index}>{part.content}</span>;
+          } else if (part.type === 'latex') {
+            return <span key={index} dangerouslySetInnerHTML={{ __html: part.content }} />;
+          } else if (part.type === 'error-latex') {
+            return (
+              <span
+                key={index}
+                className="text-red-600 font-mono bg-red-100 p-0.5 rounded"
+                dangerouslySetInnerHTML={{ __html: part.rendered }}
+              />
+            );
+          }
+          return null;
+        })}
+      </div>
+    </div>
   );
 };
 
-export default RenderMathx; 
+export default RenderMathx;
