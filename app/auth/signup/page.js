@@ -151,19 +151,20 @@ export default function SignupPage() {
   };
 
   return (
-   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 to-blue-200">
-  <div className="p-8 sm:p-10 w-full max-w-md bg-white rounded-2xl shadow-2xl transition-all duration-300 ease-in-out">
-    <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-6">Create Account</h2>
+<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-lightblue to-background">
+  <div className="p-8 sm:p-10 w-full max-w-md bg-card rounded-2xl shadow-2xl border border-lightblue/40 transition-all duration-300 ease-in-out">
+    <h2 className="text-3xl font-extrabold text-center text-darkblue mb-6 font-puritan">
+      Create Account
+    </h2>
 
-    
     {!otpSent ? (
       <>
-        <div className="space-y-5">
+        <div className="space-y-5 text-textprimary">
           <input
             placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-3 border border-lightblue/50 bg-background rounded-lg focus:outline-none focus:ring-2 focus:ring-highlight"
             disabled={isLoading}
           />
           <input
@@ -171,7 +172,7 @@ export default function SignupPage() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-3 border border-lightblue/50 bg-background rounded-lg focus:outline-none focus:ring-2 focus:ring-highlight"
             disabled={isLoading}
           />
           <div className="relative">
@@ -181,35 +182,29 @@ export default function SignupPage() {
               value={password}
               type={showPassword ? "text" : "password"}
               onChange={(e) => useStatePassword(e.target.value)}
-              className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-3 pr-12 border border-lightblue/50 bg-background rounded-lg focus:outline-none focus:ring-2 focus:ring-highlight"
               autoComplete="new-password"
               disabled={isLoading}
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute inset-y-0 right-3 flex items-center text-gray-600"
+              className="absolute inset-y-0 right-3 flex items-center text-darkblue"
               aria-label={showPassword ? "Hide password" : "Show password"}
               disabled={isLoading}
             >
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                {showPassword ? (
-                 <FaEyeSlash />
-                ) : (
-                  <FaEye />
-                )}
-              </svg>
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
             </button>
           </div>
         </div>
 
         <button
           onClick={handleSignup}
-          className="mt-6 w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="mt-6 w-full bg-highlight text-white font-semibold py-3 rounded-lg hover:bg-darkblue transition duration-300 focus:outline-none focus:ring-2 focus:ring-highlight flex justify-center"
           disabled={isLoading}
         >
           {isLoading ? (
-            <svg className="animate-spin h-5 w-5 mx-auto text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8..." />
             </svg>
@@ -220,7 +215,7 @@ export default function SignupPage() {
       </>
     ) : (
       <>
-        <p className="text-center text-gray-700 mb-4">Enter the 6-digit OTP sent to your email</p>
+        <p className="text-center text-textprimary mb-4">Enter the 6-digit OTP sent to your email</p>
 
         <div className="flex justify-center space-x-2 mb-6">
           {otpDigits.map((digit, index) => (
@@ -233,7 +228,7 @@ export default function SignupPage() {
               onKeyDown={(e) => handleOtpKeyDown(e, index)}
               onPaste={index === 0 ? handleOtpPaste : undefined}
               ref={(el) => (otpInputRefs.current[index] = el)}
-              className="w-10 h-12 text-center text-xl font-semibold border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-10 h-12 text-center text-xl font-semibold border border-lightblue/60 text-foreground bg-background rounded-lg focus:outline-none focus:ring-2 focus:ring-success"
               inputMode="numeric"
               pattern="[0-9]*"
               disabled={isLoading}
@@ -243,11 +238,11 @@ export default function SignupPage() {
 
         <button
           onClick={handleVerifyOtp}
-          className="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="w-full bg-success text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-success flex justify-center"
           disabled={isLoading}
         >
           {isLoading ? (
-            <svg className="animate-spin h-5 w-5 mx-auto text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8..." />
             </svg>
@@ -257,14 +252,16 @@ export default function SignupPage() {
         </button>
       </>
     )}
-    <p className="mt-6 text-center text-sm text-gray-500">
-     Have an account?{' '}
-      <Link href="/auth/login" className="text-indigo-600 hover:text-indigo-700 font-medium">
-       Login 
+
+    <p className="mt-6 text-center text-sm text-textprimary">
+      Have an account?{' '}
+      <Link href="/auth/login" className="text-highlight hover:text-darkblue font-medium transition">
+        Login
       </Link>
     </p>
   </div>
 </div>
+
 
   );
 }

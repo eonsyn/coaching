@@ -137,7 +137,7 @@ export async function GET(req, { params }) {
       {
         question,
         nextQuestionId,
-        previousQuestionId,
+        previousQuestionId, //previous quest
         chapterId: chapter._id,
         chapterTitle: chapter.title,
       },

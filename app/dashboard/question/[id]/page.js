@@ -28,7 +28,7 @@ export default async function QuestionPage({ params }) {
   const data = await res.json();
   const question = data.question;
   const nextId = data.nextQuestionId;
-
+  const preId = data.previousQuestionId;
   if (!question) return <div> Question not found</div>;
 
   return (
@@ -36,11 +36,11 @@ export default async function QuestionPage({ params }) {
       {/* Question Card */}
       <div className="p-6 rounded-2xl shadow-xl w-full bg-card transition-all border border-lightblue">
         <div className="mb-4 font-semibold text-lg text-foreground">
-                <RenderMathx text={question.question.text} />
-              </div>
-     <QuestionCard nextId={nextId} question={question} />  
-</div>
-      
+          <RenderMathx text={question.question.text} />
+        </div>
+        <QuestionCard preId={preId}  nextId={nextId} question={question} />
+      </div>
+
     </div>
   );
 }

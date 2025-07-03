@@ -7,9 +7,9 @@ import { toast } from 'react-toastify';
 import { FaRegLightbulb } from "react-icons/fa";
 import { CiTextAlignLeft } from "react-icons/ci";
 import Link from 'next/link';
-import { FiArrowRightCircle } from 'react-icons/fi';
+import { FiArrowRightCircle, FiArrowLeftCircle } from 'react-icons/fi';
 
-export default function QuestionCard({ question, nextId }) {
+export default function QuestionCard({preId, question, nextId }) {
   const [selected, setSelected] = useState([]);
   const [userInput, setUserInput] = useState('');
   const [isChecked, setIsChecked] = useState(false);
@@ -152,26 +152,52 @@ const handleCheckAnswer = async () => {
         </details>
       )}
 
-      <div className="mt-8 pb-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <button
-          onClick={handleCheckAnswer}
-          disabled={isChecked}
-          className={`px-5 py-2.5 w-full sm:w-auto rounded-md font-semibold text-white transition-all ${isChecked ? 'bg-gray-400 cursor-not-allowed' : 'bg-highlight hover:bg-highlight/90'
-            }`}
-        >
-          {loading ? 'Checking...' : 'Check Answer'}
-        </button>
+     
+<div className="mt-8 pb-4 flex flex-col sm:flex-row justify-between items-center gap-4">
 
-        <Link href={`/dashboard/question/${nextId}`} passHref>
-          <div
-            className="flex items-center gap-2 px-5 py-2.5 rounded-md bg-highlight text-white 
-                 hover:brightness-110 shadow transition-all duration-200 cursor-pointer"
-          >
-            Next Question
-            <FiArrowRightCircle className="text-xl" />
-          </div>
-        </Link>
+  {/* Previous Question Button */}
+  {preId ? (
+    <Link href={`/dashboard/question/${preId}`} passHref>
+      <div className="flex items-center gap-2 px-5 py-2.5 rounded-md bg-highlight text-white hover:brightness-110 shadow transition-all duration-200 cursor-pointer">
+        <FiArrowLeftCircle className="text-xl" />
+        Previous
       </div>
+    </Link>
+  ) : (
+    <div className="flex items-center gap-2 px-5 py-2.5 rounded-md bg-gray-400 text-white opacity-60 cursor-not-allowed">
+      <FiArrowLeftCircle className="text-xl" />
+      Previous
+    </div>
+  )}
+
+  {/* Check Answer Button */}
+ {(selected.length != 0 || userInput) ? (
+  <button
+    onClick={handleCheckAnswer}
+    disabled={isChecked}
+    className={`px-8 py-2.5 w-full sm:w-auto rounded-md font-semibold text-white transition-all ${isChecked ? 'bg-softred cursor-not-allowed' : 'bg-softred hover:bg-softred/90'}`}
+  >
+    {loading ? 'Checking...' : 'Check Answer'}
+  </button>
+) : null}
+
+
+  {/* Next Question Button */}
+  {nextId ? (
+    <Link href={`/dashboard/question/${nextId}`} passHref>
+      <div className="flex items-center gap-2 px-5 py-2.5 rounded-md bg-highlight text-white hover:brightness-110 shadow transition-all duration-200 cursor-pointer">
+        Next
+        <FiArrowRightCircle className="text-xl" />
+      </div>
+    </Link>
+  ) : (
+    <div className="flex items-center gap-2 px-5 py-2.5 rounded-md bg-gray-400 text-white opacity-60 cursor-not-allowed">
+      Next
+      <FiArrowRightCircle className="text-xl" />
+    </div>
+  )}
+
+</div>
       {/* Solution */}
       {isChecked && solution?.text && (
         <details className="mt-4 text-sm">
