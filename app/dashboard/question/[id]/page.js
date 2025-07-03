@@ -10,7 +10,7 @@ export const revalidate = 60; // Enable ISR (regenerates after 60 seconds)
 export default async function QuestionPage({ params }) {
   const id = params.id;
 
-  const res = await fetch(`${process.env.BASE_URL}/api/subject/chapter/question/${id}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/subject/chapter/question/${id}`, {
     next: { revalidate: 60 }, // required for ISR or SSR caching
   });
 
