@@ -5,7 +5,11 @@ import { toast } from 'react-toastify';
 export default async function DashboardLayout({ children }) {
   const user = await getLoggedInUser();
  
-
+if(!user){
+  return <div>
+    Logining to acess it 
+    </div>
+}
   // Strip sensitive info before sending to client
   const safeUser = { 
     userId:user._id,
@@ -17,7 +21,7 @@ export default async function DashboardLayout({ children }) {
     incorrectQuestion: user.incorrectQuestion,
     performance: user.performance
   }
-    
+  
 
   return <LayoutClient user={safeUser}>{children}</LayoutClient>;
 }

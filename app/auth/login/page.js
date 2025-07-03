@@ -39,7 +39,7 @@ function LoginPage() {
          setPassword('');
         setEmail(''); 
         toast.success(data.message || 'Login successful!');
-        // window.location.href = '/dashboard';
+        window.location.href = '/dashboard';
       } else {
          toast.error(data.message || 'Login failed. Please check your credentials.');
       }
