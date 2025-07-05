@@ -1,3 +1,4 @@
+// api/subject/route.js 
 import Subject from "@/models/Subject";
 import Chapter from "@/models/Chapter"; // ✅ Register the Chapter model
 import dbConnect from "@/lib/mongodb";

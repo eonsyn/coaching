@@ -33,27 +33,33 @@ async function Page({ params }) {
   const data = await res.json();
 
   return (
-    <div className="px-6 bg-background text-foreground font-puritan">
-      
-      <h2 className="text-xl  font-semibold text-textprimary">{data.subject} Chapters:</h2>
+     <div className="px-6 bg-[var(--background)] text-[var(--foreground)] font-sans">
+      {/* Heading */}
+      <h2 className="text-xl font-semibold text-[var(--primary)] mb-4 font-heading">
+        {data.subject} Chapters:
+      </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
+      {/* Chapter Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
         {data.chapters.map((chapter, i) => (
           <Link href={`/dashboard/solveproblem/${data.subject}/${chapter._id}`} key={i}>
             <div
-              className="group p-4 h-28 bg-card border border-[--gray-200] dark:border-[--color-highlight]/10 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer"
+              className="group p-4 h-28 bg-[var(--card-bg)] border border-[var(--border-color)] rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer"
               title={chapter.title}
             >
               <div className="flex items-start gap-4">
+                {/* Icon */}
                 <IoIosBook
-                  className="text-darkblue group-hover:text-highlight transition-transform duration-200 mt-1"
+                  className="text-[var(--primary)] group-hover:text-[var(--accent)] transition-colors duration-200 mt-1"
                   size={26}
                 />
+
+                {/* Chapter Info */}
                 <div>
-                  <p className="text-base font-bold text-foreground group-hover:text-highlight transition-colors">
+                  <p className="text-base font-semibold group-hover:text-[var(--accent)] transition-colors">
                     {trimText(chapter.title)}
                   </p>
-                  <p className="text-sm text-textprimary opacity-80 mt-1">
+                  <p className="text-sm text-[var(--muted)] mt-1">
                     Total Questions: {chapter.questionsCount}
                   </p>
                 </div>

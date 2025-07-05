@@ -32,15 +32,33 @@ export default async function QuestionPage({ params }) {
   if (!question) return <div> Question not found</div>;
 
   return (
-    <div className="px-6 pb-4 max-w-4xl mx-auto bg-background text-foreground font-puritan">
-      {/* Question Card */}
-      <div className="p-6 rounded-2xl shadow-xl w-full bg-card transition-all border border-lightblue">
-        <div className="mb-4 font-semibold text-lg text-foreground">
-          <RenderMathx text={question.question.text} />
-        </div>
-        <QuestionCard preId={preId}  nextId={nextId} question={question} />
-      </div>
+   <div className="px-6 pb-4 max-w-4xl mx-auto bg-[var(--background)] text-[var(--foreground)] font-sans">
+  {/* Question Card */}
+  <div className="p-6 rounded-2xl shadow-xl w-full bg-[var(--card-bg)] transition-all border border-[var(--border-color)]">
+    
+    {/* Question Text */}
+    <div className="mb-4 font-semibold text-lg text-[var(--foreground)] space-y-2">
+      <RenderMathx text={question.question.text} />
 
+      {/* Previous Year Papers */}
+      {question.previousYearPapers?.length > 0 && (
+        <div className="flex flex-wrap gap-2 mt-3">
+          {question.previousYearPapers.map((p) => (
+            <span
+              key={p.title}
+              className="text-sm px-3 py-1 border border-[var(--border-color)] bg-[var(--muted-bg)] text-[var(--muted)] rounded-full"
+            >
+              {p.title}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
+
+    {/* Options / Input / Answer UI */}
+    <QuestionCard preId={preId} nextId={nextId} question={question} />
+  </div>
+</div>
+
   );
 }

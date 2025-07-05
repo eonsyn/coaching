@@ -1,55 +1,51 @@
  
 @import url('https://fonts.googleapis.com/css2?family=Puritan:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
 @import "tailwindcss";
-
 :root {
-  --background: #F9FAFB;       /* Soft neutral white-gray */
-  --foreground: #111827;       /* Deep charcoal for text */
-  --card: #FFFFFF;             /* Clean white card panel */
-  --textprimary: #1F2937;      /* Slightly lighter for body text */
-
-  --highlight: #2563EB;        /* Vibrant blue for buttons, active state */
-  --softred: #EF4444;          /* Red for important icons or tag accents */
-  
-  --success: #10B981;          /* Green for correct answer/success */
-  --warning: #F59E0B;          /* Amber warning tone */
-  --error: #DC2626;            /* Rich red for errors */
-
-  --darkblue: #1E3A8A;         /* Navy for headers or teacher dashboard */
-  --lightblue: #BFDBFE;        /* Soft blue for student areas */
-
-  --fontpuritan: 'Puritan', serif;
+  --background: #F9FAFB;        /* Soft white-gray for calm background */
+  --foreground: #1F2937;        /* Deep charcoal text for easy reading */
+  --primary: #4F46E5;           /* Indigo - academic, trustworthy */
+  --primary-light: #EEF2FF;     /* Light version for hover backgrounds */
+  --secondary: #06B6D4;         /* Calm cyan for subtle accents */
+  --accent: #FBBF24;            /* Warm amber for attention/CTA */
+  --muted: #9CA3AF;             /* Muted gray for placeholders & disabled */
+  --card-bg: #FFFFFF;           /* For cards/question containers */
+  --input-bg: #F3F4F6;          /* Input fields background */
+  --border-color: #E5E7EB;      /* Subtle borders */
+  --success: #10B981;           /* Correct answer - soft green */
+  --danger: #EF4444;            /* Wrong answer - soft red */
 }
 
-[data-theme="dark"] {
-  --background: #0F172A;       /* Almost black-blue */
-  --foreground: #F1F5F9;       /* Light soft white for text */
-  --card: #1E293B;             /* Blue-gray for dark card panels */
-  --textprimary: #CBD5E1;
 
-  --highlight: #3B82F6;        /* Brighter blue for dark mode */
-  --softred: #F87171;
-
-  --success: #34D399;
-  --warning: #FBBF24;
-  --error: #F87171;
-
-  --darkblue: #93C5FD;
-  --lightblue: #1E3A8A;
+:root[data-theme="dark"] {
+  --background: #0F172A;        /* Deep navy for eyes at night */
+  --foreground: #F8FAFC;        /* Near-white text */
+  --primary: #6366F1;           /* Lighter indigo for visibility */
+  --primary-light: #312E81;     /* Hover background in dark mode */
+  --secondary: #22D3EE;         /* Bright cyan for freshness */
+  --accent: #FACC15;            /* Yellow for premium energy */
+  --muted: #64748B;             /* Muted gray-blue */
+  --card-bg: #1E293B;           /* Slightly lighter than background */
+  --input-bg: #1E293B;          /* Consistent input style */
+  --border-color: #334155;      /* Subtle border contrast */
+  --success: #34D399;           /* Soft green for success */
+  --danger: #F87171;            /* Softer red for errors */
 }
+
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-textprimary:var(--textprimary);
-  --color-success:var(--success);
- --color-warning:var(--warning);
- --color-error:var(--error);
- --color-card:var(--card);
- --color-highlight:var(--highlight);
- --color-softred:var(--softred);
- --color-darkblue:var(--darkblue);
- --color-lightblue:var(--lightblue);
+  --color-primary:var(--primary);
+  --color-success:var(--success);   
+ --color-danger:var(--danger); 
+  --color-primary-light:var(--primary-light);
+  --color-secondary:var(--secondary);
+  --color-accent:var(--accent);
+  --color-muted:var(--muted);
+
   --font-puritan: var(--fontpuritan);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -61,7 +57,11 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;    
+}
+ 
+h1, h2, h3, h4, h5, h6, .heading, .cta {
+  font-family: 'Poppins', sans-serif;       /* Use for section titles, CTAs, banners */
 }
 /* globals.css */
 html, body {

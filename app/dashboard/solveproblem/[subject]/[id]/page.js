@@ -26,7 +26,7 @@ function Page() {
   if (isLoading || !data) return <QuesitonLoading  />;
 
   return (
-    <div className="px-6 pb-3 bg-background text-foreground font-puritan">
+    <div className="px-6 pb-6 text-foreground font-puritan">
       <ChooseQuestion page={page} chapterId={chapterId} data={data} />
 
 
