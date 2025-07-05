@@ -11,7 +11,8 @@ import {
   Tooltip,
   Legend,
 } from 'recharts';
-
+import Image from 'next/image';
+import StudentBadge from './StudentBadge';
 import { FaUser, FaEnvelope, FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 import { HiOutlineChartBar } from 'react-icons/hi';
 import { CiMedal } from 'react-icons/ci';
@@ -33,37 +34,69 @@ export default function UserStatsCard({ user }) {
   }));
 
   return (
-    <div className="user bg-card text-textprimary shadow-xl rounded-2xl p-8 w-full max-w-5xl mx-auto transition-all space-y-8 font-puritan">
+    <div className="user bg-card text-textprimary px-6  w-full md:max-w-5xl mx-auto md:shadow-xl md:rounded-2xl space-y-10 font-puritan transition-all pb-12 duration-300">
 
-      {/* Header + User Details */}
-      <div className="space-y-1">
-        <h1 className="text-3xl font-semibold flex items-center gap-2 text-darkblue">
-          <FaUser className="text-highlight" />
-          Hello, <span className="capitalize">{name}</span>
-        </h1>
+      {/* 👤 Profile Section */}
+      <div className="flex flex-col md:flex-row items-center md:items-end gap-6">
 
-        <p className="text-sm flex items-center gap-2 text-highlight">
-          <FaEnvelope className="text-highlight" />
-          {email}
-        </p>
+        {/* Profile Image */}
+        <div className="relative group h-full w-52 flex-shrink-0 rounded-2xl overflow-hidden  ">
+          <Image
+            src="/assets/profile.png"
+            alt="Profile"
+            width={208}
+            height={208}
+            className="z-10 relative transition-all ease-in-out duration-300 group-hover:-translate-y-1"
+          />
+          <div className="w-full bg-darkblue rounded-t-full h-40 absolute bottom-0 left-0" />
+        </div>
 
-        <p className="text-base mt-2 flex items-center gap-2 text-highlight">
-          <CiMedal className="text-highlight text-xl" />
-          Total Score: <span className="font-bold">{score}</span>
-        </p>
+        {/* Profile & Score Summary */}
+        <div className="flex-1 w-full">
+          <div className="bg-darkblue p-6 rounded-xl border border-dashed border-darkblue shadow-sm space-y-4 w-full">
 
-        <div className="mt-2 text-sm flex flex-wrap gap-4">
-          <span className="flex items-center gap-1 text-success font-medium">
-            <FaCheckCircle /> Total Correct: <strong>{correctQuestion.length}</strong>
-          </span>
-          <span className="flex items-center gap-1 text-error font-medium">
-            <FaTimesCircle /> Total Incorrect: <strong>{incorrectQuestion.length}</strong>
-          </span>
+            {/* Name & Email */}
+            <div className="space-y-2">
+              <h1 className="text-2xl font-bold capitalize flex items-center text-lightblue gap-2">
+                {name}
+              </h1>
+              {/* <p className="text-sm flex items-center gap-2 text-highlight">
+                <FaEnvelope className="text-highlight text-base" />
+                {email}
+              </p> */}
+            </div>
+
+            {/* Score Summary */}
+            <div className="pt-2 space-y-3">
+              <h2 className="text-xl font-bold text-lightblue flex items-center gap-2">
+                {/* <CiMedal className="text-2xl text-yellow-500" /> */}
+                Score Summary
+              </h2>
+
+              <div className="text-base text-purple-700 font-medium">
+                <span className="bg-yellow-100 px-3 py-1 rounded-md shadow-sm">
+                  Total Score: <span className="font-bold text-purple-900">{score}</span>
+                </span>
+              </div>
+
+              <div className="flex flex-wrap gap-3 text-sm text-gray-800">
+                <span className="flex items-center gap-2 bg-green-100 text-green-700 px-3 py-1 rounded-full shadow-sm">
+                  <FaCheckCircle className="text-green-500" />
+                  Correct: <strong>{correctQuestion.length}</strong>
+                </span>
+
+                <span className="flex items-center gap-2 bg-red-100 text-red-700 px-3 py-1 rounded-full shadow-sm">
+                  <FaTimesCircle className="text-red-500" />
+                  Incorrect: <strong>{incorrectQuestion.length}</strong>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Performance Line Chart */}
-      <div className="h-[320px] bg-background rounded-lg p-5 border border-gray-200">
+      {/* 📈 Performance Chart */}
+      <div className="bg-background rounded-xl border pb-4 border-gray-200 p-6 h-[320px] shadow-sm">
         <h2 className="text-xl font-semibold text-darkblue mb-4 flex items-center gap-2">
           <HiOutlineChartBar className="text-highlight text-2xl" />
           Performance Over Time
@@ -86,5 +119,6 @@ export default function UserStatsCard({ user }) {
         )}
       </div>
     </div>
+
   );
 }

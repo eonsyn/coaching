@@ -3,13 +3,22 @@
 import { FaUserGraduate, FaBookOpen, FaChartLine, FaCheckCircle, FaQuestionCircle } from 'react-icons/fa';
 import { MdOutlineLeaderboard } from 'react-icons/md';
 import Link from 'next/link';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useRef } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Dashboard() {
+  const boxRef = useRef(null);
+  const boxRef2 = useRef(null);
+   
   return (
     <div className="min-h-screen bg-background text-textprimary p-6 sm:p-10">
       {/* Header */}
       <header className="mb-10">
-        <h1 className="text-3xl font-bold text-darkblue font-puritan">
+        <h1   className="text-3xl font-bold text-darkblue font-puritan">
             Welcome to Your JEE Dashboard
         </h1>
         <p className="mt-2 text-lg text-textprimary">
@@ -21,7 +30,7 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Questions */}
         <Link href="/practice">
-          <div className="bg-card border border-lightblue/40 p-6 rounded-2xl shadow-md hover:shadow-lg transition cursor-pointer">
+          <div  className="bg-card border border-lightblue/40 p-6 rounded-2xl shadow-md hover:shadow-lg transition cursor-pointer">
             <FaQuestionCircle className="text-highlight text-3xl mb-4" />
             <h2 className="text-xl font-semibold mb-1">Practice Questions</h2>
             <p className="text-sm">Explore 3000+ questions from all JEE topics.</p>
@@ -30,7 +39,7 @@ export default function Dashboard() {
 
         {/* Leaderboard */}
         <Link href="/leaderboard">
-          <div className="bg-card border border-lightblue/40 p-6 rounded-2xl shadow-md hover:shadow-lg transition cursor-pointer">
+          <div ref={boxRef} className="bg-card border border-lightblue/40 p-6 rounded-2xl shadow-md hover:shadow-lg transition cursor-pointer">
             <MdOutlineLeaderboard className="text-warning text-3xl mb-4" />
             <h2 className="text-xl font-semibold mb-1">Leaderboard</h2>
             <p className="text-sm">See how you rank among other aspirants.</p>
@@ -48,7 +57,7 @@ export default function Dashboard() {
 
         {/* Completed Questions */}
         <Link href="/completed">
-          <div className="bg-card border border-lightblue/40 p-6 rounded-2xl shadow-md hover:shadow-lg transition cursor-pointer">
+          <div ref={boxRef2} className="bg-card border border-lightblue/40 p-6 rounded-2xl shadow-md hover:shadow-lg transition cursor-pointer">
             <FaCheckCircle className="text-softred text-3xl mb-4" />
             <h2 className="text-xl font-semibold mb-1">Completed</h2>
             <p className="text-sm">Review solved questions & reattempt.</p>

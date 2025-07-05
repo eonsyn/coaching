@@ -1,24 +1,33 @@
+'use client';
 
-import { getLoggedInUser } from '@/lib/auth';
-import { redirect } from 'next/navigation';
+ 
+import { useRef } from 'react';
 
-
-export default async function Home() {
-    const user = await getLoggedInUser();
-
-  // if (!user) {
-  //   redirect('/auth/login'); // redirect if session is invalid or user not found
-  // }
+ 
+export default function Home() {
+  const triggerRef = useRef(null);
+  const animateRef = useRef(null);
+ 
 
   return (
-    <main className="w-full bg-green-600 h-full ">
+    <div className="bg-white text-black">
+      <section className="h-screen flex items-center justify-center">
+        <h1 className="text-4xl">Scroll Down 👇</h1>
+      </section>
 
-      <div>
-      <h1>Welcome, {user?.name}</h1>
-      <p>Email: {user?.email}</p>
+      <section
+        ref={triggerRef}
+        className="h-screen flex items-center justify-center bg-gray-100"
+      >
+        <p className="text-2xl">I’m the trigger zone</p>
+      </section>
+
+      <section
+        ref={animateRef}
+        className="h-screen flex items-center justify-center bg-green-100"
+      >
+        <p className="text-2xl">I will animate as you scroll!</p>
+      </section>
     </div>
-       
-    
-    </main>
   );
 }

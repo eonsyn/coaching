@@ -29,7 +29,7 @@ export default function LayoutClient({ user, children }) {
   if (!user) return null; // Prevent showing dashboard temporarily
 
   return (
-    <main className="flex h-full w-full">
+    <main className="flex overflow-hidden h-full w-full">
       <Asidebar  />
       <div className=" pt-2 overflow-y-auto  flex-1">{children}</div>
     </main>

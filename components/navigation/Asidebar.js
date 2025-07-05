@@ -8,7 +8,6 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { FaBookOpenReader } from "react-icons/fa6";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import MobileNavbar from './MobileNavbar'; 
-
 const navOptions = [
   { icon: FaHome, name: "Home", to: "/dashboard" },
   { icon: FaNewspaper, name: "Test Paper", to: "/dashboard/testpaper" },
@@ -18,8 +17,8 @@ const navOptions = [
 
 function Asidebar() {
   const pathname = usePathname();
-  const [theme, setTheme] = useState("system");
-const user = JSON.parse(localStorage.getItem("user"));
+  const [theme, setTheme] = useState("system"); 
+  const [user, setUser] = useState(null);
 
   const handleLogout = async () => {
     try {
@@ -38,13 +37,23 @@ const user = JSON.parse(localStorage.getItem("user"));
     }
   }
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const appliedTheme = savedTheme || (prefersDark ? "dark" : "light");
-    setTheme(appliedTheme);
-    document.documentElement.setAttribute("data-theme", appliedTheme);
-  }, []);
+    if (typeof window !== 'undefined') {
+      const savedUser = localStorage.getItem("user");
+      if (savedUser) {
+        try {
+          setUser(JSON.parse(savedUser));
+        } catch (err) {
+          console.error("Invalid user data in localStorage");
+        }
+      }
 
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const appliedTheme = savedTheme || (prefersDark ? "dark" : "light");
+      setTheme(appliedTheme);
+      document.documentElement.setAttribute("data-theme", appliedTheme);
+    }
+  }, []);
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
@@ -55,7 +64,7 @@ const user = JSON.parse(localStorage.getItem("user"));
   if (typeof text !== 'string') return ''; // Optional safety check
   return text.length > 6 ? text.slice(0, 6) + '...' : text;
 };
-const name=croptext(user.name);
+const name=croptext(user?.name);
   return (
    <>
   {/* Desktop Sidebar */}

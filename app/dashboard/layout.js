@@ -16,15 +16,10 @@ if(!user){
   const safeUser = {
     userId: user._id.toString(), // ✅ Convert ObjectId to string
     name: user.name,
-    email: user.email,
-    saveQuestion: user.saveQuestion,
-    score: user.score,
-    correctQuestion: user.correctQuestion,
-    incorrectQuestion: user.incorrectQuestion,
-    performance: user.performance
+  
   };
 
   
 
-  return <LayoutClient user={safeUser}>{children}</LayoutClient>;
+  return <LayoutClient  user={safeUser}>{children}</LayoutClient>;
 }

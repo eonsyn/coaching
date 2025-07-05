@@ -174,7 +174,7 @@ const handleCheckAnswer = async () => {
  {(selected.length != 0 || userInput) ? (
   <button
     onClick={handleCheckAnswer}
-    disabled={isChecked}
+    disabled={isChecked || loading}
     className={`px-8 py-2.5 w-full sm:w-auto rounded-md font-semibold text-white transition-all ${isChecked ? 'bg-softred cursor-not-allowed' : 'bg-softred hover:bg-softred/90'}`}
   >
     {loading ? 'Checking...' : 'Check Answer'}
