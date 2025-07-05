@@ -7,6 +7,7 @@ export default async function DashboardLayout({ children }) {
   const user = await getLoggedInUser();
  
 if(!user){
+  redirect('/auth/login')
   return <div>
     Logining to acess it 
     </div>
