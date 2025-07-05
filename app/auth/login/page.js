@@ -52,50 +52,54 @@ function LoginPage() {
   };
 
   return (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-lightblue to-background">
-  <div className="p-8 sm:p-10 w-full max-w-md bg-card rounded-2xl shadow-xl border border-lightblue/40 transition-all duration-300 ease-in-out">
-    <h2 className="text-3xl font-extrabold text-center text-darkblue mb-6 font-puritan">
+<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-light to-background px-4">
+  <div className="w-full max-w-md p-6 sm:p-10 bg-card-bg text-foreground rounded-2xl shadow-xl border border-border-color font-puritan transition-all duration-300">
+    
+    {/* Heading */}
+    <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-primary mb-6">
       Welcome Back
     </h2>
 
-    <form onSubmit={handleSubmit} className="space-y-6 text-textprimary">
-      {/* Email Input */}
+    {/* Login Form */}
+    <form onSubmit={handleSubmit} className="space-y-6">
+      
+      {/* Email Field */}
       <div>
-        <label htmlFor="email" className="block text-sm font-medium mb-1 text-foreground">
+        <label htmlFor="email" className="block text-sm font-semibold mb-1 text-foreground">
           Email Address
         </label>
         <input
-          type="email"
           id="email"
+          type="email"
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full px-4 py-3 rounded-lg border border-lightblue/60 bg-background text-foreground placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-highlight focus:border-highlight transition"
           placeholder="you@example.com"
           required
           disabled={isLoading}
+          className="w-full px-4 py-3 rounded-lg border border-border-color bg-input-bg placeholder:text-muted text-foreground focus:ring-2 focus:ring-primary focus:outline-none transition"
         />
       </div>
 
-      {/* Password Input */}
+      {/* Password Field */}
       <div className="relative">
-        <label htmlFor="password" className="block text-sm font-medium mb-1 text-foreground">
+        <label htmlFor="password" className="block text-sm font-semibold mb-1 text-foreground">
           Password
         </label>
         <input
-          type={showPassword ? 'text' : 'password'}
           id="password"
+          type={showPassword ? 'text' : 'password'}
           name="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full px-4 py-3 pr-12 rounded-lg border border-lightblue/60 bg-background text-foreground placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-highlight focus:border-highlight transition"
           placeholder="••••••••"
           required
           disabled={isLoading}
+          className="w-full px-4 py-3 pr-12 rounded-lg border border-border-color bg-input-bg placeholder:text-muted text-foreground focus:ring-2 focus:ring-primary focus:outline-none transition"
         />
         <div
-          className="absolute inset-y-0 right-3 top-9 text-darkblue cursor-pointer"
           onClick={() => setShowPassword(!showPassword)}
+          className="absolute right-3 top-10 cursor-pointer text-muted"
         >
           {showPassword ? <FaEyeSlash /> : <FaEye />}
         </div>
@@ -105,12 +109,12 @@ function LoginPage() {
       <button
         type="submit"
         disabled={isLoading}
-        className="w-full py-3 text-white font-semibold rounded-lg bg-highlight hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-highlight transition flex items-center justify-center"
+        className="w-full py-3 rounded-lg bg-primary hover:bg-indigo-700 text-white font-semibold transition focus:outline-none focus:ring-2 focus:ring-primary flex items-center justify-center"
       >
         {isLoading ? (
           <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
           </svg>
         ) : (
           'Login'
@@ -119,14 +123,15 @@ function LoginPage() {
     </form>
 
     {/* Footer */}
-    <p className="mt-6 text-center text-sm text-textprimary">
+    <p className="mt-6 text-center text-sm text-muted">
       Don’t have an account?{' '}
-      <a href="/auth/signup" className="text-highlight hover:text-darkblue font-medium transition">
+      <a href="/auth/signup" className="text-accent hover:text-primary font-medium transition">
         Sign up
       </a>
     </p>
   </div>
 </div>
+
 
   );
 }

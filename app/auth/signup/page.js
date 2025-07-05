@@ -151,46 +151,53 @@ export default function SignupPage() {
   };
 
   return (
-<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-lightblue to-background">
-  <div className="p-8 sm:p-10 w-full max-w-md bg-card rounded-2xl shadow-2xl border border-lightblue/40 transition-all duration-300 ease-in-out">
-    <h2 className="text-3xl font-extrabold text-center text-darkblue mb-6 font-puritan">
+<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-light to-background px-4">
+  <div className="p-8 sm:p-10 w-full max-w-md bg-card-bg text-foreground rounded-2xl shadow-2xl border border-border-color transition-all duration-300 ease-in-out font-puritan">
+    
+    <h2 className="text-3xl font-extrabold text-center text-primary mb-6">
       Create Account
     </h2>
 
     {!otpSent ? (
       <>
+        {/* Signup Inputs */}
         <div className="space-y-5 text-textprimary">
+          {/* Username */}
           <input
             placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="w-full px-4 py-3 border border-lightblue/50 bg-background rounded-lg focus:outline-none focus:ring-2 focus:ring-highlight"
+            className="w-full px-4 py-3 border border-border-color bg-input-bg rounded-lg text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary"
             disabled={isLoading}
           />
+
+          {/* Email */}
           <input
             placeholder="Email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 border border-lightblue/50 bg-background rounded-lg focus:outline-none focus:ring-2 focus:ring-highlight"
+            className="w-full px-4 py-3 border border-border-color bg-input-bg rounded-lg text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary"
             disabled={isLoading}
           />
+
+          {/* Password */}
           <div className="relative">
             <input
               id="new-password"
               placeholder="Password"
               value={password}
-              type={showPassword ? "text" : "password"}
+              type={showPassword ? 'text' : 'password'}
               onChange={(e) => useStatePassword(e.target.value)}
-              className="w-full px-4 py-3 pr-12 border border-lightblue/50 bg-background rounded-lg focus:outline-none focus:ring-2 focus:ring-highlight"
+              className="w-full px-4 py-3 pr-12 border border-border-color bg-input-bg rounded-lg text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary"
               autoComplete="new-password"
               disabled={isLoading}
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute inset-y-0 right-3 flex items-center text-darkblue"
-              aria-label={showPassword ? "Hide password" : "Show password"}
+              className="absolute inset-y-0 right-3 flex items-center text-muted"
+              aria-label={showPassword ? 'Hide password' : 'Show password'}
               disabled={isLoading}
             >
               {showPassword ? <FaEyeSlash /> : <FaEye />}
@@ -198,9 +205,10 @@ export default function SignupPage() {
           </div>
         </div>
 
+        {/* Send OTP Button */}
         <button
           onClick={handleSignup}
-          className="mt-6 w-full bg-highlight text-white font-semibold py-3 rounded-lg hover:bg-darkblue transition duration-300 focus:outline-none focus:ring-2 focus:ring-highlight flex justify-center"
+          className="mt-6 w-full bg-primary text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-primary flex justify-center"
           disabled={isLoading}
         >
           {isLoading ? (
@@ -215,7 +223,8 @@ export default function SignupPage() {
       </>
     ) : (
       <>
-        <p className="text-center text-textprimary mb-4">Enter the 6-digit OTP sent to your email</p>
+        {/* OTP Section */}
+        <p className="text-center text-muted mb-4">Enter the 6-digit OTP sent to your email</p>
 
         <div className="flex justify-center space-x-2 mb-6">
           {otpDigits.map((digit, index) => (
@@ -228,7 +237,7 @@ export default function SignupPage() {
               onKeyDown={(e) => handleOtpKeyDown(e, index)}
               onPaste={index === 0 ? handleOtpPaste : undefined}
               ref={(el) => (otpInputRefs.current[index] = el)}
-              className="w-10 h-12 text-center text-xl font-semibold border border-lightblue/60 text-foreground bg-background rounded-lg focus:outline-none focus:ring-2 focus:ring-success"
+              className="w-10 h-12 text-center text-xl font-semibold border border-border-color text-foreground bg-input-bg rounded-lg focus:outline-none focus:ring-2 focus:ring-success"
               inputMode="numeric"
               pattern="[0-9]*"
               disabled={isLoading}
@@ -236,6 +245,7 @@ export default function SignupPage() {
           ))}
         </div>
 
+        {/* Verify OTP */}
         <button
           onClick={handleVerifyOtp}
           className="w-full bg-success text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-success flex justify-center"
@@ -253,14 +263,16 @@ export default function SignupPage() {
       </>
     )}
 
-    <p className="mt-6 text-center text-sm text-textprimary">
+    {/* Footer */}
+    <p className="mt-6 text-center text-sm text-muted">
       Have an account?{' '}
-      <Link href="/auth/login" className="text-highlight hover:text-darkblue font-medium transition">
+      <Link href="/auth/login" className="text-accent hover:text-primary font-medium transition">
         Login
       </Link>
     </p>
   </div>
 </div>
+
 
 
   );
