@@ -27,7 +27,8 @@ async function Page({ params }) {
   });
 
   if (!res.ok) {
-    throw new Error('Failed to fetch data');
+    return<>
+    <h1>Something Went Wrong Try Again</h1></>
   }
 
   const data = await res.json();

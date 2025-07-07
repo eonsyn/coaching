@@ -8,7 +8,12 @@ function ChooseQuesiton({ data, page, chapterId }) {
   const prevPage = page - 1;
   const nextPage = page + 1;
   const totalPages = data.totalPages;
-
+console.log("data is :",data)
+const statusColorMap = {
+  correct: 'bg-green-600',
+  incorrect: 'bg-red-600',
+  unattempted: 'bg-gray-400',
+};
   return (
    <>
   {/* Chapter Title */}
@@ -23,6 +28,14 @@ function ChooseQuesiton({ data, page, chapterId }) {
         key={q._id}
         className="bg-[var(--card-bg)] border border-[var(--border-color)] rounded-lg p-4 hover:shadow-md hover:-translate-y-1 transition-all"
       >
+        <div className="flex items-center gap-2">
+  <div
+    title={q.status}
+    className={`h-2 w-2 rounded-full ${statusColorMap[q.status] || 'bg-gray-300'}`}
+  ></div>
+  <span className="text-sm capitalize">{q.status}</span>
+</div>
+
         <Link href={`/dashboard/question/${q._id}`}>
           <div className="text-base text-[var(--foreground)] hover:text-[var(--accent)] transition-colors">
             <QuestionDisplay question={q.question.text} />

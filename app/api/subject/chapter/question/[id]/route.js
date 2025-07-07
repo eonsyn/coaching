@@ -129,8 +129,8 @@ export async function GET(req, { params }) {
     const questions = chapter.questions.map((q) => q.toString());
     const currentIndex = questions.indexOf(id);
 
-    const previousQuestionId = currentIndex > 0 ? questions[currentIndex - 1] : null;
-    const nextQuestionId =
+    const nextQuestionId = currentIndex > 0 ? questions[currentIndex - 1] : null;
+    const previousQuestionId =
       currentIndex < questions.length - 1 ? questions[currentIndex + 1] : null;
 
     return NextResponse.json(
