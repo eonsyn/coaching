@@ -1,4 +1,4 @@
-'use client';
+ 
 import React from 'react';
 import { FaCalculator, FaAtom, FaFlask } from 'react-icons/fa';
 import Link from 'next/link';
@@ -20,7 +20,7 @@ function ChooseSubject() {
   ];
 
   return (
-    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] flex flex-col items-center justify-center p-6">
+    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] flex flex-col items-center   ">
       <h2 className="text-3xl font-bold mb-8 text-[var(--primary)] font-heading">
         Choose a Subject
       </h2>
