@@ -1,84 +1,89 @@
 import React from 'react';
 import Image from 'next/image';
 import robot from '@/public/robot.png'; // Ensure this image exists
-import { IoArrowForward } from "react-icons/io5";
-import SplineRobot from '../SplineRobot';
+import Link from 'next/link';
 function HeroPage() {
   return (
-    <div className="relative w-full min-h-screen bg-black text-white overflow-hidden">
-      {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[550px] h-[50px] bg-white rounded-b-full blur-[100px] z-0" />
- */}
+    <div className="relative w-full min-h-screen bg-white text-white overflow-hidden">
 
-      <div className="relative w-full flex z-10 px-2 py-2">
-        <div className='w-1/2'>
-          <div className='w-full p-6 bg-slate-800 rounded-l-3xl  h-[70vh] relative'>
-            <div className='filler absolute -right-6 z-10 -bottom-6 bg-slate-800 h-12 w-12 rounded-full'></div>
-            <div className="subtractor absolute  -right-0 z-10 -bottom-12 bg-black h-12 w-12 rounded-full">
+
+      <div className="relative w-full flex z-10 md:px-2 md:py-2">
+        <div className='w-full md:w-[60%]'>
+          <div className='w-full  p-6 bg-bgray md:rounded-l-3xl  h-[70vh] relative'>
+            <div className='filler hidden md:block absolute -right-6 z-10 -bottom-6  bg-bgray h-12 w-12 rounded-full'></div>
+            <div className="subtractor hidden md:block absolute  -right-0 z-10 -bottom-12 bg-white h-12 w-12 rounded-full">
             </div>
+            <Image
+              src={robot}
+              alt="Robot"
+              layout="fill"
+              className="absolute z-0 opacity-25 md:object-cover object-contain pointer-events-none md:translate-0 translate-x-26"
+            />
 
-            <div className="text-sm flex items-center gap-2 p-1 rounded-2xl bg-slate-700 w-fit mb-6">
-              <span className="p-0.5 px-1.5 rounded-2xl bg-slate-300 text-black font-medium">
+            <div className="text-sm z-20 flex items-center gap-2 py-1 px-1 rounded-2xl bg-lightgray w-fit mb-4 relative">
+              <span className="py-1 px-2 rounded-2xl bg-bgray text-white font-medium">
                 2000+ IIT Questions
               </span>
-              <span className="flex items-center gap-2 text-white">
+              <span className="flex items-center gap-2 h-full text-black">
                 Solve Now <span className="text-xl">→</span>
               </span>
             </div>
 
-            <h1 className="text-6xl md:text-6xl font-extrabold  leading-tighter mb-1.5 ">
-              Be Genius <br /> with CLC
+            <h1 className="text-6xl relative z-20 md:text-6xl font-extrabold  leading-tighter mb-1.5 ">
+              Solve <br /> Understand. <br /> Concquer JEE.
             </h1>
 
-            <p className="text-gray-400 mb-8 leading-tighter text-lg">
-              Speed up your website build with our ultimate UI kits. Enjoy high-quality, customizable components built for seamless UX.
-            </p>
+            <p className="text-white relative mb-8 leading-tighter z-20 text-lg">
+              Master JEE with Topic-wise PYQs, AI-Powered Hints & Smart Practice.</p>
 
-            <div className="flex gap-4 flex-wrap">
-              <button className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition cursor-pointer">
-                Get it now →
+            <div className="flex gap-4 mt-3 md:mt-0 z-20 flex-wrap">
+              <Link href={'/dashboard'} className='w-full md:w-fit '>
+             
+              <button className="relative overflow-hidden w-full md:w-fit  bg-white text-black px-6 py-3 rounded-full font-semibold transition-all duration-500 group cursor-pointer">
+
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-8 h-8 bg-black rounded-full transition-all duration-500 scale-0 group-hover:scale-[6] group-hover:translate-y-0 z-0"></div>
+                <span className="relative z-10 group-hover:text-white duration-700 ">Get it now →</span>
               </button>
-              <button className="bg-black border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition ease-in-out duration-75 cursor-pointer">
-                Learn more
-              </button>
+ </Link>
+
             </div>
+
           </div>
           {/* Lower Company Stats Section */}
-          <div className="h-[26vh] w-full bg-black flex items-center justify-center px-4">
-            <div className="  text-white w-full max-w-6xl rounded-[36px] py-6 px-10 flex flex-wrap justify-between items-center shadow-md">
-              <div className="text-center flex-1 min-w-[100px]">
+          <div className="w-full bg-white px-4 py-8">
+            <div className="w-full max-w-6xl mx-auto text-black bg-white rounded-[36px] py-6 px-4 sm:px-8 flex flex-col gap-6 md:flex-row justify-between items-center">
+              <div className="text-center flex-1 min-w-[120px]">
                 <h2 className="text-2xl font-bold">500+</h2>
                 <p className="text-sm text-gray-500">Components</p>
               </div>
-              <div className="text-center flex-1 min-w-[100px]">
+              <div className="text-center flex-1 min-w-[120px]">
                 <h2 className="text-2xl font-bold">50+</h2>
                 <p className="text-sm text-gray-500">Pages</p>
               </div>
-              <div className="text-center flex-1 min-w-[100px]">
+              <div className="text-center flex-1 min-w-[120px]">
                 <h2 className="text-2xl font-bold">150+</h2>
                 <p className="text-sm text-gray-500">Customers</p>
               </div>
-              <div className="text-center flex-1 min-w-[100px]">
-                <h2 className="text-2xl font-bold">150+</h2>
-                <p className="text-sm text-gray-500">Contributors</p>
-              </div>
+
             </div>
           </div>
 
+
         </div>
 
-        <div className='w-1/2 bg-slate-800 h-[96vh] relative rounded-b-3xl rounded-tr-3xl'>
+        <div className='w-[40%] hidden md:block bg-bgray h-[96vh] relative rounded-b-3xl rounded-tr-3xl'>
           <Image
             src={robot}
             alt="Robot"
             layout="fill"
             objectFit="contain"
             style={{
-              filter: 'drop-shadow(2px 4px 8px hsla(0deg, 0%, 0%, 0.5))'
+              filter: 'drop-shadow(2px 4px 10px hsla(0deg, 0%, 0%, 0.3))'
             }}
             className=""
           />
           {/* <SplineRobot/> */}
-{/* test */}
+          {/* test */}
         </div>
       </div>
     </div>

@@ -11,7 +11,10 @@ const chapterSchema = new mongoose.Schema({
   title: { type: String, required: true },
   importance: String,
   priority: Number,
-  questions: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Question' }],
+
+  mainsQuestions: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Question' }],
+  advanceQuestions: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Question' }],
+
   class: { type: mongoose.Schema.Types.ObjectId, ref: 'Class' },
   order: Number,
   previousYearPapers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'PreviousYearPaper' }],
@@ -21,4 +24,4 @@ const chapterSchema = new mongoose.Schema({
 
 const Chapter = mongoose.models.Chapter || mongoose.model('Chapter', chapterSchema);
 
-export default Chapter; // ✅ Use this alone
+export default Chapter;

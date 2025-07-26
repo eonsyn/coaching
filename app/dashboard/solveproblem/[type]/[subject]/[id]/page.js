@@ -9,6 +9,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 function Page() {
   const params = useParams();
+  const type = params.type;
   const chapterId = params?.id; // 'id' is actually chapterId here
   const subject = params?.subject;
 
@@ -16,7 +17,7 @@ function Page() {
   const page = parseInt(searchParams.get('page') || '0', 10);
   
   const { data, error, isLoading } = useSWR(
-    chapterId ? `/api/subject/chapter?chapterId=${chapterId}&page=${page}` : null,
+    chapterId ? `/api/subject/chapter?chapterId=${chapterId}&type=${type}&page=${page}` : null,
     fetcher
   );
 

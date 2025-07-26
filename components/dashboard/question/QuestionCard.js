@@ -9,7 +9,7 @@ import { CiTextAlignLeft } from "react-icons/ci";
 import Link from 'next/link';
 import { FiArrowRightCircle, FiArrowLeftCircle } from 'react-icons/fi';
 
-export default function QuestionCard({preId, question, nextId }) {
+export default function QuestionCard({preId,url, question, nextId }) {
   const [selected, setSelected] = useState([]);
   const [userInput, setUserInput] = useState('');
   const [isChecked, setIsChecked] = useState(false);
@@ -164,7 +164,7 @@ const handleCheckAnswer = async () => {
   <div className="mt-8 pb-4 flex flex-col sm:flex-row justify-between items-center gap-4">
     {/* Previous Button */}
     {preId ? (
-      <Link href={`/dashboard/question/${preId}`} passHref>
+      <Link href={`${url}/${preId}`} passHref>
         <div className="flex items-center gap-2 px-5 py-2.5 rounded-md bg-[var(--primary)] text-white hover:brightness-110 shadow transition-all duration-200 cursor-pointer">
           <FiArrowLeftCircle className="text-xl" />
           Previous
@@ -182,7 +182,7 @@ const handleCheckAnswer = async () => {
       <button
         onClick={handleCheckAnswer}
         disabled={isChecked || loading}
-        className={`px-8 py-2.5 w-full sm:w-auto rounded-md font-semibold text-white transition-all ${
+        className={`px-8 cursor-pointer py-2.5 w-full sm:w-auto rounded-md font-semibold text-white transition-all ${
           isChecked
             ? 'bg-[var(--danger)] cursor-not-allowed'
             : 'bg-[var(--danger)] hover:bg-[var(--danger)]/90'
@@ -194,7 +194,7 @@ const handleCheckAnswer = async () => {
 
     {/* Next Button */}
     {nextId ? (
-      <Link href={`/dashboard/question/${nextId}`} passHref>
+      <Link href={`${url}/${nextId}`} passHref>
         <div className="flex items-center gap-2 px-5 py-2.5 rounded-md bg-[var(--primary)] text-white hover:brightness-110 shadow transition-all duration-200 cursor-pointer">
           Next
           <FiArrowRightCircle className="text-xl" />

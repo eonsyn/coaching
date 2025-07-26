@@ -96,53 +96,66 @@ export async function POST(req, { params }) {
   }
 }
 
+
 export async function GET(req, { params }) {
-  const { id } = params;
+  const { id: questionId } = params;
+  const { searchParams } = new URL(req.url);
+  const type = searchParams.get('type'); // 'mains' or 'advance'
+  const chapterId = searchParams.get('chapterId');
+
+  if (!["mains", "advance"].includes(type)) {
+    return NextResponse.json({ error: "Invalid type. Must be 'mains' or 'advance'." }, { status: 400 });
+  }
+
+  if (!chapterId) {
+    return NextResponse.json({ error: "chapterId is required" }, { status: 400 });
+  }
 
   try {
     await dbConnect();
 
-    const question = await Question.findById(id).lean();
-
-
-
+    const question = await Question.findById(questionId).lean();
     if (!question) {
       return NextResponse.json({ error: 'Question not found' }, { status: 404 });
     }
-    // Remove solution entirely
-    delete question.solution;
 
-    // Optional: remove isCorrect from options
+    // Remove sensitive fields
+    delete question.solution;
+    delete question.correctValue;
     if (Array.isArray(question.options)) {
       question.options = question.options.map(({ isCorrect, ...rest }) => rest);
     }
 
-    // Optional: remove correctValue
-    delete question.correctValue;
-
-    // Find the chapter containing this question
-    const chapter = await Chapter.findOne({ questions: question._id }).lean();
+    const chapter = await Chapter.findById(chapterId).lean();
     if (!chapter) {
-      return NextResponse.json({ error: 'Chapter not found for question' }, { status: 404 });
+      return NextResponse.json({ error: 'Chapter not found' }, { status: 404 });
     }
 
-    const questions = chapter.questions.map((q) => q.toString());
-    const currentIndex = questions.indexOf(id);
+    // Get correct question list based on type, and reverse it
+    const rawQuestionList = type === 'mains' ? chapter.mainsQuestions : chapter.advanceQuestions;
+    const reversedQuestions = [...rawQuestionList].reverse().map(q => q.toString());
 
-    const nextQuestionId = currentIndex > 0 ? questions[currentIndex - 1] : null;
-    const previousQuestionId =
-      currentIndex < questions.length - 1 ? questions[currentIndex + 1] : null;
+    const currentIndex = reversedQuestions.indexOf(questionId);
+    if (currentIndex === -1) {
+      return NextResponse.json({ error: "Question not found in this chapter for the given type" }, { status: 404 });
+    }
 
-    return NextResponse.json(
-      {
-        question,
-        nextQuestionId,
-        previousQuestionId, //previous quest
-        chapterId: chapter._id,
-        chapterTitle: chapter.title,
-      },
-      { status: 200 }
-    );
+    const nextQuestionId = currentIndex < reversedQuestions.length - 1
+      ? reversedQuestions[currentIndex + 1]
+      : null;
+
+    const previousQuestionId = currentIndex > 0
+      ? reversedQuestions[currentIndex - 1]
+      : null;
+
+    return NextResponse.json({
+      question,
+      chapterId: chapter._id,
+      chapterTitle: chapter.title,
+      nextQuestionId,
+      previousQuestionId,
+    }, { status: 200 });
+
   } catch (error) {
     console.error('Error fetching question:', error);
     return NextResponse.json({ error: 'Server error' }, { status: 500 });

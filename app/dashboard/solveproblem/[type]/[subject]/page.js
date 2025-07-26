@@ -21,11 +21,12 @@ export const revalidate = 60; // ISR: Revalidate every 60 seconds
 
 async function Page({ params }) {
   const subject = params.subject;
-
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/subject/?subject=${subject}`, {
-    next: { revalidate: 60 }, // ISR setup
+const type = params.type;
+console.log("type",type);
+ const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/subject/?subject=${subject}&type=${type}`, {
+    next: { revalidate: 60 }
   });
-
+console.log(res);
   if (!res.ok) {
     return<>
     <h1>Something Went Wrong Try Again</h1></>
@@ -43,7 +44,7 @@ async function Page({ params }) {
       {/* Chapter Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
         {data.chapters.map((chapter, i) => (
-          <Link href={`/dashboard/solveproblem/${data.subject}/${chapter._id}`} key={i}>
+          <Link href={`${data.subject}/${chapter._id}`} key={i}>
             <div
               className="group p-4 h-28 bg-[var(--card-bg)] border border-[var(--border-color)] rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer"
               title={chapter.title}
