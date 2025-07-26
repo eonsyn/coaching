@@ -53,7 +53,8 @@ async function Page({ params }) {
       {/* Chapter Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
         {data.chapters.map((chapter, i) => (
-          <Link href={`/${type}/${subject}/${chapter._id}`} key={i}>
+          <Link href={`${subject}/${chapter._id}`} key={i}>
+             
             <div
               className="group p-4 h-28 bg-[var(--card-bg)] border border-[var(--border-color)] rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer"
               title={chapter.title}
