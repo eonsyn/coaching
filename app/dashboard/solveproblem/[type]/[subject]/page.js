@@ -1,41 +1,50 @@
+// /app/[type]/[subject]/page.js
+
 import React from 'react';
 import Link from 'next/link';
-import { IoIosBook } from "react-icons/io";
+import { IoIosBook } from 'react-icons/io';
 
-// Helper to trim text
 const trimText = (text) => {
   const words = text.trim().split('');
   if (words.length <= 30) return text;
   return words.slice(0, 30).join('') + '...';
 };
 
+// Generate all static paths for ISR: [type]/[subject]
 export async function generateStaticParams() {
-  return [
-    { subject: 'Mathematics' },
-    { subject: 'Physics' },
-    { subject: 'Chemistry' },
-  ];
+  const subjects = ['Mathematics', 'Physics', 'Chemistry'];
+  const types = ['mains', 'advance'];
+
+  return subjects.flatMap(subject =>
+    types.map(type => ({
+      type,
+      subject,
+    }))
+  );
 }
 
-export const revalidate = 60; // ISR: Revalidate every 60 seconds
+export const revalidate = 60; // Revalidate every 60 seconds
 
 async function Page({ params }) {
-  const subject = params.subject;
-const type = params.type;
-console.log("type",type);
- const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/subject/?subject=${subject}&type=${type}`, {
-    next: { revalidate: 60 }
-  });
-console.log(res);
+  const { type, subject } = params;
+
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/subject/?subject=${subject}&type=${type}`,
+    { next: { revalidate: 60 } }
+  );
+
   if (!res.ok) {
-    return<>
-    <h1>Something Went Wrong Try Again</h1></>
+    return (
+      <div className="p-6">
+        <h1 className="text-red-500 text-lg">Something went wrong. Please try again.</h1>
+      </div>
+    );
   }
 
   const data = await res.json();
 
   return (
-     <div className="px-6 bg-[var(--background)] text-[var(--foreground)] font-sans">
+    <div className="px-6 bg-[var(--background)] text-[var(--foreground)] font-sans">
       {/* Heading */}
       <h2 className="text-xl font-semibold text-[var(--primary)] mb-4 font-heading">
         {data.subject} Chapters:
@@ -44,7 +53,7 @@ console.log(res);
       {/* Chapter Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
         {data.chapters.map((chapter, i) => (
-          <Link href={`${data.subject}/${chapter._id}`} key={i}>
+          <Link href={`/${type}/${subject}/${chapter._id}`} key={i}>
             <div
               className="group p-4 h-28 bg-[var(--card-bg)] border border-[var(--border-color)] rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer"
               title={chapter.title}
