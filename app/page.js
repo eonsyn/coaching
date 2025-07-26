@@ -7,7 +7,7 @@ export default function Home() {
   
 
   return (
-    <div className="bg-white text-black">
+    <div className="bg-white c text-black">
        {/* <NavBar/> */}
        <HeroPage/>
     </div>
