@@ -61,7 +61,11 @@ function processText(text) {
 
   if (lastIndex < decoded.length) {
     const raw = decoded.substring(lastIndex);
-    parts.push({ type: 'html-text', content: raw });
+    const lines = raw.split(';');
+    lines.forEach((line, i) => {
+      parts.push({ type: 'html-text', content: line });
+      if (i < lines.length - 1) parts.push({ type: 'line-break' });
+    });
   }
 
   return parts;

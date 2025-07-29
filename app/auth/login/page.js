@@ -10,6 +10,7 @@ function LoginPage() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+const [role, setRole] = useState('student'); // 'student' or 'teacher'
 
 
   // Handler for form submission
@@ -30,7 +31,7 @@ function LoginPage() {
         headers: {
           'Content-Type': 'application/json', // Specify content type as JSON
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password,role }),
         credentials: 'include', // Include cookies in the request
       });
 
@@ -60,6 +61,17 @@ function LoginPage() {
       Welcome Back
     </h2>
 
+    {/* Role Selector */}
+    <select
+      value={role}
+      onChange={(e) => setRole(e.target.value)}
+      className="w-full px-4 py-3 border border-border-color bg-input-bg rounded-lg text-foreground mb-4"
+      disabled={isLoading}
+    >
+      <option value="student">Student</option>
+      <option value="teacher">Teacher</option>
+    </select>
+
     {/* Login Form */}
     <form onSubmit={handleSubmit} className="space-y-6">
       
@@ -77,7 +89,7 @@ function LoginPage() {
           placeholder="you@example.com"
           required
           disabled={isLoading}
-          className="w-full px-4 py-3 rounded-lg border border-border-color bg-input-bg placeholder:text-muted text-foreground focus:ring-2 focus:ring-primary focus:outline-none transition"
+          className="w-full px-4 py-3 border border-border-color bg-input-bg text-foreground placeholder:text-muted rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition"
         />
       </div>
 
@@ -95,11 +107,11 @@ function LoginPage() {
           placeholder="••••••••"
           required
           disabled={isLoading}
-          className="w-full px-4 py-3 pr-12 rounded-lg border border-border-color bg-input-bg placeholder:text-muted text-foreground focus:ring-2 focus:ring-primary focus:outline-none transition"
+          className="w-full px-4 py-3 pr-12 border border-border-color bg-input-bg text-foreground placeholder:text-muted rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition"
         />
         <div
           onClick={() => setShowPassword(!showPassword)}
-          className="absolute right-3 top-10 cursor-pointer text-muted"
+          className="absolute top-10 right-3 text-muted cursor-pointer"
         >
           {showPassword ? <FaEyeSlash /> : <FaEye />}
         </div>
@@ -109,12 +121,21 @@ function LoginPage() {
       <button
         type="submit"
         disabled={isLoading}
-        className="w-full py-3 rounded-lg bg-primary hover:bg-indigo-700 text-white font-semibold transition focus:outline-none focus:ring-2 focus:ring-primary flex items-center justify-center"
+        className="w-full py-3 flex items-center justify-center bg-primary text-white font-semibold rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-primary transition"
       >
         {isLoading ? (
-          <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <svg
+            className="animate-spin h-5 w-5 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+            />
           </svg>
         ) : (
           'Login'
@@ -131,6 +152,7 @@ function LoginPage() {
     </p>
   </div>
 </div>
+
 
 
   );

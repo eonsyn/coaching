@@ -11,7 +11,7 @@ import { RiLogoutCircleRLine } from "react-icons/ri";
 
 // gsap.registerPlugin(ScrollTrigger);
 
-export default function MobileNavbar({ navOptions, toggleTheme, theme, name, handleLogout }) {
+export default function MobileNavbar({role, navOptions, toggleTheme, theme, name, handleLogout }) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const boxRef = useRef(null);
@@ -63,7 +63,7 @@ export default function MobileNavbar({ navOptions, toggleTheme, theme, name, han
     />
     <div>
       <h1 className="text-lg font-semibold text-[var(--foreground)]">{name}</h1>
-      <p className="text-sm text-[var(--muted)]">Student</p>
+      <p className="text-sm text-[var(--muted)] capitalize">{role}</p>
     </div>
   </div>
 

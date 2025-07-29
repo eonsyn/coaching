@@ -2,7 +2,7 @@
 import { useState, useRef } from 'react';
 import { toast } from 'react-toastify';
 import { FaEyeSlash } from "react-icons/fa";
-import { FaEye } from "react-icons/fa"; 
+import { FaEye } from "react-icons/fa";
 import Link from 'next/link';
 // Function to generate a strong random password
 const generateStrongPassword = (length = 16) => {
@@ -21,6 +21,8 @@ export default function SignupPage() {
   const [password, useStatePassword] = useState('');
   const [otpSent, setOtpSent] = useState(false); // New state to control OTP input visibility
   const [otpDigits, setOtpDigits] = useState(Array(6).fill('')); // Array for 6 OTP digits
+  const [role, setRole] = useState('student'); // 'student' or 'teacher'
+
   const [isLoading, setIsLoading] = useState(false); // New state for loading indicator
   const [showPassword, setShowPassword] = useState(false);
   const [message, setMessage] = useState('');
@@ -39,7 +41,7 @@ export default function SignupPage() {
     }, 3000); // Message disappears after 3 seconds
   };
 
- 
+
   const handleSignup = async () => {
     if (!username || !email || !password) {
       toast.error('Please fill in all fields.', 'error');
@@ -53,7 +55,7 @@ export default function SignupPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ username, email, password ,role}),
       });
       const data = await res.json();
       if (res.ok) {
@@ -90,7 +92,7 @@ export default function SignupPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, otp }),
+        body: JSON.stringify({ email, otp,role }),
       });
       const data = await res.json();
       if (res.ok) {
@@ -112,7 +114,7 @@ export default function SignupPage() {
     const { value } = e.target;
     // Allow only one digit per input field
     if (!/^\d*$/.test(value)) { // Only allow digits
-        return;
+      return;
     }
 
     const newOtpDigits = [...otpDigits];
@@ -146,132 +148,141 @@ export default function SignupPage() {
     // Focus the last filled input or the last input if all 6 are filled
     const lastFilledIndex = Math.min(digits.length - 1, 5);
     if (otpInputRefs.current[lastFilledIndex]) {
-        otpInputRefs.current[lastFilledIndex].focus();
+      otpInputRefs.current[lastFilledIndex].focus();
     }
   };
 
   return (
-<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-light to-background px-4">
-  <div className="p-8 sm:p-10 w-full max-w-md bg-card-bg text-foreground rounded-2xl shadow-2xl border border-border-color transition-all duration-300 ease-in-out font-puritan">
-    
-    <h2 className="text-3xl font-extrabold text-center text-primary mb-6">
-      Create Account
-    </h2>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-light to-background px-4">
+      <div className="p-8 sm:p-10 w-full max-w-md bg-card-bg text-foreground rounded-2xl shadow-2xl border border-border-color transition-all duration-300 ease-in-out font-puritan">
 
-    {!otpSent ? (
-      <>
-        {/* Signup Inputs */}
-        <div className="space-y-5 text-textprimary">
-          {/* Username */}
-          <input
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className="w-full px-4 py-3 border border-border-color bg-input-bg rounded-lg text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary"
-            disabled={isLoading}
-          />
+        <h2 className="text-3xl font-extrabold text-center text-primary mb-6">
+          Create Account
+        </h2>
 
-          {/* Email */}
-          <input
-            placeholder="Email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 border border-border-color bg-input-bg rounded-lg text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary"
-            disabled={isLoading}
-          />
+        {!otpSent ? (
+          <>
+            {/* Signup Inputs */}
+            <div className="space-y-5 text-textprimary">
+              <select
+                value={role}
+                onChange={(e) => setRole(e.target.value)}
+                className="w-full px-4 py-3 border border-border-color bg-input-bg rounded-lg text-foreground"
+                disabled={isLoading}
+              >
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+              </select>
+              {/* Username */}
+              <input
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                className="w-full px-4 py-3 border border-border-color bg-input-bg rounded-lg text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                disabled={isLoading}
+              />
 
-          {/* Password */}
-          <div className="relative">
-            <input
-              id="new-password"
-              placeholder="Password"
-              value={password}
-              type={showPassword ? 'text' : 'password'}
-              onChange={(e) => useStatePassword(e.target.value)}
-              className="w-full px-4 py-3 pr-12 border border-border-color bg-input-bg rounded-lg text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary"
-              autoComplete="new-password"
-              disabled={isLoading}
-            />
+              {/* Email */}
+              <input
+                placeholder="Email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-3 border border-border-color bg-input-bg rounded-lg text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                disabled={isLoading}
+              />
+
+              {/* Password */}
+              <div className="relative">
+                <input
+                  id="new-password"
+                  placeholder="Password"
+                  value={password}
+                  type={showPassword ? 'text' : 'password'}
+                  onChange={(e) => useStatePassword(e.target.value)}
+                  className="w-full px-4 py-3 pr-12 border border-border-color bg-input-bg rounded-lg text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                  autoComplete="new-password"
+                  disabled={isLoading}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute inset-y-0 right-3 flex items-center text-muted"
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  disabled={isLoading}
+                >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </button>
+              </div>
+            </div>
+
+            {/* Send OTP Button */}
             <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute inset-y-0 right-3 flex items-center text-muted"
-              aria-label={showPassword ? 'Hide password' : 'Show password'}
+              onClick={handleSignup}
+              className="mt-6 w-full bg-primary text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-primary flex justify-center"
               disabled={isLoading}
             >
-              {showPassword ? <FaEyeSlash /> : <FaEye />}
+              {isLoading ? (
+                <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8..." />
+                </svg>
+              ) : (
+                'Send OTP & Sign Up'
+              )}
             </button>
-          </div>
-        </div>
+          </>
+        ) : (
+          <>
+            {/* OTP Section */}
+            <p className="text-center text-muted mb-4">Enter the 6-digit OTP sent to your email</p>
 
-        {/* Send OTP Button */}
-        <button
-          onClick={handleSignup}
-          className="mt-6 w-full bg-primary text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-primary flex justify-center"
-          disabled={isLoading}
-        >
-          {isLoading ? (
-            <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8..." />
-            </svg>
-          ) : (
-            'Send OTP & Sign Up'
-          )}
-        </button>
-      </>
-    ) : (
-      <>
-        {/* OTP Section */}
-        <p className="text-center text-muted mb-4">Enter the 6-digit OTP sent to your email</p>
+            <div className="flex justify-center space-x-2 mb-6">
+              {otpDigits.map((digit, index) => (
+                <input
+                  key={index}
+                  type="text"
+                  maxLength="1"
+                  value={digit}
+                  onChange={(e) => handleOtpInputChange(e, index)}
+                  onKeyDown={(e) => handleOtpKeyDown(e, index)}
+                  onPaste={index === 0 ? handleOtpPaste : undefined}
+                  ref={(el) => (otpInputRefs.current[index] = el)}
+                  className="w-10 h-12 text-center text-xl font-semibold border border-border-color text-foreground bg-input-bg rounded-lg focus:outline-none focus:ring-2 focus:ring-success"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
+                  disabled={isLoading}
+                />
+              ))}
+            </div>
 
-        <div className="flex justify-center space-x-2 mb-6">
-          {otpDigits.map((digit, index) => (
-            <input
-              key={index}
-              type="text"
-              maxLength="1"
-              value={digit}
-              onChange={(e) => handleOtpInputChange(e, index)}
-              onKeyDown={(e) => handleOtpKeyDown(e, index)}
-              onPaste={index === 0 ? handleOtpPaste : undefined}
-              ref={(el) => (otpInputRefs.current[index] = el)}
-              className="w-10 h-12 text-center text-xl font-semibold border border-border-color text-foreground bg-input-bg rounded-lg focus:outline-none focus:ring-2 focus:ring-success"
-              inputMode="numeric"
-              pattern="[0-9]*"
+            {/* Verify OTP */}
+            <button
+              onClick={handleVerifyOtp}
+              className="w-full bg-success text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-success flex justify-center"
               disabled={isLoading}
-            />
-          ))}
-        </div>
+            >
+              {isLoading ? (
+                <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8..." />
+                </svg>
+              ) : (
+                'Verify & Sign Up'
+              )}
+            </button>
+          </>
+        )}
 
-        {/* Verify OTP */}
-        <button
-          onClick={handleVerifyOtp}
-          className="w-full bg-success text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-success flex justify-center"
-          disabled={isLoading}
-        >
-          {isLoading ? (
-            <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8..." />
-            </svg>
-          ) : (
-            'Verify & Sign Up'
-          )}
-        </button>
-      </>
-    )}
-
-    {/* Footer */}
-    <p className="mt-6 text-center text-sm text-muted">
-      Have an account?{' '}
-      <Link href="/auth/login" className="text-accent hover:text-primary font-medium transition">
-        Login
-      </Link>
-    </p>
-  </div>
-</div>
+        {/* Footer */}
+        <p className="mt-6 text-center text-sm text-muted">
+          Have an account?{' '}
+          <Link href="/auth/login" className="text-accent hover:text-primary font-medium transition">
+            Login
+          </Link>
+        </p>
+      </div>
+    </div>
 
 
 

@@ -4,6 +4,7 @@ import Chapter from "@/models/Chapter";
 import Question from "@/models/Question";
 import { NextResponse } from "next/server";
 import { getLoggedInUser } from "@/lib/auth";
+import Subject from '@/models/Subject';
 
 export async function GET(req) {
   try {
@@ -76,5 +77,36 @@ export async function GET(req) {
   } catch (error) {
     console.error("Error fetching chapter questions:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+  }
+}
+
+export async function POST(req) {
+  try {
+    const { subject } = await req.json();
+
+    if (!subject) {
+      return NextResponse.json({ error: 'Subject is required' }, { status: 400 });
+    }
+
+    await dbConnect();
+
+    // Find subject and populate chapter references
+    const subjectDoc = await Subject.findOne({ subject })
+      .populate('chapters', 'title')
+      .lean();
+
+    if (!subjectDoc) {
+      return NextResponse.json({ error: 'Subject not found' }, { status: 404 });
+    }
+
+    return NextResponse.json({
+      chapters: subjectDoc.chapters.map(ch => ({
+        _id: ch._id,
+        title: ch.title,
+      })),
+    });
+  } catch (err) {
+    console.error(err);
+    return NextResponse.json({ error: 'Server error' }, { status: 500 });
   }
 }

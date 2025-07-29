@@ -2,8 +2,8 @@ import { getLoggedInUser } from '@/lib/auth';
 import UserStatsCard from '@/components/dashboard/user/UserStatsCard';
 
 // ISR Configuration (revalidate every 60 seconds)
-export const revalidate = 60; // Re-generate this page at most once every 60 seconds
-
+//export const revalidate = 60;  Re-generate this page at most once every 60 seconds
+import { useSelector } from 'react-redux';
 export default async function Page() {
   const user = await getLoggedInUser();
 
@@ -14,6 +14,7 @@ export default async function Page() {
   const safeUser = {
     name: user.name,
     email: user.email,
+    role:user.user.role,
     score: user.score,
     correctQuestion: user.correctQuestion || [],
     incorrectQuestion: user.incorrectQuestion || [],

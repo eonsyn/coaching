@@ -1,26 +1,20 @@
-// app/dashboard/layout.js
 import { getLoggedInUser } from '@/lib/auth';
 import LayoutClient from './LayoutClient';
 import { redirect } from 'next/navigation';
-import { toast } from 'react-toastify';
+
 export default async function DashboardLayout({ children }) {
   const user = await getLoggedInUser();
- 
-if(!user){
-  redirect('/auth/login')
-  return <div>
-    Logining to acess it 
-    </div>
-}
-  // Strip sensitive info before sending to client
- 
+
+  if (!user || !user.user) {
+    redirect('/auth/login');
+  }
+
   const safeUser = {
-    userId: user._id.toString(), // ✅ Convert ObjectId to string
-    name: user.name,
-  
+    userId: user.user?._id?.toString() || '',
+    name: user.user?.name || '',
+    role: user.role || '',  // This might also be under user.user.role depending on your schema
   };
-
   
-
-  return <LayoutClient  user={safeUser}>{children}</LayoutClient>;
+console.log("user",user);
+  return <LayoutClient user={user}>{children}</LayoutClient>;
 }

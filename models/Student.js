@@ -39,6 +39,16 @@ const studentSchema = new mongoose.Schema({
       ref: "Question",
     },
   ],
+  teacher: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Teacher", // Assigned teacher after approval
+    default: null,
+  },
+  requestedTeacher: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Teacher", // Requested teacher before approval
+    default: null,
+  },
  performanceByDate: {
   type: Map,
   of: {
@@ -46,8 +56,7 @@ const studentSchema = new mongoose.Schema({
     incorrectQuestion: { type: Number, default: 0 },
   },
   default: {}
-}
-,
+},
 
    
 }, { timestamps: true });

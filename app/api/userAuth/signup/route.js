@@ -4,13 +4,15 @@ import dbConnect from "@/lib/mongodb";
 import Otp from "@/models/Otp";
 import Student from "@/models/Student";
 import nodemailer from "nodemailer";
-
+import Teacher from "@/models/Teacher";
 export async function POST(req) {
-  const { username, password, email } = await req.json();
+  const { username, password, email, role } = await req.json();
   await dbConnect();
 
-  const existing = await Student.findOne({ email });
-  if (existing) {
+  const studentExists = await Student.findOne({ email });
+  const teacherExists = await Teacher.findOne({ email });
+
+   if (studentExists || teacherExists) {
     return Response.json({ success: false, message: "Email already registered" }, { status: 400 });
   }
 
@@ -40,7 +42,7 @@ const mailOptions = {
     <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
       <div style="max-width: 500px; margin: auto; background-color: white; border-radius: 10px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
         <h2 style="color: #333;">Welcome to <span style="color: #ff9900;">Concept Learning Classes</span>!</h2>
-        <p style="font-size: 16px; color: #555;">To complete your signup, please use the following OTP:</p>
+        <p style="font-size: 16px; color: #555;">To complete your signup for ${role} , please use the following OTP:</p>
         <div style="font-size: 28px; font-weight: bold; color: #222; margin: 20px 0; text-align: center;">
           ${otp}
         </div>
