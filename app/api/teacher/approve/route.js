@@ -1,6 +1,6 @@
 // app/api/teacher/approve/route.js
 import { getLoggedInUser } from "@/lib/auth";
-import dbConnect from "@/lib/db";
+import dbConnect from "@/lib/mongodb";
 import Teacher from "@/models/Teacher";
 
 export async function POST(req) {

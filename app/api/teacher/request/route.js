@@ -1,6 +1,6 @@
 // app/api/teacher/request/route.js
 import { getLoggedInUser } from "@/lib/auth";
-import dbConnect from "@/lib/db";
+import dbConnect from "@/lib/mongodb";
 import Teacher from "@/models/Teacher";
 import Student from "@/models/Student";
 
