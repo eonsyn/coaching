@@ -23,7 +23,7 @@ export default async function RootLayout({ children }) {
        <head>
        
       </head>
-      <body className="font-puritan antialiased min-h-screen w-screen  ">
+      <body className="font-puritan bg-background-color antialiased min-h-screen w-screen  ">
      <ToastContainer /> 
       {children}
        

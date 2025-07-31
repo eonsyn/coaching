@@ -44,43 +44,43 @@ async function Page({ params }) {
   const data = await res.json();
 
   return (
-    <div className="px-6 bg-[var(--background)] text-[var(--foreground)] font-sans">
-      {/* Heading */}
-      <h2 className="text-xl font-semibold text-[var(--primary)] mb-4 font-heading">
-        {data.subject} Chapters:
-      </h2>
+   <div className="px-6 py-8 bg-[var(--bg-primary)] text-[var(--text-primary)] font-sans min-h-screen">
+  {/* Heading */}
+  <h2 className="text-2xl font-heading font-bold text-[var(--primary)] mb-6">
+    {data.subject} Chapters:
+  </h2>
 
-      {/* Chapter Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
-        {data.chapters.map((chapter, i) => (
-          <Link href={`${subject}/${chapter._id}`} key={i}>
-             
-            <div
-              className="group p-4 h-28 bg-[var(--card-bg)] border border-[var(--border-color)] rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 cursor-pointer"
-              title={chapter.title}
-            >
-              <div className="flex items-start gap-4">
-                {/* Icon */}
-                <IoIosBook
-                  className="text-[var(--primary)] group-hover:text-[var(--accent)] transition-colors duration-200 mt-1"
-                  size={26}
-                />
+  {/* Chapter Grid */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {data.chapters.map((chapter, i) => (
+      <Link href={`${subject}/${chapter._id}`} key={i}>
+        <div
+          className="group p-5 h-32 bg-[var(--bg-secondary)] border border-[var(--bg-accent)] rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer backdrop-blur-sm"
+          title={chapter.title}
+        >
+          <div className="flex items-start gap-4">
+            {/* Icon */}
+            <IoIosBook
+              className="text-[var(--primary)] group-hover:text-[var(--secondary)] transition-colors duration-200 mt-1"
+              size={28}
+            />
 
-                {/* Chapter Info */}
-                <div>
-                  <p className="text-base font-semibold group-hover:text-[var(--accent)] transition-colors">
-                    {trimText(chapter.title)}
-                  </p>
-                  <p className="text-sm text-[var(--muted)] mt-1">
-                    Total Questions: {chapter.questionsCount}
-                  </p>
-                </div>
-              </div>
+            {/* Chapter Info */}
+            <div className="flex flex-col justify-between">
+              <p className="text-lg font-semibold group-hover:text-[var(--secondary)] transition-colors line-clamp-1">
+                {trimText(chapter.title)}
+              </p>
+              <p className="text-sm text-[var(--text-muted)] mt-1">
+                Total Questions: {chapter.questionsCount}
+              </p>
             </div>
-          </Link>
-        ))}
-      </div>
-    </div>
+          </div>
+        </div>
+      </Link>
+    ))}
+  </div>
+</div>
+
   );
 }
 

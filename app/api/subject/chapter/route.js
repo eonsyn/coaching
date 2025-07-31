@@ -25,15 +25,19 @@ export async function GET(req) {
 
     await dbConnect();
 
-    const user = await getLoggedInUser();
-    if (!user) {
+    const session = await getLoggedInUser();
+    if (!session) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    // Choose the correct question array based on type
+    const { user } = session;
+
     const questionField = chapterType === "mains" ? "mainsQuestions" : "advanceQuestions";
 
-    const chapter = await Chapter.findById(chapterId).select(`${questionField} title`).lean();
+    const chapter = await Chapter.findById(chapterId)
+      .select(`${questionField} title`)
+      .lean();
+
     if (!chapter) {
       return NextResponse.json({ error: "Chapter not found" }, { status: 404 });
     }
@@ -48,10 +52,9 @@ export async function GET(req) {
       .limit(limit)
       .lean();
 
-    // Annotate questions based on user progress
-    const correctSet = new Set(user.correctQuestion.map(id => id.toString()));
-    const incorrectSet = new Set(user.incorrectQuestion.map(id => id.toString()));
-    const savedSet = new Set(user.saveQuestion.map(id => id.toString()));
+    const correctSet = new Set((user.correctQuestion || []).map(id => id.toString()));
+    const incorrectSet = new Set((user.incorrectQuestion || []).map(id => id.toString()));
+    const savedSet = new Set((user.saveQuestion || []).map(id => id.toString()));
 
     const annotatedQuestions = paginatedQuestions.map(q => {
       const id = q._id.toString();
@@ -79,6 +82,7 @@ export async function GET(req) {
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
+
 
 export async function POST(req) {
   try {

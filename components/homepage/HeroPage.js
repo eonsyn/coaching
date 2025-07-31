@@ -9,8 +9,8 @@ function HeroPage() {
 
       <div className="relative w-full flex z-10 md:px-2 md:py-2">
         <div className='w-full md:w-[60%]'>
-          <div className='w-full  p-6 bg-bgray md:rounded-l-3xl  h-[70vh] relative'>
-            <div className='filler hidden md:block absolute -right-6 z-10 -bottom-6  bg-bgray h-12 w-12 rounded-full'></div>
+          <div className='w-full  p-6 bg-gray-300 md:rounded-l-3xl  h-[70vh] relative'>
+            <div className='filler hidden md:block absolute -right-6 z-10 -bottom-6  bg-gray-300 h-12 w-12 rounded-full'></div>
             <div className="subtractor hidden md:block absolute  -right-0 z-10 -bottom-12 bg-white h-12 w-12 rounded-full">
             </div>
             <Image
@@ -20,8 +20,8 @@ function HeroPage() {
               className="absolute z-0 opacity-25 md:object-cover object-contain pointer-events-none md:translate-0 translate-x-26"
             />
 
-            <div className="text-sm z-20 flex items-center gap-2 py-1 px-1 rounded-2xl bg-lightgray w-fit mb-4 relative">
-              <span className="py-1 px-2 rounded-2xl bg-bgray text-white font-medium">
+            <div className="text-sm z-20 flex items-center gap-2 py-1 px-1 rounded-2xl bg-gray-400 w-fit mb-4 relative">
+              <span className="py-1 px-2 rounded-2xl bg-gray-300 text-white font-medium">
                 2000+ IIT Questions
               </span>
               <span className="flex items-center gap-2 h-full text-black">
@@ -71,7 +71,7 @@ function HeroPage() {
 
         </div>
 
-        <div className='w-[40%] hidden md:block bg-bgray h-[96vh] relative rounded-b-3xl rounded-tr-3xl'>
+        <div className='w-[40%] hidden md:block bg-gray-300 h-[96vh] relative rounded-b-3xl rounded-tr-3xl'>
           <Image
             src={robot}
             alt="Robot"

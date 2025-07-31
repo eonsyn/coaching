@@ -1,77 +1,213 @@
- 
-@import url('https://fonts.googleapis.com/css2?family=Puritan:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Puritan:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
-@import "tailwindcss";
-:root {
-  --background: #F9FAFB;        /* Soft white-gray for calm background */
-  --foreground: #1F2937;        /* Deep charcoal text for easy reading */
-  --primary: #4F46E5;           /* Indigo - academic, trustworthy */
-  --primary-light: #EEF2FF;     /* Light version for hover backgrounds */
-  --secondary: #06B6D4;         /* Calm cyan for subtle accents */
-  --accent: #FBBF24;            /* Warm amber for attention/CTA */
-  --muted: #9CA3AF;             /* Muted gray for placeholders & disabled */
-  --card-bg: #FFFFFF;           /* For cards/question containers */
-  --input-bg: #F3F4F6;          /* Input fields background */
-  --border-color: #E5E7EB;      /* Subtle borders */
-  --success: #10B981;           /* Correct answer - soft green */
-  --danger: #EF4444;            /* Wrong answer - soft red */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Noto+Serif+Thai:wght@100..900&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-  --bgray:#95A19F;
-  --lgray:#D6DEDB;
-}
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+ @import "tailwindcss";
+
+ :root {
+ /* Background & Surfaces */
+--bg-primary: #E5E9DE;        /* Your chosen background - soft sage */
+--bg-secondary: #F8FAF5;      /* Ultra light sage for cards */
+--bg-tertiary: #FFFFFF;       /* Pure white for elevated surfaces */
+--bg-accent: #D8DDD0;         /* Subtle sage borders */
+
+/* Text Colors */
+--text-primary: #1C1E1A;      /* Almost black with green tint */
+--text-secondary: #525A48;    /* Medium sage-gray */
+--text-muted: #7A8370;        /* Muted sage for hints */
+--text-inverse: #FFFFFF;      /* White text for dark surfaces */
+
+/* Gradient Cards (inspired by reference) */
+--gradient-purple: linear-gradient(135deg, #E879F9 0%, #A855F7 100%);
+--gradient-blue: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+--gradient-orange: linear-gradient(135deg, #FB923C 0%, #F97316 100%);
+--gradient-green: linear-gradient(135deg, #4ADE80 0%, #22C55E 100%);
+--gradient-pink: linear-gradient(135deg, #F472B6 0%, #EC4899 100%);
+--gradient-cyan: linear-gradient(135deg, #22D3EE 0%, #06B6D4 100%);
+
+/* Brand Colors */
+--primary: #22C55E;           /* Vibrant green */
+--primary-hover: #16A34A;     /* Darker green */
+--primary-light: #DCFCE7;     /* Light green background */
+
+--secondary: #8B5CF6;         /* Purple accent */
+--secondary-hover: #7C3AED;   /* Darker purple */
+--secondary-light: #EDE9FE;   /* Light purple background */
+
+/* Status Colors */
+--success: #22C55E;           /* Green success */
+--success-light: #DCFCE7;     /* Light green */
+--warning: #F59E0B;           /* Orange warning */
+--warning-light: #FEF3C7;     /* Light orange */
+--error: #EF4444;             /* Red error */
+--error-light: #FEE2E2;       /* Light red */
+--info: #3B82F6;              /* Blue info */
+--info-light: #DBEAFE;        /* Light blue */
+
+/* Interactive Elements */
+--border: #D1D5DB;            /* Light border */
+--border-hover: #9CA3AF;      /* Darker on hover */
+--shadow: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+--shadow-premium: rgba(0, 0, 0, 0.15); /* Premium card shadow */
+ }
 
 
-:root[data-theme="dark"] {
-  --background: #0F172A;        /* Deep navy for eyes at night */
-  --foreground: #F8FAFC;        /* Near-white text */
-  --primary: #6366F1;           /* Lighter indigo for visibility */
-  --primary-light: #312E81;     /* Hover background in dark mode */
-  --secondary: #22D3EE;         /* Bright cyan for freshness */
-  --accent: #FACC15;            /* Yellow for premium energy */
-  --muted: #64748B;             /* Muted gray-blue */
-  --card-bg: #1E293B;           /* Slightly lighter than background */
-  --input-bg: #1E293B;          /* Consistent input style */
-  --border-color: #334155;      /* Subtle border contrast */
-  --success: #34D399;           /* Soft green for success */
-  --danger: #F87171;            /* Softer red for errors */
-}
+ :root[data-theme="dark"] {
+  /* Background & Surfaces - matching the reference */
+--bg-primary: #0A0A0A;        /* Deep black like reference */
+--bg-secondary: #1A1A1A;      /* Dark gray for cards */
+--bg-tertiary: #2A2A2A;       /* Elevated surfaces */
+--bg-accent: #333333;         /* Subtle borders */
 
+/* Text Colors */
+--text-primary: #FFFFFF;      /* Pure white text */
+--text-secondary: #A3A3A3;    /* Light gray secondary */
+--text-muted: #737373;        /* Muted gray */
+--text-inverse: #0A0A0A;      /* Dark text for light surfaces */
+
+/* Premium Gradients (matching reference style) */
+--gradient-purple: linear-gradient(135deg, #C084FC 0%, #8B5CF6 50%, #7C3AED 100%);
+--gradient-blue: linear-gradient(135deg, #60A5FA 0%, #3B82F6 50%, #2563EB 100%);
+--gradient-orange: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
+--gradient-green: linear-gradient(135deg, #34D399 0%, #10B981 50%, #059669 100%);
+--gradient-pink: linear-gradient(135deg, #F472B6 0%, #EC4899 50%, #DB2777 100%);
+--gradient-cyan: linear-gradient(135deg, #22D3EE 0%, #06B6D4 50%, #0891B2 100%);
+
+/* Glassmorphism effect (like reference) */
+--glass-bg: rgba(255, 255, 255, 0.1);
+--glass-border: rgba(255, 255, 255, 0.2);
+--glass-backdrop: blur(20px);
+
+/* Brand Colors */
+--primary: #8B5CF6;           /* Purple primary */
+--primary-hover: #7C3AED;     /* Darker purple */
+--primary-light: rgba(139, 92, 246, 0.1); /* Transparent purple */
+
+--secondary: #F59E0B;         /* Orange secondary */
+--secondary-hover: #D97706;   /* Darker orange */
+--secondary-light: rgba(245, 158, 11, 0.1); /* Transparent orange */
+
+/* Status Colors */
+--success: #10B981;           /* Green success */
+--success-light: rgba(16, 185, 129, 0.1);
+--warning: #F59E0B;           /* Orange warning */
+--warning-light: rgba(245, 158, 11, 0.1);
+--error: #EF4444;             /* Red error */
+--error-light: rgba(239, 68, 68, 0.1);
+--info: #3B82F6;              /* Blue info */
+--info-light: rgba(59, 130, 246, 0.1);
+
+/* Interactive Elements */
+--border: rgba(255, 255, 255, 0.1); /* Subtle white border */
+--border-hover: rgba(255, 255, 255, 0.2); /* Brighter on hover */
+--shadow: rgba(0, 0, 0, 0.5); /* Strong shadow */
+--shadow-premium: rgba(0, 0, 0, 0.8); /* Premium deep shadow */
+
+/* Special Effects */
+--neon-glow: 0 0 20px rgba(139, 92, 246, 0.5);
+--card-hover: 0 20px 40px rgba(0, 0, 0, 0.3);
+    
+ }
 
 @theme inline {
-  --color-bgray:var(--bgray);
-  --color-lightgray:var(--lgray); 
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary:var(--primary);
-  --color-success:var(--success);   
- --color-danger:var(--danger); 
-  --color-primary-light:var(--primary-light);
-  --color-secondary:var(--secondary);
-  --color-accent:var(--accent);
-  --color-muted:var(--muted);
+  /* Backgrounds */
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-bg-accent: var(--bg-accent);
 
-  --font-puritan: var(--fontpuritan);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Text */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-inverse: var(--text-inverse);
+
+  /* Brand Colors */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-light: var(--secondary-light);
+
+  /* Status Colors */
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-warning: var(--warning);
+  --color-warning-light: var(--warning-light);
+  --color-error: var(--error);
+  --color-error-light: var(--error-light);
+  --color-info: var(--info);
+  --color-info-light: var(--info-light);
+
+  /* Borders & Shadows */
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  --shadow-default: var(--shadow);
+  --shadow-premium: var(--shadow-premium);
+
+  /* Gradients */
+  --color-gradient-purple: var(--gradient-purple);
+  --color-gradient-blue: var(--gradient-blue);
+  --color-gradient-orange: var(--gradient-orange);
+  --color-gradient-green: var(--gradient-green);
+  --color-gradient-pink: var(--gradient-pink);
+  --color-gradient-cyan: var(--gradient-cyan);
+
+  /* Glassmorphism */
+  --glass-bg: var(--glass-bg);
+  --glass-border: var(--glass-border);
+  --glass-backdrop: var(--glass-backdrop);
+
+  --color-neon-glow: var(--neon-glow);
+  --color-card-hover: var(--card-hover);
+
+  /* Special Effects */
+ --color-card-bg: var(--bg-secondary);       /* for --card-bg */
+  --color-foreground: var(--text-primary);    /* for --foreground */
+  --color-muted: var(--text-muted);           /* for --muted */
+  --color-border-color: var(--border);        /* for --border-color */
+  --color-input-bg: var(--bg-tertiary);       /* for --input-bg */
+  --color-danger: var(--error);               /* for --danger */
+  /* Fonts */
+  --font-family-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-family-puritan: 'Puritan', serif;
+  --font-family-poppins: 'Poppins', sans-serif;
+  --font-family-baloo: 'Baloo 2', cursive;
 
 }
 
+
+
+
+ body {
+   background: var(--bg-primary);
+   color: var(--foreground);
+   font-family: 'Inter', sans-serif;
+ }
  
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Inter', sans-serif;    
+ /* globals.css */
+ html,
+ body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   font-family: 'Baloo 2', cursive;
+   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+ }
+ .glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop);
+  border: 1px solid var(--glass-border);
 }
- 
-h1, h2, h3, h4, h5, h6, .heading, .cta {
-  font-family: 'Poppins', sans-serif;       /* Use for section titles, CTAs, banners */
-}
-/* globals.css */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  
+
+/* Gradient text utility */
+.gradient-text {
+  background: var(--gradient-purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

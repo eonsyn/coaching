@@ -70,28 +70,28 @@ const handleCheckAnswer = async () => {
 };
 
   return (
-   <>
+  <>
   {/* Options */}
   {(question.type === 'singleCorrect' || question.type === 'multiCorrect') && (
-    <div className="space-y-3">
+    <div className="space-y-3 mt-2">
       {question.options.map((opt, i) => {
         const isSelected = selected.includes(i);
         const isRight = correctAnswers.includes(i);
         const isWrongSelected = isChecked && isSelected && !isRight;
 
         const baseStyles = `p-3 rounded-lg border text-sm sm:text-base font-medium transition-all cursor-pointer`;
-        let stateStyles = 'bg-[var(--card-bg)] border-[var(--border-color)] hover:bg-[var(--primary)]/5';
+        let stateStyles = 'bg-[var(--bg-secondary)] border-[var(--bg-accent)] hover:bg-[var(--primary)]/10';
 
         if (isChecked) {
           if (isRight) {
-            stateStyles = 'bg-[var(--success)]/10 border-[var(--success)] text-[var(--success)]';
+            stateStyles = 'bg-[var(--success-light)] border-[var(--success)] text-[var(--success)]';
           } else if (isWrongSelected) {
-            stateStyles = 'bg-[var(--danger)]/10 border-[var(--danger)] text-[var(--danger)]';
+            stateStyles = 'bg-[var(--error-light)] border-[var(--error)] text-[var(--error)]';
           } else if (isSelected) {
-            stateStyles = 'bg-[var(--accent)]/10 border-[var(--accent)] text-[var(--accent)]';
+            stateStyles = 'bg-[var(--primary-light)] border-[var(--accent)] text-[var(--accent)]';
           }
         } else if (isSelected) {
-          stateStyles = 'bg-[var(--accent)]/10 border-[var(--accent)] text-[var(--accent)]';
+          stateStyles = 'bg-[var(--primary-light)] border-[var(--accent)] text-[var(--accent)]';
         }
 
         return (
@@ -120,7 +120,7 @@ const handleCheckAnswer = async () => {
       placeholder="Enter your answer"
       value={userInput}
       onChange={(e) => setUserInput(e.target.value)}
-      className="mt-4 p-3 w-full rounded-md border border-[var(--border-color)] bg-[var(--input-bg)] text-[var(--foreground)] placeholder:text-[var(--muted)] focus:ring-2 focus:ring-[var(--primary)] disabled:opacity-60"
+      className="mt-4 p-3 w-full rounded-md border border-[var(--bg-accent)] bg-[var(--bg-tertiary)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:ring-2 focus:ring-[var(--primary)] disabled:opacity-60"
     />
   )}
 
@@ -132,7 +132,7 @@ const handleCheckAnswer = async () => {
       onChange={(e) => setUserInput(e.target.value)}
       rows={3}
       disabled={isChecked}
-      className="mt-4 p-3 w-full rounded-md border border-[var(--border-color)] bg-[var(--input-bg)] text-[var(--foreground)] placeholder:text-[var(--muted)] focus:ring-2 focus:ring-[var(--primary)] disabled:opacity-60"
+      className="mt-4 p-3 w-full rounded-md border border-[var(--bg-accent)] bg-[var(--bg-tertiary)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:ring-2 focus:ring-[var(--primary)] disabled:opacity-60"
     />
   )}
 
@@ -143,24 +143,26 @@ const handleCheckAnswer = async () => {
         <FaRegLightbulb className="text-[var(--warning)]" />
         Hint
       </summary>
-      <div className="mt-2 bg-[var(--warning)]/10 p-3 rounded-md text-[var(--foreground)]">
+      <div className="mt-2 bg-[var(--warning-light)] p-3 rounded-md text-[var(--text-primary)]">
         <RenderMathx text={question.hint} />
       </div>
     </details>
   )}
-{/* Solution */}
+
+  {/* Solution */}
   {isChecked && solution?.text && (
     <details className="mt-4 text-sm">
       <summary className="cursor-pointer font-medium flex items-center gap-2 text-[var(--success)] hover:underline">
         <CiTextAlignLeft className="text-[var(--success)]" />
         View Solution
       </summary>
-      <div className="mt-2 bg-[var(--success)]/10 p-3 rounded-md text-[var(--foreground)] whitespace-pre-wrap">
+      <div className="mt-2 bg-[var(--success-light)] p-3 rounded-md text-[var(--text-primary)] whitespace-pre-wrap">
         <RenderMathx text={solution.text} />
       </div>
     </details>
   )}
-  {/* Navigation + Check Answer */}
+
+  {/* Navigation + Check Button */}
   <div className="mt-8 pb-4 flex flex-col sm:flex-row justify-between items-center gap-4">
     {/* Previous Button */}
     {preId ? (
@@ -177,15 +179,15 @@ const handleCheckAnswer = async () => {
       </div>
     )}
 
-    {/* Check Answer Button */}
+    {/* Check Button */}
     {(selected.length !== 0 || userInput) && (
       <button
         onClick={handleCheckAnswer}
         disabled={isChecked || loading}
-        className={`px-8 cursor-pointer py-2.5 w-full sm:w-auto rounded-md font-semibold text-white transition-all ${
+        className={`px-8 w-full sm:w-auto py-2.5 rounded-md font-semibold text-white transition-all ${
           isChecked
-            ? 'bg-[var(--danger)] cursor-not-allowed'
-            : 'bg-[var(--danger)] hover:bg-[var(--danger)]/90'
+            ? 'bg-[var(--error)] cursor-not-allowed'
+            : 'bg-[var(--error)] hover:bg-[var(--error)]/90'
         }`}
       >
         {loading ? 'Checking...' : 'Check Answer'}
@@ -207,8 +209,6 @@ const handleCheckAnswer = async () => {
       </div>
     )}
   </div>
-
-  
 </>
 
   );
