@@ -15,7 +15,7 @@ function Page() {
 
   const searchParams = useSearchParams();
   const page = parseInt(searchParams.get('page') || '0', 10);
-  
+   
   const { data, error, isLoading } = useSWR(
     chapterId ? `/api/subject/chapter?chapterId=${chapterId}&type=${type}&page=${page}` : null,
     fetcher
@@ -28,7 +28,7 @@ function Page() {
 
   return (
     <div className="px-6 pb-6 text-foreground font-puritan">
-      <ChooseQuestion page={page} chapterId={chapterId} data={data} />
+      <ChooseQuestion type={type} sub={subject} page={page} chapterId={chapterId} data={data} />
 
 
 

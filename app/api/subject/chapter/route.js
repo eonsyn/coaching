@@ -12,6 +12,7 @@ export async function GET(req) {
     const chapterId = searchParams.get("chapterId");
     const chapterType = searchParams.get("type"); // 'mains' or 'advance'
     const page = parseInt(searchParams.get("page") || "0", 10);
+    console.log("page is ==> ",page);
     const limit = 10;
     const skip = page * limit;
 

@@ -3,12 +3,11 @@ import QuestionDisplay from '@/components/QuestionDisplay';
 import Link from 'next/link';
 import { IoChevronForwardSharp } from "react-icons/io5";
 import { IoIosArrowBack } from "react-icons/io";
-
-function ChooseQuesiton({ data, page, chapterId }) {
+import RenderMathx from '@/components/RenderMathx';
+function ChooseQuesiton({type,sub, data, page, chapterId }) {
   const prevPage = page - 1;
   const nextPage = page + 1;
-  const totalPages = data.totalPages;
-  console.log("data is :", data)
+  const totalPages = data.totalPages; 
   const statusColorMap = {
     correct: 'bg-green-600',
     incorrect: 'bg-red-600',
@@ -40,9 +39,10 @@ function ChooseQuesiton({ data, page, chapterId }) {
         {/* Question Link */}
         <Link href={`${chapterId}/${q._id}`}>
           <div className="text-base text-[var(--text-primary)] hover:text-[var(--secondary)] transition-colors">
-            <QuestionDisplay question={q.question.text} />
+            <RenderMathx text={q.question.text} />
+
           </div>
-        </Link>
+        </Link> 
       </li>
     ))}
   </ul>
@@ -52,7 +52,7 @@ function ChooseQuesiton({ data, page, chapterId }) {
     {/* Previous Link */}
     {page > 0 ? (
       <Link
-        href={`/dashboard/solveproblem/testsub/${chapterId}?page=${prevPage}`}
+        href={`/dashboard/solveproblem/${type}/${sub}/${chapterId}?page=${prevPage}`}
         className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--primary)] text-white hover:brightness-110 transition"
       >
         <IoIosArrowBack className="text-lg" />
@@ -73,7 +73,7 @@ function ChooseQuesiton({ data, page, chapterId }) {
     {/* Next Link */}
     {page + 1 < totalPages ? (
       <Link
-        href={`/dashboard/solveproblem/testsub/${chapterId}?page=${nextPage}`}
+        href={`/dashboard/solveproblem/${type}/${sub}/${chapterId}?page=${nextPage}`}
         className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--primary)] text-white hover:brightness-110 transition"
       >
         <span>Next</span>

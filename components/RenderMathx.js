@@ -1,9 +1,8 @@
-// components/RenderMathx.jsx
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
 /**
- * Decode HTML entities in a server-safe way.
+ * Decode HTML entities safely.
  */
 function decodeHTMLEntities(text) {
   return text.replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(dec))
@@ -16,12 +15,22 @@ function decodeHTMLEntities(text) {
 }
 
 /**
- * Process LaTeX and text parts from input
+ * Main processor that handles both raw HTML, LaTeX, and inline text.
  */
 function processText(text) {
+  if (!text) return [];
+
+  const decoded = decodeHTMLEntities(text.trim());
   const parts = [];
+
+  // If the content contains MathML or HTML tags, treat it as full HTML and render directly.
+  if (/<(math|p|img|div|span|br|table|ul|ol|li|h[1-6])[\s>]/i.test(decoded)) {
+    parts.push({ type: 'raw-html', content: decoded });
+    return parts;
+  }
+
+  // Otherwise, handle LaTeX inline/block expressions
   const latexRegex = /(\$\$[^\$]*\$\$|\$[^\$]*\$)/g;
-  const decoded = decodeHTMLEntities(text?.trim() || '');
   let lastIndex = 0;
   let match;
 
@@ -50,30 +59,22 @@ function processText(text) {
       renderedHtml = `<span class="katex-error" style="color: red;">Invalid LaTeX: ${latexExpression}</span>`;
     }
 
-    if (hasError) {
-      parts.push({ type: 'error-latex', content: latexExpression, rendered: renderedHtml });
-    } else {
-      parts.push({ type: 'latex', content: renderedHtml });
-    }
+    parts.push({
+      type: hasError ? 'error-latex' : 'latex',
+      content: hasError ? latexExpression : renderedHtml,
+      rendered: renderedHtml,
+    });
 
     lastIndex = latexRegex.lastIndex;
   }
 
   if (lastIndex < decoded.length) {
-    const raw = decoded.substring(lastIndex);
-    const lines = raw.split(';');
-    lines.forEach((line, i) => {
-      parts.push({ type: 'html-text', content: line });
-      if (i < lines.length - 1) parts.push({ type: 'line-break' });
-    });
+    parts.push({ type: 'html-text', content: decoded.substring(lastIndex) });
   }
 
   return parts;
 }
 
-/**
- * @param {{ text: string }} props
- */
 const RenderMathx = ({ text }) => {
   const processedContent = processText(text);
 
@@ -81,22 +82,18 @@ const RenderMathx = ({ text }) => {
     <div className="flex items-start">
       <div className="text-lg leading-relaxed flex-1">
         {processedContent.map((part, index) => {
+          if (part.type === 'raw-html') {
+            return (
+              <div key={index} dangerouslySetInnerHTML={{ __html: part.content }} />
+            );
+          }
           if (part.type === 'html-text') {
-            // Allow raw HTML (img, br, etc.) to be rendered correctly
-            return (
-              <span
-                key={index}
-                dangerouslySetInnerHTML={{ __html: part.content }}
-              />
-            );
-          } else if (part.type === 'latex') {
-            return (
-              <span
-                key={index}
-                dangerouslySetInnerHTML={{ __html: part.content }}
-              />
-            );
-          } else if (part.type === 'error-latex') {
+            return <span key={index} dangerouslySetInnerHTML={{ __html: part.content }} />;
+          }
+          if (part.type === 'latex') {
+            return <span key={index} dangerouslySetInnerHTML={{ __html: part.content }} />;
+          }
+          if (part.type === 'error-latex') {
             return (
               <span
                 key={index}
