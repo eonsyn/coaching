@@ -2,7 +2,7 @@ import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
 /**
- * Decode HTML entities safely.
+ * Convert special HTML entities to proper characters.
  */
 function decodeHTMLEntities(text) {
   return text.replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(dec))
@@ -15,96 +15,85 @@ function decodeHTMLEntities(text) {
 }
 
 /**
- * Main processor that handles both raw HTML, LaTeX, and inline text.
+ * Split and process the string to handle raw HTML, MathML, and LaTeX
  */
 function processText(text) {
-  if (!text) return [];
-
   const decoded = decodeHTMLEntities(text.trim());
   const parts = [];
 
-  // If the content contains MathML or HTML tags, treat it as full HTML and render directly.
+  // If full HTML or MathML is detected, render as is
   if (/<(math|p|img|div|span|br|table|ul|ol|li|h[1-6])[\s>]/i.test(decoded)) {
     parts.push({ type: 'raw-html', content: decoded });
     return parts;
   }
 
-  // Otherwise, handle LaTeX inline/block expressions
   const latexRegex = /(\$\$[^\$]*\$\$|\$[^\$]*\$)/g;
   let lastIndex = 0;
   let match;
 
   while ((match = latexRegex.exec(decoded)) !== null) {
-    const latexExpression = match[0];
-    const matchIndex = match.index;
+    const latex = match[0];
+    const start = match.index;
 
-    if (matchIndex > lastIndex) {
-      const raw = decoded.substring(lastIndex, matchIndex);
-      parts.push({ type: 'html-text', content: raw });
+    // Add preceding text
+    if (start > lastIndex) {
+      parts.push({ type: 'text', content: decoded.slice(lastIndex, start) });
     }
 
-    const isBlock = latexExpression.startsWith('$$');
-    const strippedExpression = latexExpression.replace(/^\$\$?|\$\$?$/g, '');
-    let renderedHtml = '';
-    let hasError = false;
+    const isBlock = latex.startsWith('$$');
+    const expression = latex.replace(/^\$\$?|\$\$?$/g, '');
 
     try {
-      renderedHtml = katex.renderToString(strippedExpression, {
-        throwOnError: false,
+      const html = katex.renderToString(expression, {
         displayMode: isBlock,
+        throwOnError: false,
       });
-      if (renderedHtml.includes('katex-error')) hasError = true;
-    } catch (e) {
-      hasError = true;
-      renderedHtml = `<span class="katex-error" style="color: red;">Invalid LaTeX: ${latexExpression}</span>`;
+      parts.push({ type: 'latex', content: html });
+    } catch (err) {
+      parts.push({ type: 'error', content: `Error: ${latex}` });
     }
-
-    parts.push({
-      type: hasError ? 'error-latex' : 'latex',
-      content: hasError ? latexExpression : renderedHtml,
-      rendered: renderedHtml,
-    });
 
     lastIndex = latexRegex.lastIndex;
   }
 
+  // Add remaining text
   if (lastIndex < decoded.length) {
-    parts.push({ type: 'html-text', content: decoded.substring(lastIndex) });
+    parts.push({ type: 'text', content: decoded.slice(lastIndex) });
   }
 
   return parts;
 }
 
 const RenderMathx = ({ text }) => {
-  const processedContent = processText(text);
+  const parts = processText(text);
 
   return (
-    <div className="flex items-start">
-      <div className="text-lg leading-relaxed flex-1">
-        {processedContent.map((part, index) => {
-          if (part.type === 'raw-html') {
-            return (
-              <div key={index} dangerouslySetInnerHTML={{ __html: part.content }} />
-            );
-          }
-          if (part.type === 'html-text') {
-            return <span key={index} dangerouslySetInnerHTML={{ __html: part.content }} />;
-          }
-          if (part.type === 'latex') {
-            return <span key={index} dangerouslySetInnerHTML={{ __html: part.content }} />;
-          }
-          if (part.type === 'error-latex') {
-            return (
-              <span
-                key={index}
-                className="text-red-600 font-mono bg-red-100 p-0.5 rounded"
-                dangerouslySetInnerHTML={{ __html: part.rendered }}
-              />
-            );
-          }
-          return null;
-        })}
-      </div>
+    <div className="leading-relaxed text-base text-[var(--foreground)]">
+      {parts.map((part, i) => {
+        if (part.type === 'raw-html') {
+          return <div key={i} dangerouslySetInnerHTML={{ __html: part.content }} />;
+        }
+        if (part.type === 'latex') {
+          return (
+            <span
+              key={i}
+              className="mx-[2px]"
+              dangerouslySetInnerHTML={{ __html: part.content }}
+            />
+          );
+        }
+        if (part.type === 'text') {
+          return <span key={i}>{part.content}</span>;
+        }
+        if (part.type === 'error') {
+          return (
+            <span key={i} className="text-red-500 font-mono">
+              {part.content}
+            </span>
+          );
+        }
+        return null;
+      })}
     </div>
   );
 };
