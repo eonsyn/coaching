@@ -14,7 +14,8 @@ export async function POST(req, { params }) {
   try {
     await dbConnect();
 
-    const user = await getLoggedInUser(); // ✅ get from cookie-based session
+    const user = await getLoggedInUser();
+ 
     if (!user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
@@ -23,7 +24,7 @@ export async function POST(req, { params }) {
     const { selected = [], userInput = '', type } = await req.json();
 
     const question = await Question.findById(questionId).lean();
-    const student = await Student.findById(user._id);
+    const student = await Student.findById(user.user._id);
 
     if (!question) {
       return NextResponse.json({ error: 'Question not found' }, { status: 404 });
@@ -45,7 +46,7 @@ export async function POST(req, { params }) {
       const userSorted = [...selected].sort();
       const correctSorted = [...correctIndices].sort();
       correct = userSorted.length === correctSorted.length &&
-                userSorted.every((val, i) => val === correctSorted[i]);
+        userSorted.every((val, i) => val === correctSorted[i]);
     } else if (type === 'numerical') {
       correct = userInput.trim() === (question.correctValue ?? '').toString().trim();
     } else if (type === 'descriptive') {
