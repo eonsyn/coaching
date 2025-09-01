@@ -47,7 +47,7 @@ export async function GET(req) {
     const totalQuestions = allQuestions.length;
 
     const paginatedQuestions = await Question.find({ _id: { $in: allQuestions } })
-      .select("question")
+      .select("question options solution correctValue type")
       .sort({ _id: -1 })
       .skip(skip)
       .limit(limit)

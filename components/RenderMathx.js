@@ -68,16 +68,16 @@ const RenderMathx = ({ text }) => {
   const parts = processText(text);
 
   return (
-    <div className="leading-relaxed text-base text-[var(--foreground)]">
+    <div className="leading-relaxed  text-base text-[var(--foreground)]">
       {parts.map((part, i) => {
         if (part.type === 'raw-html') {
-          return <div key={i} dangerouslySetInnerHTML={{ __html: part.content }} />;
+          return <div key={i} className='' dangerouslySetInnerHTML={{ __html: part.content }} />;
         }
         if (part.type === 'latex') {
           return (
             <span
               key={i}
-              className="mx-[2px]"
+              className="px-1"
               dangerouslySetInnerHTML={{ __html: part.content }}
             />
           );
