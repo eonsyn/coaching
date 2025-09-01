@@ -20,7 +20,7 @@ function Step2({
   const [data, setData] = useState({ questions: [], totalPages: 0 });
   const [type, setType] = useState("mains");
   const [page, setPage] = useState(0);
-  const [popup, setPopup] = useState(true);
+  const [popup, setPopup] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const fetchQuestions = async (chapterId, chapterType, pageNum) => {
@@ -136,7 +136,7 @@ function Step2({
           <button
             type="button"
             onClick={() => setPopup(!popup)}
-            className="bg-green-50 px-3 py-1 rounded-lg mt-3 hover:bg-green-100 transition-colors"
+            className="bg-[var(--bg-tertiary)] px-3 py-1 rounded-lg mt-3  transition-colors"
           >
             Custom Paper?
           </button>
@@ -151,7 +151,7 @@ function Step2({
             <option value="advance">Advance</option>
           </select>
 
-          <label className="block mt-4 mb-2 font-semibold">Number of Questions:</label>
+          {questions.length != 0 && (<><label className="block mt-4 mb-2 font-semibold">Number of Questions:</label>
           <input
             type="number"
             value={questionCount}
@@ -159,7 +159,7 @@ function Step2({
             className="w-full p-3 rounded-lg bg-[var(--bg-tertiary)] focus:outline-none focus:ring-2 focus:ring-blue-400"
             min={1}
             max={15}
-          />
+          /></>)}
 
           <label className="block mt-4 mb-2 font-semibold">Test Duration (minutes):</label>
           <input
